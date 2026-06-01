@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ホスホイノシタイド 標的タンパク質と機能 | 佐々木研究室</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  :root {
+    --teal:     #1d9e75;
+    --teal-lt:  #e1f5ee;
+    --teal-mid: #5dcaa5;
+    --coral:    #d85a30;
+    --coral-lt: #faece7;
+    --amber:    #ba7517;
+    --amber-lt: #faeeda;
+    --purple:   #534ab7;
+    --purple-lt:#eeedfe;
+    --bg:       #fafaf8;
+    --white:    #ffffff;
+    --text:     #1a1a18;
+    --muted:    #6b6b65;
+    --border:   #e4e4de;
+    --radius:   16px;
+    --nav-h:    64px;
+  }
+  html { scroll-behavior: smooth; }
+  body { font-family: 'Noto Sans JP', 'DM Sans', sans-serif; background: var(--bg); color: var(--text); font-size: 15px; line-height: 1.75; }
+
+  /* ── NAV ── */
+  nav {
+    position: sticky; top: 0; z-index: 100;
+    background: rgba(255,255,255,0.92); backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--border);
+    height: var(--nav-h); display: flex; align-items: center;
+  }
+  .nav-inner { max-width: 1100px; margin: auto; width: 100%; padding: 0 2rem; display: flex; align-items: center; justify-content: space-between; }
+  .nav-univ-logo { height: 44px; width: auto; display: block; }
+  .nav-univ-logo:hover { opacity: 0.85; }
+  .nav-links { display: flex; gap: 0.25rem; }
+  .nav-links a { text-decoration: none; color: var(--muted); font-size: 13px; font-weight: 500; padding: 6px 12px; border-radius: 20px; transition: all 0.2s; }
+  .nav-links a:hover { background: var(--teal-lt); color: var(--teal); }
+  @media (max-width: 860px) {
+    .nav-univ-logo { height: 32px; }
+    .nav-links a { font-size: 12px; padding: 5px 8px; }
+  }
+  @media (max-width: 540px) {
+  }
+
+  /* ── PAGE HEADER ── */
+  .page-header {
+    background: linear-gradient(135deg, var(--teal-lt) 0%, #f0faf5 100%);
+    padding: 64px 2rem 56px;
+    border-bottom: 1px solid var(--border);
+  }
+  .page-header-inner { max-width: 800px; margin: auto; }
+  .section-tag { display: inline-block; font-size: 12px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--teal); background: white; padding: 4px 12px; border-radius: 20px; margin-bottom: 14px; border: 1px solid var(--teal-lt); }
+  .page-title { font-family: 'DM Serif Display', serif; font-size: 2.6rem; line-height: 1.2; margin-bottom: 1rem; }
+  .page-lead { color: var(--muted); font-size: 15px; max-width: 640px; line-height: 1.8; }
+
+  /* ── ARTICLE ── */
+  .article-wrap { max-width: 800px; margin: 0 auto; padding: 56px 2rem 80px; }
+  .back-link { display: inline-flex; align-items: center; gap: 6px; color: var(--teal); text-decoration: none; font-size: 14px; font-weight: 600; margin-bottom: 2rem; }
+  .back-link:hover { text-decoration: underline; }
+
+  /* イントロ */
+  .intro {
+    font-size: 16px; line-height: 2.0; color: var(--text);
+    background: var(--teal-lt); border-radius: var(--radius);
+    padding: 24px 28px; margin-bottom: 1.4rem;
+  }
+
+  /* 存在量の序列 */
+  .abundance {
+    display: flex; flex-wrap: wrap; align-items: center; gap: 7px;
+    font-size: 13.5px; font-weight: 700; color: var(--text);
+    background: var(--white); border: 1px solid var(--border);
+    border-radius: var(--radius); padding: 16px 22px; margin-bottom: 2.6rem;
+  }
+  .abundance .ab-label { color: var(--teal); margin-right: 6px; }
+  .abundance .ab-chip { background: var(--teal-lt); border-radius: 16px; padding: 2px 10px; color: var(--text); font-weight: 500; }
+  .abundance .ab-sep { color: var(--teal-mid); }
+
+  /* 各種ホスホイノシタイドのカード */
+  .species {
+    background: var(--white); border: 1px solid var(--border);
+    border-radius: var(--radius); padding: 24px 28px; margin-bottom: 1.3rem;
+    border-left: 5px solid var(--teal);
+  }
+  .species-head { display: flex; align-items: baseline; flex-wrap: wrap; gap: 12px; margin-bottom: 12px; }
+  .species-name { font-family: 'DM Serif Display', serif; font-size: 1.7rem; color: var(--teal); line-height: 1.1; }
+  .species-name sub { font-size: 0.6em; }
+  .species-badge { font-size: 12px; font-weight: 700; color: var(--muted); background: var(--bg); border: 1px solid var(--border); border-radius: 16px; padding: 3px 12px; }
+  .species p { font-size: 15px; line-height: 1.95; color: var(--text); }
+  .species p sub { font-size: 0.7em; }
+  .species p sup { font-size: 0.7em; }
+  .species-ref { margin-top: 12px; padding-top: 10px; border-top: 1px dashed var(--border); font-size: 12.5px; color: var(--muted); line-height: 1.6; }
+  .species-ref div { margin-top: 8px; }
+  .species-ref div:first-child { margin-top: 0; }
+
+  /* アクセント色（リン酸化数で色分け） */
+  .species.c-pi   { border-left-color: var(--purple); }
+  .species.c-pi   .species-name { color: var(--purple); }
+  .species.c-bis  { border-left-color: var(--amber); }
+  .species.c-bis  .species-name { color: var(--amber); }
+  .species.c-tris { border-left-color: var(--coral); }
+  .species.c-tris .species-name { color: var(--coral); }
+
+  .source {
+    margin-top: 2.4rem; padding: 18px 24px; font-size: 13px; color: var(--muted);
+    background: var(--amber-lt); border-radius: var(--radius); border-left: 4px solid var(--amber);
+  }
+  .source strong { color: var(--text); }
+
+  figure.figure { margin: 2.6rem 0 0.4rem; text-align: center; }
+  figure.figure img { display: block; width: 100%; height: auto; border-radius: var(--radius); border: 1px solid var(--border); background: var(--white); }
+  figure.figure figcaption { font-size: 13px; color: var(--muted); margin-top: 12px; line-height: 1.8; text-align: left; }
+
+  /* ── FOOTER ── */
+  footer { background: #1a1a18; color: #9a9a94; padding: 3rem 2rem; }
+  .footer-inner { max-width: 1100px; margin: auto; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; }
+  .footer-lab { font-family: 'DM Serif Display', serif; font-size: 18px; color: white; }
+  .footer-links { display: flex; gap: 1.5rem; flex-wrap: wrap; }
+  .footer-links a { font-size: 13px; color: #9a9a94; text-decoration: none; }
+  .footer-links a:hover { color: var(--teal-mid); }
+  .footer-copy { font-size: 12px; margin-top: 0.5rem; }
+
+  @media (max-width: 640px) {
+    .page-title { font-size: 2rem; }
+    .article-wrap { padding: 40px 1.3rem 64px; }
+    .species { padding: 20px 20px; }
+    .species-name { font-size: 1.45rem; }
+  }
+  .nav-toggle { display: none; background: none; border: none; cursor: pointer; color: var(--text); padding: 4px; line-height: 0; }
+  .nav-toggle svg { width: 28px; height: 28px; stroke: currentColor; }
+  /* hamburger menu (<=768px only; desktop unchanged) */
+  @media (max-width: 768px) {
+    .nav-toggle { display: block; }
+    .nav-links {
+      position: absolute; top: 100%; left: 0; right: 0;
+      flex-direction: column; gap: 0; max-width: none;
+      background: rgba(255,255,255,0.98); backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+      max-height: 0; overflow: hidden; transition: max-height 0.3s ease;
+    }
+    .nav-links.open { max-height: 80vh; }
+    .nav-links a { font-size: 15px; padding: 14px 2rem; border-radius: 0; border-bottom: 1px solid var(--border); }
+    .nav-links a:last-child { border-bottom: none; }
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-inner">
+    <a href="https://www.isct.ac.jp/ja" target="_blank" rel="noopener" style="line-height:0;">
+      <img class="nav-univ-logo" src="photos/sciencetokyo_logo.jpg" alt="東京科学大学 Science Tokyo">
+    </a>
+    <button class="nav-toggle" id="navToggle" aria-label="メニューを開閉" aria-expanded="false" aria-controls="navLinks">
+      <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+    </button>
+    <div class="nav-links" id="navLinks">
+      <a href="index.html">Home</a>
+      <a href="index.html#news">ニュース</a>
+      <a href="index.html#research">研究</a>
+      <a href="index.html#publications">業績</a>
+      <a href="index.html#highlights">教育・研究環境</a>
+      <a href="index.html#members">メンバー</a>
+      <a href="index.html#learn">学ぶ・読む</a>
+      <a href="index.html#contact">アクセス</a>
+    </div>
+  </div>
+</nav>
+<script>
+(function(){
+  var t = document.getElementById('navToggle');
+  var m = document.getElementById('navLinks');
+  if (!t || !m) return;
+  var ICON_OPEN = '<svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><line x1="5" y1="5" x2="19" y2="19"/><line x1="19" y1="5" x2="5" y2="19"/></svg>';
+  var ICON_CLOSED = '<svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>';
+  function setOpen(o){ m.classList.toggle('open', o); t.setAttribute('aria-expanded', o ? 'true' : 'false'); t.innerHTML = o ? ICON_OPEN : ICON_CLOSED; }
+  t.addEventListener('click', function(){ setOpen(!m.classList.contains('open')); });
+  m.addEventListener('click', function(e){ if (e.target.tagName === 'A') setOpen(false); });
+})();
+</script>
+
+<!-- PAGE HEADER -->
+<div class="page-header">
+  <div class="page-header-inner">
+    <div class="section-tag">Background</div>
+    <h1 class="page-title">ホスホイノシタイド<br>標的タンパク質と機能</h1>
+    <p class="page-lead">ホスファチジルイノシトール（PI）と、そのイノシトール環3・4・5位水酸基がリン酸化された7種のホスホイノシタイド。あわせて8種それぞれが固有の存在量・細胞内局在・結合タンパク質をもち、多彩な生命現象を制御する。</p>
+  </div>
+</div>
+
+<!-- ARTICLE -->
+<div class="article-wrap">
+
+  <a href="index.html#learn" class="back-link">← 学ぶページに戻る</a>
+
+  <div class="intro">
+    ホスホイノシタイドは、ホスファチジルイノシトール（PI）のイノシトール環がさまざまに組み合わさってリン酸化された一群の微量リン脂質である。相互に連関した代謝系を構成しており、それぞれが特定の細胞内コンパートメントで固有の機能タンパク質を制御している。
+  </div>
+
+  <div class="abundance">
+    <span class="ab-label">存在量の序列</span>
+    <span class="ab-chip">PI</span><span class="ab-sep">≫</span>
+    <span class="ab-chip">PI4P</span><span class="ab-sep">≥</span>
+    <span class="ab-chip">PI(4,5)P<sub>2</sub></span><span class="ab-sep">&gt;</span>
+    <span class="ab-chip">PI3P</span><span class="ab-sep">&gt;</span>
+    <span class="ab-chip">PI(3,5)P<sub>2</sub></span><span class="ab-sep">&gt;</span>
+    <span class="ab-chip">PI(3,4,5)P<sub>3</sub></span><span class="ab-sep">≫</span>
+    <span class="ab-chip">PI(3,4)P<sub>2</sub></span><span class="ab-sep">,</span>
+    <span class="ab-chip">PI5P</span>
+  </div>
+
+  <figure class="figure">
+    <img src="photos/pips_network.png" alt="各ホスホイノシタイドの代謝ネットワークと、関連する細胞生理機能・病態の一覧。中央でPI・PI3P・PI4P・PI5P・PI(3,4)P2・PI(3,5)P2・PI(4,5)P2・PI(3,4,5)P3が相互に代謝変換され、外向きの矢印が各種の細胞機能と疾患（がん、炎症、神経変性、免疫、代謝、心血管など）への関与を示す。">
+    <figcaption>各ホスホイノシタイドは互いに代謝変換され合い（中央の赤・青の矢印）、それぞれが多様な細胞機能（細胞増殖・生存、オルガネラ連携、膜輸送、オートファジー、細胞形態・運動など）と、がん・炎症・神経変性・免疫・代謝・心血管などの幅広い病態に関与する。</figcaption>
+  </figure>
+
+  <div class="species c-pi">
+    <div class="species-head">
+      <span class="species-name">PI</span>
+      <span class="species-badge">細胞膜リン脂質の 1〜10％</span>
+    </div>
+    <p>細胞膜リン脂質の1～10％を占める。一部がリン酸化されて以下のホスホイノシタイドが生成される。正常細胞・組織内での存在量は概ね「PI≫PI4P≧PI(4,5)P<sub>2</sub>＞PI3P＞PI(3,5)P<sub>2</sub>＞PI(3,4,5)P<sub>3</sub>≫PI(3,4)P<sub>2</sub>，PI5P」の序列で保たれている。</p>
+  </div>
+
+  <div class="species">
+    <div class="species-head">
+      <span class="species-name">PI3P</span>
+      <span class="species-badge">PI の ＜1％</span>
+    </div>
+    <p>PIの＜1％のレベルで存在する。タンパク質分解系の制御に重要な役割を果たしている。ユビキチン化タンパク質の多胞体での選別に関わるESCRT複合体の形成において、Hrs（ESCRT-0）、EAP45（ESCRT-II）をリクルートする。オートファジーにおいては、WIPI2とDFCP1をオートファゴソームの形成開始部位にターゲットし、Alfyを介したユビキチン化タンパク質のオートファゴソームへの集積を促進する。また、SNX5やキネシン16Bなどとの結合により、細胞内小胞輸送の多くの局面に関与している。</p>
+    <div class="species-ref">
+      <div>Yoshioka K et al. Essential role of endothelial class II PI3K-C2α in angiogenesis and vascular barrier function.<br>Nat Med 18:1560-1569, 2012</div>
+      <div>Kimura H et al. Vps34 regulates myofibril proteostasis to prevent hypertrophic cardiomyopathy.<br>JCI Insight 2:e89462, 2017</div>
+    </div>
+  </div>
+
+  <div class="species">
+    <div class="species-head">
+      <span class="species-name">PI4P</span>
+      <span class="species-badge">PI の 3〜5％</span>
+    </div>
+    <p>PIの3～5％のレベルで存在する。ゴルジ体と形質膜における機能が注目されている。ゴルジ体にAP1をリクルートすることで積荷を含むクラスリン被覆小胞の形成を促進し、GOLPH3を介して膜形態、小胞の出芽を制御する。また、コンタクトサイトでの脂質輸送において重要な役割を果たしており、例えば、CERTによる小胞体からゴルジ体へのセラミド移行や、ORPによるホスファチジルセリンの小胞体から形質膜への輸送、小胞体からゴルジ体へのコレステロール輸送を制御する。特異性は高くないものの形質膜貫通タンパク質にも作用し、TRPV1陽イオンチャネルや機械感受性Piezo陽イオンチャネルなどの活性調節への関与も報告されている。</p>
+    <div class="species-ref">
+      <div>Zhou X et al. Control of Golgi-V-ATPase through Sac1-dependent co-regulation of PI(4)P and cholesterol.<br>Nat Commun 16:7808, 2025</div>
+      <div>Kawasaki A et al. PI4P/PS countertransport by ORP10 at ER-endosome membrane contact sites regulates endosome fission.<br>J Cell Biol 221:e202103141, 2022</div>
+    </div>
+  </div>
+
+  <div class="species">
+    <div class="species-head">
+      <span class="species-name">PI5P</span>
+      <span class="species-badge">痕跡量</span>
+    </div>
+    <p>通常は痕跡量しか存在せず、生理機能についても不明な点が多い。核における機能が研究されており、ING2にplant homeo domain (PHD) fingerを介して結合し、p53の安定化によるDNA傷害応答に関与することや、SAP30およびSAP30Lの塩基性アミノ酸クラスターに結合することでヒストン脱アセチル化を制御することなどが報告されている。また、グルコース飢餓状態において、PI3P標的タンパク質を介してオートファジーを誘導することが報告されている。しかしながら、論文は少なく、未だ謎が多い脂質といえる。</p>
+  </div>
+
+  <div class="species c-bis">
+    <div class="species-head">
+      <span class="species-name">PI(3,4)P<sub>2</sub></span>
+      <span class="species-badge">痕跡量（がんで蓄積）</span>
+    </div>
+    <p>通常は痕跡量しか存在しないが、増殖因子、走化性因子などの受容体刺激や過酸化水素処理により細胞内に産生される。がん組織ではPI(4,5)P<sub>2</sub>に匹敵するレベルで蓄積する場合もある。SNXファミリーのいくつかの分子と結合して、クラスリン被覆小胞やマクロピノソームの成熟と縊り取りを促進する。細胞形態、運動に関してはlamellipodin (Lpd)を形質膜にリクルートし、Ena/VASPを介したアクチン繊維の伸長やWAVEを介したアクチン繊維の分枝によって、ラッフリング、ラメリポディアの形成を促す。ファゴソーム膜でのp40<sup>phox</sup>との結合はNADPHオキシダーゼのアセンブリーによる活性酸素産生に必須である。αTTPとPI(3,4)P<sub>2</sub>の結合はビタミンEの放出を促進し、形質膜でのABCトランスポーターへの受け渡しに関与する。</p>
+    <div class="species-ref">
+      <div>Sasaki J et al. The PtdIns(3,4)P<sub>2</sub>-phosphatase INPP4A is a suppressor of excitotoxic neuronal death.<br>Nature 465:497-501, 2010</div>
+      <div>Malek M et al. PTEN regulates PI(3,4)P<sub>2</sub> signaling downstream of class I PI3K.<br>Mol Cell 68:566-580, 2017</div>
+    </div>
+  </div>
+
+  <div class="species c-bis">
+    <div class="species-head">
+      <span class="species-name">PI(3,5)P<sub>2</sub></span>
+      <span class="species-badge">PI の ＜0.5％</span>
+    </div>
+    <p>PIの＜0.5％のレベルで存在する。主にエンドソーム、リソソームでの機能が着目されており、PI(3,5)P<sub>2</sub>の枯渇により細胞内に光学顕微鏡でも観察可能な空胞が形成される。イオンチャネルへの作用としては、TRPML1の活性化によりリソソームからのCa<sup>2+</sup>放出を促進し、two-pore channel（TPC）1/2を活性化してリソソームやメラノソームからのNa<sup>+</sup>放出を促進する。ESCRT-III複合体のVps24と結合し、多胞体経路でのタンパク質分解に関与する。</p>
+    <div class="species-ref">
+      <div>Shoji T et al. A PI(3,5)P<sub>2</sub>/CHMP4B axis on lysosomes is essential for microautophagic degradation of STING.<br>Nat Commun 17:4602, 2026</div>
+      <div>Wu JZ et al. Sorting nexin 10 regulates lysosomal ionic homeostasis via ClC-7 by controlling PI(3,5)P<sub>2</sub>.<br>J Cell Biol 224:e202408174, 2025</div>
+    </div>
+  </div>
+
+  <div class="species c-bis">
+    <div class="species-head">
+      <span class="species-name">PI(4,5)P<sub>2</sub></span>
+      <span class="species-badge">PI の 3〜5％</span>
+    </div>
+    <p>PIの3～5％のレベルで存在する。PLCの基質となり、ジアシルグリセロール、イノシトール(1,4,5)三リン酸が産生される。プロフィリンやαアクチニンなどのアクチン重合調節タンパク質へのPI(4,5)P<sub>2</sub>の結合と調節機能の解明は、イノシトールリン脂質の直接作用が広く研究されるきっかけになった。アクチン繊維と形質膜を架橋するezrin/radixin/moesin（ERM）タンパク質やtalin、vinculinなどを介して細胞接着斑の形成を担う。また、イオンチャネルやトランスポーターなど、PI(4,5)P<sub>2</sub>により調節される膜輸送体は枚挙にいとまがない。クラスリン被覆ピット形成におけるAP-2を介したクラスリンの集積や、epsin 1を介した膜の変形など、形質膜での機能が先行して研究されてきたが、エンドソーム系においても膜タンパク質のリサイクリングやオートファジーへの関与が示唆されている。cPLA2やPLDを活性化することから、リゾリン脂質やホスファチジン酸の生成を介して他のリン脂質代謝にも関与すると考えられている。</p>
+    <div class="species-ref">
+      <div>Sako K et al. Cells adapt to extracellular acidic pH through TM9SF3-mediated PI(4,5)P<sub>2</sub> flop.<br>Nat Commun 16:8852, 2025</div>
+      <div>Kanemaru K et al. Plasma membrane phosphatidylinositol (4,5)-bisphosphate is critical for determination of epithelial characteristics.<br>Nat Commun 13:2347, 2022</div>
+    </div>
+  </div>
+
+  <div class="species c-tris">
+    <div class="species-head">
+      <span class="species-name">PI(3,4,5)P<sub>3</sub></span>
+      <span class="species-badge">PI の ＜0.1％（がんで上昇）</span>
+    </div>
+    <p>PIの＜0.1％のレベルで存在するが、がん組織ではその100倍程度まで上昇する例もある。分解酵素の活性が高いこと、インスリンなど様々な細胞外アゴニストの受容体刺激依存的にクラスI phosphoinositide 3-kinase（PI3K）が活性化されることから、セカンドメッセンジャーとして機能する。主に形質膜での機能が理解されている。結合タンパク質の属性は広範で、PKBやBtkなどのプロテインキナーゼ、TRPM3などのイオンチャネル、低分子量Gタンパク質RacやArf6のGEFや RhoのGAP、myosin-Xや種々のアクチン結合タンパク質、WAVE2などの細胞骨格関連タンパク質などが挙げられる。細胞増殖、分化、運動、細胞死、糖・脂質代謝調節などを司る。</p>
+    <div class="species-ref">
+      <div>Stambolic V et al. Negative regulation of PKB/Akt-dependent cell survival by the tumor suppressor PTEN.<br>Cell 95:29-39, 1998</div>
+      <div>Sasaki T et al. Function of PI3Kγ in thymocyte development, T cell activation, and neutrophil migration.<br>Science 287:1040-1046, 2000</div>
+      <div>Nishikimi A et al. Sequential regulation of DOCK2 dynamics by two phospholipids during neutrophil chemotaxis.<br>Science 324:384-387, 2009</div>
+    </div>
+  </div>
+
+  <div class="source">
+    <strong>出典：</strong>脂質解析ハンドブック（実験医学別冊）「膜で働く生理活性脂質〜イノシトールリン脂質，ジアシルグリセロール」【佐々木雄彦】を改変。
+  </div>
+
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div>
+      <div class="footer-lab" style="font-size:15px; line-height:1.7;">東京科学大学 総合研究院 難治疾患研究所 <strong>病態生理化学分野</strong></div>
+      <div class="footer-copy" style="font-size:13px; line-height:1.7;">大学院 医歯学総合研究科 <strong>脂質生物学分野</strong></div>
+      <div class="footer-copy" style="font-size:12px; margin-top:0.6rem;">© 2025–2026 佐々木研究室, 東京科学大学. All rights reserved.</div>
+    </div>
+    <div>
+      <div class="footer-links">
+        <a href="index.html#research">研究内容</a>
+        <a href="members.html">メンバー</a>
+        <a href="publications.html">論文</a>
+        <a href="index.html#learn">学ぶ・読む</a>
+        <a href="index.html#contact">アクセス</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- Back-to-top button -->
+<button id="backToTop" aria-label="ページの先頭へ戻る" class="back-to-top">
+  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+    <polyline points="18 15 12 9 6 15"></polyline>
+  </svg>
+</button>
+<style>
+.back-to-top {
+  position: fixed; bottom: 24px; right: 24px;
+  width: 44px; height: 44px; border-radius: 50%;
+  background: #1d9e75; color: white; border: none;
+  display: flex; align-items: center; justify-content: center;
+  cursor: pointer; box-shadow: 0 4px 16px rgba(0,0,0,0.15);
+  opacity: 0; pointer-events: none;
+  transition: opacity 0.25s, transform 0.25s, background 0.2s;
+  transform: translateY(8px);
+  z-index: 200;
+}
+.back-to-top.visible { opacity: 1; pointer-events: auto; transform: translateY(0); }
+.back-to-top:hover { background: #0f6e56; }
+@media (max-width: 540px) {
+  .back-to-top { bottom: 16px; right: 16px; width: 40px; height: 40px; }
+}
+</style>
+<script>
+(function() {
+  var btn = document.getElementById('backToTop');
+  if (!btn) return;
+  window.addEventListener('scroll', function() {
+    if (window.scrollY > 300) btn.classList.add('visible');
+    else btn.classList.remove('visible');
+  });
+  btn.addEventListener('click', function() {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+})();
+</script>
+
+</body>
+</html>

@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ホスホイノシタイド代謝系 キナーゼ・ホスファターゼ一覧 | 佐々木研究室</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  :root {
+    --teal:     #1d9e75;
+    --teal-lt:  #e1f5ee;
+    --teal-mid: #5dcaa5;
+    --coral:    #d85a30;
+    --coral-lt: #faece7;
+    --amber:    #ba7517;
+    --amber-lt: #faeeda;
+    --purple:   #534ab7;
+    --purple-lt:#eeedfe;
+    --bg:       #fafaf8;
+    --white:    #ffffff;
+    --text:     #1a1a18;
+    --muted:    #6b6b65;
+    --border:   #e4e4de;
+    --radius:   16px;
+    --nav-h:    64px;
+  }
+  html { scroll-behavior: smooth; }
+  body { font-family: 'Noto Sans JP', 'DM Sans', sans-serif; background: var(--bg); color: var(--text); font-size: 15px; line-height: 1.75; }
+
+  /* ── NAV ── */
+  nav {
+    position: sticky; top: 0; z-index: 100;
+    background: rgba(255,255,255,0.92); backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--border);
+    height: var(--nav-h); display: flex; align-items: center;
+  }
+  .nav-inner { max-width: 1100px; margin: auto; width: 100%; padding: 0 2rem; display: flex; align-items: center; justify-content: space-between; }
+  .nav-univ-logo { height: 44px; width: auto; display: block; }
+  .nav-univ-logo:hover { opacity: 0.85; }
+  .nav-links { display: flex; gap: 0.25rem; }
+  .nav-links a { text-decoration: none; color: var(--muted); font-size: 13px; font-weight: 500; padding: 6px 12px; border-radius: 20px; transition: all 0.2s; }
+  .nav-links a:hover { background: var(--teal-lt); color: var(--teal); }
+  @media (max-width: 860px) {
+    .nav-univ-logo { height: 32px; }
+    .nav-links a { font-size: 12px; padding: 5px 8px; }
+  }
+  @media (max-width: 540px) {
+  }
+
+  /* ── PAGE HEADER ── */
+  .page-header {
+    background: linear-gradient(135deg, var(--teal-lt) 0%, #f0faf5 100%);
+    padding: 64px 2rem 56px;
+    border-bottom: 1px solid var(--border);
+  }
+  .page-header-inner { max-width: 1000px; margin: auto; }
+  .section-tag { display: inline-block; font-size: 12px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--teal); background: white; padding: 4px 12px; border-radius: 20px; margin-bottom: 14px; border: 1px solid var(--teal-lt); }
+  .page-title { font-family: 'DM Serif Display', serif; font-size: 2.6rem; line-height: 1.2; margin-bottom: 1rem; }
+  .page-lead { color: var(--muted); font-size: 15px; max-width: 720px; line-height: 1.8; }
+
+  /* ── ARTICLE ── */
+  .article-wrap { max-width: 1000px; margin: 0 auto; padding: 56px 2rem 80px; }
+  .back-link { display: inline-flex; align-items: center; gap: 6px; color: var(--teal); text-decoration: none; font-size: 14px; font-weight: 600; margin-bottom: 2rem; }
+  .back-link:hover { text-decoration: underline; }
+
+  .intro {
+    font-size: 15.5px; line-height: 2.0; color: var(--text);
+    background: var(--teal-lt); border-radius: var(--radius);
+    padding: 22px 26px; margin-bottom: 1.2rem;
+  }
+  .legend {
+    font-size: 13px; color: var(--muted); margin-bottom: 2.4rem; line-height: 1.9;
+    padding: 14px 20px; background: var(--white); border: 1px solid var(--border); border-radius: var(--radius);
+  }
+  .legend .k { color: var(--coral); font-weight: 700; }
+  .legend .p { color: #2f6fb0; font-weight: 700; }
+
+  .diagram-card { display: flex; gap: 26px; align-items: center; padding: 22px 26px; margin-bottom: 2.6rem; background: var(--white); border: 1px solid var(--border); border-radius: var(--radius); }
+  .diagram-card .fig { flex: 1 1 58%; min-width: 0; margin: 0; }
+  .diagram-card .fig img { display: block; width: 100%; height: auto; }
+  .diagram-card .lg { flex: 1 1 42%; font-size: 13.5px; color: var(--text); line-height: 1.95; }
+  .diagram-card .lg h3 { font-size: 14px; color: var(--teal); margin-bottom: 8px; font-weight: 700; }
+  .diagram-card .lg .k { color: var(--coral); font-weight: 700; }
+  .diagram-card .lg .p { color: #2f6fb0; font-weight: 700; }
+  @media (max-width: 720px) { .diagram-card { flex-direction: column; align-items: stretch; gap: 16px; } }
+
+  /* ── 酵素テーブル ── */
+  .enz-section { margin-bottom: 2.6rem; }
+  .enz-title { font-family: 'DM Serif Display', serif; font-size: 1.5rem; color: var(--teal); margin-bottom: 4px; }
+  .enz-sub { font-size: 13px; color: var(--muted); margin-bottom: 12px; }
+  .table-scroll { overflow-x: auto; border: 1px solid var(--border); border-radius: var(--radius); }
+  table.enz { width: 100%; border-collapse: collapse; font-size: 13px; min-width: 780px; background: var(--white); table-layout: fixed; }
+  table.enz thead th {
+    background: var(--teal); color: #fff; font-weight: 600; text-align: left;
+    padding: 9px 12px; white-space: nowrap; font-size: 12.5px;
+  }
+  table.enz thead th.grp { background: #178065; }
+  table.enz thead th.grp-span, table.enz thead th.sub { text-align: center; }
+  table.enz thead th.grp-span { padding-bottom: 1px; }
+  table.enz thead th.sub { font-weight: 500; padding-top: 1px; }
+  table.enz td { padding: 8px 12px; border-top: 1px solid var(--border); vertical-align: top; }
+  table.enz tbody tr:nth-child(odd) td { background: #fcfbf9; }
+  table.enz .cls { font-weight: 700; color: var(--text); white-space: nowrap; }
+  table.enz .prot { font-weight: 600; white-space: nowrap; }
+  table.enz .gene { font-style: italic; white-space: nowrap; }
+  table.enz .rxn { font-family: 'DM Sans', monospace; white-space: nowrap; }
+  table.enz .loc { white-space: nowrap; color: var(--muted); text-align: center; }
+  .enz-note { font-size: 12.5px; color: var(--muted); margin-top: 8px; }
+
+  .source {
+    margin-top: 2.4rem; padding: 18px 24px; font-size: 13px; color: var(--muted);
+    background: var(--amber-lt); border-radius: var(--radius); border-left: 4px solid var(--amber);
+  }
+  .source strong { color: var(--text); }
+
+  /* ── FOOTER ── */
+  footer { background: #1a1a18; color: #9a9a94; padding: 3rem 2rem; }
+  .footer-inner { max-width: 1100px; margin: auto; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; }
+  .footer-lab { font-family: 'DM Serif Display', serif; font-size: 18px; color: white; }
+  .footer-links { display: flex; gap: 1.5rem; flex-wrap: wrap; }
+  .footer-links a { font-size: 13px; color: #9a9a94; text-decoration: none; }
+  .footer-links a:hover { color: var(--teal-mid); }
+  .footer-copy { font-size: 12px; margin-top: 0.5rem; }
+
+  @media (max-width: 640px) {
+    .page-title { font-size: 2rem; }
+    .article-wrap { padding: 40px 1.3rem 64px; }
+  }
+  .nav-toggle { display: none; background: none; border: none; cursor: pointer; color: var(--text); padding: 4px; line-height: 0; }
+  .nav-toggle svg { width: 28px; height: 28px; stroke: currentColor; }
+  /* hamburger menu (<=768px only; desktop unchanged) */
+  @media (max-width: 768px) {
+    .nav-toggle { display: block; }
+    .nav-links {
+      position: absolute; top: 100%; left: 0; right: 0;
+      flex-direction: column; gap: 0; max-width: none;
+      background: rgba(255,255,255,0.98); backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+      max-height: 0; overflow: hidden; transition: max-height 0.3s ease;
+    }
+    .nav-links.open { max-height: 80vh; }
+    .nav-links a { font-size: 15px; padding: 14px 2rem; border-radius: 0; border-bottom: 1px solid var(--border); }
+    .nav-links a:last-child { border-bottom: none; }
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-inner">
+    <a href="https://www.isct.ac.jp/ja" target="_blank" rel="noopener" style="line-height:0;">
+      <img class="nav-univ-logo" src="photos/sciencetokyo_logo.jpg" alt="東京科学大学 Science Tokyo">
+    </a>
+    <button class="nav-toggle" id="navToggle" aria-label="メニューを開閉" aria-expanded="false" aria-controls="navLinks">
+      <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+    </button>
+    <div class="nav-links" id="navLinks">
+      <a href="index.html">Home</a>
+      <a href="index.html#news">ニュース</a>
+      <a href="index.html#research">研究</a>
+      <a href="index.html#publications">業績</a>
+      <a href="index.html#highlights">教育・研究環境</a>
+      <a href="index.html#members">メンバー</a>
+      <a href="index.html#learn">学ぶ・読む</a>
+      <a href="index.html#contact">アクセス</a>
+    </div>
+  </div>
+</nav>
+<script>
+(function(){
+  var t = document.getElementById('navToggle');
+  var m = document.getElementById('navLinks');
+  if (!t || !m) return;
+  var ICON_OPEN = '<svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><line x1="5" y1="5" x2="19" y2="19"/><line x1="19" y1="5" x2="5" y2="19"/></svg>';
+  var ICON_CLOSED = '<svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>';
+  function setOpen(o){ m.classList.toggle('open', o); t.setAttribute('aria-expanded', o ? 'true' : 'false'); t.innerHTML = o ? ICON_OPEN : ICON_CLOSED; }
+  t.addEventListener('click', function(){ setOpen(!m.classList.contains('open')); });
+  m.addEventListener('click', function(e){ if (e.target.tagName === 'A') setOpen(false); });
+})();
+</script>
+
+<!-- PAGE HEADER -->
+<div class="page-header">
+  <div class="page-header-inner">
+    <div class="section-tag">Background</div>
+    <h1 class="page-title">ホスホイノシタイド代謝系<br>キナーゼ・ホスファターゼ一覧</h1>
+    <p class="page-lead">ホスホイノシタイドを産生・分解する約50種類の酵素（キナーゼ・ホスファターゼ）の一覧。各酵素について、タンパク質名・反応・遺伝子記号・染色体座位（ヒト／マウス）・別名をまとめている。</p>
+  </div>
+</div>
+
+<!-- ARTICLE -->
+<div class="article-wrap">
+
+  <a href="index.html#learn" class="back-link">← 学ぶページに戻る</a>
+
+  <div class="intro">
+    ホスホイノシタイドの相互変換反応を、立方体の各頂点にPIPsを配置した模式図で表す。哺乳動物では、ほとんどの反応が複数の酵素によって重複して制御されている。
+  </div>
+
+  <div class="diagram-card">
+    <figure class="fig">
+      <img src="photos/pips_interconversion.jpg" alt="ホスホイノシタイドの相互変換模式図。PI・PI3P・PI4P・PI5P・PI(3,4)P2・PI(3,5)P2・PI(4,5)P2・PI(3,4,5)P3 の8種を頂点に配置し、キナーゼ反応（赤実線・大文字A〜K）とホスファターゼ反応（青破線・小文字a〜k）で結ぶ。右側に各反応を担う酵素数を示す。">
+    </figure>
+    <div class="lg">
+      <h3>反応欄の凡例</h3>
+      <p>大文字（<span class="k">A〜I</span>）＝キナーゼによるリン酸化反応、小文字（<span class="p">a〜k</span>）＝ホスファターゼによる脱リン酸化反応。括弧内は副次的・条件依存的な反応を表す。座位はヒト／マウスの染色体上の位置を示す。</p>
+    </div>
+  </div>
+
+  <!-- PI3K -->
+  <div class="enz-section">
+    <div class="enz-title">Phosphoinositide 3-kinase（PI3K）</div>
+    <div class="table-scroll">
+      <table class="enz">
+        <colgroup><col style="width:14%"><col style="width:11%"><col style="width:15%"><col style="width:11%"><col style="width:8%"><col style="width:8%"><col style="width:33%"></colgroup>
+        <thead>
+          <tr><th class="grp" rowspan="2">Class / Type</th><th rowspan="2">タンパク質</th><th rowspan="2">反応</th><th rowspan="2">遺伝子</th><th colspan="2" class="grp-span">遺伝子座</th><th rowspan="2">別名</th></tr>
+          <tr><th class="sub">ヒト</th><th class="sub">マウス</th></tr>
+        </thead>
+        <tbody>
+          <tr><td class="cls">Class IA PI3K</td><td class="prot">p110α</td><td class="rxn">K (A, E)</td><td class="gene">PIK3CA</td><td class="loc">3q26</td><td class="loc">3B</td><td>PI3Kα / PIK3CA</td></tr>
+          <tr><td class="cls"></td><td class="prot">p110β</td><td class="rxn">K (A, E)</td><td class="gene">PIK3CB</td><td class="loc">3q22</td><td class="loc">9E4</td><td>PI3Kβ / PIK3CB</td></tr>
+          <tr><td class="cls"></td><td class="prot">p110δ</td><td class="rxn">K (A, E)</td><td class="gene">PIK3CD</td><td class="loc">1q36</td><td class="loc">4E2</td><td>PI3Kδ / PIK3CD</td></tr>
+          <tr><td class="cls">Class IB PI3K</td><td class="prot">p110γ</td><td class="rxn">K (A, E)</td><td class="gene">PIK3CG</td><td class="loc">7q22</td><td class="loc">12B</td><td>PI3Kγ / PIK3CG</td></tr>
+          <tr><td class="cls">Class II PI3K</td><td class="prot">PI3K-C2α</td><td class="rxn">A (E)</td><td class="gene">PIK3C2A</td><td class="loc">11q15</td><td class="loc">7F1</td><td>PIK3C2α / Cpk-m</td></tr>
+          <tr><td class="cls"></td><td class="prot">PI3K-C2β</td><td class="rxn">A (E)</td><td class="gene">PIK3C2B</td><td class="loc">1q32</td><td class="loc">1E4</td><td>PIK3C2β</td></tr>
+          <tr><td class="cls"></td><td class="prot">PI3K-C2γ</td><td class="rxn">A (E)</td><td class="gene">PIK3C2G</td><td class="loc">12q12</td><td class="loc">6G2</td><td>PIK3C2γ</td></tr>
+          <tr><td class="cls">Class III PI3K</td><td class="prot">Vps34</td><td class="rxn">A</td><td class="gene">PIK3C3</td><td class="loc">18q12</td><td class="loc">18B1</td><td>PIK3C3</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- PI4K -->
+  <div class="enz-section">
+    <div class="enz-title">Phosphatidylinositol 4-kinase（PI4K）</div>
+    <div class="table-scroll">
+      <table class="enz">
+        <colgroup><col style="width:14%"><col style="width:11%"><col style="width:15%"><col style="width:11%"><col style="width:8%"><col style="width:8%"><col style="width:33%"></colgroup>
+        <thead>
+          <tr><th class="grp" rowspan="2">Class / Type</th><th rowspan="2">タンパク質</th><th rowspan="2">反応</th><th rowspan="2">遺伝子</th><th colspan="2" class="grp-span">遺伝子座</th><th rowspan="2">別名</th></tr>
+          <tr><th class="sub">ヒト</th><th class="sub">マウス</th></tr>
+        </thead>
+        <tbody>
+          <tr><td class="cls">Type II PI4K</td><td class="prot">PI4KIIα</td><td class="rxn">B</td><td class="gene">PI4K2A</td><td class="loc">10q24</td><td class="loc">19C3</td><td>PI4K2A</td></tr>
+          <tr><td class="cls"></td><td class="prot">PI4KIIβ</td><td class="rxn">B</td><td class="gene">PI4K2B</td><td class="loc">4q15</td><td class="loc">5C1</td><td>PI4K2B</td></tr>
+          <tr><td class="cls">Type III PI4K</td><td class="prot">PI4KIIIα</td><td class="rxn">B</td><td class="gene">PIK4CA</td><td class="loc">22q11</td><td class="loc">16A3</td><td>PIK4CA / PI4KA</td></tr>
+          <tr><td class="cls"></td><td class="prot">PI4KIIIβ</td><td class="rxn">B</td><td class="gene">PIK4CB</td><td class="loc">1q22</td><td class="loc">3F2.1</td><td>PIK4CB / PI4KB</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="enz-note">注）Type I PI4K は後の研究で PI3K であることが見出された。</div>
+  </div>
+
+  <!-- PIPK -->
+  <div class="enz-section">
+    <div class="enz-title">Phosphatidylinositol phosphate kinase（PIPK）</div>
+    <div class="table-scroll">
+      <table class="enz">
+        <colgroup><col style="width:14%"><col style="width:11%"><col style="width:15%"><col style="width:11%"><col style="width:8%"><col style="width:8%"><col style="width:33%"></colgroup>
+        <thead>
+          <tr><th class="grp" rowspan="2">Class / Type</th><th rowspan="2">タンパク質</th><th rowspan="2">反応</th><th rowspan="2">遺伝子</th><th colspan="2" class="grp-span">遺伝子座</th><th rowspan="2">別名</th></tr>
+          <tr><th class="sub">ヒト</th><th class="sub">マウス</th></tr>
+        </thead>
+        <tbody>
+          <tr><td class="cls">Type I PIPK</td><td class="prot">PIPKIα</td><td class="rxn">H</td><td class="gene">PIP5K1A</td><td class="loc">1q22</td><td class="loc">19C1</td><td>PIP5KIα / PIP5K1A<br>（mouse PIPKIβ / PIP5K1B）</td></tr>
+          <tr><td class="cls"></td><td class="prot">PIPKIβ</td><td class="rxn">H</td><td class="gene">PIP5K1B</td><td class="loc">9q13</td><td class="loc">3F2.1</td><td>PIP5KIβ / PIP5K1B<br>（mouse PIPKIα / PIP5K1A）</td></tr>
+          <tr><td class="cls"></td><td class="prot">PIPKIγ</td><td class="rxn">H</td><td class="gene">PIP5K1C</td><td class="loc">19p13</td><td class="loc">10C1</td><td>PIP5KIγ / PIP5K1C</td></tr>
+          <tr><td class="cls">Type II PIPK</td><td class="prot">PIPKIIα</td><td class="rxn">I</td><td class="gene">PIP4K2A</td><td class="loc">10p12</td><td class="loc">2A3</td><td>PIP4K2A / PIP5K2A / PIP5KIIα</td></tr>
+          <tr><td class="cls"></td><td class="prot">PIPKIIβ</td><td class="rxn">I</td><td class="gene">PIP4K2B</td><td class="loc">17q12</td><td class="loc">11D</td><td>PIP4K2B / PIP5K2B / PIP5KIIβ</td></tr>
+          <tr><td class="cls"></td><td class="prot">PIPKIIγ</td><td class="rxn">I</td><td class="gene">PIP4K2C</td><td class="loc">12q13</td><td class="loc">10D3</td><td>PIP4K2C / PIP5K2C / PIP5KIIγ</td></tr>
+          <tr><td class="cls">Type III PIPK</td><td class="prot">PIPKIII</td><td class="rxn">F (C)</td><td class="gene">PIP5K3</td><td class="loc">2p35</td><td class="loc">1C2</td><td>PIKfyve / p235 / PIP5K3</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- 3-phosphatase -->
+  <div class="enz-section">
+    <div class="enz-title">Phosphoinositide 3-phosphatase</div>
+    <div class="table-scroll">
+      <table class="enz">
+        <colgroup><col style="width:14%"><col style="width:11%"><col style="width:15%"><col style="width:11%"><col style="width:8%"><col style="width:8%"><col style="width:33%"></colgroup>
+        <thead>
+          <tr><th class="grp" rowspan="2">Class / Type</th><th rowspan="2">タンパク質</th><th rowspan="2">反応</th><th rowspan="2">遺伝子</th><th colspan="2" class="grp-span">遺伝子座</th><th rowspan="2">別名</th></tr>
+          <tr><th class="sub">ヒト</th><th class="sub">マウス</th></tr>
+        </thead>
+        <tbody>
+          <tr><td class="cls">PTEN</td><td class="prot">PTEN</td><td class="rxn">e, k (a)</td><td class="gene">PTEN</td><td class="loc">10q23</td><td class="loc">19C1</td><td>MMAC1 / TEP1</td></tr>
+          <tr><td class="cls">Myotubularin</td><td class="prot">MTM1</td><td class="rxn">a, g</td><td class="gene">MTM1</td><td class="loc">Xq28</td><td class="loc">XA7.2</td><td>CNM / MTMX / XLMTM</td></tr>
+          <tr><td class="cls"></td><td class="prot">MTMR1</td><td class="rxn">a, g</td><td class="gene">MTMR1</td><td class="loc">Xq28</td><td class="loc">XA7.2</td><td></td></tr>
+          <tr><td class="cls"></td><td class="prot">MTMR2</td><td class="rxn">a, g</td><td class="gene">MTMR2</td><td class="loc">11q21</td><td class="loc">9A1</td><td>CMT4B / CMT4B1</td></tr>
+          <tr><td class="cls"></td><td class="prot">MTMR3</td><td class="rxn">a, g</td><td class="gene">MTMR3</td><td class="loc">22q12</td><td class="loc">11A1</td><td>FYVE-DSP1 / ZFYVE10</td></tr>
+          <tr><td class="cls"></td><td class="prot">MTMR4</td><td class="rxn">a, g</td><td class="gene">MTMR4</td><td class="loc">17q22</td><td class="loc">11C</td><td>FYVE-DSP2 / ZFYVE11</td></tr>
+          <tr><td class="cls"></td><td class="prot">MTMR6</td><td class="rxn">a (g)</td><td class="gene">MTMR6</td><td class="loc">13q12</td><td class="loc">14D1</td><td></td></tr>
+          <tr><td class="cls"></td><td class="prot">MTMR7</td><td class="rxn">a</td><td class="gene">MTMR7</td><td class="loc">8p22</td><td class="loc">8B1.2</td><td></td></tr>
+          <tr><td class="cls"></td><td class="prot">MTMR8</td><td class="rxn">(a)</td><td class="gene">MTMR8</td><td class="loc">Xq11</td><td class="loc">14D1</td><td>（mouse MTMR9）</td></tr>
+          <tr><td class="cls"></td><td class="prot">MTMR14</td><td class="rxn">a, g</td><td class="gene">MTMR14</td><td class="loc">3p25</td><td class="loc">6E3</td><td>hJUMPY / hEDTP</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- 4-phosphatase -->
+  <div class="enz-section">
+    <div class="enz-title">Phosphoinositide 4-phosphatase</div>
+    <div class="table-scroll">
+      <table class="enz">
+        <colgroup><col style="width:14%"><col style="width:11%"><col style="width:15%"><col style="width:11%"><col style="width:8%"><col style="width:8%"><col style="width:33%"></colgroup>
+        <thead>
+          <tr><th class="grp" rowspan="2">Class / Type</th><th rowspan="2">タンパク質</th><th rowspan="2">反応</th><th rowspan="2">遺伝子</th><th colspan="2" class="grp-span">遺伝子座</th><th rowspan="2">別名</th></tr>
+          <tr><th class="sub">ヒト</th><th class="sub">マウス</th></tr>
+        </thead>
+        <tbody>
+          <tr><td class="cls">INPP4</td><td class="prot">INPP4A</td><td class="rxn">d, (j)</td><td class="gene">INPP4A</td><td class="loc">2q11</td><td class="loc">1B</td><td>INPP4 type I</td></tr>
+          <tr><td class="cls"></td><td class="prot">INPP4B</td><td class="rxn">d, (j)</td><td class="gene">INPP4B</td><td class="loc">4q31</td><td class="loc">8C2</td><td>INPP4 type II</td></tr>
+          <tr><td class="cls">PIP4P</td><td class="prot">PIP4P1</td><td class="rxn">i</td><td class="gene">PIP4P1</td><td class="loc">14q11</td><td class="loc">14C1</td><td>TMEM55B</td></tr>
+          <tr><td class="cls"></td><td class="prot">PIP4P2</td><td class="rxn">i</td><td class="gene">PIP4P2</td><td class="loc">8q21</td><td class="loc">4A1</td><td>TMEM55A</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- 5-phosphatase -->
+  <div class="enz-section">
+    <div class="enz-title">Phosphoinositide 5-phosphatase</div>
+    <div class="table-scroll">
+      <table class="enz">
+        <colgroup><col style="width:14%"><col style="width:11%"><col style="width:15%"><col style="width:11%"><col style="width:8%"><col style="width:8%"><col style="width:33%"></colgroup>
+        <thead>
+          <tr><th class="grp" rowspan="2">Class / Type</th><th rowspan="2">タンパク質</th><th rowspan="2">反応</th><th rowspan="2">遺伝子</th><th colspan="2" class="grp-span">遺伝子座</th><th rowspan="2">別名</th></tr>
+          <tr><th class="sub">ヒト</th><th class="sub">マウス</th></tr>
+        </thead>
+        <tbody>
+          <tr><td class="cls">Type II INPP5</td><td class="prot">SYNJ1</td><td class="rxn">a, b, f, h, i, j</td><td class="gene">SYNJ1</td><td class="loc">21q22</td><td class="loc">16C3</td><td>synaptojanin 1 / INPP5G / PARK20</td></tr>
+          <tr><td class="cls"></td><td class="prot">SYNJ2</td><td class="rxn">a, b, f, h, i, j</td><td class="gene">SYNJ2</td><td class="loc">6q25</td><td class="loc">17A1</td><td>synaptojanin 2 / INPP5H</td></tr>
+          <tr><td class="cls"></td><td class="prot">OCRL</td><td class="rxn">h, j</td><td class="gene">OCRL</td><td class="loc">Xq26</td><td class="loc">10D3</td><td>OCRL1 / LOCR / Dent-2 / INPP5F</td></tr>
+          <tr><td class="cls"></td><td class="prot">INPP5B</td><td class="rxn">h, j</td><td class="gene">INPP5B</td><td class="loc">1p34</td><td class="loc">4D2</td><td>5PTase / INPP5P</td></tr>
+          <tr><td class="cls"></td><td class="prot">INPP5J</td><td class="rxn">h, j</td><td class="gene">INPP5J</td><td class="loc">22q12</td><td class="loc">11A1</td><td>PIPP / PIB5PA</td></tr>
+          <tr><td class="cls"></td><td class="prot">INPP5K</td><td class="rxn">j, (h)</td><td class="gene">INPP5K</td><td class="loc">17p13</td><td class="loc">11B5</td><td>SKIP / PPS</td></tr>
+          <tr><td class="cls">Type III INPP5</td><td class="prot">SHIP1</td><td class="rxn">j</td><td class="gene">INPP5D</td><td class="loc">2q37</td><td class="loc">1D</td><td></td></tr>
+          <tr><td class="cls"></td><td class="prot">SHIP2</td><td class="rxn">j</td><td class="gene">INPPL1</td><td class="loc">11q13</td><td class="loc">7E2</td><td></td></tr>
+          <tr><td class="cls">Type IV INPP5</td><td class="prot">INPP5E</td><td class="rxn">f, h, j</td><td class="gene">INPP5E</td><td class="loc">9q34</td><td class="loc">2A3</td><td>pharbin / MORMS / CPD4</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- Others -->
+  <div class="enz-section">
+    <div class="enz-title">Others</div>
+    <div class="table-scroll">
+      <table class="enz">
+        <colgroup><col style="width:14%"><col style="width:11%"><col style="width:15%"><col style="width:11%"><col style="width:8%"><col style="width:8%"><col style="width:33%"></colgroup>
+        <thead>
+          <tr><th class="grp" rowspan="2">Class / Type</th><th rowspan="2">タンパク質</th><th rowspan="2">反応</th><th rowspan="2">遺伝子</th><th colspan="2" class="grp-span">遺伝子座</th><th rowspan="2">別名</th></tr>
+          <tr><th class="sub">ヒト</th><th class="sub">マウス</th></tr>
+        </thead>
+        <tbody>
+          <tr><td class="cls">Sac</td><td class="prot">SAC1</td><td class="rxn">a, b, (f)</td><td class="gene">SACM1L</td><td class="loc">3q21</td><td class="loc">9F4</td><td></td></tr>
+          <tr><td class="cls"></td><td class="prot">SAC2</td><td class="rxn">h, j</td><td class="gene">INPP5F</td><td class="loc">10q26</td><td class="loc">7F3</td><td></td></tr>
+          <tr><td class="cls"></td><td class="prot">SAC3</td><td class="rxn">f</td><td class="gene">FIG4</td><td class="loc">6q21</td><td class="loc">10B1</td><td>CMT4J / ALS11</td></tr>
+          <tr><td class="cls">VSP</td><td class="prot">VSP</td><td class="rxn">e, h, j</td><td class="gene">TPTE2</td><td class="loc">13q12</td><td class="loc">8A2</td><td>TPIP / TPTE2<br>（mouse PTEN2）</td></tr>
+          <tr><td class="cls">PTPMT1</td><td class="prot">PTPMT1</td><td class="rxn">c</td><td class="gene">PTPMT1</td><td class="loc">11p11.3</td><td class="loc">2E1</td><td>PLIP</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <div class="source">
+    <strong>出典：</strong>佐々木研究室（旧 病態生理化学/脂質生物学分野）資料より。哺乳動物のホスホイノシタイド代謝酵素の分類は Sasaki T et al. Prog Lipid Res 48:307-343, 2009 に基づく。
+  </div>
+
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div>
+      <div class="footer-lab" style="font-size:15px; line-height:1.7;">東京科学大学 総合研究院 難治疾患研究所 <strong>病態生理化学分野</strong></div>
+      <div class="footer-copy" style="font-size:13px; line-height:1.7;">大学院 医歯学総合研究科 <strong>脂質生物学分野</strong></div>
+      <div class="footer-copy" style="font-size:12px; margin-top:0.6rem;">© 2025–2026 佐々木研究室, 東京科学大学. All rights reserved.</div>
+    </div>
+    <div>
+      <div class="footer-links">
+        <a href="index.html#research">研究内容</a>
+        <a href="members.html">メンバー</a>
+        <a href="publications.html">論文</a>
+        <a href="index.html#learn">学ぶ・読む</a>
+        <a href="index.html#contact">アクセス</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- Back-to-top button -->
+<button id="backToTop" aria-label="ページの先頭へ戻る" class="back-to-top">
+  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+    <polyline points="18 15 12 9 6 15"></polyline>
+  </svg>
+</button>
+<style>
+.back-to-top {
+  position: fixed; bottom: 24px; right: 24px;
+  width: 44px; height: 44px; border-radius: 50%;
+  background: #1d9e75; color: white; border: none;
+  display: flex; align-items: center; justify-content: center;
+  cursor: pointer; box-shadow: 0 4px 16px rgba(0,0,0,0.15);
+  opacity: 0; pointer-events: none;
+  transition: opacity 0.25s, transform 0.25s, background 0.2s;
+  transform: translateY(8px);
+  z-index: 200;
+}
+.back-to-top.visible { opacity: 1; pointer-events: auto; transform: translateY(0); }
+.back-to-top:hover { background: #0f6e56; }
+@media (max-width: 540px) {
+  .back-to-top { bottom: 16px; right: 16px; width: 40px; height: 40px; }
+}
+</style>
+<script>
+(function() {
+  var btn = document.getElementById('backToTop');
+  if (!btn) return;
+  window.addEventListener('scroll', function() {
+    if (window.scrollY > 300) btn.classList.add('visible');
+    else btn.classList.remove('visible');
+  });
+  btn.addEventListener('click', function() {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+})();
+</script>
+
+</body>
+</html>

@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>リンク集 | 佐々木研究室</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  :root {
+    --teal:     #1d9e75;
+    --teal-lt:  #e1f5ee;
+    --teal-mid: #5dcaa5;
+    --coral:    #d85a30;
+    --coral-lt: #faece7;
+    --amber:    #ba7517;
+    --amber-lt: #faeeda;
+    --purple:   #534ab7;
+    --purple-lt:#eeedfe;
+    --bg:       #fafaf8;
+    --white:    #ffffff;
+    --text:     #1a1a18;
+    --muted:    #6b6b65;
+    --border:   #e4e4de;
+    --radius:   16px;
+    --nav-h:    64px;
+  }
+  html { scroll-behavior: smooth; }
+  body { font-family: 'Noto Sans JP', 'DM Sans', sans-serif; background: var(--bg); color: var(--text); font-size: 15px; line-height: 1.75; }
+
+  /* ── NAV ── */
+  nav {
+    position: sticky; top: 0; z-index: 100;
+    background: rgba(255,255,255,0.92); backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--border);
+    height: var(--nav-h); display: flex; align-items: center;
+  }
+  .nav-inner { max-width: 1100px; margin: auto; width: 100%; padding: 0 2rem; display: flex; align-items: center; justify-content: space-between; }
+  .nav-univ-logo { height: 44px; width: auto; display: block; }
+  .nav-univ-logo:hover { opacity: 0.85; }
+  .nav-links { display: flex; gap: 0.25rem; }
+  .nav-links a { text-decoration: none; color: var(--muted); font-size: 13px; font-weight: 500; padding: 6px 12px; border-radius: 20px; transition: all 0.2s; }
+  .nav-links a:hover { background: var(--teal-lt); color: var(--teal); }
+  @media (max-width: 860px) {
+    .nav-univ-logo { height: 32px; }
+    .nav-links a { font-size: 12px; padding: 5px 8px; }
+  }
+  @media (max-width: 540px) {
+  }
+
+  /* ── PAGE HEADER ── */
+  .page-header {
+    background: linear-gradient(135deg, var(--teal-lt) 0%, #f0faf5 100%);
+    padding: 64px 2rem 56px;
+    border-bottom: 1px solid var(--border);
+  }
+  .page-header-inner { max-width: 1100px; margin: auto; }
+  .section-tag { display: inline-block; font-size: 12px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--teal); background: white; padding: 4px 12px; border-radius: 20px; margin-bottom: 14px; border: 1px solid var(--teal-lt); }
+  .page-title { font-family: 'DM Serif Display', serif; font-size: 2.4rem; line-height: 1.25; margin-bottom: 1rem; }
+  .page-lead { color: var(--muted); font-size: 15px; max-width: 760px; line-height: 1.8; }
+
+  /* ── ARTICLE ── */
+  .article-wrap { max-width: 1100px; margin: 0 auto; padding: 48px 2rem 80px; }
+  .back-link { display: inline-flex; align-items: center; gap: 6px; color: var(--teal); text-decoration: none; font-size: 14px; font-weight: 600; margin-bottom: 2rem; }
+  .back-link:hover { text-decoration: underline; }
+
+  /* ── LINKS ── */
+  .link-section-label { font-size: 13px; font-weight: 700; letter-spacing: 0.04em; color: var(--teal); margin: 0 0 0.9rem; padding-bottom: 0.4rem; border-bottom: 1px solid var(--border); }
+  .link-section-label + .link-grid { margin-bottom: 2.4rem; }
+  .link-grid { display: grid; grid-template-columns: repeat(2,1fr); gap: 1rem; }
+  .link-card { display: flex; flex-direction: column; gap: 5px; padding: 1.1rem 1.25rem; border: 1px solid var(--border); border-radius: var(--radius); background: white; text-decoration: none; color: inherit; transition: transform 0.2s, box-shadow 0.2s, border-color 0.2s; }
+  .link-card:hover { transform: translateY(-2px); box-shadow: 0 6px 20px rgba(0,0,0,0.07); border-color: var(--teal-mid); }
+  .link-card .lk-title { font-size: 15px; font-weight: 700; color: var(--text); }
+  .link-card .lk-title::after { content: ' ↗'; color: var(--teal); font-size: 12px; }
+  .link-card .lk-desc { font-size: 12.5px; color: var(--muted); line-height: 1.6; }
+  .link-card .lk-url { font-size: 11.5px; color: var(--teal); word-break: break-all; margin-top: 2px; }
+  @media (max-width: 640px) { .link-grid { grid-template-columns: 1fr; } }
+
+  /* ── FOOTER ── */
+  footer { background: #1a1a18; color: #9a9a94; padding: 3rem 2rem; }
+  .footer-inner { max-width: 1100px; margin: auto; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; }
+  .footer-lab { font-family: 'DM Serif Display', serif; font-size: 18px; color: white; }
+  .footer-links { display: flex; gap: 1.5rem; flex-wrap: wrap; }
+  .footer-links a { font-size: 13px; color: #9a9a94; text-decoration: none; }
+  .footer-links a:hover { color: var(--teal-mid); }
+  .footer-copy { font-size: 12px; margin-top: 0.5rem; }
+
+  @media (max-width: 640px) {
+    .page-title { font-size: 1.8rem; }
+    .article-wrap { padding: 32px 1.1rem 64px; }
+  }
+  .nav-toggle { display: none; background: none; border: none; cursor: pointer; color: var(--text); padding: 4px; line-height: 0; }
+  .nav-toggle svg { width: 28px; height: 28px; stroke: currentColor; }
+  /* hamburger menu (<=768px only; desktop unchanged) */
+  @media (max-width: 768px) {
+    .nav-toggle { display: block; }
+    .nav-links {
+      position: absolute; top: 100%; left: 0; right: 0;
+      flex-direction: column; gap: 0; max-width: none;
+      background: rgba(255,255,255,0.98); backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+      max-height: 0; overflow: hidden; transition: max-height 0.3s ease;
+    }
+    .nav-links.open { max-height: 80vh; }
+    .nav-links a { font-size: 15px; padding: 14px 2rem; border-radius: 0; border-bottom: 1px solid var(--border); }
+    .nav-links a:last-child { border-bottom: none; }
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-inner">
+    <a href="https://www.isct.ac.jp/ja" target="_blank" rel="noopener" style="line-height:0;">
+      <img class="nav-univ-logo" src="photos/sciencetokyo_logo.jpg" alt="東京科学大学 Science Tokyo">
+    </a>
+    <button class="nav-toggle" id="navToggle" aria-label="メニューを開閉" aria-expanded="false" aria-controls="navLinks">
+      <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+    </button>
+    <div class="nav-links" id="navLinks">
+      <a href="index.html">Home</a>
+      <a href="index.html#news">ニュース</a>
+      <a href="index.html#research">研究</a>
+      <a href="index.html#publications">業績</a>
+      <a href="index.html#highlights">教育・研究環境</a>
+      <a href="members.html">メンバー</a>
+      <a href="index.html#learn">学ぶ・読む</a>
+      <a href="index.html#contact">アクセス</a>
+    </div>
+  </div>
+</nav>
+<script>
+(function(){
+  var t = document.getElementById('navToggle');
+  var m = document.getElementById('navLinks');
+  if (!t || !m) return;
+  var ICON_OPEN = '<svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><line x1="5" y1="5" x2="19" y2="19"/><line x1="19" y1="5" x2="5" y2="19"/></svg>';
+  var ICON_CLOSED = '<svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>';
+  function setOpen(o){ m.classList.toggle('open', o); t.setAttribute('aria-expanded', o ? 'true' : 'false'); t.innerHTML = o ? ICON_OPEN : ICON_CLOSED; }
+  t.addEventListener('click', function(){ setOpen(!m.classList.contains('open')); });
+  m.addEventListener('click', function(e){ if (e.target.tagName === 'A') setOpen(false); });
+})();
+</script>
+
+<!-- PAGE HEADER -->
+<div class="page-header">
+  <div class="page-header-inner">
+    <div class="section-tag">Links</div>
+    <h1 class="page-title">リンク集</h1>
+    <p class="page-lead">研究室に関連する機関と、研究でよく使うツール・データベースへのリンク集です。各リンクは別タブで開きます。</p>
+  </div>
+</div>
+
+<!-- ARTICLE -->
+<div class="article-wrap">
+
+  <a href="index.html#learn" class="back-link">← 学ぶ・読むに戻る</a>
+
+  <div class="link-section-label">機関</div>
+  <div class="link-grid">
+    <a class="link-card" href="https://www.isct.ac.jp/ja" target="_blank" rel="noopener">
+      <div class="lk-title">東京科学大学（Science Tokyo）</div>
+      <div class="lk-desc">大学公式サイト。組織・研究・入試などの情報。</div>
+      <div class="lk-url">isct.ac.jp</div>
+    </a>
+    <a class="link-card" href="https://www.tmd.ac.jp/mri/" target="_blank" rel="noopener">
+      <div class="lk-title">難治疾患研究所</div>
+      <div class="lk-desc">当研究室（病態生理化学分野）が所属する研究所の公式サイト。</div>
+      <div class="lk-url">tmd.ac.jp/mri</div>
+    </a>
+    <a class="link-card" href="https://shochou-kaigi.org/greeting/" target="_blank" rel="noopener">
+      <div class="lk-title">国立大学附置研究所・センター会議</div>
+      <div class="lk-desc">全国の国立大学附置研究所・センターで構成される会議。2026年度会長を当研究室の佐々木雄彦（難治疾患研究所長）が務めています。</div>
+      <div class="lk-url">shochou-kaigi.org/greeting</div>
+    </a>
+  </div>
+
+  <div class="link-section-label">ツール・データベース</div>
+  <div class="link-grid">
+    <a class="link-card" href="https://pubmed.ncbi.nlm.nih.gov/" target="_blank" rel="noopener">
+      <div class="lk-title">PubMed</div>
+      <div class="lk-desc">生命科学・医学文献の検索データベース（NCBI）。</div>
+      <div class="lk-url">pubmed.ncbi.nlm.nih.gov</div>
+    </a>
+    <a class="link-card" href="https://www.lipidmaps.org/" target="_blank" rel="noopener">
+      <div class="lk-title">LIPID MAPS</div>
+      <div class="lk-desc">脂質の構造・分類・命名の国際標準データベース。</div>
+      <div class="lk-url">lipidmaps.org</div>
+    </a>
+    <a class="link-card" href="https://www.lipidmaps.org/updates/lipidmatters" target="_blank" rel="noopener">
+      <div class="lk-title">Lipid Matters（LIPID MAPS ブログ）</div>
+      <div class="lk-desc">脂質研究の最新トピックを紹介するLIPID MAPSのブログ。</div>
+      <div class="lk-url">lipidmaps.org/updates/lipidmatters</div>
+    </a>
+    <a class="link-card" href="https://www.kegg.jp/" target="_blank" rel="noopener">
+      <div class="lk-title">KEGG</div>
+      <div class="lk-desc">遺伝子・代謝経路・化合物などを統合した生命情報データベース。</div>
+      <div class="lk-url">kegg.jp</div>
+    </a>
+    <a class="link-card" href="https://portal.gdc.cancer.gov/" target="_blank" rel="noopener">
+      <div class="lk-title">TCGA portal（NCI GDC）</div>
+      <div class="lk-desc">がんゲノムデータ（TCGA）を閲覧・取得できるNCI GDCデータポータル。</div>
+      <div class="lk-url">portal.gdc.cancer.gov</div>
+    </a>
+  </div>
+
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div>
+      <div class="footer-lab" style="font-size:15px; line-height:1.7;">東京科学大学 総合研究院 難治疾患研究所 <strong>病態生理化学分野</strong></div>
+      <div class="footer-copy" style="font-size:13px; line-height:1.7;">大学院 医歯学総合研究科 <strong>脂質生物学分野</strong></div>
+      <div class="footer-copy" style="font-size:12px; margin-top:0.6rem;">© 2025–2026 佐々木研究室, 東京科学大学. All rights reserved.</div>
+    </div>
+    <div>
+      <div class="footer-links">
+        <a href="index.html#research">研究内容</a>
+        <a href="members.html">メンバー</a>
+        <a href="publications.html">論文</a>
+        <a href="index.html#learn">学ぶ・読む</a>
+        <a href="index.html#contact">アクセス</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- Back-to-top button -->
+<button id="backToTop" aria-label="ページの先頭へ戻る" class="back-to-top">
+  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+    <polyline points="18 15 12 9 6 15"></polyline>
+  </svg>
+</button>
+<style>
+.back-to-top {
+  position: fixed; bottom: 24px; right: 24px;
+  width: 44px; height: 44px; border-radius: 50%;
+  background: #1d9e75; color: white; border: none;
+  display: flex; align-items: center; justify-content: center;
+  cursor: pointer; box-shadow: 0 4px 16px rgba(0,0,0,0.15);
+  opacity: 0; pointer-events: none;
+  transition: opacity 0.25s, transform 0.25s, background 0.2s;
+  transform: translateY(8px);
+  z-index: 200;
+}
+.back-to-top.visible { opacity: 1; pointer-events: auto; transform: translateY(0); }
+.back-to-top:hover { background: #0f6e56; }
+@media (max-width: 540px) {
+  .back-to-top { bottom: 16px; right: 16px; width: 40px; height: 40px; }
+}
+</style>
+<script>
+(function() {
+  var btn = document.getElementById('backToTop');
+  if (!btn) return;
+  window.addEventListener('scroll', function() {
+    if (window.scrollY > 300) btn.classList.add('visible');
+    else btn.classList.remove('visible');
+  });
+  btn.addEventListener('click', function() {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+})();
+</script>
+
+</body>
+</html>

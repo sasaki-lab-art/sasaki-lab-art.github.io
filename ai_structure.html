@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AIで読み解く脂質–タンパク質相互作用 | 佐々木研究室</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  :root {
+    --teal:     #1d9e75;
+    --teal-lt:  #e1f5ee;
+    --teal-mid: #5dcaa5;
+    --coral:    #d85a30;
+    --coral-lt: #faece7;
+    --amber:    #ba7517;
+    --amber-lt: #faeeda;
+    --purple:   #534ab7;
+    --purple-lt:#eeedfe;
+    --bg:       #fafaf8;
+    --white:    #ffffff;
+    --text:     #1a1a18;
+    --muted:    #6b6b65;
+    --border:   #e4e4de;
+    --radius:   16px;
+    --nav-h:    64px;
+  }
+  html { scroll-behavior: smooth; }
+  body { font-family: 'Noto Sans JP', 'DM Sans', sans-serif; background: var(--bg); color: var(--text); font-size: 15px; line-height: 1.75; }
+
+  /* ── NAV ── */
+  nav {
+    position: sticky; top: 0; z-index: 100;
+    background: rgba(255,255,255,0.92); backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--border);
+    height: var(--nav-h); display: flex; align-items: center;
+  }
+  .nav-inner { max-width: 1100px; margin: auto; width: 100%; padding: 0 2rem; display: flex; align-items: center; justify-content: space-between; }
+  .nav-univ-logo { height: 44px; width: auto; display: block; }
+  .nav-univ-logo:hover { opacity: 0.85; }
+  .nav-links { display: flex; gap: 0.25rem; }
+  .nav-links a { text-decoration: none; color: var(--muted); font-size: 13px; font-weight: 500; padding: 6px 12px; border-radius: 20px; transition: all 0.2s; }
+  .nav-links a:hover { background: var(--teal-lt); color: var(--teal); }
+  @media (max-width: 860px) {
+    .nav-univ-logo { height: 32px; }
+    .nav-links a { font-size: 12px; padding: 5px 8px; }
+  }
+  @media (max-width: 540px) {
+  }
+
+  /* ── PAGE HEADER ── */
+  .page-header {
+    background: linear-gradient(135deg, var(--teal-lt) 0%, #f0faf5 100%);
+    padding: 64px 2rem 56px;
+    border-bottom: 1px solid var(--border);
+  }
+  .page-header-inner { max-width: 1100px; margin: auto; }
+  .section-tag { display: inline-block; font-size: 12px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--teal); background: white; padding: 4px 12px; border-radius: 20px; margin-bottom: 14px; border: 1px solid var(--teal-lt); }
+  .page-title { font-family: 'DM Serif Display', serif; font-size: 2.4rem; line-height: 1.25; margin-bottom: 1rem; }
+  .page-lead { color: var(--muted); font-size: 15px; max-width: 760px; line-height: 1.8; }
+
+  /* ── ARTICLE ── */
+  .article-wrap { max-width: 1100px; margin: 0 auto; padding: 48px 2rem 80px; }
+  .back-link { display: inline-flex; align-items: center; gap: 6px; color: var(--teal); text-decoration: none; font-size: 14px; font-weight: 600; margin-bottom: 2rem; }
+  .back-link:hover { text-decoration: underline; }
+
+  .article-body { font-size: 16px; line-height: 2.05; color: var(--text); max-width: 800px; margin: 0 auto 2.6rem; }
+  .article-body h2 { font-family: 'DM Serif Display', serif; font-size: 1.5rem; margin: 2.4rem 0 1rem; line-height: 1.4; }
+  .article-body p { margin-bottom: 1.6rem; }
+  .article-body p:last-child { margin-bottom: 0; }
+  .article-body .em-teal { color: var(--teal); font-weight: 700; }
+
+  /* ── KEY IDEA CALLOUT ── */
+  .callout { max-width: 800px; margin: 0 auto 2.6rem; background: var(--teal-lt); border-left: 5px solid var(--teal); border-radius: 12px; padding: 26px 30px; }
+  .callout .co-label { font-size: 12px; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; color: var(--teal); margin-bottom: 8px; }
+  .callout p { font-size: 18px; font-weight: 500; line-height: 1.85; margin: 0; }
+
+  /* ── WORKFLOW FIGURE ── */
+  figure.wf { margin: 0 auto 2.6rem; max-width: 980px; text-align: center; }
+  figure.wf svg { width: 100%; height: auto; display: block; border: 1px solid var(--border); border-radius: var(--radius); background: var(--white); box-shadow: 0 6px 28px rgba(0,0,0,0.06); }
+  figure.wf figcaption { font-size: 13px; color: var(--muted); margin-top: 14px; line-height: 1.7; }
+
+  .source-note { max-width: 800px; margin: 2.4rem auto 0; padding-top: 1.4rem; border-top: 1px solid var(--border); font-size: 13px; color: var(--muted); line-height: 1.8; }
+
+  /* ── FOOTER ── */
+  footer { background: #1a1a18; color: #9a9a94; padding: 3rem 2rem; }
+  .footer-inner { max-width: 1100px; margin: auto; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; }
+  .footer-lab { font-family: 'DM Serif Display', serif; font-size: 18px; color: white; }
+  .footer-links { display: flex; gap: 1.5rem; flex-wrap: wrap; }
+  .footer-links a { font-size: 13px; color: #9a9a94; text-decoration: none; }
+  .footer-links a:hover { color: var(--teal-mid); }
+  .footer-copy { font-size: 12px; margin-top: 0.5rem; }
+
+  @media (max-width: 640px) {
+    .page-title { font-size: 1.8rem; }
+    .article-wrap { padding: 32px 1.1rem 64px; }
+  }
+  .nav-toggle { display: none; background: none; border: none; cursor: pointer; color: var(--text); padding: 4px; line-height: 0; }
+  .nav-toggle svg { width: 28px; height: 28px; stroke: currentColor; }
+  /* hamburger menu (<=768px only; desktop unchanged) */
+  @media (max-width: 768px) {
+    .nav-toggle { display: block; }
+    .nav-links {
+      position: absolute; top: 100%; left: 0; right: 0;
+      flex-direction: column; gap: 0; max-width: none;
+      background: rgba(255,255,255,0.98); backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+      max-height: 0; overflow: hidden; transition: max-height 0.3s ease;
+    }
+    .nav-links.open { max-height: 80vh; }
+    .nav-links a { font-size: 15px; padding: 14px 2rem; border-radius: 0; border-bottom: 1px solid var(--border); }
+    .nav-links a:last-child { border-bottom: none; }
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-inner">
+    <a href="https://www.isct.ac.jp/ja" target="_blank" rel="noopener" style="line-height:0;">
+      <img class="nav-univ-logo" src="photos/sciencetokyo_logo.jpg" alt="東京科学大学 Science Tokyo">
+    </a>
+    <button class="nav-toggle" id="navToggle" aria-label="メニューを開閉" aria-expanded="false" aria-controls="navLinks">
+      <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+    </button>
+    <div class="nav-links" id="navLinks">
+      <a href="index.html">Home</a>
+      <a href="index.html#news">ニュース</a>
+      <a href="index.html#research">研究</a>
+      <a href="index.html#publications">業績</a>
+      <a href="index.html#highlights">教育・研究環境</a>
+      <a href="members.html">メンバー</a>
+      <a href="index.html#learn">学ぶ・読む</a>
+      <a href="index.html#contact">アクセス</a>
+    </div>
+  </div>
+</nav>
+<script>
+(function(){
+  var t = document.getElementById('navToggle');
+  var m = document.getElementById('navLinks');
+  if (!t || !m) return;
+  var ICON_OPEN = '<svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><line x1="5" y1="5" x2="19" y2="19"/><line x1="19" y1="5" x2="5" y2="19"/></svg>';
+  var ICON_CLOSED = '<svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>';
+  function setOpen(o){ m.classList.toggle('open', o); t.setAttribute('aria-expanded', o ? 'true' : 'false'); t.innerHTML = o ? ICON_OPEN : ICON_CLOSED; }
+  t.addEventListener('click', function(){ setOpen(!m.classList.contains('open')); });
+  m.addEventListener('click', function(e){ if (e.target.tagName === 'A') setOpen(false); });
+})();
+</script>
+
+<!-- PAGE HEADER -->
+<div class="page-header">
+  <div class="page-header-inner">
+    <div class="section-tag">Background</div>
+    <h1 class="page-title">AIで読み解く脂質–タンパク質相互作用</h1>
+    <p class="page-lead">深層学習による構造予測AI「AlphaFold3」に、生成AIと統計解析を組み合わせ、脂質とタンパク質がどのように結合するかを定量的に予測・検証する ── 当研究室が取り組む新しい計算アプローチを紹介します。</p>
+  </div>
+</div>
+
+<!-- ARTICLE -->
+<div class="article-wrap">
+
+  <a href="index.html#learn" class="back-link">← 学ぶ・読むに戻る</a>
+
+  <div class="article-body">
+    <h2>疾患の変異を読み解き、実験を設計する</h2>
+    <p>脂質結合タンパク質の遺伝子変異が疾患の原因となる例が知られています。こうした<span class="em-teal">病原性の変異が、なぜ病気を引き起こすのか</span> ── その一因が「脂質との結合の異常」にあるのかどうかを、本手法は構造のレベルで検討できます。野生型と変異型で結合の起こりやすさがどう変わるかをin silicoで比較することで、病態のメカニズムについて検証可能な仮説を立てられます。</p>
+    <p>また、タンパク質と脂質の結合を実験的に証明するには、アミノ酸を置き換えた<span class="em-teal">変異体を作製し、質量分析などで脂質の結合量を実測</span>します。このとき、どのアミノ酸を変えれば結合が損なわれるかを的確に見極めることが鍵になります。本手法は、結合に重要なアミノ酸の候補を提案し、効果的な変異体設計のアイデアを与えてくれます。<span class="em-teal">計算で当たりをつけ、実験で確かめる</span> ── 計算と実験を往復することで、研究を効率よく前へ進められます。</p>
+
+    <h2>構造予測AIの登場と、その限界</h2>
+    <p>2024年に発表された<span class="em-teal">AlphaFold3</span>は、タンパク質だけでなく核酸・低分子・脂質を含む複合体の立体構造を深層学習で予測できるようになりました。一方で、予測には毎回「揺らぎ」があり、また実際には結合しない組み合わせでも“結合する”構造を出力してしまう傾向（強制結合バイアス）があります。つまり、一度の予測結果をそのまま正解として扱うことはできません。</p>
+
+    <h2>実験科学の作法を計算に持ち込む</h2>
+    <p>そこで当研究室では、実験生化学で当たり前に用いられる<span class="em-teal">「反復」「統計」「対照」</span>という考え方を、構造予測の世界に導入しました。同じ複合体を数百〜1500回くり返し予測して<span class="em-teal">構造アンサンブル</span>を作り、結合の起こりやすさや分子の配置をモンテカルロ／ベイズ統計で定量します。さらに、結合しない脂質を対照として同時に予測空間へ加えることで、偽陽性を見分けます。こうしてAlphaFold3を、単なる「推論ツール」から、結合を数値で裏づける「定量的検証ツール」へと位置づけ直しました。</p>
+
+    <div class="callout">
+      <div class="co-label">Key Idea</div>
+      <p>深層学習が暗黙にとらえている「生物学的に重要な過渡的な構造」を、in silicoで浮かび上がらせる。</p>
+    </div>
+
+    <h2>生成AIとスーパーコンピュータの活用</h2>
+    <p>1500通りの予測構造から、原子間距離や接触の有無といった指標を自動で抽出するには、専用の解析プログラムが必要です。こうしたPythonの解析スクリプトも、生成AIに相談しながら作成できます。やりたいことを言葉で伝えれば、AIがコードの下書きや修正を手伝ってくれるため、<span class="em-teal">プログラミングに不慣れなウェット研究者や学生でも</span>、自分の手で解析を組み立てられます。大規模な構造予測そのものは、学内のスーパーコンピュータ TSUBAME4.0 上で実行しています。得られた数値は統計解析言語Rや構造表示ソフトで集計・可視化します。</p>
+  </div>
+
+  <figure class="wf">
+    <svg viewBox="0 0 1000 440" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="AIを活用した脂質–タンパク質相互作用解析のワークフロー：①AlphaFold3で同一複合体を多数回予測して構造アンサンブルを得る、②生成AIで作成したPythonスクリプトで各構造を数値化する、③モンテカルロ・ベイズ統計で結合頻度や配座を評価して定量的に検証する。">
+      <defs>
+        <marker id="arw" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+          <path d="M0,0 L10,5 L0,10 z" fill="#9a9a94"/>
+        </marker>
+      </defs>
+      <!-- title -->
+      <text x="500" y="42" text-anchor="middle" font-family="'DM Sans','Noto Sans JP',sans-serif" font-size="21" font-weight="700" fill="#1a1a18">AIを活用した脂質–タンパク質相互作用解析のワークフロー</text>
+
+      <!-- STEP 1 -->
+      <rect x="30" y="80" width="292" height="210" rx="14" fill="#e1f5ee" stroke="#1d9e75" stroke-width="1.5"/>
+      <circle cx="60" cy="116" r="18" fill="#1d9e75"/>
+      <text x="60" y="123" text-anchor="middle" font-family="'DM Sans',sans-serif" font-size="18" font-weight="700" fill="#fff">1</text>
+      <text x="88" y="122" font-family="'Noto Sans JP',sans-serif" font-size="18" font-weight="700" fill="#1a1a18">構造を予測する</text>
+      <text x="52" y="160" font-family="'Noto Sans JP',sans-serif" font-size="15" fill="#1a1a18">AlphaFold3で同一の複合体を</text>
+      <text x="52" y="186" font-family="'Noto Sans JP',sans-serif" font-size="15" fill="#1a1a18">多数回（&gt;1500試行）予測</text>
+      <text x="52" y="222" font-family="'Noto Sans JP',sans-serif" font-size="14" font-weight="700" fill="#16805f">→ 構造アンサンブルを取得</text>
+      <text x="52" y="250" font-family="'Noto Sans JP',sans-serif" font-size="13" fill="#6b6b65">対照分子も同時に投入</text>
+
+      <!-- STEP 2 -->
+      <rect x="354" y="80" width="292" height="210" rx="14" fill="#faeeda" stroke="#ba7517" stroke-width="1.5"/>
+      <circle cx="384" cy="116" r="18" fill="#ba7517"/>
+      <text x="384" y="123" text-anchor="middle" font-family="'DM Sans',sans-serif" font-size="18" font-weight="700" fill="#fff">2</text>
+      <text x="412" y="122" font-family="'Noto Sans JP',sans-serif" font-size="18" font-weight="700" fill="#1a1a18">数値化する</text>
+      <text x="376" y="160" font-family="'Noto Sans JP',sans-serif" font-size="15" fill="#1a1a18">原子間距離や接触などの</text>
+      <text x="376" y="186" font-family="'Noto Sans JP',sans-serif" font-size="15" fill="#1a1a18">指標を各構造から抽出</text>
+      <text x="376" y="222" font-family="'Noto Sans JP',sans-serif" font-size="14" font-weight="700" fill="#8a5410">→ 生成AIでコード作成</text>
+      <text x="376" y="250" font-family="'Noto Sans JP',sans-serif" font-size="13" fill="#6b6b65">計算はTSUBAME4.0で実行</text>
+
+      <!-- STEP 3 -->
+      <rect x="678" y="80" width="292" height="210" rx="14" fill="#eeedfe" stroke="#534ab7" stroke-width="1.5"/>
+      <circle cx="708" cy="116" r="18" fill="#534ab7"/>
+      <text x="708" y="123" text-anchor="middle" font-family="'DM Sans',sans-serif" font-size="18" font-weight="700" fill="#fff">3</text>
+      <text x="736" y="122" font-family="'Noto Sans JP',sans-serif" font-size="18" font-weight="700" fill="#1a1a18">統計で検証する</text>
+      <text x="700" y="160" font-family="'Noto Sans JP',sans-serif" font-size="15" fill="#1a1a18">モンテカルロ／ベイズ統計で</text>
+      <text x="700" y="186" font-family="'Noto Sans JP',sans-serif" font-size="15" fill="#1a1a18">結合頻度・配座を評価</text>
+      <text x="700" y="222" font-family="'Noto Sans JP',sans-serif" font-size="14" font-weight="700" fill="#3d3596">→ 結合を定量的に裏づけ</text>
+      <text x="700" y="250" font-family="'Noto Sans JP',sans-serif" font-size="13" fill="#6b6b65">（R・PyMOLで可視化）</text>
+
+      <!-- arrows between steps -->
+      <line x1="326" y1="185" x2="352" y2="185" stroke="#9a9a94" stroke-width="2.5" marker-end="url(#arw)"/>
+      <line x1="650" y1="185" x2="676" y2="185" stroke="#9a9a94" stroke-width="2.5" marker-end="url(#arw)"/>
+
+      <!-- bottom transformation ribbon -->
+      <rect x="30" y="320" width="940" height="100" rx="14" fill="#1a1a18"/>
+      <text x="500" y="360" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-size="17" fill="#cfcfca">AlphaFold3 を「推論ツール」から「定量的検証ツール」へ</text>
+      <text x="500" y="394" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-size="21" font-weight="700" fill="#fff">決定論的なダイナミクス　→　確率論的な構造サンプリング</text>
+    </svg>
+    <figcaption>脂質–タンパク質相互作用解析のワークフロー（概念図）。反復予測・生成AI・統計解析を組み合わせ、構造予測を定量的な検証へとつなげる。</figcaption>
+  </figure>
+
+  <div class="article-body">
+    <h2>めざすもの</h2>
+    <p>物理法則に基づく決定論的なシミュレーションから、深層学習が導く確率論的な構造サンプリングへ ── このパラダイムシフトを脂質生物学に応用することで、変異の設計やリン脂質の結合選択性の予測など、これまで実験だけでは到達しにくかった問いに、計算と実験の両輪で迫れるようになります。in silicoの予測と、培養細胞やモデル動物を用いた実験結果が高度に一致することも確認しつつあり、今後さらに展開していきます。</p>
+
+    <div class="source-note">
+      本ページは第5回 Lipid フォーラム（2026年4月、山本 利義）での発表内容に基づく一般向け解説です。本研究は東京科学大学 難治疾患研究所 計算創薬科学分野（石谷 隆一郎 教授・森脇 由隆 准教授）との共同で進めています。具体的な解析事例の詳細は、関連論文の公開後に追記予定です。
+    </div>
+  </div>
+
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div>
+      <div class="footer-lab" style="font-size:15px; line-height:1.7;">東京科学大学 総合研究院 難治疾患研究所 <strong>病態生理化学分野</strong></div>
+      <div class="footer-copy" style="font-size:13px; line-height:1.7;">大学院 医歯学総合研究科 <strong>脂質生物学分野</strong></div>
+      <div class="footer-copy" style="font-size:12px; margin-top:0.6rem;">© 2025–2026 佐々木研究室, 東京科学大学. All rights reserved.</div>
+    </div>
+    <div>
+      <div class="footer-links">
+        <a href="index.html#research">研究内容</a>
+        <a href="members.html">メンバー</a>
+        <a href="publications.html">論文</a>
+        <a href="index.html#learn">学ぶ・読む</a>
+        <a href="index.html#contact">アクセス</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- Back-to-top button -->
+<button id="backToTop" aria-label="ページの先頭へ戻る" class="back-to-top">
+  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+    <polyline points="18 15 12 9 6 15"></polyline>
+  </svg>
+</button>
+<style>
+.back-to-top {
+  position: fixed; bottom: 24px; right: 24px;
+  width: 44px; height: 44px; border-radius: 50%;
+  background: #1d9e75; color: white; border: none;
+  display: flex; align-items: center; justify-content: center;
+  cursor: pointer; box-shadow: 0 4px 16px rgba(0,0,0,0.15);
+  opacity: 0; pointer-events: none;
+  transition: opacity 0.25s, transform 0.25s, background 0.2s;
+  transform: translateY(8px);
+  z-index: 200;
+}
+.back-to-top.visible { opacity: 1; pointer-events: auto; transform: translateY(0); }
+.back-to-top:hover { background: #0f6e56; }
+@media (max-width: 540px) {
+  .back-to-top { bottom: 16px; right: 16px; width: 40px; height: 40px; }
+}
+</style>
+<script>
+(function() {
+  var btn = document.getElementById('backToTop');
+  if (!btn) return;
+  window.addEventListener('scroll', function() {
+    if (window.scrollY > 300) btn.classList.add('visible');
+    else btn.classList.remove('visible');
+  });
+  btn.addEventListener('click', function() {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+})();
+</script>
+
+</body>
+</html>
