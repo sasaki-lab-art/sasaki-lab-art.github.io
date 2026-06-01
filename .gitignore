@@ -14,6 +14,10 @@ photos/_originals/
 
 # 内部作業メモ（公開したくない場合は除外のまま。公開してよければこの行を削除）
 README.md
+README_history.md
+
+# 手順書などのドキュメント（サイトには公開しない）
+*.docx
 
 # OS / エディタが作る不要ファイル
 .DS_Store
