@@ -155,7 +155,7 @@
   <div class="page-header-inner">
     <div class="section-tag">Research Infrastructure</div>
     <h1 class="page-title">難治疾患研究所 ロボット実験支援室<br>ロボット未来創造センター</h1>
-    <p class="page-lead">ロボットとAIによる実験の自律化を推進し、大規模・高精度な実験を効率的に実施できる、国内でも先進的な研究インフラです。下の動画で、開所したロボット未来創造センターの様子をご覧いただけます。</p>
+    <p class="page-lead">ロボットとAIによる実験の自律化を推進し、大規模・高精度な実験を効率的に実施できる、国内でも先進的な研究インフラです。</p>
   </div>
 </div>
 
@@ -164,16 +164,7 @@
 
   <a href="index.html#highlights" class="back-link">← 教育・研究環境に戻る</a>
 
-  <p class="lead-para">東京科学大学に開所した「ロボット未来創造センター」では、実験ロボットが24時間365日にわたり科学実験を遂行します。再現性の高い大量の実験を自律的に実施することで、研究のスピードと精度を飛躍的に高め、難治疾患の病態解明や創薬研究を加速します。</p>
-
-  <div class="video-wrap" id="ytFacade" role="button" tabindex="0"
-       aria-label="クリックして動画をその場で再生：ロボット未来創造センター 紹介">
-    <img src="https://i.ytimg.com/vi/1jSt2HToBa0/maxresdefault.jpg"
-         onerror="this.onerror=null;this.src='https://i.ytimg.com/vi/1jSt2HToBa0/hqdefault.jpg';"
-         alt="ロボット未来創造センター 紹介動画のサムネイル">
-    <span class="play-btn"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg></span>
-  </div>
-  <p class="video-caption">▲ クリックするとこの場で動画が再生されます。<br>動画：「ロボットが24時間365日科学実験？ 東京科学大学に『ロボット未来創造センター』開所」（提供：朝日新聞 / YouTube）<br>再生できない場合は <a href="https://www.youtube.com/watch?v=1jSt2HToBa0" target="_blank" rel="noopener" style="color:var(--teal);font-weight:600;">YouTubeで開く</a> をご利用ください。</p>
+  <p class="lead-para">東京科学大学に開所した「ロボット未来創造センター」では、実験ロボットが24時間365日にわたり科学実験を遂行します。再現性の高い大量の実験を自律的に実施することで、研究のスピードと精度を飛躍的に高め、難治疾患の病態解明や創薬研究を加速します。施設の詳細や最新の取り組みは、下記の公式サイトをご覧ください。</p>
 
   <div class="cta-row">
     <a class="cta-btn" href="https://www.ric.rim.isct.ac.jp/ja/" target="_blank" rel="noopener">ロボット未来創造センター 公式サイトを見る →</a>
@@ -236,24 +227,6 @@
   btn.addEventListener('click', function() {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   });
-})();
-</script>
-
-<!-- クリックでその場再生（新規ウインドウを開かない） -->
-<script>
-(function(){
-  var f = document.getElementById('ytFacade');
-  if (!f) return;
-  function play(){
-    var id = '1jSt2HToBa0';
-    f.innerHTML = '<iframe src="https://www.youtube-nocookie.com/embed/' + id + '?autoplay=1&rel=0" '
-      + 'title="ロボット未来創造センター 紹介動画" '
-      + 'allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" '
-      + 'referrerpolicy="strict-origin-when-cross-origin" allowfullscreen '
-      + 'style="position:absolute;inset:0;width:100%;height:100%;border:0;"></iframe>';
-  }
-  f.addEventListener('click', play);
-  f.addEventListener('keydown', function(e){ if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); play(); } });
 })();
 </script>
 
