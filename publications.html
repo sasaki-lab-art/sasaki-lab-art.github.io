@@ -86,6 +86,10 @@
   .yr-btn.review-btn.active { background: var(--purple); border-color: var(--purple); }
   .yr-btn.review-btn:hover { border-color: var(--purple); color: var(--purple); }
 
+  /* BACK LINK */
+  .back-link { display: inline-flex; align-items: center; gap: 6px; color: var(--teal); text-decoration: none; font-size: 14px; font-weight: 600; margin-top: 0.9rem; }
+  .back-link:hover { text-decoration: underline; }
+
   /* COUNT BAR */
   .count-bar { display: flex; align-items: center; justify-content: space-between; margin-bottom: 1.25rem; padding: 0.6rem 0; border-bottom: 1px solid var(--border); }
   .count-text { font-size: 13px; color: var(--muted); }
@@ -222,6 +226,7 @@
   <div class="filter-section">
 
     <div class="year-btns" id="year-btns"></div>
+    <div><a href="index.html" class="back-link">← トップページへ</a></div>
   </div>
 
   <!-- Count bar -->
