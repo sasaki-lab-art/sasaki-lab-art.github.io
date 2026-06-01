@@ -223,16 +223,16 @@
   #contact { background: white; max-width: 100%; padding: 0; }
   #contact .inner { max-width: 1100px; margin: auto; padding: 0 2rem; }
   .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; }
-  .contact-info { }
+  .contact-info { display: flex; flex-direction: column; }
   .contact-row { display: flex; align-items: flex-start; gap: 12px; margin-bottom: 1.25rem; }
   .contact-icon { width: 38px; height: 38px; background: var(--teal-lt); border-radius: 10px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; font-size: 18px; }
   .contact-label { font-size: 12px; font-weight: 700; color: var(--muted); text-transform: uppercase; letter-spacing: 0.06em; }
   .contact-val { font-size: 14px; color: var(--text); margin-top: 2px; }
   .access-box { background: var(--teal-lt); border-radius: var(--radius); padding: 1.5rem; }
-  .access-box h3 { font-size: 15px; font-weight: 700; color: #0f6e56; margin-bottom: 0.75rem; }
+  .access-box h3 { font-size: 18px; font-weight: 700; color: #0f6e56; margin-bottom: 0.75rem; }
   .access-step { display: flex; gap: 10px; align-items: flex-start; margin-bottom: 0.6rem; }
-  .step-n { width: 22px; height: 22px; background: var(--teal); color: white; border-radius: 50%; font-size: 11px; font-weight: 700; display: flex; align-items: center; justify-content: center; flex-shrink: 0; margin-top: 1px; }
-  .access-step p { font-size: 13px; color: #0f6e56; line-height: 1.5; }
+  .step-n { width: 24px; height: 24px; background: var(--teal); color: white; border-radius: 50%; font-size: 13px; font-weight: 700; display: flex; align-items: center; justify-content: center; flex-shrink: 0; margin-top: 1px; }
+  .access-step p { font-size: 15px; color: #0f6e56; line-height: 1.6; }
 
   /* ── FOOTER ── */
   footer { background: #1a1a18; color: #9a9a94; padding: 3rem 2rem; }
@@ -325,6 +325,7 @@
   .hc-coral .highlight-link { color: var(--coral); }
   .hc-purple .highlight-link { color: var(--purple); }
   .hc-amber .highlight-link { color: var(--amber); }
+  .hc-dark .highlight-link { color: #1a1a18; }
   @media (max-width: 860px) { .highlight-grid { grid-template-columns: 1fr; } }
 
 
@@ -525,11 +526,11 @@
         <span class="highlight-link">詳細を見る →</span>
       </a>
 
-      <a class="highlight-card hc-teal" href="https://www.ric.rim.isct.ac.jp/ja/" target="_blank" rel="noopener">
+      <a class="highlight-card hc-teal" href="https://www.nature.com/articles/d41586-026-01625-2" target="_blank" rel="noopener">
         <span class="highlight-badge hb-teal">高精度実験支援</span>
         <h3>難治疾患研究所 ロボット実験支援室<br>ロボット未来創造センター</h3>
         <p>ロボットとAIによる実験自律化を推進するロボット実験支援室を設置。大規模・高精度な実験を効率的に実施できる先進的な研究インフラです。</p>
-        <span class="highlight-link">詳細を見る →</span>
+        <span class="highlight-link">Nature誌に紹介されました →</span>
       </a>
 
       <a class="highlight-card hc-coral" href="https://www.tmd.ac.jp/mri/base/id=61917" target="_blank">
@@ -683,11 +684,12 @@
     <h2 class="sec-title">連絡先・アクセス</h2>
     <div class="contact-grid">
       <div class="contact-info">
+        <div style="height:260px;">
         <div class="contact-row">
           <div class="contact-icon">🏛️</div>
           <div>
             <div class="contact-label">所在地</div>
-            <div class="contact-val">〒113-8510 東京都文京区湯島1-5-45<br>東京科学大学 M&amp;Dタワー19階<br><br>総合研究院 難治疾患研究所 <strong>病態生理化学分野</strong><br>大学院 医歯学総合研究科 <strong>脂質生物学分野</strong></div>
+            <div class="contact-val">〒113-8510 東京都文京区湯島1-5-45<br>東京科学大学 M&amp;Dタワー19階</div>
           </div>
         </div>
         <div class="contact-row">
@@ -701,12 +703,27 @@
           <div class="contact-icon">🎓</div>
           <div>
             <div class="contact-label">大学院進学・研究生の方へ</div>
-            <div class="contact-val">随時、研究室訪問を受け付けています。まずはメールにてご連絡ください。</div>
+            <div class="contact-val">随時、研究室訪問を受け付けています。メールにてご連絡ください。</div>
+          </div>
+        </div>
+        </div>
+        <div style="margin-top:1.25rem; padding:1.25rem; border:1px solid var(--border); border-radius:var(--radius); background:white; flex:1; display:flex; flex-direction:column;">
+          <p style="font-size:14px; color:var(--muted); text-align:center;">🗺️ Googleマップで開く</p>
+          <div style="margin-top:10px; flex:1; display:flex; flex-direction:column;">
+            <iframe
+              src="https://maps.google.com/maps?q=東京科学大学+湯島キャンパス+文京区湯島1-5-45&t=&z=16&ie=UTF8&iwloc=&output=embed"
+              width="100%" height="100%"
+              style="border:0; border-radius:10px; display:block; width:100%; flex:1; min-height:180px;"
+              allowfullscreen loading="lazy">
+            </iframe>
           </div>
         </div>
       </div>
-      <div>
-        <div class="access-box">
+      <div style="display:flex; flex-direction:column;">
+        <div style="height:260px; display:flex; align-items:center; justify-content:center;">
+          <img src="photos/access2.jpg" alt="御茶ノ水・湯島周辺の鉄道風景" style="max-width:66%; max-height:260px; width:auto; height:auto; border-radius:var(--radius); display:block; margin:0 auto; border:1px solid var(--border);">
+        </div>
+        <div class="access-box" style="margin-top:1.25rem; flex:1;">
           <h3>🚃 交通アクセス</h3>
           <div class="access-step">
             <div class="step-n">1</div>
@@ -723,17 +740,6 @@
           <div class="access-step">
             <div class="step-n">4</div>
             <p>エレベーターで19階へ（病態生理化学分野）</p>
-          </div>
-        </div>
-        <div style="margin-top:1.25rem; padding:1.25rem; border:1px solid var(--border); border-radius:var(--radius); background:white;">
-          <p style="font-size:14px; color:var(--muted); text-align:center;">🗺️ Googleマップで開く</p>
-          <div style="margin-top:10px;">
-            <iframe
-              src="https://maps.google.com/maps?q=東京科学大学+湯島キャンパス+文京区湯島1-5-45&t=&z=16&ie=UTF8&iwloc=&output=embed"
-              width="100%" height="150"
-              style="border:0; border-radius:10px; display:block;"
-              allowfullscreen loading="lazy">
-            </iframe>
           </div>
         </div>
       </div>
