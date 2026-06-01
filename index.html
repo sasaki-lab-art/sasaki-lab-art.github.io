@@ -146,6 +146,7 @@
   .members-grid { display: grid; grid-template-columns: repeat(4,1fr); gap: 1.25rem; }
   .member-card { border: 1px solid var(--border); border-radius: var(--radius); overflow: hidden; background: white; transition: all 0.2s; }
   .member-card:hover { box-shadow: 0 4px 20px rgba(0,0,0,0.07); transform: translateY(-2px); }
+  a.member-card { text-decoration: none; color: inherit; display: block; cursor: pointer; }
   .member-photo { height: 140px; display: flex; align-items: center; justify-content: center; font-size: 48px; font-weight: 700; font-family: 'DM Serif Display', serif; }
   .member-info { padding: 1rem; }
   .member-name { font-size: 15px; font-weight: 700; }
@@ -356,7 +357,7 @@
       <a href="#research">研究</a>
       <a href="#publications">業績</a>
       <a href="#highlights">教育・研究環境</a>
-      <a href="#members">メンバー</a>
+      <a href="#members">教室員</a>
       <a href="#learn">学ぶ・読む</a>
       <a href="#contact">アクセス</a>
     </div>
@@ -527,7 +528,7 @@
       <a class="highlight-card hc-teal" href="https://www.ric.rim.isct.ac.jp/ja/" target="_blank" rel="noopener">
         <span class="highlight-badge hb-teal">高精度実験支援</span>
         <h3>難治疾患研究所 ロボット実験支援室<br>ロボット未来創造センター</h3>
-        <p>ロボットとAIによる実験自律化を推進するロボット実験支援室を設置。大規模・高精度な実験を効率的に実施できる国内でも先進的な研究インフラです。</p>
+        <p>ロボットとAIによる実験自律化を推進するロボット実験支援室を設置。大規模・高精度な実験を効率的に実施できる先進的な研究インフラです。</p>
         <span class="highlight-link">詳細を見る →</span>
       </a>
 
@@ -569,10 +570,10 @@
 <div style="background: white;">
 <section id="members">
   <div class="section-tag">Members</div>
-  <h2 class="sec-title">メンバー紹介</h2>
-  <p class="sec-lead">多様なバックグラウンドを持つメンバーが協力し、研究を進めています。</p>
+  <h2 class="sec-title">教室員紹介</h2>
+  <p class="sec-lead">多様なバックグラウンドを持つ教室員が協力し、研究を進めています。</p>
   <div class="members-grid">
-    <div class="member-card">
+    <a class="member-card" href="members.html">
       <div class="member-photo" style="background:var(--teal-lt); color:var(--teal);">雄</div>
       <div class="member-info">
         <div class="member-name">佐々木 雄彦</div>
@@ -581,7 +582,7 @@
           <span class="kw">ホスホイノシタイド</span><span class="kw">がん・炎症</span>
         </div>
       </div>
-    </div>
+    </a>
     <div class="member-card">
       <div class="member-photo" style="background:var(--purple-lt); color:var(--purple);">純</div>
       <div class="member-info">
@@ -616,7 +617,7 @@
   </div>
   <p style="margin-top:1.5rem; font-size:14px; color:var(--muted);">教員・大学院生・学部生 約20名が在籍しています。</p>
   <div style="margin-top:1rem;">
-    <a href="members.html" class="btn btn-outline" style="font-size:13px; padding:8px 18px;">メンバー一覧を見る →</a>
+    <a href="members.html" class="btn btn-outline" style="font-size:13px; padding:8px 18px;">教室員一覧を見る →</a>
   </div>
 </section>
 </div>
@@ -764,7 +765,7 @@
     <div>
       <div class="footer-links">
         <a href="index.html#research">研究内容</a>
-        <a href="members.html">メンバー</a>
+        <a href="members.html">教室員</a>
         <a href="publications.html">論文</a>
         <a href="index.html#learn">学ぶ・読む</a>
         <a href="index.html#contact">アクセス</a>
