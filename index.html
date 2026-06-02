@@ -140,6 +140,9 @@
   .ri-amber { background: var(--amber-lt); }
   .ri-blue { background: var(--blue-lt); }
   .research-card h3 { font-size: 17px; font-weight: 700; margin-bottom: 0.6rem; }
+  .research-head { display: flex; align-items: center; gap: 1rem; margin-bottom: 0.8rem; }
+  .research-head .research-icon { margin-bottom: 0; flex-shrink: 0; }
+  .research-head h3 { margin-bottom: 0; }
   .research-card p { font-size: 14px; color: var(--muted); line-height: 1.7; }
 
   /* ── MEMBERS ── */
@@ -178,16 +181,16 @@
   .learn-panel.active { display: block; }
 
   /* Background cards */
-  .bg-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 1.25rem; }
-  .bg-card { position: relative; overflow: hidden; border: 1px solid var(--border); border-radius: var(--radius); padding: 1.5rem; background: white; transition: transform 0.2s, box-shadow 0.2s; }
+  .bg-grid { display: grid; grid-template-columns: repeat(3,1fr); grid-auto-rows: 1fr; gap: 1.25rem; }
+  .bg-card { position: relative; display: flex; flex-direction: column; overflow: hidden; border: 1px solid var(--border); border-radius: var(--radius); padding: 1.5rem; background: white; transition: transform 0.2s, box-shadow 0.2s; }
   .bg-card:hover { transform: translateY(-3px); box-shadow: 0 8px 28px rgba(0,0,0,0.08); }
   .bg-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 4px; background: var(--teal); }
   .bg-card.c-coral::before  { background: var(--coral); }
   .bg-card.c-amber::before  { background: var(--amber); }
   .bg-card.c-purple::before { background: var(--purple); }
-  .bg-card h3 { font-size: 16px; font-weight: 700; margin-bottom: 0.5rem; }
+  .bg-card h3 { font-size: 16px; font-weight: 700; line-height: 1.45; margin-bottom: 0.7rem; }
   .bg-card p { font-size: 14px; color: var(--muted); }
-  .bg-card .read-more { display: inline-block; margin-top: 10px; font-size: 13px; font-weight: 600; color: var(--teal); text-decoration: none; }
+  .bg-card .read-more { align-self: flex-start; margin-top: auto; padding-top: 12px; font-size: 13px; font-weight: 600; color: var(--teal); text-decoration: none; }
   .bg-card.c-coral  .read-more { color: var(--coral); }
   .bg-card.c-amber  .read-more { color: var(--amber); }
   .bg-card.c-purple .read-more { color: var(--purple); }
@@ -382,7 +385,7 @@
   <div>
     <p class="hero-eyebrow"><span class="univ-name">東京科学大学</span><br>総合研究院 難治疾患研究所 <strong>病態生理化学分野</strong><br>大学院 医歯学総合研究科 <strong>脂質生物学分野</strong></p>
     <h1 class="hero-title">脂質が紐解く<br><em>生命と疾患</em>の謎</h1>
-    <p class="hero-desc">ホスホイノシタイド（イノシトールリン脂質）をはじめとするリン脂質の生物学を軸に、がん・炎症性疾患・神経変性疾患、そして老化の分子メカニズムの解明に取り組んでいます。生命を司る新たな原理を探求し、難治疾患の予防と治癒につながる治療法の実装を目指しています。</p>
+    <p class="hero-desc">ホスホイノシタイド（イノシトールリン脂質）をはじめとするリン脂質の生物学を軸に、がん・炎症性疾患・神経変性疾患、そして老化の分子メカニズムの解明に取り組んでいます。生命を司る新たな原理を探求し、難治疾患の予防と治癒につながる医療の実装を目指しています。</p>
     <div class="hero-btns">
       <a href="#research" class="btn btn-research">研究内容</a>
       <a href="#highlights" class="btn btn-env">教育・研究環境</a>
@@ -411,8 +414,8 @@
   <div class="section-tag">News</div>
   <h2 class="sec-title">ニュース・お知らせ</h2>
   <div class="news-grid" id="top-news-grid"></div>
-  <div style="margin-top:1.5rem; text-align:right;">
-    <a href="news.html" style="font-size:14px; font-weight:600; color:var(--teal); text-decoration:none;">ニュース一覧を見る →</a>
+  <div style="margin-top:1.5rem; text-align:left;">
+    <a href="news.html" class="btn btn-primary" style="font-size:13px; padding:8px 18px;">ニュース一覧を見る →</a>
   </div>
 </section>
 </div>
@@ -424,26 +427,26 @@
   <section class="inner" style="padding: 48px 2rem; max-width: 1100px; margin:auto;">
     <div class="section-tag">Research</div>
     <h2 class="sec-title">研究内容</h2>
-    <p class="sec-lead">ホスホイノシタイド（PIPs）を中心とした脂質生物学の視点から、がん・炎症性疾患・神経変性疾患の病態を分子レベルで解明します。</p>
+    <p class="sec-lead" style="max-width:none;">ホスホイノシタイドを中心とした脂質生物学の視点から、がん・炎症性疾患・神経変性疾患の病態を分子レベルで解明します。</p>
     <div class="research-grid">
       <div class="research-card">
-        <div class="research-icon ri-teal" style="padding:2px;"><img src="photos/inositol_turtle.png" alt="myo-inositolの立体構造を亀に見立てた図" style="width:100%;height:100%;object-fit:contain;"></div>
-        <h3>ホスホイノシタイドと難治疾患</h3>
+        <div class="research-head"><div class="research-icon ri-teal" style="padding:2px;"><img src="photos/inositol_turtle.png" alt="myo-inositolの立体構造を亀に見立てた図" style="width:100%;height:100%;object-fit:contain;"></div>
+        <h3>ホスホイノシタイドと難治疾患</h3></div>
         <p>ホスホイノシタイドは、細胞内外のシグナル伝達や生体膜動態を制御する微量リン脂質です。約50種類のホスホイノシタイド代謝酵素遺伝子改変マウスを用いて、がん、炎症性疾患、神経変性疾患などの難治疾患の発症・進展機構を解明します。</p>
       </div>
       <div class="research-card">
-        <div class="research-icon ri-blue" style="color:var(--blue);">
+        <div class="research-head"><div class="research-icon ri-blue" style="color:var(--blue);">
           <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
             <circle cx="12" cy="12" r="1" fill="currentColor" stroke="none"/>
             <path d="M20.2 20.2c2.04-2.03.02-7.36-4.5-11.9-4.54-4.52-9.87-6.54-11.9-4.5-2.04 2.03-.02 7.36 4.5 11.9 4.54 4.52 9.87 6.54 11.9 4.5Z"/>
             <path d="M15.7 15.7c4.52-4.54 6.54-9.87 4.5-11.9-2.03-2.04-7.36-.02-11.9 4.5-4.52 4.54-6.54 9.87-4.5 11.9 2.03 2.04 7.36.02 11.9-4.5Z"/>
           </svg>
         </div>
-        <h3>新規脂質と代謝酵素の発見</h3>
+        <h3>新規脂質と代謝酵素の発見</h3></div>
         <p>質量分析データとAI・機械学習を組み合わせ、疾患で変動する未知の脂質分子を探索します。それらを産生・分解する代謝酵素を同定し、生理機能や作用機序を解明します。</p>
       </div>
       <div class="research-card">
-        <div class="research-icon ri-purple" style="color:var(--purple);">
+        <div class="research-head"><div class="research-icon ri-purple" style="color:var(--purple);">
           <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
             <polygon points="11,1.1 14,2.85 14,6.35 11,8.1 8,6.35 8,2.85" fill="none" stroke="currentColor"/>
             <path d="M9.3 8.4 C8.3 11, 10 13, 9.3 16 C8.7 18, 9.3 19, 9.3 20.5"/>
@@ -453,17 +456,17 @@
             <path d="M17 4 a5.2 5.2 0 0 1 4.3 5" opacity="0.4"/>
           </svg>
         </div>
-        <h3>生理活性脂質の動作原理の解明</h3>
+        <h3>生理活性脂質の動作原理の解明</h3></div>
         <p>脂質は細胞膜だけでなく、オルガネラ、細胞質、細胞外環境にも分布し、生命現象を制御しています。脂質の局在制御や脂質情報を読み取り細胞応答へ変換する分子機構を解明します。</p>
       </div>
       <div class="research-card">
-        <div class="research-icon ri-amber" style="color:var(--amber);">
+        <div class="research-head"><div class="research-icon ri-amber" style="color:var(--amber);">
           <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
             <path d="M3.5 4 V20 H21" opacity="0.55"/>
             <path d="M4.5 20 L7 20 L8.5 11 L10 20 L12.5 20 L14 5.5 L15.5 20 L17.5 20 L18.6 13 L20 20"/>
           </svg>
         </div>
-        <h3>脂質プロファイリングによる病態解析</h3>
+        <h3>脂質プロファイリングによる病態解析</h3></div>
         <p>リン脂質を高深度に測定する質量分析技術を開発し、ヒト疾患の臨床検体に適用します。疾患、遺伝子異常、生活習慣、老化に伴う脂質変動を解析し、層別化マーカーを開発します。</p>
       </div>
       <div class="research-card" style="grid-column: 1 / -1;">
@@ -495,15 +498,15 @@
     <div class="section-tag">Publications</div>
     <div style="display:flex; align-items:baseline; gap:1.25rem; flex-wrap:wrap; margin-bottom:1rem;">
       <h2 class="sec-title" style="margin-bottom:0;">論文・業績</h2>
-      <span style="display:inline-flex; align-items:baseline; gap:16px; color:var(--muted); font-size:14px;">
-        <span><strong style="color:var(--teal); font-size:18px; font-family:'Segoe UI',system-ui,-apple-system,'Noto Sans JP',sans-serif; font-variant-numeric:tabular-nums; font-feature-settings:'tnum' 1;">71</strong> h-index</span>
-        <span><strong style="color:var(--teal); font-size:18px; font-family:'Segoe UI',system-ui,-apple-system,'Noto Sans JP',sans-serif; font-variant-numeric:tabular-nums; font-feature-settings:'tnum' 1;">25,111</strong> Citations</span>
-        <span style="font-size:12px; color:var(--muted);">(2026.6.1)</span>
+      <span style="display:inline-flex; align-items:baseline; gap:16px; color:var(--muted); font-size:17px;">
+        <span><strong style="color:var(--teal); font-size:24px; font-family:'Segoe UI',system-ui,-apple-system,'Noto Sans JP',sans-serif; font-variant-numeric:tabular-nums; font-feature-settings:'tnum' 1;">71</strong> h-index</span>
+        <span>引用数 <strong style="color:var(--teal); font-size:24px; font-family:'Segoe UI',system-ui,-apple-system,'Noto Sans JP',sans-serif; font-variant-numeric:tabular-nums; font-feature-settings:'tnum' 1;">25,111</strong> 回</span>
+        <span style="font-size:14px; color:var(--muted);">(2026.6.1)</span>
       </span>
     </div>
-    <p class="sec-lead">主要論文の一覧です。全リストはPubMedにてご確認ください。</p>
+    <p class="sec-lead">主要な論文を掲載しています。全論文リストは下記からご覧ください。</p>
     <div class="pub-list" id="top-pub-list"></div>
-    <div style="margin-top:1.25rem; text-align:right; display:flex; gap:12px; justify-content:flex-end; flex-wrap:wrap;">
+    <div style="margin-top:1.25rem; text-align:left; display:flex; gap:12px; justify-content:flex-start; flex-wrap:wrap;">
       <a href="publications.html" class="btn btn-primary" style="font-size:13px; padding:8px 18px;">全論文リストを見る →</a>
     </div>
   </section>
@@ -516,7 +519,7 @@
   <section class="inner" style="padding: 48px 2rem; max-width:1100px; margin:auto;">
     <div class="section-tag">Research Environment</div>
     <h2 class="sec-title">教育・研究環境</h2>
-    <p class="highlight-intro">東京科学大学・難治疾患研究所は、充実した教育・研究環境を提供しています。</p>
+    <p class="highlight-intro">国際卓越研究大学の認定やロボット実験支援など、世界水準の教育・研究環境を備えています。</p>
     <div class="highlight-grid">
 
       <a class="highlight-card hc-dark" href="https://www.isct.ac.jp/ja/news/bvsdzijisqjd" target="_blank">
@@ -572,7 +575,7 @@
 <section id="members">
   <div class="section-tag">Members</div>
   <h2 class="sec-title">教室員紹介</h2>
-  <p class="sec-lead">多様なバックグラウンドを持つ教室員が協力し、研究を進めています。</p>
+  <p class="sec-lead">多様なバックグラウンドを持つ教室員が協力し、オリジナリティが高い研究を進めています。</p>
   <div class="members-grid">
     <a class="member-card" href="members.html">
       <div class="member-photo" style="background:var(--teal-lt); color:var(--teal);">雄</div>
@@ -581,28 +584,28 @@
         <div class="member-pos">教授 / Principal Investigator</div>
       </div>
     </a>
-    <div class="member-card">
+    <a class="member-card" href="members.html#staff-junko-sasaki">
       <div class="member-photo" style="background:var(--purple-lt); color:var(--purple);">純</div>
       <div class="member-info">
         <div class="member-name">佐々木 純子</div>
         <div class="member-pos">准教授<span style="font-size:0.82em; font-weight:500;">（教授（キャリアアップ））</span></div>
         <div class="member-pos">細胞分子医学分野 分野長（併任）</div>
       </div>
-    </div>
-    <div class="member-card">
+    </a>
+    <a class="member-card" href="members.html#staff-hiroaki-kajiho">
       <div class="member-photo" style="background:var(--coral-lt); color:var(--coral);">博</div>
       <div class="member-info">
         <div class="member-name">梶保 博昭</div>
         <div class="member-pos">助教<span style="font-size:0.82em; font-weight:500;">（難治疾患研究所内講師）</span></div>
       </div>
-    </div>
-    <div class="member-card">
+    </a>
+    <a class="member-card" href="members.html#staff-toshiyoshi-yamamoto">
       <div class="member-photo" style="background:var(--amber-lt); color:var(--amber);">義</div>
       <div class="member-info">
         <div class="member-name">山本 利義</div>
         <div class="member-pos">技術補佐員</div>
       </div>
-    </div>
+    </a>
   </div>
   <div style="margin-top:1.5rem;">
     <a href="members.html" class="btn btn-outline" style="font-size:15px; padding:9px 20px; border-color:var(--teal); color:var(--teal);">教職員・大学院生・学部生 約20名が在籍しています：教室員一覧を見る→</a>
@@ -616,7 +619,7 @@
 <section id="learn">
   <div class="section-tag">Learn</div>
   <h2 class="sec-title">学ぶ・読む</h2>
-  <p class="sec-lead">研究室テーマに関連する教科書的な解説と、関連リンク集を公開しています。学生・一般の方もどうぞ。</p>
+  <p class="sec-lead">研究室のテーマに関わる教科書的な解説と、参考リンク集を公開しています。学生や一般の方にもおすすめです。</p>
 
   <div class="learn-tabs">
     <button class="tab-btn" onclick="showTab('bg')">📘 バックグラウンド</button>
@@ -631,38 +634,38 @@
         <a href="lipid_layers.html" class="read-more">続きを読む →</a>
       </div>
       <div class="bg-card c-coral">
-        <h3>ホスホイノシタイド<br>標的タンパク質と機能</h3>
-        <p>細胞膜に存在する微量リン脂質群。ホスファチジルイノシトールのイノシトール環3, 4, 5位水酸基のリン酸化パターンが異なる8種類が存在し、標的となる多様な機能タンパク質を制御します。</p>
+        <h3>ホスホイノシタイドの機能</h3>
+        <p>細胞膜に存在する微量リン脂質群。ホスファチジルイノシトールのイノシトール環3・4・5位水酸基のリン酸化パターンが異なる8種類が存在し、標的となる多様な機能タンパク質を制御します。</p>
         <a href="pips_functions.html" class="read-more">続きを読む →</a>
       </div>
       <div class="bg-card c-amber">
-        <h3>ホスホイノシタイド代謝系<br>キナーゼ・ホスファターゼ一覧</h3>
+        <h3>ホスホイノシタイド代謝系</h3>
         <p>ホスホイノシタイド代謝系では、リン酸化・脱リン酸化による相互変換反応を触媒する酵素が、ヒト・マウスで約50種類存在します。</p>
         <a href="enzyme_list.html" class="read-more">続きを読む →</a>
       </div>
       <div class="bg-card c-purple">
-        <h3>ホスホイノシタイド代謝の破綻と疾患病態</h3>
-        <p>PIPs代謝酵素の異常は、がん・炎症・神経変性・代謝疾患から白内障・骨粗鬆症・早発卵巣不全まで多岐にわたる病態を引き起こします。約50種の代謝酵素の遺伝子改変マウス研究から見えてきた、PIPs代謝破綻と疾患の関係を概観します。</p>
+        <h3>ホスホイノシタイド代謝関連病態</h3>
+        <p>ホスホイノシタイド代謝酵素遺伝子の異常は、がん・炎症・神経疾患の病態を引き起こします。約50種類の代謝酵素の遺伝子改変マウス研究から見えてきた、ホスホイノシタイド代謝破綻に起因する病態を概観します。</p>
         <a href="pips_disease.html" class="read-more">続きを読む →</a>
       </div>
       <div class="bg-card c-teal">
         <h3>老化とホスホイノシタイド変容</h3>
-        <p>加齢に伴いPIPsプロファイルが変容することを独自のPRMC-MS法で見出しました。老化制御性のPIPs分子種・代謝酵素の同定を通じ、根本的な老化現象へのPIPs代謝系の関与を解明します（AMED-CREST「老化」課題）。</p>
+        <p>加齢に伴いホスホイノシタイドのプロファイルが変容することを独自測定技術で見出しました。老化制御性のホスホイノシタイド分子種・代謝酵素の同定、根本的な老化メカニズムの理解を目指します。</p>
         <a href="aging_pips.html" class="read-more">続きを読む →</a>
       </div>
       <div class="bg-card c-coral">
         <h3>AIで読み解く脂質–タンパク質相互作用</h3>
-        <p>構造予測AI「AlphaFold3」に生成AIと統計解析を組み合わせ、脂質とタンパク質の結合を定量的に予測・検証する新しい計算アプローチに取り組んでいます。</p>
+        <p>構造予測AIに生成AIと統計解析を組み合わせ、脂質とタンパク質の結合を定量的に予測・検証する新しい計算-生化学アプローチに取り組んでいます。</p>
         <a href="ai_structure.html" class="read-more">続きを読む →</a>
       </div>
       <div class="bg-card c-amber">
-        <h3>ホスホイノシタイド 研究小史</h3>
-        <p>1953年のHokin夫妻の発見から、病態関連脂質としての理解まで。ホスホイノシタイド研究70年の歩みを概観します。</p>
+        <h3>ホスホイノシタイドの研究小史</h3>
+        <p>1953年のHokin夫妻の発見から、病態関連脂質としての再発見まで。ホスホイノシタイド研究70年の歩みを概観します。</p>
         <a href="pips_history.html" class="read-more">続きを読む →</a>
       </div>
       <div class="bg-card c-purple">
         <h3>PI3キナーゼ・PTENと疾患</h3>
-        <p>PI3キナーゼはPIPsを産生し、PTENはその逆反応を触媒します。この二つのバランス異常ががん・過誤腫・自己免疫疾患と深く関わっています。</p>
+        <p>PI3キナーゼはホスホイノシタイドを産生し、PTENはその逆反応を触媒します。この二つのバランス異常ががん・過誤腫・自己免疫疾患と深く関わっています。</p>
         <a href="pips_pten.html" class="read-more">続きを読む →</a>
       </div>
       <div class="bg-card c-teal">

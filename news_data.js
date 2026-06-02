@@ -26,9 +26,10 @@ const newsItems = [
    link:"https://www.hormones-cell-regulation.eu/"},
 
   {date:"2026年6月11日", dateSort:"2026-06", cat:"event", intl:false, badge:"説明会", pin:true,
-   /* タイトル2行：1行目=説明会ページへのリンク、2行目=3専攻（プレーンテキスト・リンクなし）。
-      1行目を外側<a>で包むのではなくタイトル内にリンクを置くため link フィールドは付けない */
-   title:'<a href="https://www.tmd.ac.jp/mri/events/open-campus/20260611/" target="_blank" rel="noopener" style="color:inherit;text-decoration:none;">難治疾患研究所 大学院入試説明会（対面実施）</a><br>'
+   link:"https://www.tmd.ac.jp/mri/events/open-campus/20260611/",
+   /* link フィールドで「カード全体」を説明会ページへのリンクにする（レンダリング側が item.link を <a> 化）。
+      タイトル内に <a> を置くと入れ子アンカーになるためプレーンテキストにする。 */
+   title:'難治疾患研究所 大学院入試説明会（対面実施）<br>'
         +'<span style="font-size:15px;font-weight:400;color:var(--muted);">医歯理工保健学専攻（修士）／医歯学専攻（博士）／生命理工医療科学専攻（博士）</span>',
    detail:"2026年6月11日（木）開催"},
 

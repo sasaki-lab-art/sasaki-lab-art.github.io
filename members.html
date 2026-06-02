@@ -78,6 +78,8 @@
 
   /* ── SECTION COMMON ── */
   .content-section { max-width: 1100px; margin: auto; padding: 56px 2rem; }
+  .back-link { display: inline-flex; align-items: center; gap: 6px; color: var(--teal); text-decoration: none; font-size: 14px; font-weight: 600; margin-bottom: 1.5rem; }
+  .back-link:hover { text-decoration: underline; }
   .group-label {
     display: flex; align-items: center; gap: 12px;
     font-size: 13px; font-weight: 700; color: var(--muted);
@@ -254,12 +256,14 @@
     </div>
     <div class="section-tag">Members</div>
     <h1 class="page-title">教室員紹介</h1>
-    <p class="page-lead">教員・研究員・学生、多様なバックグラウンドを持つ教室員が脂質生物学の最前線に挑んでいます。</p>
+    <p class="page-lead" style="max-width:none;">多様なバックグラウンドを持つ教室員が協力し、オリジナリティが高い研究を進めています。</p>
   </div>
 </div>
 
 <!-- MAIN CONTENT -->
 <div class="content-section">
+
+  <a href="index.html" class="back-link">← トップページに戻る</a>
 
   <!-- PI -->
   <div class="group-label">Principal Investigator</div>
@@ -305,7 +309,7 @@
   <!-- STAFF -->
   <div class="group-label">Staff</div>
   <div class="staff-list">
-    <a class="staff-item" href="member_junko_sasaki.html">
+    <a class="staff-item" id="staff-junko-sasaki" style="scroll-margin-top:90px;" href="member_junko_sasaki.html">
       <div class="staff-avatar" style="background:var(--purple-lt); color:var(--purple);">純</div>
       <div>
         <div class="staff-name">佐々木 純子</div>
@@ -314,7 +318,7 @@
       </div>
       <div class="staff-pos">准教授<span style="font-size:0.82em; font-weight:500;">（教授（キャリアアップ））</span></div>
     </a>
-    <a class="staff-item" href="member_hiroaki_kajiho.html">
+    <a class="staff-item" id="staff-hiroaki-kajiho" style="scroll-margin-top:90px;" href="member_hiroaki_kajiho.html">
       <div class="staff-avatar" style="background:var(--coral-lt); color:var(--coral);">博</div>
       <div>
         <div class="staff-name">梶保 博昭</div>
@@ -322,7 +326,7 @@
       </div>
       <div class="staff-pos">助教<span style="font-size:0.82em; font-weight:500;">（難治疾患研究所内講師）</span></div>
     </a>
-    <a class="staff-item" href="member_toshiyoshi_yamamoto.html">
+    <a class="staff-item" id="staff-toshiyoshi-yamamoto" style="scroll-margin-top:90px;" href="member_toshiyoshi_yamamoto.html">
       <div class="staff-avatar" style="background:var(--amber-lt); color:var(--amber);">義</div>
       <div>
         <div class="staff-name">山本 利義</div>
