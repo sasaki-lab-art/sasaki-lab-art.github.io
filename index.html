@@ -84,8 +84,8 @@
   .btn-primary:hover { background: #0f6e56; }
   .btn-outline { background: transparent; color: var(--text); border: 1.5px solid var(--border); }
   .btn-outline:hover { border-color: var(--teal); color: var(--teal); }
-  .btn-research, .btn-env, .btn-learn { background:#0e8f80; color:#fff; }
-  .btn-research:hover, .btn-env:hover, .btn-learn:hover { background:#0b7a6d; }
+  .btn-research, .btn-env, .btn-learn, .btn-admission { background:#0e8f80; color:#fff; }
+  .btn-research:hover, .btn-env:hover, .btn-learn:hover, .btn-admission:hover { background:#0b7a6d; }
   .hero-visual { position: relative; border-radius: 20px; overflow: hidden; height: 360px; background: var(--teal-lt); }
   .hero-slide { position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; object-position: left center; display: block; opacity: 0; z-index: 1; transition: opacity 1.2s ease-in-out; }
   .hero-slide.active { opacity: 1; }
@@ -229,13 +229,13 @@
   .contact-info { display: flex; flex-direction: column; }
   .contact-row { display: flex; align-items: flex-start; gap: 12px; margin-bottom: 1.25rem; }
   .contact-icon { width: 38px; height: 38px; background: var(--teal-lt); border-radius: 10px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; font-size: 18px; }
-  .contact-label { font-size: 12px; font-weight: 700; color: var(--muted); text-transform: uppercase; letter-spacing: 0.06em; }
-  .contact-val { font-size: 14px; color: var(--text); margin-top: 2px; }
+  .contact-label { font-size: 13px; font-weight: 700; color: var(--muted); text-transform: uppercase; letter-spacing: 0.06em; }
+  .contact-val { font-size: 16px; color: var(--text); margin-top: 2px; }
   .access-box { background: var(--teal-lt); border-radius: var(--radius); padding: 1.5rem; }
-  .access-box h3 { font-size: 18px; font-weight: 700; color: #0f6e56; margin-bottom: 0.75rem; }
+  .access-box h3 { font-size: 21px; font-weight: 700; color: #0f6e56; margin-bottom: 0.75rem; }
   .access-step { display: flex; gap: 10px; align-items: flex-start; margin-bottom: 0.6rem; }
   .step-n { width: 24px; height: 24px; background: var(--teal); color: white; border-radius: 50%; font-size: 13px; font-weight: 700; display: flex; align-items: center; justify-content: center; flex-shrink: 0; margin-top: 1px; }
-  .access-step p { font-size: 15px; color: #0f6e56; line-height: 1.6; }
+  .access-step p { font-size: 17px; color: #0f6e56; line-height: 1.6; }
 
   /* ── FOOTER ── */
   footer { background: #1a1a18; color: #9a9a94; padding: 3rem 2rem; }
@@ -390,6 +390,7 @@
       <a href="#research" class="btn btn-research">研究内容</a>
       <a href="#highlights" class="btn btn-env">教育・研究環境</a>
       <a href="#learn" class="btn btn-learn">学ぶ・読む</a>
+      <a href="join.html#admission" class="btn btn-admission">大学院入試</a>
     </div>
   </div>
   <div class="hero-visual">
@@ -552,7 +553,7 @@
 
       <a class="highlight-card hc-purple" href="equipment_program.html">
         <span class="highlight-badge hb-purple">研究基盤強化</span>
-        <h3>大学の枠を超えた<br>研究基盤設備強化プログラム</h3>
+        <h3>大学の枠を超えた<br>研究基盤設備強化・充実プログラム</h3>
         <p>「大学の枠を超えた研究基盤設備強化・充実プログラム」により、先端解析機器の整備と技術教育体制を強化しています。</p>
         <span class="highlight-link">詳細を見る →</span>
       </a>
@@ -619,7 +620,7 @@
 <section id="learn">
   <div class="section-tag">Learn</div>
   <h2 class="sec-title">学ぶ・読む</h2>
-  <p class="sec-lead">研究室のテーマに関わる教科書的な解説と、参考リンク集を公開しています。学生や一般の方にもおすすめです。</p>
+  <p class="sec-lead" style="max-width:none;">研究内容のバックグラウンドと解説、参考リンク集を公開しています。学生や一般の方にもおすすめです。</p>
 
   <div class="learn-tabs">
     <button class="tab-btn" onclick="showTab('bg')">📘 バックグラウンド</button>
@@ -665,13 +666,13 @@
       </div>
       <div class="bg-card c-purple">
         <h3>PI3キナーゼ・PTENと疾患</h3>
-        <p>PI3キナーゼはホスホイノシタイドを産生し、PTENはその逆反応を触媒します。この二つのバランス異常ががん・過誤腫・自己免疫疾患と深く関わっています。</p>
-        <a href="pips_pten.html" class="read-more">続きを読む →</a>
+        <p>PI3キナーゼはPI(4,5)P<sub>2</sub>からPI(3,4,5)P<sub>3</sub>を生成し、PTENはその逆反応を触媒します。この二つのバランス異常が、がんや免疫疾患に深く関わっています。</p>
+        <a href="pips_pten.html" class="read-more">準備中</a>
       </div>
       <div class="bg-card c-teal">
-        <h3>脂質の質量分析（リピドミクス）</h3>
-        <p>質量分析計を用いて細胞・組織中の脂質を網羅的に解析する技術。当研究室ではホスホイノシタイド専用の測定法を独自に開発しています。</p>
-        <a href="lipidomics.html" class="read-more">続きを読む →</a>
+        <h3>脂質の質量分析とリピドミクス</h3>
+        <p>手術組織検体や血液などの生体試料中の脂質は、質量分析計を用いて測定できます。ホスホイノシタイドの数百種類に及ぶ分子種を高深度に解析する技術は、当研究室の大きな強みです。</p>
+        <a href="lipidomics.html" class="read-more">準備中</a>
       </div>
     </div>
   </div>
@@ -687,7 +688,7 @@
     <h2 class="sec-title">連絡先・アクセス</h2>
     <div class="contact-grid">
       <div class="contact-info">
-        <div style="height:260px;">
+        <div style="height:300px;">
         <div class="contact-row">
           <div class="contact-icon">🏛️</div>
           <div>
@@ -716,17 +717,17 @@
             <iframe
               src="https://maps.google.com/maps?q=東京科学大学+湯島キャンパス+文京区湯島1-5-45&t=&z=16&ie=UTF8&iwloc=&output=embed"
               width="100%" height="100%"
-              style="border:0; border-radius:10px; display:block; width:100%; flex:1; min-height:180px;"
+              style="border:0; border-radius:10px; display:block; width:100%; flex:1; min-height:320px;"
               allowfullscreen loading="lazy">
             </iframe>
           </div>
         </div>
       </div>
       <div style="display:flex; flex-direction:column;">
-        <div style="height:260px; display:flex; align-items:center; justify-content:center;">
-          <img src="photos/access2.jpg" alt="御茶ノ水・湯島周辺の鉄道風景" style="max-width:66%; max-height:260px; width:auto; height:auto; border-radius:var(--radius); display:block; margin:0 auto; border:1px solid var(--border);">
+        <div style="height:300px; display:flex; align-items:center; justify-content:center;">
+          <img src="photos/access_ochanomizu.jpg" alt="御茶ノ水駅周辺：神田川と東京メトロ丸ノ内線・JR中央線・総武線が交差する風景" style="width:100%; height:300px; object-fit:cover; object-position:center bottom; border-radius:var(--radius); display:block; border:1px solid var(--border);">
         </div>
-        <div class="access-box" style="margin-top:1.25rem; flex:1;">
+        <div class="access-box" style="margin-top:1.25rem; flex:1; display:flex; flex-direction:column; justify-content:center;">
           <h3>🚃 交通アクセス</h3>
           <div class="access-step">
             <div class="step-n">1</div>
