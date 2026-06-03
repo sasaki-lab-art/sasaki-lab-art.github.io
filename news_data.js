@@ -33,6 +33,11 @@ const newsItems = [
         +'<span style="font-size:15px;font-weight:400;color:var(--muted);">医歯理工保健学専攻（修士）／医歯学専攻（博士）／生命理工医療科学専攻（博士）</span>',
    detail:"2026年6月11日（木）開催"},
 
+  {date:"2026年5月27日", dateSort:"2026-05", cat:"press", badge:"プレスリリース",
+   title:"自然免疫の炎症シグナルの終息を制御する新たな脂質–タンパク質相互作用を発見",
+   detail:'STINGシグナルの終息を担うリソソーム脂質 PI(3,5)P<sub>2</sub> と CHMP4B の相互作用を解明。<i>Nature Communications</i> 掲載',
+   link:"https://www.isct.ac.jp/ja/news/484kuqiti3h0"},
+
   {date:"2026年3月", dateSort:"2026-03", cat:"award", badge:"受賞",
    title:"柳井 翔吾が難治疾患研究所 最優秀論文賞を受賞",
    detail:"柳井 翔吾が最優秀論文賞を受賞しました"},
@@ -43,6 +48,11 @@ const newsItems = [
    link:"https://www.ptenresearchinstitute.org/"},
 
   /* ── 2025 ── */
+  {date:"2025年9月29日", dateSort:"2025-09", cat:"press", badge:"プレスリリース",
+   title:'副腎細胞が“脂肪細胞に変わる”仕組みを解明',
+   detail:'リン脂質 PI(3,4,5)P<sub>3</sub> の蓄積が副腎皮質細胞を脂肪細胞様へ分化転換させることを発見。<i>PNAS</i> 掲載',
+   link:"https://www.isct.ac.jp/ja/news/x2saemu71np0"},
+
   {date:"2025年6月", dateSort:"2025-06", cat:"award", badge:"受賞",
    title:"菊地 雄翔が日本生化学会 関東支部例会で優秀発表賞を受賞",
    detail:"2025年度 日本生化学会 関東支部例会 優秀発表賞"},
@@ -56,6 +66,11 @@ const newsItems = [
    detail:"2024年度 難治疾患研究所 学生・若手研究発表会"},
 
   /* ── 2024 ── */
+  {date:"2024年11月14日", dateSort:"2024-11-b", cat:"press", badge:"プレスリリース",
+   title:"電子顕微鏡技術を駆使して高機能膜脂質の超微細分布を解明",
+   detail:'電子顕微鏡法で膜脂質 PI(4,5)P<sub>2</sub> の超微細分布を高精度・定量的に可視化。<i>Journal of Cell Biology</i> 掲載',
+   link:"https://www.isct.ac.jp/ja/news/hnfw6sy7t8m1"},
+
   {date:"2024年11月", dateSort:"2024-11", cat:"award", badge:"受賞",
    title:"岡 風吹が第97回 日本生化学会大会で若手優秀賞を受賞",
    detail:"第97回 日本生化学会大会（2024年11月）"},
@@ -63,6 +78,11 @@ const newsItems = [
   {date:"2024年9月", dateSort:"2024-09", cat:"recruit", badge:"採択",
    title:"吉富 香澄がクリニシャン・サイエンティスト養成支援制度に採択",
    detail:"吉富 香澄（博士課程）が同制度に採択されました"},
+
+  {date:"2024年7月24日", dateSort:"2024-07", cat:"press", badge:"プレスリリース",
+   title:"がん抑制の分子メカニズム解明に新局面",
+   detail:'がん抑制タンパク質 p53 がヒストン H3.1 と核脂質ホスファチジン酸を介してゲノム恒常性を制御する仕組みを解明',
+   link:"https://www.tmd.ac.jp/press-release/20240724-1/"},
 
   {date:"2024年6月", dateSort:"2024-06", cat:"award", badge:"受賞",
    title:"菊地 雄翔が大学院リトリートでリトリート賞を受賞",
@@ -111,6 +131,11 @@ const newsItems = [
   {date:"2022年3月", dateSort:"2022-03", cat:"award", badge:"受賞",
    title:"森岡 真が難治疾患研究所 最優秀論文賞を受賞",
    detail:"難治疾患研究所における最優秀論文賞"},
+
+  {date:"2022年1月13日", dateSort:"2022-01", cat:"press", badge:"プレスリリース",
+   title:"疾患関連リン脂質の新規測定技術の開発",
+   detail:'生体リン脂質ホスホイノシタイドの多様性と局在を明らかにする新規測定技術を開発。疾患バイオマーカー探索へ',
+   link:"https://www.tmd.ac.jp/press-release/20220113-1/"},
 
   {date:"2022年度", dateSort:"2022-00", cat:"award", badge:"受賞",
    title:"釘井 雄基が日本生化学会 関東支部例会で優秀発表賞を受賞",

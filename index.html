@@ -121,10 +121,11 @@
   .badge-event { background: var(--amber-lt); color: #854f0b; }
   .badge-award { background: var(--teal-lt); color: #0f6e56; }
   .badge-recruit { background: var(--coral); color: #fff; }
+  .badge-press { background: #1f5fbf; color: #fff; }
   .news-text { font-size: 14px; line-height: 1.5; }
+  .news-detail { display: block; font-size: 12px; font-weight: 400; color: var(--muted); line-height: 1.6; margin-top: 4px; }
   /* ピン留め（最上部の注目ニュース）：一回り大きいフォント */
   .news-item-pinned .news-date { font-size: 13px; }
-  .news-item-pinned .news-badge { font-size: 12px; }
   .news-item-pinned .news-text { font-size: 16px; font-weight: 600; }
 
   /* ── RESEARCH ── */
@@ -621,7 +622,7 @@
     </a>
   </div>
   <div style="margin-top:1.5rem;">
-    <a href="members.html" class="btn btn-outline" style="font-size:15px; padding:9px 20px; border-color:var(--teal); color:var(--teal);">教職員・大学院生・学部生 約20名が在籍しています：教室員一覧を見る→</a>
+    <a href="members.html" class="btn btn-primary" style="font-size:15px; padding:9px 20px;">教職員・大学院生・学部生 約20名が在籍しています：教室員一覧を見る→</a>
   </div>
 </section>
 </div>
@@ -793,15 +794,16 @@
   var badgeClass = {
     '受賞':'badge-award', '採用':'badge-award',
     '基調講演':'badge-event', '招待講演':'badge-event', '講演':'badge-event',
-    '説明会':'badge-recruit', '募集':'badge-recruit', '採択':'badge-new', 'お知らせ':'badge-new'
+    '説明会':'badge-recruit', '募集':'badge-recruit', '採択':'badge-new', 'お知らせ':'badge-new',
+    'プレスリリース':'badge-press'
   };
 
   /* ① pin:true の項目を最上部に固定（手動指定の注目ニュース）*/
   var pinned = newsItems.filter(function(item) { return item.pin === true; });
 
-  /* ② 対象：受賞 または 国際講演（intl:true の event）。pin 項目は除外 */
+  /* ② 対象：受賞 / プレスリリース / 国際講演（intl:true の event）。pin 項目は除外 */
   var filtered = newsItems.filter(function(item) {
-    return !item.pin && (item.cat === 'award' || (item.cat === 'event' && item.intl === true));
+    return !item.pin && (item.cat === 'award' || item.cat === 'press' || (item.cat === 'event' && item.intl === true));
   });
 
   /* dateSort 降順 → 上位6件。pin を先頭に連結 */
@@ -813,6 +815,7 @@
   var html = '';
   topNews.forEach(function(item) {
     var bc    = badgeClass[item.badge] || 'badge-new';
+    var bt    = (item.cat === 'press') ? 'プレス' : item.badge;  /* トップでは短縮表示 */
     var date  = item.date.replace(/年.*/, '').replace('年','.');  /* "2026年3月" → "2026.03" 風 */
     /* dateSort "2026-03" → "2026.03" */
     var ds    = (item.dateSort || '').replace(/^(\d{4})-(\d{2}).*$/, '$1.$2');
@@ -823,8 +826,10 @@
 
     html += '<' + tag + ' ' + attrs + '>'
           + '<span class="news-date">' + ds + '</span>'
-          + '<span class="news-badge ' + bc + '">' + item.badge + '</span>'
-          + '<span class="news-text">' + item.title + '</span>'
+          + '<span class="news-badge ' + bc + '">' + bt + '</span>'
+          + '<span class="news-text">' + item.title
+          + ((item.detail && item.cat === 'press') ? '<span class="news-detail">' + item.detail + '</span>' : '')
+          + '</span>'
           + '</' + tag + '>';
   });
   container.innerHTML = html;

@@ -124,7 +124,7 @@
   .tl-date { font-size: 12px; font-weight: 700; color: var(--muted); }
 
   .badge {
-    font-size: 11px; font-weight: 700; padding: 2px 0; border-radius: 10px; white-space: nowrap; display: inline-block; width: 58px; text-align: center; flex-shrink: 0;
+    font-size: 11px; font-weight: 700; padding: 3px 12px; border-radius: 10px; white-space: nowrap; display: inline-block; min-width: 72px; text-align: center; flex-shrink: 0;
   }
   .badge-paper   { background: var(--purple-lt); color: #3c3489; }
   .badge-review  { background: var(--teal-lt); color: #0f6e56; }
@@ -133,6 +133,7 @@
   .badge-grant   { background: var(--purple); color: #fff; }
   .badge-info    { background: #e7e7e2; color: #5d5d56; }
   .badge-recruit { background: var(--coral); color: #fff; }
+  .badge-press   { background: #1f5fbf; color: #fff; }
 
   .tl-title { font-size: 15px; font-weight: 600; line-height: 1.55; color: var(--text); margin-bottom: 4px; }
   .tl-title a { color: inherit; text-decoration: none; }
@@ -227,6 +228,7 @@
 <!-- FILTER BAR -->
 <div class="filter-bar">
   <button class="filter-btn active" data-filter="all">すべて</button>
+  <button class="filter-btn" data-filter="press">プレスリリース</button>
   <button class="filter-btn" data-filter="event">学会・講演</button>
   <button class="filter-btn" data-filter="award">受賞・表彰</button>
   <button class="filter-btn" data-filter="recruit">募集</button>
@@ -258,7 +260,7 @@
 <script>
 // ── RENDER ────────────────────────────────────────────────────────────────────
 function badgeClass(badge) {
-  var map = {"受賞":"badge-award","採用":"badge-award","基調講演":"badge-event","招待講演":"badge-event","講演":"badge-event","説明会":"badge-recruit","採択":"badge-grant","お知らせ":"badge-info","募集":"badge-recruit"};
+  var map = {"受賞":"badge-award","採用":"badge-award","基調講演":"badge-event","招待講演":"badge-event","講演":"badge-event","説明会":"badge-recruit","採択":"badge-grant","お知らせ":"badge-info","募集":"badge-recruit","プレスリリース":"badge-press"};
   return map[badge] || "badge-info";
 }
 
@@ -289,8 +291,8 @@ function renderNews() {
       html += '<div class="tl-dot"></div>';
       html += '<div class="tl-body">';
       html += '<div class="tl-meta">';
-      html += '<span class="tl-date">' + item.date + '</span>';
       html += '<span class="badge ' + badgeClass(item.badge) + '">' + item.badge + '</span>';
+      html += '<span class="tl-date">' + item.date + '</span>';
       html += '</div>';
       html += '<div class="tl-title">' + item.title + '</div>';
       if (item.detail) html += '<div class="tl-detail">' + item.detail + '</div>';
@@ -305,7 +307,7 @@ function renderNews() {
     noYear.forEach(function(item) {
       html += '<div class="tl-item" data-cat="' + item.cat + '">';
       html += '<div class="tl-dot"></div><div class="tl-body">';
-      html += '<div class="tl-meta"><span class="tl-date">' + (item.date||"") + '</span><span class="badge ' + badgeClass(item.badge) + '">' + item.badge + '</span></div>';
+      html += '<div class="tl-meta"><span class="badge ' + badgeClass(item.badge) + '">' + item.badge + '</span><span class="tl-date">' + (item.date||"") + '</span></div>';
       html += '<div class="tl-title">' + item.title + '</div>';
       if (item.detail) html += '<div class="tl-detail">' + item.detail + '</div>';
       html += '</div></div>';

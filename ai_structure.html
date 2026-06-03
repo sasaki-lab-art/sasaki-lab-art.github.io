@@ -175,7 +175,7 @@
   <div class="page-header-inner">
     <div class="section-tag">Background</div>
     <h1 class="page-title">AIで読み解く脂質–タンパク質相互作用</h1>
-    <p class="page-lead">深層学習による構造予測AI、生成AI、統計解析を活用し、脂質とタンパク質の結合様式を予測し、実験で検証する。当研究室が進める、AI時代の脂質生物学アプローチを紹介します。</p>
+    <p class="page-lead">深層学習による構造予測AI、生成AI、統計解析を活用し、脂質とタンパク質の結合様式、そして疾患関連変異が脂質結合に与える影響を予測し、実験で検証する。</p>
   </div>
 </div>
 
@@ -186,25 +186,25 @@
 
   <div class="article-body">
     <h2>疾患の変異を読み解き、実験を設計する</h2>
-    <p>脂質結合タンパク質の遺伝子変異が、疾患の原因となる例が知られています。しかし、こうした<span class="em-teal">病原性変異がなぜタンパク質機能を損ない</span>、細胞応答や疾患病態につながるのかは、必ずしも明らかではありません。その一因として、脂質との結合異常が関わる可能性があります。</p>
-    <p>本手法では、野生型タンパク質と変異型タンパク質について、脂質がどの領域に結合しやすいか、どのアミノ酸が脂質認識に関わるか、変異によって結合ポケットや接触残基がどう変化するかを、構造のレベルで検討します。これにより、病態メカニズムについて<span class="em-teal">実験で検証可能な仮説</span>を立てることができます。</p>
-    <p>また、タンパク質と脂質の結合を実験的に証明するには、結合に関わると予測されるアミノ酸を置換した変異体を作製し、質量分析や結合アッセイなどで脂質の結合量を実測します。このとき、どのアミノ酸を変えれば結合が損なわれるかを的確に見極めることが鍵になります。<span class="em-teal">計算で当たりをつけ、実験で確かめる</span> ── この往復により、研究を効率よく前へ進めます。</p>
+    <p>脂質結合能を持つタンパク質には、神経疾患、免疫疾患、内分泌疾患、代謝疾患、網膜変性、難聴、がんなどに関わるものが数多く存在します。しかし、患者で見つかった遺伝子変異が、脂質との結合、脂質依存的な構造変化、膜局在、シグナル伝達をどのように変えるのかは、多くの場合まだ十分に調べられていません。</p>
+    <p>私たちは、こうした疾患関連変異を、<span class="em-teal">「脂質結合異常」という未検証の視点</span>から読み解くことを目指しています。すなわち、疾患変異がタンパク質の立体構造や脂質結合ドメイン、脂質との接触残基をどのように変化させるのかをAIで予測し、実験で検証可能な仮説へと落とし込みます。</p>
+    <p>本手法では、野生型タンパク質と変異型タンパク質について、どの脂質がどの領域に結合しやすいか、どのアミノ酸が脂質認識に関わるか、変異によって結合ドメインや接触残基がどう変化するかを、構造のレベルで検討します。これにより、病態メカニズムについて<span class="em-teal">実験で検証可能な仮説</span>を立てることができます。疾患変異による異常が脂質結合や脂質シグナルの失調に基づくと分かれば、<span class="em-teal">脂質代謝への介入を通じた新しい治療戦略</span>にもつながる可能性があります。</p>
 
     <h2>構造予測AIの登場と、その限界</h2>
     <p><span class="em-teal">AlphaFold3</span>などの構造予測AIにより、タンパク質だけでなく、核酸、低分子、脂質を含む複合体構造の候補を予測できるようになりました。脂質–タンパク質相互作用についても、脂質がどのポケットに配置されるか、どのアミノ酸と近接するかを検討できる可能性があります。</p>
     <p>一方で、構造予測AIの出力は、実験的な証明そのものではありません。予測には毎回揺らぎがあり、また実際には結合しない組み合わせでも、複合体らしい構造が出力される場合があります。したがって、<span class="em-teal">1回の予測結果をそのまま正解として扱うことはできません</span>。</p>
 
     <h2>実験科学の作法を計算に持ち込む</h2>
-    <p>そこで当研究室では、実験生化学で当たり前に用いられる<span class="em-teal">反復・統計・対照</span>という考え方を、構造予測の解析に取り入れています。同じタンパク質–脂質の組み合わせについて多数回の反復予測を行い、得られた構造候補をアンサンブルとして扱います。</p>
-    <p>各構造について、脂質とアミノ酸残基の距離、接触頻度、結合ポケットの再現性、対照脂質との差を解析します。これにより、偶然に得られた配置ではなく、繰り返し現れる脂質結合様式や、特定の脂質に特徴的な相互作用候補を抽出します。</p>
+    <p>そこで当研究室では、実験生化学で当たり前に用いられる<span class="em-teal">反復・統計・対照</span>という考え方を、構造予測の解析に取り入れています。同じタンパク質–脂質の組み合わせについて数千回の反復予測を行い、得られた構造候補をアンサンブルとして扱います。</p>
+    <p>各構造について、脂質とアミノ酸残基の距離、接触頻度、結合ドメインの再現性、対照脂質との差を解析します。これにより、偶然に得られた配置ではなく、繰り返し現れる脂質結合様式や、特定の脂質に特徴的な相互作用候補を抽出します。</p>
 
     <div class="callout">
       <div class="co-label">Key Idea</div>
-      <p>深層学習が提示する多数の構造候補を、実験科学の考え方で評価し、脂質結合に関わるアミノ酸、結合ポケット、変異体設計の候補を絞り込む。</p>
+      <p>深層学習が提示する多数の構造候補を、実験科学の考え方で評価し、脂質結合に関わるアミノ酸、結合ドメイン、変異体設計の候補を絞り込む。</p>
     </div>
 
     <h2>生成AIとスーパーコンピュータの活用</h2>
-    <p>多数の予測構造から、原子間距離、接触頻度、結合ポケットの位置などを抽出するには、専用の解析プログラムが必要です。こうしたPythonスクリプトの作成や修正には、生成AIを活用できます。やりたい解析を言葉で整理し、コードの下書きや修正をAIに支援させることで、<span class="em-teal">プログラミングに不慣れなウェット研究者や学生でも</span>、自分の研究目的に合わせた解析を組み立てやすくなります。</p>
+    <p>多数の予測構造から、原子間距離、接触頻度、結合ドメインの位置などを抽出するには、専用の解析プログラムが必要です。こうしたPythonスクリプトの作成や修正には、生成AIを活用できます。やりたい解析を言葉で整理し、コードの下書きや修正をAIに支援させることで、<span class="em-teal">プログラミングに不慣れなウェット研究者や学生でも</span>、自分の研究目的に合わせた解析を組み立てやすくなります。</p>
     <p>さらに当研究室では、生成AIを単なるコード作成補助にとどめず、多数の予測結果を整理し、どの脂質、どのアミノ酸、どの変異体、どの実験系を優先すべきかを考えるための支援技術として活用します。大規模な構造予測は、学内のスーパーコンピュータ<span class="em-teal">TSUBAME4.0</span>上で実行し、得られた数値は統計解析言語Rや構造表示ソフトを用いて集計・可視化します。</p>
   </div>
 
@@ -213,7 +213,7 @@
   </div>
 
   <figure class="wf">
-    <svg viewBox="0 0 1200 560" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="AIを活用した脂質–タンパク質相互作用解析のワークフロー：①構造を予測する（AlphaFold3などで複合体を多数回予測し構造アンサンブルを取得）、②数値化する（原子間距離・接触頻度・結合ポケットを抽出。生成AIも活用）、③統計で評価する（反復予測を統計解析し再現性と対照との差を評価して脂質結合候補を絞り込む）、④実験で検証する（変異体を作製し質量分析・結合アッセイ・細胞解析で機能と病態仮説を検証）。構造予測AIを仮説生成・実験設計ツールへ。">
+    <svg viewBox="0 0 1200 560" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="AIを活用した脂質–タンパク質相互作用解析のワークフロー：①構造を予測する（AlphaFold3などで複合体を数千回予測し構造アンサンブルを取得）、②数値化する（原子間距離・接触頻度・結合ドメインを抽出。生成AIも活用）、③統計で評価する（反復予測を統計解析し再現性と対照との差を評価して脂質結合候補を絞り込む）、④実験で検証する（変異体を作製し質量分析・結合アッセイ・細胞解析で機能と病態仮説を検証）。構造予測AIを仮説生成・実験設計ツールへ。">
       <defs>
         <marker id="arw" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
           <path d="M0,0 L10,5 L0,10 z" fill="#9a9a94"/>
@@ -225,48 +225,49 @@
       <!-- STEP 1 (green) -->
       <rect x="30" y="90" width="264" height="310" rx="14" fill="#e1f5ee" stroke="#1d9e75" stroke-width="1.5"/>
       <circle cx="62" cy="132" r="18" fill="#1d9e75"/>
-      <text x="62" y="139" text-anchor="middle" font-family="'DM Sans',sans-serif" font-size="18" font-weight="700" fill="#fff">1</text>
-      <text x="90" y="139" font-family="'Noto Sans JP',sans-serif" font-size="18" font-weight="700" fill="#1a1a18">構造を予測する</text>
-      <text x="52" y="190" font-family="'Noto Sans JP',sans-serif" font-size="15" fill="#1a1a18">AlphaFold3などで</text>
-      <text x="52" y="216" font-family="'Noto Sans JP',sans-serif" font-size="15" fill="#1a1a18">タンパク質–脂質複合体を</text>
-      <text x="52" y="242" font-family="'Noto Sans JP',sans-serif" font-size="15" fill="#1a1a18">多数回予測</text>
-      <text x="52" y="300" font-family="'Noto Sans JP',sans-serif" font-size="14" font-weight="700" fill="#16805f">→ 構造アンサンブルを取得</text>
+      <text x="62" y="139" text-anchor="middle" font-family="'DM Sans',sans-serif" font-size="20" font-weight="700" fill="#fff">1</text>
+      <text x="90" y="139" font-family="'Noto Sans JP',sans-serif" font-size="20" font-weight="700" fill="#1a1a18">構造を予測する</text>
+      <text x="52" y="190" font-family="'Noto Sans JP',sans-serif" font-size="17" fill="#1a1a18">AlphaFold3などで</text>
+      <text x="52" y="216" font-family="'Noto Sans JP',sans-serif" font-size="17" fill="#1a1a18">タンパク質–脂質複合体を</text>
+      <text x="52" y="242" font-family="'Noto Sans JP',sans-serif" font-size="17" fill="#1a1a18">数千回予測</text>
+      <text x="52" y="300" font-family="'Noto Sans JP',sans-serif" font-size="16" font-weight="700" fill="#16805f">→ 構造アンサンブルを取得</text>
       <line x1="52" y1="328" x2="272" y2="328" stroke="#1d9e75" stroke-width="1" stroke-dasharray="2 4" opacity="0.6"/>
-      <text x="52" y="362" font-family="'Noto Sans JP',sans-serif" font-size="13" fill="#6b6b65">野生型・変異型・対照脂質を比較</text>
+      <text x="52" y="362" font-family="'Noto Sans JP',sans-serif" font-size="15" fill="#6b6b65">野生型・変異型・対照脂質を比較</text>
 
       <!-- STEP 2 (amber) -->
       <rect x="322" y="90" width="264" height="310" rx="14" fill="#faeeda" stroke="#ba7517" stroke-width="1.5"/>
       <circle cx="354" cy="132" r="18" fill="#ba7517"/>
-      <text x="354" y="139" text-anchor="middle" font-family="'DM Sans',sans-serif" font-size="18" font-weight="700" fill="#fff">2</text>
-      <text x="382" y="139" font-family="'Noto Sans JP',sans-serif" font-size="18" font-weight="700" fill="#1a1a18">数値化する</text>
-      <text x="344" y="190" font-family="'Noto Sans JP',sans-serif" font-size="15" fill="#1a1a18">原子間距離・接触頻度・</text>
-      <text x="344" y="216" font-family="'Noto Sans JP',sans-serif" font-size="15" fill="#1a1a18">結合ポケットを抽出</text>
-      <text x="344" y="300" font-family="'Noto Sans JP',sans-serif" font-size="14" font-weight="700" fill="#8a5410">→ 生成AIも活用して解析</text>
+      <text x="354" y="139" text-anchor="middle" font-family="'DM Sans',sans-serif" font-size="20" font-weight="700" fill="#fff">2</text>
+      <text x="382" y="139" font-family="'Noto Sans JP',sans-serif" font-size="20" font-weight="700" fill="#1a1a18">数値化する</text>
+      <text x="344" y="190" font-family="'Noto Sans JP',sans-serif" font-size="17" fill="#1a1a18">原子間距離・接触頻度・</text>
+      <text x="344" y="216" font-family="'Noto Sans JP',sans-serif" font-size="17" fill="#1a1a18">結合ドメインを抽出</text>
+      <text x="344" y="290" font-family="'Noto Sans JP',sans-serif" font-size="16" font-weight="700" fill="#8a5410">→ 生成AIも活用して解析</text>
+      <text x="344" y="314" font-family="'Noto Sans JP',sans-serif" font-size="16" font-weight="700" fill="#8a5410">大規模計算はTSUBAME4.0で実行</text>
       <line x1="344" y1="328" x2="564" y2="328" stroke="#ba7517" stroke-width="1" stroke-dasharray="2 4" opacity="0.6"/>
-      <text x="344" y="362" font-family="'Noto Sans JP',sans-serif" font-size="13" fill="#6b6b65">Python・可視化ツールで整理</text>
+      <text x="344" y="362" font-family="'Noto Sans JP',sans-serif" font-size="15" fill="#6b6b65">Python・可視化ツールで整理</text>
 
       <!-- STEP 3 (purple) -->
       <rect x="614" y="90" width="264" height="310" rx="14" fill="#eeedfe" stroke="#534ab7" stroke-width="1.5"/>
       <circle cx="646" cy="132" r="18" fill="#534ab7"/>
-      <text x="646" y="139" text-anchor="middle" font-family="'DM Sans',sans-serif" font-size="18" font-weight="700" fill="#fff">3</text>
-      <text x="674" y="139" font-family="'Noto Sans JP',sans-serif" font-size="18" font-weight="700" fill="#1a1a18">統計で評価する</text>
-      <text x="636" y="190" font-family="'Noto Sans JP',sans-serif" font-size="15" fill="#1a1a18">反復予測を統計的に解析し</text>
-      <text x="636" y="216" font-family="'Noto Sans JP',sans-serif" font-size="15" fill="#1a1a18">再現性と対照との差を評価</text>
-      <text x="636" y="300" font-family="'Noto Sans JP',sans-serif" font-size="14" font-weight="700" fill="#3d3596">→ 脂質結合候補を絞り込む</text>
+      <text x="646" y="139" text-anchor="middle" font-family="'DM Sans',sans-serif" font-size="20" font-weight="700" fill="#fff">3</text>
+      <text x="674" y="139" font-family="'Noto Sans JP',sans-serif" font-size="20" font-weight="700" fill="#1a1a18">統計で評価する</text>
+      <text x="636" y="190" font-family="'Noto Sans JP',sans-serif" font-size="17" fill="#1a1a18">反復予測を統計的に解析し</text>
+      <text x="636" y="216" font-family="'Noto Sans JP',sans-serif" font-size="17" fill="#1a1a18">再現性と対照との差を評価</text>
+      <text x="636" y="300" font-family="'Noto Sans JP',sans-serif" font-size="16" font-weight="700" fill="#3d3596">→ 脂質結合候補を絞り込む</text>
       <line x1="636" y1="328" x2="856" y2="328" stroke="#534ab7" stroke-width="1" stroke-dasharray="2 4" opacity="0.6"/>
-      <text x="636" y="362" font-family="'Noto Sans JP',sans-serif" font-size="13" fill="#6b6b65">接触頻度・配置・再現性を比較</text>
+      <text x="636" y="362" font-family="'Noto Sans JP',sans-serif" font-size="15" fill="#6b6b65">接触頻度・配置・再現性を比較</text>
 
       <!-- STEP 4 (blue) -->
       <rect x="906" y="90" width="264" height="310" rx="14" fill="#e7f0fa" stroke="#2f74c0" stroke-width="1.5"/>
       <circle cx="938" cy="132" r="18" fill="#2f74c0"/>
-      <text x="938" y="139" text-anchor="middle" font-family="'DM Sans',sans-serif" font-size="18" font-weight="700" fill="#fff">4</text>
-      <text x="966" y="139" font-family="'Noto Sans JP',sans-serif" font-size="18" font-weight="700" fill="#1a1a18">実験で検証する</text>
-      <text x="928" y="190" font-family="'Noto Sans JP',sans-serif" font-size="15" fill="#1a1a18">変異体を作製し、</text>
-      <text x="928" y="216" font-family="'Noto Sans JP',sans-serif" font-size="15" fill="#1a1a18">質量分析・結合アッセイ・</text>
-      <text x="928" y="242" font-family="'Noto Sans JP',sans-serif" font-size="15" fill="#1a1a18">細胞解析で検証</text>
-      <text x="928" y="300" font-family="'Noto Sans JP',sans-serif" font-size="14" font-weight="700" fill="#1f548f">→ 機能と病態仮説を検証</text>
+      <text x="938" y="139" text-anchor="middle" font-family="'DM Sans',sans-serif" font-size="20" font-weight="700" fill="#fff">4</text>
+      <text x="966" y="139" font-family="'Noto Sans JP',sans-serif" font-size="20" font-weight="700" fill="#1a1a18">実験で検証する</text>
+      <text x="928" y="190" font-family="'Noto Sans JP',sans-serif" font-size="17" fill="#1a1a18">変異体を作製し、</text>
+      <text x="928" y="216" font-family="'Noto Sans JP',sans-serif" font-size="17" fill="#1a1a18">質量分析・結合アッセイ・</text>
+      <text x="928" y="242" font-family="'Noto Sans JP',sans-serif" font-size="17" fill="#1a1a18">細胞解析で検証</text>
+      <text x="928" y="300" font-family="'Noto Sans JP',sans-serif" font-size="16" font-weight="700" fill="#1f548f">→ 機能と病態仮説を検証</text>
       <line x1="928" y1="328" x2="1148" y2="328" stroke="#2f74c0" stroke-width="1" stroke-dasharray="2 4" opacity="0.6"/>
-      <text x="928" y="362" font-family="'Noto Sans JP',sans-serif" font-size="13" fill="#6b6b65">計算結果を生命現象へ接続</text>
+      <text x="928" y="362" font-family="'Noto Sans JP',sans-serif" font-size="15" fill="#6b6b65">計算結果を生命現象へ接続</text>
 
       <!-- arrows between steps -->
       <line x1="297" y1="245" x2="319" y2="245" stroke="#9a9a94" stroke-width="2.5" marker-end="url(#arw)"/>
@@ -275,8 +276,8 @@
 
       <!-- bottom transformation ribbon -->
       <rect x="30" y="430" width="1140" height="110" rx="16" fill="#1a1a18"/>
-      <text x="600" y="472" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-size="17" fill="#cfcfca">構造予測AIを『仮説生成・実験設計ツール』へ</text>
-      <text x="600" y="508" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-size="22" font-weight="700" fill="#fff">生命現象と疾患病態への問い　→　AIで実験の狙いを定める　→　実験で確かめる</text>
+      <text x="600" y="472" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-size="20" fill="#cfcfca">構造予測AIを『仮説生成・実験設計ツール』へ</text>
+      <text x="600" y="508" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-size="26" font-weight="700" fill="#fff">生命現象と疾患病態への問い　→　AIで実験の狙いを定める　→　実験で確かめる</text>
     </svg>
     <figcaption>脂質–タンパク質相互作用解析の概念図。反復予測・生成AI・統計解析・実験検証を連結し、AIを仮説生成と実験設計に活用する。</figcaption>
   </figure>
@@ -286,21 +287,21 @@
       <div class="num" style="background:#1d9e75;">1</div>
       <div class="st-body">
         <h3>構造を予測する</h3>
-        <p>AlphaFold3などの構造予測AIを用いて、同じタンパク質–脂質複合体を多数回予測します。野生型と変異型、候補脂質と対照脂質を比較し、構造アンサンブルを取得します。</p>
+        <p>AlphaFold3などの構造予測AIを用いて、同じタンパク質–脂質複合体を数千回予測します。野生型と変異型、候補脂質と対照脂質を比較し、構造アンサンブルを取得します。</p>
       </div>
     </div>
     <div class="wf-step">
       <div class="num" style="background:#ba7517;">2</div>
       <div class="st-body">
         <h3>数値化する</h3>
-        <p>各予測構造から、脂質とアミノ酸残基の距離、接触の有無、結合ポケットの位置、脂質の配置を抽出します。必要な解析コードは、生成AIも活用しながら作成します。</p>
+        <p>各予測構造から、脂質とアミノ酸残基の距離、接触の有無、結合ドメインの位置、脂質の配置を抽出します。必要な解析コードは、生成AIも活用しながら作成します。</p>
       </div>
     </div>
     <div class="wf-step">
       <div class="num" style="background:#534ab7;">3</div>
       <div class="st-body">
         <h3>統計で評価する</h3>
-        <p>反復予測で得られた構造群を統計的に解析し、接触頻度、結合ポケットの再現性、対照脂質との差を評価します。これにより、脂質結合に関わる可能性の高いアミノ酸を優先順位づけします。</p>
+        <p>反復予測で得られた構造群を統計的に解析し、接触頻度、結合ドメインの再現性、対照脂質との差を評価します。これにより、脂質結合に関わる可能性の高いアミノ酸を優先順位づけします。</p>
       </div>
     </div>
     <div class="wf-step">
@@ -315,7 +316,7 @@
   <div class="article-body">
     <h2>AlphaFold3を「推論ツール」から「実験設計ツール」へ</h2>
     <p>1回の構造予測結果をそのまま正解とみなすのではなく、<span class="em-teal">反復予測、統計解析、対照比較</span>を組み合わせることで、構造予測AIを実験設計に活用します。重要なのは、AIだけで結論を出すことではありません。AIを使って、実験で確かめるべき候補を絞り込むことです。</p>
-    <p>この考え方により、脂質結合に関わるアミノ酸候補、疾患変異の影響、変異体設計の方針、対照脂質の選定を、より合理的に進めることができます。構造予測AIは、実験を置き換えるものではなく、<span class="em-teal">実験の狙いを明確にするための道具</span>です。</p>
+    <p>この考え方により、脂質結合に関わるアミノ酸候補、疾患変異の影響、変異体設計の方針、対照脂質の選定を、より合理的に進めることができます。構造予測AIは、実験を置き換えるものではなく、<span class="em-teal">実験の設計精度を格段に向上させる道具</span>です。</p>
 
     <h2>めざすもの</h2>
     <p>当研究室は、AIそのものを開発する研究室ではありません。脂質生物学、ホスホイノシタイド解析、質量分析、細胞実験、疾患モデル研究を基盤とする<span class="em-teal">ウェット研究室</span>です。近年、AIは専門的なデータサイエンティストだけでなく、生命科学の実験研究者にとっても活用しやすい技術になりつつあります。一方で、AIが提示した候補を実際の細胞・組織・疾患モデルで検証するには、確かな実験技術と生物学的洞察が不可欠です。</p>
