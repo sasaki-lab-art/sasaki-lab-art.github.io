@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex">
+<title>大学院生リクルート動画 | 病態生理化学分野/脂質生物学分野</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  :root {
+    --teal:#1d9e75; --coral:#d85a30; --amber:#ba7517; --purple:#534ab7;
+    --bg:#0d1411; --text:#f3f3ee;
+  }
+  body { font-family:'Noto Sans JP','DM Sans',sans-serif; background:var(--bg); color:var(--text); }
+  .wrap { max-width:1040px; margin:0 auto; padding:24px 16px 64px; }
+  .intro { text-align:center; margin-bottom:18px; }
+  .intro h1 { font-family:'DM Serif Display',serif; font-weight:400; font-size:1.5rem; letter-spacing:.02em; }
+  .intro p { color:#9aa39d; font-size:13px; margin-top:6px; line-height:1.7; }
+
+  /* ── STAGE (16:9) ── */
+  .stage {
+    position:relative; width:100%; aspect-ratio:16/9; background:#000;
+    border-radius:14px; overflow:hidden; box-shadow:0 18px 60px rgba(0,0,0,.5);
+  }
+  .scene { position:absolute; inset:0; opacity:0; transition:opacity .9s ease; }
+  .scene.active { opacity:1; }
+  .scene-bg { position:absolute; inset:0; background-size:cover; background-position:center;
+    transform:scale(1.04); }
+  .scene.active .scene-bg { animation:kb var(--dur,14s) linear forwards; }
+  @keyframes kb { from{ transform:scale(1.02);} to{ transform:scale(1.12);} }
+  .scene::after { content:''; position:absolute; inset:0;
+    background:linear-gradient(180deg, rgba(8,12,10,.30) 0%, rgba(8,12,10,.05) 32%, rgba(8,12,10,.45) 72%, rgba(8,12,10,.86) 100%); }
+  .scene-text { position:absolute; left:0; right:0; bottom:0; padding:7% 7% 8%; z-index:2; }
+  .kicker { display:inline-block; font-size:clamp(11px,1.5vw,15px); font-weight:700; letter-spacing:.14em;
+    text-transform:uppercase; color:#fff; background:var(--accent,var(--teal));
+    padding:4px 14px; border-radius:20px; margin-bottom:14px; opacity:0; }
+  .title { font-family:'Noto Sans JP',sans-serif; font-weight:900; line-height:1.18;
+    font-size:clamp(22px,4.2vw,46px); text-shadow:0 2px 18px rgba(0,0,0,.55); opacity:0; }
+  .sub { margin-top:12px; font-size:clamp(12px,1.9vw,19px); font-weight:500; color:#e7e7e0;
+    text-shadow:0 2px 12px rgba(0,0,0,.5); max-width:80%; opacity:0; }
+  .scene.active .kicker { animation:rise .7s .15s ease forwards; }
+  .scene.active .title  { animation:rise .8s .35s ease forwards; }
+  .scene.active .sub    { animation:rise .8s .6s ease forwards; }
+  @keyframes rise { from{ opacity:0; transform:translateY(18px);} to{ opacity:1; transform:translateY(0);} }
+
+  /* progress + bigplay */
+  .bar { position:absolute; left:0; top:0; height:4px; width:0; background:var(--teal); z-index:5; box-shadow:0 0 12px var(--teal); }
+  .bigplay { position:absolute; inset:0; display:flex; flex-direction:column; align-items:center; justify-content:center;
+    gap:16px; z-index:6; background:rgba(6,10,8,.55); cursor:pointer; transition:opacity .4s; }
+  .bigplay.hidden { opacity:0; pointer-events:none; }
+  .bigplay .pbtn { width:84px; height:84px; border-radius:50%; background:var(--teal); display:flex; align-items:center; justify-content:center; box-shadow:0 8px 30px rgba(29,158,117,.5); }
+  .bigplay .pbtn svg { width:34px; height:34px; fill:#fff; margin-left:5px; }
+  .bigplay span { font-size:14px; color:#dfe6e2; letter-spacing:.04em; }
+  .bigplay small { font-size:12px; color:#9aa39d; }
+
+  /* controls */
+  .controls { display:flex; align-items:center; gap:10px; margin-top:14px; flex-wrap:wrap; }
+  .controls button { font-family:inherit; font-size:13px; font-weight:700; color:var(--text);
+    background:#1c2823; border:1px solid #2c3a33; padding:9px 16px; border-radius:10px; cursor:pointer; transition:.15s; }
+  .controls button:hover { background:#26342d; border-color:var(--teal); }
+  .controls .spacer { flex:1; }
+  .controls label { font-size:12px; color:#9aa39d; display:flex; align-items:center; gap:6px; }
+  .controls select { font-family:inherit; font-size:12px; background:#1c2823; color:var(--text); border:1px solid #2c3a33; border-radius:8px; padding:6px 8px; max-width:230px; }
+  .hint { font-size:12px; color:#7f8a83; margin-top:10px; line-height:1.7; }
+
+  /* script */
+  .script { margin-top:34px; background:#121a16; border:1px solid #1f2a24; border-radius:14px; padding:22px 24px; }
+  .script h2 { font-size:14px; letter-spacing:.08em; text-transform:uppercase; color:var(--teal); margin-bottom:4px; }
+  .script p.note { font-size:12px; color:#8a948d; margin-bottom:14px; }
+  .srow { display:grid; grid-template-columns:84px 1fr; gap:14px; padding:11px 0; border-top:1px solid #1f2a24; }
+  .srow:first-of-type { border-top:none; }
+  .stime { font-variant-numeric:tabular-nums; font-size:12px; color:#7f8a83; font-weight:700; }
+  .scap { font-size:12px; color:#9aa39d; }
+  .snar { font-size:14px; color:#e7e7e0; line-height:1.7; margin-top:3px; }
+  @media (max-width:560px){ .srow{ grid-template-columns:64px 1fr; } .sub{ max-width:100%; } }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <div class="intro">
+    <h1>大学院生 リクルート動画</h1>
+    <p>東京科学大学 難治疾患研究所 病態生理化学分野／脂質生物学分野（佐々木研究室）<br>
+       下の ▶ を押すと、日本語の自動音声ナレーション付きで再生します（約3分）。</p>
+  </div>
+
+  <div class="stage" id="stage">
+    <div class="bar" id="bar"></div>
+    <!-- scenes injected by JS -->
+    <div class="bigplay" id="bigplay">
+      <div class="pbtn"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
+      <span>再生（音声あり）</span>
+      <small>音声が出ない場合は、PCの音量と下の「音声」設定をご確認ください</small>
+    </div>
+  </div>
+
+  <div class="controls">
+    <button id="btnPlay">▶ 再生 / ⏸ 一時停止</button>
+    <button id="btnRestart">⟲ 最初から</button>
+    <button id="btnFull">⛶ 全画面</button>
+    <span class="spacer"></span>
+    <label>音声
+      <select id="voiceSel"><option value="">（読み込み中…）</option></select>
+    </label>
+    <label>速度
+      <select id="rateSel">
+        <option value="0.9">ゆっくり</option>
+        <option value="1.0" selected>標準</option>
+        <option value="1.1">やや速い</option>
+      </select>
+    </label>
+  </div>
+  <p class="hint">※ 音声は閲覧PCに入っている日本語音声で再生されます（Windows: Nanami/Haruka、Mac: Kyoto/Kyoko 等）。日本語音声が無い場合はOSの設定で追加できます。<br>
+     ※ MP4にしたいときは、このページを全画面再生しながら「システム音声込み」で画面録画してください（Windows: Xbox Game Bar、Mac: QuickTime＋仮想オーディオ等）。</p>
+
+  <div class="script" id="scriptBox">
+    <h2>ナレーション台本（録画・差し替え用）</h2>
+    <p class="note">自動音声を使わず、先生やメンバーがご自分で録音される場合はこの原稿をどうぞ。タイムコードは目安です。</p>
+  </div>
+
+</div>
+
+<script>
+const SCENES = [
+  { img:"photos/yushima_plum_spring.jpg", acc:"var(--teal)", dur:15,
+    kicker:"大学院生 募集",
+    title:"脂質から、<br>老化と難病に挑む。",
+    sub:"東京科学大学 難治疾患研究所 病態生理化学分野／脂質生物学分野",
+    nar:"東京科学大学、難治疾患研究所。私たちは、脂質という分子から、老化と難病の謎に挑んでいます。" },
+
+  { img:"photos/molecular_hierarchy.jpg", acc:"var(--purple)", dur:15,
+    kicker:"私たちの問い",
+    title:"細胞は、どうやって<br>情報を伝えるのか。",
+    sub:"遺伝子 — タンパク質 — 代謝物質。三つの階層をつなぐ要を探る。",
+    nar:"細胞は、どのように情報を伝え、その姿を変えるのか。遺伝子、タンパク質、そして代謝物質。その三つの階層をつなぐ要を、私たちは探っています。" },
+
+  { img:"photos/inositol_turtle.png", acc:"var(--teal)", dur:16,
+    kicker:"研究テーマ",
+    title:"ホスホイノシタイド<br>（PIPs）",
+    sub:"ごく微量ながら、細胞内シグナルを司る、多彩な脂質。",
+    nar:"鍵を握るのは、ホスホイノシタイド。ごく微量でありながら、細胞の中で情報の流れを司る、とても多彩な脂質です。" },
+
+  { img:"photos/pips_network.png", acc:"var(--teal)", dur:15,
+    kicker:"仕組みを解く",
+    title:"酵素が織りなす、<br>精密な代謝ネットワーク。",
+    sub:"キナーゼとホスファターゼが、脂質を瞬時に変換する。",
+    nar:"キナーゼとホスファターゼ。二種類の酵素が、脂質を瞬時に変換します。この精密なネットワークの仕組みを、私たちは一つずつ解き明かしています。" },
+
+  { img:"photos/pips_disease_montage.png", acc:"var(--coral)", dur:16,
+    kicker:"なぜ重要か",
+    title:"破綻は、<br>難病に直結する。",
+    sub:"がん・神経疾患・免疫異常 … PIPs代謝の乱れが、病をもたらす。",
+    nar:"この代謝が破綻すると、がん、神経の病気、免疫の異常など、さまざまな難病につながります。だからこそ、解き明かす意義があるのです。" },
+
+  { img:"photos/aging_pips_overview.png", acc:"var(--amber)", dur:15,
+    kicker:"研究の最前線",
+    title:"加齢で変容する<br>脂質を追う。",
+    sub:"老化と疾患の本態に迫る、新しい視点。",
+    nar:"さらに私たちは、加齢に伴って脂質が変わっていく様子に注目しています。老化と病気の本当の姿に迫る、新しい挑戦です。" },
+
+  { img:"photos/campus2.jpg", acc:"var(--teal)", dur:15,
+    kicker:"研究環境",
+    title:"国際卓越研究大学で、<br>研究する。",
+    sub:"東京科学大学 — 世界最高水準の研究環境構築を目指す。",
+    nar:"舞台は、国際卓越研究大学に認定された、東京科学大学。世界最高水準の研究環境が、あなたを待っています。" },
+
+  { img:"photos/ms_sample.jpg", acc:"var(--purple)", dur:15,
+    kicker:"研究基盤",
+    title:"最先端の質量分析と、<br>ロボット実験支援。",
+    sub:"大規模・高精度な実験を、効率よく。",
+    nar:"最先端の質量分析や、ロボットによる実験の支援。大規模で精密な実験を、効率よく進めることができます。" },
+
+  { img:"photos/research_montage.jpg", acc:"var(--coral)", dur:14,
+    kicker:"成果",
+    title:"一流誌へ、<br>そして受賞へ。",
+    sub:"確かな成果が、世界に発信されている。",
+    nar:"その成果は、一流の科学誌に発表され、数々の賞にも輝いています。" },
+
+  { img:"photos/sympo.jpg", acc:"var(--teal)", dur:15,
+    kicker:"ラボの日常",
+    title:"議論と実験、<br>そして仲間。",
+    sub:"国内外から集う多様なメンバーが、互いを高め合う。",
+    nar:"国内外から集まる、多様な仲間たち。議論と実験を重ね、互いを高め合う日々が、ここにあります。" },
+
+  { img:"photos/drink.jpg", acc:"var(--amber)", dur:14,
+    kicker:"メッセージ",
+    title:"「一緒に、<br>実験をやりましょう。」",
+    sub:"大切なのは、好奇心と、やってみたいという気持ち。",
+    nar:"大切なのは、難しい知識よりも、好奇心と、やってみたいという気持ち。さあ、一緒に、実験をやりましょう。" },
+
+  { img:"photos/yushima_autumn.jpg", acc:"var(--teal)", dur:13,
+    kicker:"大学院進学希望の方へ",
+    title:"あなたの挑戦を、<br>待っています。",
+    sub:"sasaki-lab-art.github.io ／ お問い合わせはウェブサイトから。",
+    nar:"あなたの挑戦を、心から待っています。詳しくは、私たちのウェブサイトをご覧ください。" }
+];
+
+const stage = document.getElementById('stage');
+const bar = document.getElementById('bar');
+const bigplay = document.getElementById('bigplay');
+const voiceSel = document.getElementById('voiceSel');
+const rateSel = document.getElementById('rateSel');
+
+// build scenes
+const els = SCENES.map((s,i)=>{
+  const d = document.createElement('div');
+  d.className = 'scene';
+  d.style.setProperty('--accent', s.acc);
+  d.innerHTML =
+    '<div class="scene-bg" style="background-image:url(\''+s.img+'\')"></div>'+
+    '<div class="scene-text">'+
+      '<span class="kicker">'+s.kicker+'</span>'+
+      '<div class="title">'+s.title+'</div>'+
+      '<div class="sub">'+s.sub+'</div>'+
+    '</div>';
+  stage.insertBefore(d, bigplay);
+  return d;
+});
+
+// build script panel
+const scriptBox = document.getElementById('scriptBox');
+let acc=0;
+SCENES.forEach((s)=>{
+  const t0=acc; acc+=s.dur;
+  const mm=String(Math.floor(t0/60)).padStart(2,'0');
+  const ss=String(t0%60).padStart(2,'0');
+  const row=document.createElement('div');
+  row.className='srow';
+  row.innerHTML='<div class="stime">'+mm+':'+ss+'</div>'+
+    '<div><div class="scap">'+s.kicker+' — '+s.title.replace(/<br>/g,'')+'</div>'+
+    '<div class="snar">'+s.nar+'</div></div>';
+  scriptBox.appendChild(row);
+});
+const TOTAL = SCENES.reduce((a,s)=>a+s.dur,0);
+
+// ── voices ──
+let voices=[], chosen=null;
+function loadVoices(){
+  voices = window.speechSynthesis ? speechSynthesis.getVoices() : [];
+  const ja = voices.filter(v=>/ja|Japanese|日本/i.test(v.lang+' '+v.name));
+  voiceSel.innerHTML='';
+  const list = ja.length?ja:voices;
+  if(!list.length){ voiceSel.innerHTML='<option value="">（音声なし）</option>'; return; }
+  list.forEach((v)=>{
+    const realIdx = voices.indexOf(v);
+    const o=document.createElement('option');
+    o.value=realIdx; o.textContent=v.name+'  ('+v.lang+')';
+    voiceSel.appendChild(o);
+  });
+  const pref = ja.find(v=>/Nanami|Haruka|Kyoko|Ayumi|O-ren|Google 日本語/i.test(v.name)) || ja[0] || voices[0];
+  if(pref){ voiceSel.value = voices.indexOf(pref); chosen=pref; }
+}
+if(window.speechSynthesis){
+  loadVoices();
+  speechSynthesis.onvoiceschanged = loadVoices;
+}
+voiceSel.addEventListener('change',()=>{ chosen = voices[+voiceSel.value]||null; });
+
+// ── playback engine ──
+let playing=false, idx=-1, sceneTimer=null, startedAudio=false;
+
+function speak(text){
+  if(!window.speechSynthesis) return;
+  speechSynthesis.cancel();
+  const u=new SpeechSynthesisUtterance(text);
+  u.lang='ja-JP';
+  if(chosen) u.voice=chosen;
+  u.rate=parseFloat(rateSel.value)||1;
+  u.pitch=1;
+  speechSynthesis.speak(u);
+}
+
+function showScene(i){
+  els.forEach((e,k)=>e.classList.toggle('active', k===i));
+  const s=SCENES[i];
+  els[i].querySelector('.scene-bg').style.setProperty('--dur', s.dur+'s');
+  if(startedAudio) speak(s.nar);
+}
+
+function runFrom(i){
+  clearTimeout(sceneTimer);
+  if(i>=SCENES.length){ stop(true); return; }
+  idx=i; showScene(i);
+  // progress bar for this whole timeline
+  const elapsedBefore = SCENES.slice(0,i).reduce((a,s)=>a+s.dur,0);
+  animateBar(elapsedBefore, SCENES[i].dur);
+  sceneTimer=setTimeout(()=>runFrom(i+1), SCENES[i].dur*1000);
+}
+
+let barRAF=null, barT0=0, barBase=0, barDur=0;
+function animateBar(base, dur){
+  cancelAnimationFrame(barRAF);
+  barBase=base; barDur=dur; barT0=performance.now();
+  const step=(now)=>{
+    if(!playing) return;
+    const e = barBase + Math.min(barDur, (now-barT0)/1000);
+    bar.style.width = (e/TOTAL*100)+'%';
+    if((now-barT0)/1000 < barDur) barRAF=requestAnimationFrame(step);
+  };
+  barRAF=requestAnimationFrame(step);
+}
+
+function play(){
+  if(playing) return;
+  playing=true; startedAudio=true;
+  bigplay.classList.add('hidden');
+  if(idx<0 || idx>=SCENES.length){ runFrom(0); }
+  else { showScene(idx); if(window.speechSynthesis) speechSynthesis.resume();
+         const before=SCENES.slice(0,idx).reduce((a,s)=>a+s.dur,0);
+         animateBar(before, SCENES[idx].dur);
+         sceneTimer=setTimeout(()=>runFrom(idx+1), SCENES[idx].dur*1000); }
+}
+function pause(){
+  if(!playing) return;
+  playing=false; clearTimeout(sceneTimer); cancelAnimationFrame(barRAF);
+  if(window.speechSynthesis) speechSynthesis.pause();
+}
+function stop(ended){
+  playing=false; clearTimeout(sceneTimer); cancelAnimationFrame(barRAF);
+  if(window.speechSynthesis) speechSynthesis.cancel();
+  if(ended){ bar.style.width='100%'; bigplay.classList.remove('hidden'); idx=-1; }
+}
+function restart(){
+  stop(false); bar.style.width='0%'; idx=-1; startedAudio=true; playing=false; play();
+}
+
+document.getElementById('btnPlay').addEventListener('click',()=> playing?pause():play());
+document.getElementById('btnRestart').addEventListener('click', restart);
+document.getElementById('btnFull').addEventListener('click',()=>{
+  if(!document.fullscreenElement){ stage.requestFullscreen?.(); } else { document.exitFullscreen?.(); }
+});
+bigplay.addEventListener('click', play);
+
+// show first frame as poster
+showScene(0); els[0].classList.remove('active');
+els[0].classList.add('active'); // poster visible, but animations will replay on play()
+</script>
+</body>
+</html>
