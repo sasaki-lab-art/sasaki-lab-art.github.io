@@ -69,7 +69,7 @@
   section { padding: 48px 2rem; max-width: 1100px; margin: auto; }
   .section-tag { display: inline-block; font-size: 12px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--teal); background: var(--teal-lt); padding: 4px 12px; border-radius: 20px; margin-bottom: 12px; }
   h2.sec-title { font-family: 'DM Serif Display', serif; font-size: 2.2rem; line-height: 1.2; margin-bottom: 1rem; }
-  .sec-lead { color: var(--muted); max-width: 560px; margin-bottom: 2.5rem; }
+  .sec-lead { color: var(--muted); max-width: none; margin-bottom: 2.5rem; }
 
   /* ── HERO ── */
   #hero { padding: 80px 2rem 48px; max-width: 1100px; margin: auto; display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 2.5rem; align-items: end; }
@@ -289,7 +289,7 @@
   /* ── HIGHLIGHTS (Research Environment) ── */
   #highlights { background: transparent; max-width: 100%; padding: 0; }
   #highlights .inner { max-width: 1100px; margin: auto; padding: 0 2rem; }
-  .highlight-intro { color: var(--muted); font-size: 14px; max-width: 600px; margin-bottom: 2rem; }
+  .highlight-intro { color: var(--muted); font-size: 14px; max-width: none; margin-bottom: 2rem; }
   .highlight-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.25rem; }
   .highlight-card {
     border-radius: var(--radius);
@@ -532,7 +532,10 @@
 <div id="highlights">
   <section class="inner" style="padding: 48px 2rem; max-width:1100px; margin:auto;">
     <div class="section-tag">Research Environment</div>
-    <h2 class="sec-title">教育・研究環境</h2>
+    <div style="display:flex; align-items:center; gap:14px; flex-wrap:wrap; margin-bottom:1rem;">
+      <h2 class="sec-title" style="margin:0;">教育・研究環境</h2>
+      <a href="join.html" class="btn btn-admission" style="font-size:13px; padding:7px 16px; line-height:1.3;">🎓修士・博士課程大学院入学希望者へ🎓</a>
+    </div>
     <p class="highlight-intro">国際卓越研究大学の認定やロボット実験支援など、世界水準の教育・研究環境を備えています。</p>
     <div class="highlight-grid">
 
@@ -589,7 +592,7 @@
 <section id="members">
   <div class="section-tag">Members</div>
   <h2 class="sec-title">教室員紹介</h2>
-  <p class="sec-lead">多様なバックグラウンドを持つ教室員が協力し、オリジナリティが高い研究を進めています。</p>
+  <p class="sec-lead" style="max-width:none;">多様なバックグラウンドを持つ教室員が協力し、オリジナリティが高い研究を進めています。</p>
   <div class="members-grid">
     <a class="member-card" href="members.html">
       <div class="member-photo" style="background:var(--teal-lt); color:var(--teal);">雄</div>
@@ -632,7 +635,10 @@
 <!-- LEARN -->
 <section id="learn">
   <div class="section-tag">Learn</div>
-  <h2 class="sec-title">学ぶ・読む</h2>
+  <div style="display:flex; align-items:center; gap:14px; flex-wrap:wrap; margin-bottom:1rem;">
+    <h2 class="sec-title" style="margin:0;">学ぶ・読む</h2>
+    <a href="join.html" class="btn btn-admission" style="font-size:13px; padding:7px 16px; line-height:1.3;">🎓修士・博士課程大学院入学希望者へ🎓</a>
+  </div>
   <p class="sec-lead" style="max-width:none;">研究内容のバックグラウンドと解説、参考リンク集を公開しています。学生や一般の方にもおすすめです。</p>
 
   <div class="learn-tabs">
