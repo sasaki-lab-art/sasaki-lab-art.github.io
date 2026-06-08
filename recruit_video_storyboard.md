@@ -22,16 +22,16 @@
 | 0:20-0:35 | 導入 | 研究室HP全体 | `video_assets/screenshots/001_intro_index_top.png` | HTMLスクリーンショット | 研究室名・所属が見えるトップ画面を使う。所属名は画面下部に短く表示する。 |
 | 0:35-0:50 | 導入 | 研究室コンセプト | `video_assets/screenshots/002_intro_index_h1.png` | HTMLスクリーンショット | H1「脂質が紐解く 生命と疾患の謎」を印象的に見せる。 |
 | 0:50-1:05 | 研究テーマ | 研究内容4カード | `video_assets/screenshots/008_tech_index_research_tech.png` | HTMLスクリーンショット | 研究テーマの幅を見せる。カード本文を読ませすぎず、全体像を優先する。 |
-| 1:05-1:20 | 研究テーマ | 脂質研究の階層性 | `video_assets/screenshots/003_research_lipid_layers_top.png` | HTMLスクリーンショット | 見出しと図を中心に、脂質研究の入口として使う。 |
+| 1:05-1:20 | 研究テーマ | 脂質研究の階層性 | `video_assets/screenshots/003_research_lipid_layers_top.jpg` | HTMLスクリーンショット | 見出しと図を中心に、脂質研究の入口として使う。 |
 | 1:20-1:30 | 研究テーマ | `lipid_layers.html` スクロール | `video_assets/scroll_recordings/004_research_lipid_layers_scroll.mp4` | HTMLスクロール録画 | 長いスクロールは避け、見出し・図・重要セクションだけを短く見せる。 |
-| 1:30-1:45 | 研究テーマ | ホスホイノシタイドの機能 | `video_assets/screenshots/005_research_pips_functions.png` | HTMLスクリーンショット | ネットワーク図は全体を見せた後、中央付近に寄る。細部の文字より複雑さを印象づける。 |
-| 1:45-2:00 | 研究テーマ | 疾患との関係 | `video_assets/screenshots/006_research_pips_disease.png` | HTMLスクリーンショット | 疾患との関係は公開HTMLの表現に留め、過度に医療断定的な表現は避ける。 |
+| 1:30-1:45 | 研究テーマ | ホスホイノシタイドの機能 | `video_assets/screenshots/005_research_pips_functions_wide.png` | HTMLスクリーンショット | ネットワーク図は全体を見せた後、中央付近に寄る。細部の文字より複雑さを印象づける。 |
+| 1:45-2:00 | 研究テーマ | 疾患との関係 | `video_assets/screenshots/006_research_pips_disease_wide.png` | HTMLスクリーンショット | 疾患との関係は公開HTMLの表現に留め、過度に医療断定的な表現は避ける。 |
 | 2:00-2:15 | 研究テーマ | 老化研究 | `video_assets/screenshots/007_research_aging_pips.png` | HTMLスクリーンショット | 老化研究の概要を見せ、次章の技術紹介へつなぐ。 |
 | 2:15-2:30 | 技術 | 質量分析・実験技術 | `video_assets/photos_selected/010_tech_ms_sample.jpg` | 写真 | 質量分析装置の写真を主役に置く。人物が写る場合は使用前に了承を確認する。 |
 | 2:30-2:45 | 技術 | 研究技術・研究風景 | `video_assets/photos_selected/012_tech_research_montage.jpg` | 写真 | 研究手法の幅をテンポよく見せる。個別データの詳細は読ませない。人物が写る場合は使用前に了承を確認する。 |
-| 2:45-3:00 | 技術 | AI・構造予測ページ上部 | `video_assets/screenshots/010_tech_ai_structure_top.png` | HTMLスクリーンショット | AI活用が一目で伝わる見出し中心の画面にする。 |
-| 3:00-3:15 | 技術 | AI解析ワークフロー | `video_assets/screenshots/012_tech_ai_computation.png` | HTMLスクリーンショット | 「問いを立て、AIで狙いを定め、実験で確かめる」流れを短く見せる。 |
-| 3:15-3:25 | 技術 | AI構造解析ページのスクロール | `video_assets/scroll_recordings/011_tech_ai_structure_scroll.mp4` | HTMLスクロール録画 | 見出しと主要セクションだけを短く見せる。未発表のAI成果は追加しない。 |
+| 2:45-3:00 | 技術 | AI・構造予測ページ上部 | `video_assets/screenshots/010_tech_ai_structure_top_wide.png` | HTMLスクリーンショット | AI活用が一目で伝わる見出し中心の画面にする。 |
+| 3:00-3:15 | 技術 | AI解析ワークフロー | `video_assets/screenshots/011_tech_ai_structure_workflow_wide.png` | HTMLスクリーンショット | 「問いを立て、AIで狙いを定め、実験で確かめる」流れを短く見せる。 |
+| 3:15-3:25 | 技術 | AI構造解析の4ステップ | `video_assets/screenshots/012_tech_ai_computation_steps_wide.png` | HTMLスクリーンショット | 主要ステップだけを短く見せる。未発表のAI成果は追加しない。 |
 | 3:25-3:40 | 学生募集 | 研究室の特徴・学生募集 | `video_assets/screenshots/009_tech_join_tech_list.png` | HTMLスクリーンショット | 公開HTMLにある技術項目だけを使い、学べる技術の幅を示す。 |
 | 3:40-3:50 | まとめ | 研究全体のまとめ | `video_assets/photos_selected/005_intro_research_montage.jpg` | 写真 | 研究全体の印象をまとめる。細部のデータを読ませず、全体像を見せる。人物が写る場合は使用前に了承を確認する。 |
 | 3:50-4:00 | 問い合わせ | 問い合わせ誘導 | `video_assets/screenshots/001_intro_index_top.png` | HTMLスクリーンショット | 研究室HPの問い合わせ欄・アクセスページへの誘導を主役にする。メールアドレスを大きく固定表示しない。 |
@@ -50,10 +50,10 @@
 | 時間 | 章 | ナレーション要約 | 画面素材 | 使用素材 | テロップ案 | 演出メモ |
 | --- | --- | --- | --- | --- | --- | --- |
 | 0:50-1:05 | 研究テーマ | ホスホイノシタイドをはじめとするリン脂質に注目している。 | `index.html` 研究内容4カード | `video_assets/screenshots/008_tech_index_research_tech.png` | 注目するのはリン脂質 | 研究テーマの幅を見せる。カード本文を読ませすぎず、全体像を優先する。 |
-| 1:05-1:20 | 研究テーマ | 脂質は情報を伝え、生命現象を制御する重要な分子。 | `lipid_layers.html` 見出し・図周辺 | `video_assets/screenshots/003_research_lipid_layers_top.png` | 脂質は情報を伝える分子 | 見出しと図を中心に、脂質研究の入口として使う。 |
+| 1:05-1:20 | 研究テーマ | 脂質は情報を伝え、生命現象を制御する重要な分子。 | `lipid_layers.html` 見出し・図周辺 | `video_assets/screenshots/003_research_lipid_layers_top.jpg` | 脂質は情報を伝える分子 | 見出しと図を中心に、脂質研究の入口として使う。 |
 | 1:20-1:30 | 研究テーマ | 脂質研究の階層性を、ページの流れで見せる。 | `lipid_layers.html` スクロール | `video_assets/scroll_recordings/004_research_lipid_layers_scroll.mp4` | 脂質研究の階層性 | 長いスクロールは避け、見出し・図・重要セクションだけを短く見せる。 |
-| 1:30-1:45 | 研究テーマ | ホスホイノシタイドは種類ごとに局在や働きが異なる。 | `pips_functions.html` 図周辺 | `video_assets/screenshots/005_research_pips_functions.png` | 多彩な生命現象を制御 | ネットワーク図は全体を見せた後、中央付近に寄る。細部の文字を読ませるより複雑さを印象づける。 |
-| 1:45-2:00 | 研究テーマ | 代謝バランスの破綻は、がん、炎症、神経変性、代謝疾患につながる。 | `pips_disease.html` 図周辺 | `video_assets/screenshots/006_research_pips_disease.png` | 脂質代謝の破綻と疾患 | 疾患との関係は公開HTMLの表現に留め、過度に医療断定的な表現は避ける。 |
+| 1:30-1:45 | 研究テーマ | ホスホイノシタイドは種類ごとに局在や働きが異なる。 | `pips_functions.html` 図周辺 | `video_assets/screenshots/005_research_pips_functions_wide.png` | 多彩な生命現象を制御 | ネットワーク図は全体を見せた後、中央付近に寄る。細部の文字を読ませるより複雑さを印象づける。 |
+| 1:45-2:00 | 研究テーマ | 代謝バランスの破綻は、がん、炎症、神経変性、代謝疾患につながる。 | `pips_disease.html` 図周辺 | `video_assets/screenshots/006_research_pips_disease_wide.png` | 脂質代謝の破綻と疾患 | 疾患との関係は公開HTMLの表現に留め、過度に医療断定的な表現は避ける。 |
 | 2:00-2:15 | 研究テーマ | 脂質の世界から、生命現象と疾患を理解する手がかりを探す。 | `aging_pips.html` 図周辺 | `video_assets/screenshots/007_research_aging_pips.png` | 未解明の生命現象に迫る | 老化研究の概要を見せ、次章の技術紹介へつなぐ。 |
 
 ## 2:15-3:25 技術
@@ -62,9 +62,9 @@
 | --- | --- | --- | --- | --- | --- | --- |
 | 2:15-2:30 | 技術 | 病態モデル生物やヒト臨床検体を用い、質量分析による脂質解析を行う。 | 質量分析・実験技術写真 | `video_assets/photos_selected/010_tech_ms_sample.jpg` | 質量分析による脂質解析 | 質量分析装置の写真を主役に置く。人物が写る場合は使用前に了承を確認する。 |
 | 2:30-2:45 | 技術 | オミクス解析、細胞生物学、生化学、構造生物学、マウス個体実験を組み合わせる。 | 研究技術・研究風景 | `video_assets/photos_selected/012_tech_research_montage.jpg` | 多層的な解析を組み合わせる | 研究手法の幅をテンポよく見せる。個別データの詳細は読ませない。人物が写る場合は使用前に了承を確認する。 |
-| 2:45-3:00 | 技術 | AI、機械学習、構造予測で未知の脂質分子や相互作用を探索する。 | `ai_structure.html` ページ上部 | `video_assets/screenshots/010_tech_ai_structure_top.png` | AIで読み解く脂質-タンパク質相互作用 | HTMLページの見出しキャプチャを使い、AI活用を印象づける。 |
-| 3:00-3:15 | 技術 | 研究者が問いを立て、AIで狙いを定め、実験で確かめる。 | AI解析ワークフロー | `video_assets/screenshots/012_tech_ai_computation.png` | 問いを立て、実験で確かめる | 「問い → AI → 実験 → 仮説検証」の流れを矢印テロップで簡潔に見せる。 |
-| 3:15-3:25 | 技術 | AI構造解析ページの流れを短く見せる。 | `ai_structure.html` スクロール | `video_assets/scroll_recordings/011_tech_ai_structure_scroll.mp4` | AI構造解析の流れ | 見出しと主要セクションだけを短く見せる。未発表のAI成果は追加しない。 |
+| 2:45-3:00 | 技術 | AI、機械学習、構造予測で未知の脂質分子や相互作用を探索する。 | `ai_structure.html` ページ上部 | `video_assets/screenshots/010_tech_ai_structure_top_wide.png` | AIで読み解く脂質-タンパク質相互作用 | HTMLページの見出しキャプチャを使い、AI活用を印象づける。 |
+| 3:00-3:15 | 技術 | 研究者が問いを立て、AIで狙いを定め、実験で確かめる。 | AI解析ワークフロー | `video_assets/screenshots/011_tech_ai_structure_workflow_wide.png` | 問いを立て、実験で確かめる | 「問い → AI → 実験 → 仮説検証」の流れを矢印テロップで簡潔に見せる。 |
+| 3:15-3:25 | 技術 | AI構造解析の4ステップを短く見せる。 | AI解析ステップ | `video_assets/screenshots/012_tech_ai_computation_steps_wide.png` | AI構造解析の流れ | 主要ステップだけを短く見せる。未発表のAI成果は追加しない。 |
 
 ## 3:25-3:40 学生募集
 
