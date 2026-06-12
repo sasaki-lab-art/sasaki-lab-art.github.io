@@ -54,11 +54,11 @@ const newsItems = [
    link:"https://www.isct.ac.jp/ja/news/x2saemu71np0"},
 
   {date:"2025年6月", dateSort:"2025-06", cat:"award", badge:"受賞",
-   title:"菊地 雄翔が日本生化学会 関東支部例会で優秀発表賞を受賞",
+   title:"菊池 雄翔が日本生化学会 関東支部例会で優秀発表賞を受賞",
    detail:"2025年度 日本生化学会 関東支部例会 優秀発表賞"},
 
   {date:"2025年3月", dateSort:"2025-03-b", cat:"award", badge:"受賞",
-   title:"菊地 雄翔がベストプレゼンテーション賞を受賞",
+   title:"菊池 雄翔がベストプレゼンテーション賞を受賞",
    detail:"東京科学大学 2024年度 難治疾患研究所発表会"},
 
   {date:"2025年3月", dateSort:"2025-03-a", cat:"award", badge:"受賞",
@@ -85,11 +85,11 @@ const newsItems = [
    link:"https://www.tmd.ac.jp/press-release/20240724-1/"},
 
   {date:"2024年6月", dateSort:"2024-06", cat:"award", badge:"受賞",
-   title:"菊地 雄翔が大学院リトリートでリトリート賞を受賞",
+   title:"菊池 雄翔が大学院リトリートでリトリート賞を受賞",
    detail:"東京医科歯科大学 大学院リトリート"},
 
   {date:"2024年3月", dateSort:"2024-03", cat:"award", badge:"受賞",
-   title:"菊地 雄翔がベストディスカッション賞を受賞",
+   title:"菊池 雄翔がベストディスカッション賞を受賞",
    detail:"東京医科歯科大学 2023年度 難治疾患研究所発表会"},
 
   /* ── 2023 ── */
@@ -115,7 +115,7 @@ const newsItems = [
    detail:"Frankfurt, Germany"},
 
   {date:"2023年3月", dateSort:"2023-03", cat:"award", badge:"受賞",
-   title:"菊地 雄翔が中谷・椎名学術奨励賞を受賞",
+   title:"菊池 雄翔が中谷・椎名学術奨励賞を受賞",
    detail:"東京医科歯科大学 医学部 中谷・椎名学術奨励賞"},
 
   /* ── 2022 ── */
