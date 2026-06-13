@@ -155,9 +155,10 @@
   .kw-amber { background: var(--amber-lt); color: #854f0b; }
 
   /* ── STAFF ROW (for secretary, tech staff) ── */
-  .staff-list { display: flex; flex-direction: column; gap: 1px; background: var(--border); border: 1px solid var(--border); border-radius: var(--radius); overflow: hidden; margin-bottom: 2.5rem; }
+  .staff-list { display: flex; flex-direction: column; background: var(--border); border: 1px solid var(--border); border-radius: var(--radius); overflow: hidden; margin-bottom: 2.5rem; }
   .staff-item { background: white; padding: 1rem 1.5rem; display: flex; align-items: center; gap: 1.25rem; transition: background 0.15s; }
   .staff-item:hover { background: var(--teal-lt); }
+  .staff-item + .staff-item { border-top: 1px solid var(--border); }
   .staff-avatar { width: 44px; height: 44px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-family: 'DM Serif Display', serif; font-size: 18px; font-weight: 700; flex-shrink: 0; overflow: hidden; }
   .staff-avatar img { width: 100%; height: 100%; object-fit: cover; }
   .staff-name { font-size: 14px; font-weight: 700; }
@@ -286,7 +287,6 @@
             <li><span class="pi-bio-year">1997</span><span>東京大学 大学院 薬学系研究科 博士課程 修了</span></li>
             <li><span class="pi-bio-year">1997</span><span>トロント大学・オンタリオ癌研究所 ポスドク</span></li>
             <li><span class="pi-bio-year">2000</span><span>東京都臨床医学総合研究所 主任研究員</span></li>
-            <li><span class="pi-bio-year">2003</span><span>秋田大学 医学部 COE 主任研究員</span></li>
             <li><span class="pi-bio-year">2004</span><span>秋田大学 医学部 教授</span></li>
             <li><span class="pi-bio-year">2018</span><span>東京医科歯科大学 難治疾患研究所 教授</span></li>
             <li><span class="pi-bio-year">2024</span><span>東京科学大学 総合研究院 難治疾患研究所 教授</span></li>
