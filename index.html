@@ -539,7 +539,7 @@
     <p class="highlight-intro">国際卓越研究大学の認定やロボット実験支援など、世界水準の教育・研究環境を備えています。</p>
     <div class="highlight-grid">
 
-      <a class="highlight-card hc-dark" href="https://www.isct.ac.jp/ja/news/bvsdzijisqjd" target="_blank">
+      <a class="highlight-card hc-dark" href="https://www.isct.ac.jp/ja/news/bvsdzijisqjd" target="_blank" rel="noopener">
         <span class="highlight-badge hb-dark">2026年1月 認定</span>
         <h3>国際卓越研究大学<br>東京科学大学</h3>
         <p>文部科学省の国際卓越研究大学制度において、東京科学大学が正式に認定。大学ファンドより助成を受け、世界最高水準の研究環境構築を目指します。</p>
@@ -553,7 +553,7 @@
         <span class="highlight-link">Nature誌に紹介されました →</span>
       </a>
 
-      <a class="highlight-card hc-amber" href="https://www.tmd.ac.jp/mri/base/id=61917" target="_blank">
+      <a class="highlight-card hc-amber" href="https://www.tmd.ac.jp/mri/base/id=61917" target="_blank" rel="noopener">
         <span class="highlight-badge hb-amber">文部科学省 認定</span>
         <h3>難治疾患共同研究拠点<br>共同利用・共同研究拠点</h3>
         <p>「難治疾患共同研究拠点」に認定。所内研究者のみならず、国内外研究者との共同研究・機器利用を積極的に支援しています。</p>
@@ -860,12 +860,12 @@
 
     /* DOIリンク */
     var doiLink = p.doi
-      ? '<a class="pub-doi" href="https://doi.org/' + p.doi + '" target="_blank">DOI: ' + p.doi + '</a>'
+      ? '<a class="pub-doi" href="https://doi.org/' + p.doi + '" target="_blank" rel="noopener">DOI: ' + p.doi + '</a>'
       : '<span style="font-size:12px;color:var(--muted);">In press</span>';
 
     /* タイトル（DOIがあればリンク、なければプレーンテキスト） */
     var titleHtml = p.doi
-      ? '<a href="https://doi.org/' + p.doi + '" target="_blank">' + p.ti + '</a>'
+      ? '<a href="https://doi.org/' + p.doi + '" target="_blank" rel="noopener">' + p.ti + '</a>'
       : p.ti;
 
     html += '<div class="pub-item">'

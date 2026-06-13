@@ -231,7 +231,7 @@
   <!-- Count bar -->
   <div class="count-bar">
     <span class="count-text" id="count-text"></span>
-    <a class="pubmed-link" href="https://pubmed.ncbi.nlm.nih.gov/?term=sasaki+takehiko%5Bau%5D&sort=date" target="_blank">PubMedで全件検索 →</a>
+    <a class="pubmed-link" href="https://pubmed.ncbi.nlm.nih.gov/?term=sasaki+takehiko%5Bau%5D&sort=date" target="_blank" rel="noopener">PubMedで全件検索 →</a>
   </div>
 
   <!-- Publication list -->
@@ -265,7 +265,7 @@ let currentFilter = "all";
 
 function makePubHTML(p, isReview) {
   const doiLink = p.doi
-    ? `<a class="pub-doi" href="https://doi.org/${p.doi}" target="_blank">DOI: ${p.doi}</a>`
+    ? `<a class="pub-doi" href="https://doi.org/${p.doi}" target="_blank" rel="noopener">DOI: ${p.doi}</a>`
     : "";
   const badge = isReview
     ? `<span class="review-badge">Review</span>`
