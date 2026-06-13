@@ -181,9 +181,6 @@
     <figcaption>ホスホイノシタイド代謝系の破綻に起因する疾患病態 ── 各病態のマウスモデル解析の俯瞰図</figcaption>
   </figure>
 
-  <div class="doc-actions">
-    <a class="doc-btn primary" href="photos/pips_disease_montage_full.png" target="_blank" rel="noopener">画像を拡大表示 ↗</a>
-  </div>
 
   <a href="index.html#learn" class="back-link" style="margin-top:2.5rem; margin-bottom:0;">← 学ぶ・読むに戻る</a>
 
@@ -247,5 +244,14 @@
 })();
 </script>
 
+<!-- image download deterrent -->
+<style>img{-webkit-user-drag:none;-khtml-user-drag:none;-moz-user-drag:none;-o-user-drag:none;user-drag:none;}</style>
+<script>
+(function(){
+  function blockImg(e){ if(e.target && e.target.tagName==="IMG"){ e.preventDefault(); } }
+  document.addEventListener("contextmenu", blockImg);
+  document.addEventListener("dragstart", blockImg);
+})();
+</script>
 </body>
 </html>

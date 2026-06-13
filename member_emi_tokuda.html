@@ -356,5 +356,14 @@
 })();
 </script>
 
+<!-- image download deterrent -->
+<style>img{-webkit-user-drag:none;-khtml-user-drag:none;-moz-user-drag:none;-o-user-drag:none;user-drag:none;}</style>
+<script>
+(function(){
+  function blockImg(e){ if(e.target && e.target.tagName==="IMG"){ e.preventDefault(); } }
+  document.addEventListener("contextmenu", blockImg);
+  document.addEventListener("dragstart", blockImg);
+})();
+</script>
 </body>
 </html>

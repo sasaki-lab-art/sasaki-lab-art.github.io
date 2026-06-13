@@ -337,5 +337,14 @@ bigplay.addEventListener('click', play);
 showScene(0); els[0].classList.remove('active');
 els[0].classList.add('active'); // poster visible, but animations will replay on play()
 </script>
+<!-- image download deterrent -->
+<style>img{-webkit-user-drag:none;-khtml-user-drag:none;-moz-user-drag:none;-o-user-drag:none;user-drag:none;}</style>
+<script>
+(function(){
+  function blockImg(e){ if(e.target && e.target.tagName==="IMG"){ e.preventDefault(); } }
+  document.addEventListener("contextmenu", blockImg);
+  document.addEventListener("dragstart", blockImg);
+})();
+</script>
 </body>
 </html>
