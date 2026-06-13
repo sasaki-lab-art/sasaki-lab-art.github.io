@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Decoding lipid–protein interactions with AI — combining structure-prediction AI, generative AI, and statistics to predict and experimentally verify lipid binding and the effects of disease mutations. A “Learn” article from Sasaki Laboratory.">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Sasaki Laboratory | Institute of Science Tokyo">
+<meta property="og:title" content="Decoding lipid–protein interactions with AI | Sasaki Laboratory">
+<meta property="og:description" content="Decoding lipid–protein interactions with AI — combining structure-prediction AI, generative AI, and statistics to predict and experimentally verify lipid binding and the effects of disease mutations. A “Learn” article from Sasaki Laboratory.">
+<meta property="og:url" content="https://sasaki-lab-art.github.io/en/ai_structure.html">
+<meta property="og:image" content="https://sasaki-lab-art.github.io/photos/molecular_hierarchy.jpg">
+<meta property="og:locale" content="en_US">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Decoding lipid–protein interactions with AI | Sasaki Laboratory">
+<meta name="twitter:description" content="Decoding lipid–protein interactions with AI — combining structure-prediction AI, generative AI, and statistics to predict and experimentally verify lipid binding and the effects of disease mutations. A “Learn” article from Sasaki Laboratory.">
+<meta name="twitter:image" content="https://sasaki-lab-art.github.io/photos/molecular_hierarchy.jpg">
+<title>Decoding lipid–protein interactions with AI | Sasaki Laboratory, Institute of Science Tokyo</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  :root {
+    --teal:     #1c3177;
+    --teal-lt:  #e9edf7;
+    --teal-mid: #7f96c2;
+    --coral:    #d85a30;
+    --coral-lt: #faece7;
+    --amber:    #ba7517;
+    --amber-lt: #faeeda;
+    --purple:   #534ab7;
+    --purple-lt:#eeedfe;
+    --bg:       #fafaf8;
+    --white:    #ffffff;
+    --text:     #1a1a18;
+    --muted:    #6b6b65;
+    --border:   #e4e4de;
+    --radius:   16px;
+    --nav-h:    64px;
+  }
+  html { scroll-behavior: smooth; }
+  body { font-family: 'Noto Sans JP', 'DM Sans', sans-serif; background: var(--bg); color: var(--text); font-size: 15px; line-height: 1.75; }
+
+  /* ── NAV ── */
+  nav {
+    position: sticky; top: 0; z-index: 100;
+    background: rgba(255,255,255,0.92); backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--border);
+    height: var(--nav-h); display: flex; align-items: center;
+  }
+  .nav-inner { max-width: 1100px; margin: auto; width: 100%; padding: 0 2rem; display: flex; align-items: center; justify-content: space-between; }
+  .nav-univ-logo { height: 44px; width: auto; display: block; }
+  .nav-univ-logo:hover { opacity: 0.85; }
+  .nav-links { display: flex; gap: 0.25rem; }
+  .nav-links a { text-decoration: none; color: var(--muted); font-size: 13px; font-weight: 500; padding: 6px 12px; border-radius: 20px; transition: all 0.2s; }
+  .nav-links a:hover { background: var(--teal-lt); color: var(--teal); }
+  @media (max-width: 860px) {
+    .nav-univ-logo { height: 32px; }
+    .nav-links a { font-size: 12px; padding: 5px 8px; }
+  }
+  @media (max-width: 540px) {
+  }
+
+  /* ── PAGE HEADER ── */
+  .page-header {
+    background: linear-gradient(135deg, var(--teal-lt) 0%, #f0f3fa 100%);
+    padding: 64px 2rem 56px;
+    border-bottom: 1px solid var(--border);
+  }
+  .page-header-inner { max-width: 1100px; margin: auto; }
+  .section-tag { display: inline-block; font-size: 12px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--teal); background: white; padding: 4px 12px; border-radius: 20px; margin-bottom: 14px; border: 1px solid var(--teal-lt); }
+  .page-title { font-family: 'DM Serif Display', serif; font-size: 2.4rem; line-height: 1.25; margin-bottom: 1rem; }
+  .page-lead { color: var(--muted); font-size: 15px; max-width: none; line-height: 1.8; }
+
+  /* ── ARTICLE ── */
+  .article-wrap { max-width: 1100px; margin: 0 auto; padding: 48px 2rem 80px; }
+  .back-link { display: inline-flex; align-items: center; gap: 6px; color: var(--teal); text-decoration: none; font-size: 14px; font-weight: 600; margin-bottom: 2rem; }
+  .back-link:hover { text-decoration: underline; }
+
+  .article-body { font-size: 16px; line-height: 2.05; color: var(--text); max-width: 800px; margin: 0 auto 2.6rem; }
+  .article-body h2 { font-family: 'DM Serif Display', serif; font-size: 1.5rem; margin: 2.4rem 0 1rem; line-height: 1.4; }
+  .article-body p { margin-bottom: 1.6rem; }
+  .article-body p:last-child { margin-bottom: 0; }
+  .article-body .em-teal { color: var(--teal); font-weight: 700; }
+
+  /* ── KEY IDEA CALLOUT ── */
+  .callout { max-width: 800px; margin: 0 auto 2.6rem; background: var(--teal-lt); border-left: 5px solid var(--teal); border-radius: 12px; padding: 26px 30px; }
+  .callout .co-label { font-size: 12px; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; color: var(--teal); margin-bottom: 8px; }
+  .callout p { font-size: 18px; font-weight: 500; line-height: 1.85; margin: 0; }
+
+  /* ── WORKFLOW FIGURE ── */
+  figure.wf { margin: 0 auto 2.6rem; max-width: 980px; text-align: center; }
+  figure.wf svg { width: 100%; height: auto; display: block; border: 1px solid var(--border); border-radius: var(--radius); background: var(--white); box-shadow: 0 6px 28px rgba(0,0,0,0.06); }
+  figure.wf figcaption { font-size: 13px; color: var(--muted); margin-top: 14px; line-height: 1.7; }
+
+  /* ── WORKFLOW STEP LIST (prose detail) ── */
+  .wf-steps { max-width: 800px; margin: 0 auto 2.6rem; }
+  .wf-step { display: flex; gap: 16px; padding: 18px 2px; border-bottom: 1px solid var(--border); }
+  .wf-step:last-child { border-bottom: none; }
+  .wf-step .num { flex: 0 0 34px; width: 34px; height: 34px; border-radius: 50%; color: #fff; font-family: 'DM Sans', sans-serif; font-weight: 700; font-size: 16px; display: flex; align-items: center; justify-content: center; }
+  .wf-step .st-body h3 { font-family: 'Noto Sans JP', sans-serif; font-size: 17px; font-weight: 700; margin-bottom: 5px; }
+  .wf-step .st-body p { font-size: 15px; line-height: 1.85; margin: 0; color: var(--text); }
+
+  .source-note { max-width: 800px; margin: 2.4rem auto 0; padding-top: 1.4rem; border-top: 1px solid var(--border); font-size: 13px; color: var(--muted); line-height: 1.8; }
+
+  /* ── FOOTER ── */
+  footer { background: #1a1a18; color: #9a9a94; padding: 3rem 2rem; }
+  .footer-inner { max-width: 1100px; margin: auto; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; }
+  .footer-lab { font-family: 'DM Serif Display', serif; font-size: 18px; color: white; }
+  .footer-links { display: flex; gap: 1.5rem; flex-wrap: wrap; }
+  .footer-links a { font-size: 13px; color: #9a9a94; text-decoration: none; }
+  .footer-links a:hover { color: var(--teal-mid); }
+  .footer-copy { font-size: 12px; margin-top: 0.5rem; }
+
+  @media (max-width: 640px) {
+    .page-title { font-size: 1.8rem; }
+    .article-wrap { padding: 32px 1.1rem 64px; }
+  }
+  .nav-toggle { display: none; background: none; border: none; cursor: pointer; color: var(--text); padding: 4px; line-height: 0; }
+  .nav-toggle svg { width: 28px; height: 28px; stroke: currentColor; }
+  /* hamburger menu (<=768px only; desktop unchanged) */
+  @media (max-width: 768px) {
+    .nav-toggle { display: block; }
+    .nav-links {
+      position: absolute; top: 100%; left: 0; right: 0;
+      flex-direction: column; gap: 0; max-width: none;
+      background: rgba(255,255,255,0.98); backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+      max-height: 0; overflow: hidden; transition: max-height 0.3s ease;
+    }
+    .nav-links.open { max-height: 80vh; }
+    .nav-links a { font-size: 15px; padding: 14px 2rem; border-radius: 0; border-bottom: 1px solid var(--border); }
+    .nav-links a:last-child { border-bottom: none; }
+  }
+</style>
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon-32.png" sizes="32x32" type="image/png">
+<link rel="icon" href="/favicon-16.png" sizes="16x16" type="image/png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="canonical" href="https://sasaki-lab-art.github.io/en/ai_structure.html">
+<link rel="alternate" hreflang="ja" href="https://sasaki-lab-art.github.io/ai_structure.html">
+<link rel="alternate" hreflang="en" href="https://sasaki-lab-art.github.io/en/ai_structure.html">
+<link rel="alternate" hreflang="x-default" href="https://sasaki-lab-art.github.io/ai_structure.html">
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-inner">
+    <a href="https://www.isct.ac.jp/en" target="_blank" rel="noopener" style="line-height:0;">
+      <img class="nav-univ-logo" src="../photos/sciencetokyo_logo.jpg" alt="Institute of Science Tokyo (Science Tokyo)">
+    </a>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="navLinks">
+      <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+    </button>
+    <div class="nav-links" id="navLinks">
+      <a href="index.html">Home</a>
+      <a href="index.html#news">News</a>
+      <a href="index.html#research">Research</a>
+      <a href="index.html#publications">Publications</a>
+      <a href="index.html#highlights">Research Environment</a>
+      <a href="members.html">Members</a>
+      <a href="index.html#learn">Learn</a>
+      <a href="index.html#contact">Access</a>
+      <a href="../ai_structure.html" class="lang-switch" style="color:var(--teal);font-weight:700;">日本語</a>
+    </div>
+  </div>
+</nav>
+<script>
+(function(){
+  var t = document.getElementById('navToggle');
+  var m = document.getElementById('navLinks');
+  if (!t || !m) return;
+  var ICON_OPEN = '<svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><line x1="5" y1="5" x2="19" y2="19"/><line x1="19" y1="5" x2="5" y2="19"/></svg>';
+  var ICON_CLOSED = '<svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>';
+  function setOpen(o){ m.classList.toggle('open', o); t.setAttribute('aria-expanded', o ? 'true' : 'false'); t.innerHTML = o ? ICON_OPEN : ICON_CLOSED; }
+  t.addEventListener('click', function(){ setOpen(!m.classList.contains('open')); });
+  m.addEventListener('click', function(e){ if (e.target.tagName === 'A') setOpen(false); });
+})();
+</script>
+
+<!-- PAGE HEADER -->
+<div class="page-header">
+  <div class="page-header-inner">
+    <div class="section-tag">Background</div>
+    <h1 class="page-title">Decoding lipid–protein interactions with AI</h1>
+    <p class="page-lead">Using deep-learning structure-prediction AI, generative AI, and statistical analysis, we predict how lipids and proteins bind and how disease-related mutations affect lipid binding — and verify these predictions experimentally.</p>
+  </div>
+</div>
+
+<!-- ARTICLE -->
+<div class="article-wrap">
+
+  <div class="article-body">
+    <h2>Decoding disease mutations and designing experiments</h2>
+    <p>There are many lipid-binding proteins involved in neurological, immune, endocrine, and metabolic diseases, retinal degeneration, hearing loss, cancer, and more. Yet how the gene mutations found in patients alter lipid binding, lipid-dependent structural changes, membrane localization, and signal transduction has, in many cases, not yet been adequately studied.</p>
+    <p>We aim to decode such disease-related mutations from <span class="em-teal">the as-yet-untested viewpoint of "abnormal lipid binding."</span> That is, we use AI to predict how a disease mutation changes a protein’s three-dimensional structure, its lipid-binding domains, and its lipid-contacting residues, and distill these into experimentally testable hypotheses.</p>
+    <p>In this approach, for both wild-type and mutant proteins we examine, at the structural level, which lipids tend to bind which regions, which amino acids are involved in lipid recognition, and how mutations change binding domains and contact residues. This lets us build <span class="em-teal">experimentally testable hypotheses</span> about disease mechanisms. If an abnormality caused by a disease mutation turns out to stem from dysregulated lipid binding or lipid signaling, it may also lead to <span class="em-teal">new therapeutic strategies through intervention in lipid metabolism</span>.</p>
+
+    <h2>The arrival of structure-prediction AI — and its limits</h2>
+    <p>Structure-prediction AIs such as <span class="em-teal">AlphaFold3</span> can now predict candidate complex structures that include not only proteins but also nucleic acids, small molecules, and lipids. For lipid–protein interactions too, it may be possible to examine which pocket a lipid is placed in and which amino acids it lies close to.</p>
+    <p>On the other hand, the output of structure-prediction AI is not experimental proof itself. Predictions fluctuate each time, and even combinations that do not actually bind can yield plausible-looking complex structures. Therefore, <span class="em-teal">a single prediction cannot be taken at face value as the correct answer</span>.</p>
+
+    <h2>Bringing the practices of experimental science into computation</h2>
+    <p>So in our laboratory we incorporate into structure-prediction analysis the ideas of <span class="em-teal">repetition, statistics, and controls</span> that are routine in experimental biochemistry. For the same protein–lipid combination, we run thousands of repeated predictions and treat the resulting candidate structures as an ensemble.</p>
+    <p>For each structure, we analyze the distances between lipids and amino-acid residues, contact frequencies, the reproducibility of binding domains, and differences from control lipids. This lets us extract recurring lipid-binding modes and interaction candidates characteristic of particular lipids, rather than configurations obtained by chance.</p>
+
+    <div class="callout">
+      <div class="co-label">Key Idea</div>
+      <p>Evaluate the many candidate structures proposed by deep learning using the mindset of experimental science, and narrow down candidate amino acids, binding domains, and mutants for lipid binding.</p>
+    </div>
+
+    <h2>Using generative AI and supercomputers</h2>
+    <p>Extracting atom-to-atom distances, contact frequencies, the positions of binding domains, and structural changes caused by mutations from many predicted structures requires analysis programs tailored to the purpose. In our laboratory, we use generative AI to create and revise such Python scripts and to organize analysis procedures. By clearly stating in words what we want to analyze and having the AI assist with drafting code, fixing errors, and improving workflows, <span class="em-teal">even wet-lab researchers and students who are not programming specialists</span> can more easily assemble analyses suited to their own research goals.</p>
+    <p>Furthermore, we use generative AI not merely as a coding aid but as a support technology for deciding which lipids, which amino-acid residues, which mutants, and which experimental systems to prioritize for verification. Large-scale structure prediction and molecular-dynamics simulations are run on the campus supercomputer <span class="em-teal">TSUBAME4.0</span>, and the resulting numerical data are tabulated and visualized with Python, R, and structure-viewing software.</p>
+  </div>
+
+  <div class="article-body">
+    <h2>Workflow for AI-assisted analysis of lipid–protein interactions</h2>
+  </div>
+
+  <figure class="wf">
+    <svg viewBox="0 0 1200 560" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Workflow for AI-assisted analysis of lipid–protein interactions: (1) Predict the structure (predict complexes thousands of times with AlphaFold3 etc. to obtain a structural ensemble); (2) Quantify (extract atom distances, contact frequencies, and binding domains, aided by generative AI); (3) Evaluate statistically (statistically analyze repeated predictions, assess reproducibility and differences from controls, and narrow down lipid-binding candidates); (4) Verify experimentally (generate mutants and verify function and disease hypotheses by mass spectrometry, binding assays, and cell analysis). Turning structure-prediction AI into a hypothesis-generation and experiment-design tool.">
+      <defs>
+        <marker id="arw" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+          <path d="M0,0 L10,5 L0,10 z" fill="#9a9a94"/>
+        </marker>
+      </defs>
+      <!-- title -->
+      <text x="600" y="46" text-anchor="middle" font-family="'DM Sans','Noto Sans JP',sans-serif" font-size="21" font-weight="700" fill="#1a1a18">Workflow for AI-assisted analysis of lipid–protein interactions</text>
+
+      <!-- STEP 1 (green) -->
+      <rect x="30" y="90" width="264" height="310" rx="14" fill="#e9edf7" stroke="#1c3177" stroke-width="1.5"/>
+      <circle cx="62" cy="132" r="18" fill="#1c3177"/>
+      <text x="62" y="139" text-anchor="middle" font-family="'DM Sans',sans-serif" font-size="18" font-weight="700" fill="#fff">1</text>
+      <text x="90" y="139" font-family="'Noto Sans JP',sans-serif" font-size="18" font-weight="700" fill="#1a1a18">Predict the structure</text>
+      <text x="52" y="190" font-family="'Noto Sans JP',sans-serif" font-size="15" fill="#1a1a18">With AlphaFold3,</text>
+      <text x="52" y="216" font-family="'Noto Sans JP',sans-serif" font-size="15" fill="#1a1a18">predict protein–lipid</text>
+      <text x="52" y="242" font-family="'Noto Sans JP',sans-serif" font-size="15" fill="#1a1a18">complexes 1000s of times</text>
+      <text x="52" y="300" font-family="'Noto Sans JP',sans-serif" font-size="14" font-weight="700" fill="#1c3177">→ get a structure ensemble</text>
+      <line x1="52" y1="328" x2="272" y2="328" stroke="#1c3177" stroke-width="1" stroke-dasharray="2 4" opacity="0.6"/>
+      <text x="52" y="362" font-family="'Noto Sans JP',sans-serif" font-size="14" fill="#6b6b65">WT / mutant / control lipids</text>
+
+      <!-- STEP 2 (amber) -->
+      <rect x="322" y="90" width="264" height="310" rx="14" fill="#faeeda" stroke="#ba7517" stroke-width="1.5"/>
+      <circle cx="354" cy="132" r="18" fill="#ba7517"/>
+      <text x="354" y="139" text-anchor="middle" font-family="'DM Sans',sans-serif" font-size="18" font-weight="700" fill="#fff">2</text>
+      <text x="382" y="139" font-family="'Noto Sans JP',sans-serif" font-size="18" font-weight="700" fill="#1a1a18">Quantify</text>
+      <text x="344" y="190" font-family="'Noto Sans JP',sans-serif" font-size="15" fill="#1a1a18">Extract distances, contacts,</text>
+      <text x="344" y="216" font-family="'Noto Sans JP',sans-serif" font-size="15" fill="#1a1a18">and binding domains</text>
+      <text x="344" y="290" font-family="'Noto Sans JP',sans-serif" font-size="14" font-weight="700" fill="#8a5410">→ aided by generative AI</text>
+      <text x="344" y="314" font-family="'Noto Sans JP',sans-serif" font-size="14" font-weight="700" fill="#8a5410">Big compute on TSUBAME4.0</text>
+      <line x1="344" y1="328" x2="564" y2="328" stroke="#ba7517" stroke-width="1" stroke-dasharray="2 4" opacity="0.6"/>
+      <text x="344" y="362" font-family="'Noto Sans JP',sans-serif" font-size="14" fill="#6b6b65">Organize: Python &amp; viz tools</text>
+
+      <!-- STEP 3 (purple) -->
+      <rect x="614" y="90" width="264" height="310" rx="14" fill="#eeedfe" stroke="#534ab7" stroke-width="1.5"/>
+      <circle cx="646" cy="132" r="18" fill="#534ab7"/>
+      <text x="646" y="139" text-anchor="middle" font-family="'DM Sans',sans-serif" font-size="18" font-weight="700" fill="#fff">3</text>
+      <text x="674" y="139" font-family="'Noto Sans JP',sans-serif" font-size="18" font-weight="700" fill="#1a1a18">Evaluate statistically</text>
+      <text x="636" y="190" font-family="'Noto Sans JP',sans-serif" font-size="15" fill="#1a1a18">Statistically analyze</text>
+      <text x="636" y="216" font-family="'Noto Sans JP',sans-serif" font-size="15" fill="#1a1a18">repeats; assess reproducibility</text>
+      <text x="636" y="300" font-family="'Noto Sans JP',sans-serif" font-size="14" font-weight="700" fill="#3d3596">→ narrow lipid-binding candidates</text>
+      <line x1="636" y1="328" x2="856" y2="328" stroke="#534ab7" stroke-width="1" stroke-dasharray="2 4" opacity="0.6"/>
+      <text x="636" y="362" font-family="'Noto Sans JP',sans-serif" font-size="14" fill="#6b6b65">Compare freq., placement, reprod.</text>
+
+      <!-- STEP 4 (blue) -->
+      <rect x="906" y="90" width="264" height="310" rx="14" fill="#e7f0fa" stroke="#2f74c0" stroke-width="1.5"/>
+      <circle cx="938" cy="132" r="18" fill="#2f74c0"/>
+      <text x="938" y="139" text-anchor="middle" font-family="'DM Sans',sans-serif" font-size="18" font-weight="700" fill="#fff">4</text>
+      <text x="966" y="139" font-family="'Noto Sans JP',sans-serif" font-size="18" font-weight="700" fill="#1a1a18">Verify experimentally</text>
+      <text x="928" y="190" font-family="'Noto Sans JP',sans-serif" font-size="15" fill="#1a1a18">Generate mutants;</text>
+      <text x="928" y="216" font-family="'Noto Sans JP',sans-serif" font-size="15" fill="#1a1a18">verify by MS, binding</text>
+      <text x="928" y="242" font-family="'Noto Sans JP',sans-serif" font-size="15" fill="#1a1a18">assays, cell analysis</text>
+      <text x="928" y="300" font-family="'Noto Sans JP',sans-serif" font-size="14" font-weight="700" fill="#1f548f">→ test function &amp; disease ideas</text>
+      <line x1="928" y1="328" x2="1148" y2="328" stroke="#2f74c0" stroke-width="1" stroke-dasharray="2 4" opacity="0.6"/>
+      <text x="928" y="362" font-family="'Noto Sans JP',sans-serif" font-size="14" fill="#6b6b65">Connect computation to biology</text>
+
+      <!-- arrows between steps -->
+      <line x1="297" y1="245" x2="319" y2="245" stroke="#9a9a94" stroke-width="2.5" marker-end="url(#arw)"/>
+      <line x1="589" y1="245" x2="611" y2="245" stroke="#9a9a94" stroke-width="2.5" marker-end="url(#arw)"/>
+      <line x1="881" y1="245" x2="903" y2="245" stroke="#9a9a94" stroke-width="2.5" marker-end="url(#arw)"/>
+
+      <!-- bottom transformation ribbon -->
+      <rect x="30" y="430" width="1140" height="110" rx="16" fill="#1a1a18"/>
+      <text x="600" y="472" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-size="16" fill="#cfcfca">Structure-prediction AI → a hypothesis &amp; experiment-design tool</text>
+      <text x="600" y="508" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-size="19" font-weight="700" fill="#fff">Researchers ask the questions → AI sets the experimental aim → experiments confirm</text>
+    </svg>
+    <figcaption>Conceptual diagram of lipid–protein interaction analysis. Repeated prediction, generative AI, statistical analysis, and experimental verification are linked, applying AI to hypothesis generation and experiment design.</figcaption>
+  </figure>
+
+  <div class="wf-steps">
+    <div class="wf-step">
+      <div class="num" style="background:#1c3177;">1</div>
+      <div class="st-body">
+        <h3>Predict the structure</h3>
+        <p>Using structure-prediction AI such as AlphaFold3, we predict the same protein–lipid complex thousands of times. Comparing wild-type and mutant, and candidate and control lipids, we obtain a structural ensemble.</p>
+      </div>
+    </div>
+    <div class="wf-step">
+      <div class="num" style="background:#ba7517;">2</div>
+      <div class="st-body">
+        <h3>Quantify</h3>
+        <p>From each predicted structure, we extract the distances between lipids and amino-acid residues, the presence or absence of contacts, the positions of binding domains, and the placement of lipids. The necessary analysis code is created with the help of generative AI.</p>
+      </div>
+    </div>
+    <div class="wf-step">
+      <div class="num" style="background:#534ab7;">3</div>
+      <div class="st-body">
+        <h3>Evaluate statistically</h3>
+        <p>We statistically analyze the set of structures obtained by repeated prediction and evaluate contact frequencies, the reproducibility of binding domains, and differences from control lipids. This lets us prioritize the amino acids most likely involved in lipid binding.</p>
+      </div>
+    </div>
+    <div class="wf-step">
+      <div class="num" style="background:#2f74c0;">4</div>
+      <div class="st-body">
+        <h3>Verify experimentally</h3>
+        <p>We generate mutants in which the predicted amino acids are substituted and verify them by mass spectrometry, binding assays, subcellular-localization analysis, transcriptional-activity measurements, and more. We connect AI predictions to an understanding of actual biological phenomena.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="article-body">
+    <h2>From an "inference tool" to an "experiment-design tool" for AlphaFold3</h2>
+    <p>Rather than treating a single structure prediction as the correct answer, we use structure-prediction AI for experimental design by combining <span class="em-teal">repeated prediction, statistical analysis, and control comparison</span>. The key is not to draw conclusions with AI alone, but to use AI to narrow down the candidates that should be confirmed by experiment.</p>
+    <p>With this approach, we can more rationally select candidate amino acids for lipid binding, the effects of disease mutations, mutant-design strategies, and control lipids. Structure-prediction AI does not replace experiments; it is <span class="em-teal">a tool that dramatically improves the precision of experimental design</span>.</p>
+
+    <h2>What we aim for</h2>
+    <p>Our laboratory is not one that develops AI itself. We are a <span class="em-teal">wet lab</span> grounded in lipid biology, phosphoinositide analysis, mass spectrometry, cell experiments, and disease-model research. In recent years, AI has become a technology that is easy to use not only for specialized data scientists but also for experimental researchers in the life sciences. At the same time, verifying the candidates that AI proposes in actual cells, tissues, and disease models requires solid experimental skills and biological insight.</p>
+    <p>Our starting point is, above all, questions about biological phenomena and disease pathology. We aim to clarify experimentally how lipids control protein function and how their dysregulation leads to disease. To do so, we must precisely design which lipids to examine, which amino acids to mutate, and which experimental systems to use for verification.</p>
+    <p>AI is a powerful tool that supports this experimental design. By using structure-prediction AI, statistical analysis, and generative AI, we narrow down candidate amino acids involved in lipid binding, set strategies for control lipids and mutant design, and refine them into testable hypotheses.</p>
+    <p><span class="em-teal">Researchers pose the questions about biological phenomena and disease pathology, AI focuses the aim of the experiments, and experiments confirm.</span> This is the lipid biology for the AI era that our laboratory aims for.</p>
+
+    <div class="source-note">
+      This page is a general-audience explanation based on a presentation at the 5th Lipid Forum (April 2026, Toshiyoshi Yamamoto). This research is carried out in collaboration with the Department of Computational Drug Discovery, Medical Research Laboratory, Institute of Science Tokyo (Prof. Ryuichiro Ishitani and Assoc. Prof. Yoshitaka Moriwaki). Details of specific analysis examples will be added after the related papers are published.
+    </div>
+  </div>
+
+  <a href="index.html#learn" class="back-link" style="margin-top:2.5rem; margin-bottom:0;">← Back to Learn</a>
+
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div>
+      <div class="footer-lab" style="font-size:15px; line-height:1.7;">Institute of Science Tokyo · Institute of Integrated Research · Medical Research Laboratory · <strong>Department of Biochemical Pathophysiology</strong></div>
+      <div class="footer-copy" style="font-size:15px; line-height:1.7; color:#fff; font-family:'DM Serif Display', serif;">Graduate School of Medical and Dental Sciences · <strong>Department of Lipid Biology</strong></div>
+      <div class="footer-copy" style="font-size:12px; margin-top:0.6rem;">© 2025–2026 Sasaki Laboratory, Institute of Science Tokyo. All rights reserved.</div>
+    </div>
+    <div>
+      <div class="footer-links">
+        <a href="index.html#research">Research</a>
+        <a href="members.html">Members</a>
+        <a href="publications.html">Publications</a>
+        <a href="index.html#learn">Learn</a>
+        <a href="index.html#contact">Access</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- Back-to-top button -->
+<button id="backToTop" aria-label="Back to top" class="back-to-top">
+  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+    <polyline points="18 15 12 9 6 15"></polyline>
+  </svg>
+</button>
+<style>
+.back-to-top {
+  position: fixed; bottom: 24px; right: 24px;
+  width: 44px; height: 44px; border-radius: 50%;
+  background: #1c3177; color: white; border: none;
+  display: flex; align-items: center; justify-content: center;
+  cursor: pointer; box-shadow: 0 4px 16px rgba(0,0,0,0.15);
+  opacity: 0; pointer-events: none;
+  transition: opacity 0.25s, transform 0.25s, background 0.2s;
+  transform: translateY(8px);
+  z-index: 200;
+}
+.back-to-top.visible { opacity: 1; pointer-events: auto; transform: translateY(0); }
+.back-to-top:hover { background: #14245a; }
+@media (max-width: 540px) {
+  .back-to-top { bottom: 16px; right: 16px; width: 40px; height: 40px; }
+}
+</style>
+<script>
+(function() {
+  var btn = document.getElementById('backToTop');
+  if (!btn) return;
+  window.addEventListener('scroll', function() {
+    if (window.scrollY > 300) btn.classList.add('visible');
+    else btn.classList.remove('visible');
+  });
+  btn.addEventListener('click', function() {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+})();
+</script>
+
+<!-- image download deterrent -->
+<style>img{-webkit-user-drag:none;-khtml-user-drag:none;-moz-user-drag:none;-o-user-drag:none;user-drag:none;}</style>
+<script>
+(function(){
+  function blockImg(e){ if(e.target && e.target.tagName==="IMG"){ e.preventDefault(); } }
+  document.addEventListener("contextmenu", blockImg);
+  document.addEventListener("dragstart", blockImg);
+})();
+</script>
+</body>
+</html>

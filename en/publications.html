@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Full list of publications from Sasaki Laboratory, Institute of Science Tokyo — original articles and reviews on phosphoinositide and lipid biology.">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Sasaki Laboratory | Institute of Science Tokyo">
+<meta property="og:title" content="Publications | Sasaki Laboratory">
+<meta property="og:description" content="Full list of publications from Sasaki Laboratory, Institute of Science Tokyo — original articles and reviews on phosphoinositide and lipid biology.">
+<meta property="og:url" content="https://sasaki-lab-art.github.io/en/publications.html">
+<meta property="og:image" content="https://sasaki-lab-art.github.io/photos/molecular_hierarchy.jpg">
+<meta property="og:locale" content="en_US">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Publications | Sasaki Laboratory">
+<meta name="twitter:description" content="Full list of publications from Sasaki Laboratory, Institute of Science Tokyo — original articles and reviews on phosphoinositide and lipid biology.">
+<meta name="twitter:image" content="https://sasaki-lab-art.github.io/photos/molecular_hierarchy.jpg">
+<title>Publications | Sasaki Laboratory, Institute of Science Tokyo</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  :root {
+    --teal:     #1c3177;
+    --teal-lt:  #e9edf7;
+    --teal-mid: #7f96c2;
+    --coral:    #d85a30;
+    --coral-lt: #faece7;
+    --amber:    #ba7517;
+    --amber-lt: #faeeda;
+    --purple:   #534ab7;
+    --purple-lt:#eeedfe;
+    --bg:       #fafaf8;
+    --white:    #ffffff;
+    --text:     #1a1a18;
+    --muted:    #6b6b65;
+    --border:   #e4e4de;
+    --radius:   16px;
+    --radius-sm: 8px;
+    --nav-h:    64px;
+  }
+  html { scroll-behavior: smooth; }
+  body { font-family: 'Noto Sans JP', 'DM Sans', sans-serif; background: var(--bg); color: var(--text); font-size: 15px; line-height: 1.75; }
+
+  /* NAV */
+  nav { position: sticky; top: 0; z-index: 100; background: rgba(255,255,255,0.92); backdrop-filter: blur(12px); border-bottom: 1px solid var(--border); height: var(--nav-h); display: flex; align-items: center; }
+  .nav-inner { max-width: 1100px; margin: auto; width: 100%; padding: 0 2rem; display: flex; align-items: center; justify-content: space-between; }
+  .nav-logo { display: flex; align-items: center; gap: 10px; text-decoration: none; }
+  .nav-logo-icon { width: 36px; height: 36px; background: var(--teal); border-radius: 10px; display: flex; align-items: center; justify-content: center; }
+  .nav-logo-icon svg { width: 20px; height: 20px; fill: white; }
+  .nav-logo-text { font-family: 'DM Serif Display', serif; font-size: 18px; color: var(--text); }
+  .nav-links { display: flex; gap: 0.25rem; }
+  .nav-links a { text-decoration: none; color: var(--muted); font-size: 13px; font-weight: 500; padding: 6px 12px; border-radius: 20px; transition: all 0.2s; }
+  .nav-links a:hover, .nav-links a.active { background: var(--teal-lt); color: var(--teal); }
+  .nav-univ-logo { height: 44px; width: auto; display: block; }
+  .nav-univ-logo:hover { opacity: 0.85; }
+  @media (max-width: 860px) { .nav-univ-logo { height: 32px; } }
+
+  /* PAGE HEADER */
+  .page-header { background: white; border-bottom: 1px solid var(--border); padding: 60px 2rem 48px; }
+  .page-header-inner { max-width: 1100px; margin: auto; }
+  .breadcrumb { display: flex; align-items: center; gap: 8px; font-size: 13px; color: var(--muted); margin-bottom: 1.25rem; }
+  .breadcrumb a { color: var(--teal); text-decoration: none; }
+  .breadcrumb a:hover { text-decoration: underline; }
+  .section-tag { display: inline-block; font-size: 12px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--teal); background: var(--teal-lt); padding: 4px 12px; border-radius: 20px; margin-bottom: 12px; }
+  .page-title { font-family: 'DM Serif Display', serif; font-size: 2.6rem; line-height: 1.2; margin-bottom: 0.75rem; }
+  .page-lead { color: var(--muted); font-size: 15px; max-width: none; }
+
+  /* STATS */
+  .stats-row { display: flex; gap: 1.5rem; margin-bottom: 2.5rem; flex-wrap: wrap; }
+  .stat-item { background: white; border: 1px solid var(--border); border-radius: var(--radius); padding: 1rem 1.5rem; text-align: center; min-width: 110px; }
+  .stat-n { font-family: 'DM Serif Display', serif; font-size: 2rem; color: var(--teal); display: block; line-height: 1; }
+  .stat-l { font-size: 12px; color: var(--muted); margin-top: 4px; display: block; }
+
+  /* FILTER */
+  .filter-section { margin-bottom: 1.5rem; }
+  .filter-label { font-size: 12px; font-weight: 700; color: var(--muted); text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 0.75rem; }
+  .year-btns { display: flex; flex-wrap: wrap; gap: 6px; }
+  .yr-btn {
+    padding: 9px 22px; border-radius: 20px; font-size: 15px; font-weight: 600;
+    cursor: pointer; border: 1.5px solid var(--border); background: white; color: var(--muted);
+    transition: all 0.15s;
+  }
+  .yr-btn:hover { border-color: var(--teal); color: var(--teal); }
+  .yr-btn.active { background: var(--teal); color: white; border-color: var(--teal); }
+  .yr-btn.review-btn.active { background: var(--purple); border-color: var(--purple); }
+  .yr-btn.review-btn:hover { border-color: var(--purple); color: var(--purple); }
+
+  /* BACK LINK */
+  .back-link { display: inline-flex; align-items: center; gap: 6px; color: var(--teal); text-decoration: none; font-size: 14px; font-weight: 600; margin-top: 0.9rem; }
+  .back-link:hover { text-decoration: underline; }
+
+  /* COUNT BAR */
+  .count-bar { display: flex; align-items: center; justify-content: space-between; margin-bottom: 1.25rem; padding: 0.6rem 0; border-bottom: 1px solid var(--border); }
+  .count-text { font-size: 13px; color: var(--muted); }
+  .count-text strong { color: var(--text); }
+  .pubmed-link { font-size: 13px; font-weight: 600; color: var(--teal); text-decoration: none; }
+  .pubmed-link:hover { text-decoration: underline; }
+
+  /* YEAR GROUP HEADING */
+  .year-heading {
+    font-family: 'DM Serif Display', serif;
+    font-size: 1.5rem;
+    color: var(--teal);
+    padding: 1.5rem 0 0.75rem;
+    border-top: 2px solid var(--teal-lt);
+    margin-top: 1.5rem;
+  }
+  .year-heading:first-child { margin-top: 0; border-top: none; padding-top: 0; }
+
+  /* PUB ITEM */
+  .pub-item { padding: 1.25rem 0; border-bottom: 1px solid var(--border); transition: background 0.12s; }
+  .pub-item:last-child { border-bottom: none; }
+  .pub-num { font-size: 11px; font-weight: 700; color: var(--muted); margin-bottom: 3px; }
+  .pub-authors { font-size: 13px; color: var(--muted); margin-bottom: 4px; line-height: 1.5; }
+  .pub-title { font-size: 14px; font-weight: 600; line-height: 1.55; margin-bottom: 6px; color: var(--text); }
+  .pub-meta { display: flex; align-items: center; flex-wrap: wrap; gap: 8px; font-size: 13px; color: var(--muted); }
+  .pub-journal { font-style: italic; }
+  .pub-year-badge { background: var(--teal-lt); color: #14245a; padding: 1px 8px; border-radius: 10px; font-size: 11px; font-weight: 700; font-style: normal; }
+  .pub-doi { color: var(--teal); text-decoration: none; font-size: 12px; }
+  .pub-doi:hover { text-decoration: underline; }
+
+  /* REVIEW badge */
+  .review-badge { background: var(--purple-lt); color: #3c3489; padding: 1px 8px; border-radius: 10px; font-size: 11px; font-weight: 700; }
+
+  /* SECTION DIVIDER */
+  .section-divider { height: 1px; background: var(--border); margin: 2rem 0; }
+
+  /* CONTENT */
+  .content-section { max-width: 1100px; margin: auto; padding: 48px 2rem 80px; }
+
+  /* FOOTER */
+  footer { background: #1a1a18; color: #9a9a94; padding: 3rem 2rem; }
+  .footer-inner { max-width: 1100px; margin: auto; display: flex; justify-content: space-between; align-items: center; }
+  .footer-lab { font-family: 'DM Serif Display', serif; font-size: 18px; color: white; }
+  .footer-links { display: flex; gap: 1.5rem; }
+  .footer-links a { font-size: 13px; color: #9a9a94; text-decoration: none; }
+  .footer-links a:hover { color: var(--teal-mid); }
+  .footer-copy { font-size: 12px; margin-top: 0.5rem; }
+
+  /* EMPTY */
+  .no-results { padding: 3rem; text-align: center; color: var(--muted); font-size: 14px; }
+
+  @media (max-width: 860px) {
+    .page-title { font-size: 2rem; }
+    .nav-links a { font-size: 12px; padding: 5px 8px; }
+  }
+  @media (max-width: 540px) {
+    .content-section { padding: 36px 1.25rem 60px; }
+    .stat-item { min-width: 90px; padding: 0.75rem 1rem; }
+    .stats-row { gap: 0.75rem; }
+  }
+  .nav-toggle { display: none; background: none; border: none; cursor: pointer; color: var(--text); padding: 4px; line-height: 0; }
+  .nav-toggle svg { width: 28px; height: 28px; stroke: currentColor; }
+  /* hamburger menu (<=768px only; desktop unchanged) */
+  @media (max-width: 768px) {
+    .nav-toggle { display: block; }
+    .nav-links {
+      position: absolute; top: 100%; left: 0; right: 0;
+      flex-direction: column; gap: 0; max-width: none;
+      background: rgba(255,255,255,0.98); backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+      max-height: 0; overflow: hidden; transition: max-height 0.3s ease;
+    }
+    .nav-links.open { max-height: 80vh; }
+    .nav-links a { font-size: 15px; padding: 14px 2rem; border-radius: 0; border-bottom: 1px solid var(--border); }
+    .nav-links a:last-child { border-bottom: none; }
+  }
+</style>
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon-32.png" sizes="32x32" type="image/png">
+<link rel="icon" href="/favicon-16.png" sizes="16x16" type="image/png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="canonical" href="https://sasaki-lab-art.github.io/en/publications.html">
+<link rel="alternate" hreflang="ja" href="https://sasaki-lab-art.github.io/publications.html">
+<link rel="alternate" hreflang="en" href="https://sasaki-lab-art.github.io/en/publications.html">
+<link rel="alternate" hreflang="x-default" href="https://sasaki-lab-art.github.io/publications.html">
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-inner">
+    <a href="https://www.isct.ac.jp/en" target="_blank" rel="noopener" style="line-height:0;">
+      <img class="nav-univ-logo" src="../photos/sciencetokyo_logo.jpg" alt="Institute of Science Tokyo (Science Tokyo)">
+    </a>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="navLinks">
+      <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+    </button>
+    <div class="nav-links" id="navLinks">
+      <a href="index.html">Home</a>
+      <a href="index.html#news">News</a>
+      <a href="index.html#research">Research</a>
+      <a href="publications.html" class="active">Publications</a>
+      <a href="index.html#highlights">Research Environment</a>
+      <a href="members.html">Members</a>
+      <a href="index.html#learn">Learn</a>
+      <a href="index.html#contact">Access</a>
+      <a href="../publications.html" class="lang-switch" style="color:var(--teal);font-weight:700;">日本語</a>
+    </div>
+  </div>
+</nav>
+<script>
+(function(){
+  var t = document.getElementById('navToggle');
+  var m = document.getElementById('navLinks');
+  if (!t || !m) return;
+  var ICON_OPEN = '<svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><line x1="5" y1="5" x2="19" y2="19"/><line x1="19" y1="5" x2="5" y2="19"/></svg>';
+  var ICON_CLOSED = '<svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>';
+  function setOpen(o){ m.classList.toggle('open', o); t.setAttribute('aria-expanded', o ? 'true' : 'false'); t.innerHTML = o ? ICON_OPEN : ICON_CLOSED; }
+  t.addEventListener('click', function(){ setOpen(!m.classList.contains('open')); });
+  m.addEventListener('click', function(e){ if (e.target.tagName === 'A') setOpen(false); });
+})();
+</script>
+
+<!-- PAGE HEADER -->
+<div class="page-header">
+  <div class="page-header-inner">
+    <div class="breadcrumb">
+      <a href="index.html">Top</a>
+      <span style="color:var(--border)">›</span>
+      <span>Publications</span>
+    </div>
+    <div class="section-tag">Publications</div>
+    <h1 class="page-title">Publications</h1>
+  </div>
+</div>
+
+<!-- MAIN -->
+<div class="content-section">
+
+
+  <!-- Filter -->
+  <div class="filter-section">
+
+    <div class="year-btns" id="year-btns"></div>
+    <div><a href="index.html" class="back-link">← Back to home</a></div>
+  </div>
+
+  <!-- Count bar -->
+  <div class="count-bar">
+    <span class="count-text" id="count-text"></span>
+    <a class="pubmed-link" href="https://pubmed.ncbi.nlm.nih.gov/?term=sasaki+takehiko%5Bau%5D&sort=date" target="_blank" rel="noopener">Search all on PubMed →</a>
+  </div>
+
+  <!-- Publication list -->
+  <div id="pub-list"></div>
+
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div>
+      <div class="footer-lab" style="font-size:15px; line-height:1.7;">Institute of Science Tokyo · Institute of Integrated Research · Medical Research Laboratory · <strong>Department of Biochemical Pathophysiology</strong></div>
+      <div class="footer-copy" style="font-size:15px; line-height:1.7; color:#fff; font-family:'DM Serif Display', serif;">Graduate School of Medical and Dental Sciences · <strong>Department of Lipid Biology</strong></div>
+      <div class="footer-copy" style="font-size:12px; margin-top:0.6rem;">© 2025–2026 Sasaki Laboratory, Institute of Science Tokyo. All rights reserved.</div>
+    </div>
+    <div class="footer-links">
+      <a href="index.html#research">Research</a>
+      <a href="members.html">Members</a>
+      <a href="publications.html">Publications</a>
+      <a href="index.html#learn">Learn</a>
+      <a href="index.html#contact">Access</a>
+      <a href="../publications.html" class="lang-switch" style="color:var(--teal);font-weight:700;">日本語</a>
+    </div>
+  </div>
+</footer>
+
+<script src="../papers_data.js"></script>
+<script>
+
+// ── RENDER ────────────────────────────────────────────────────────────────────
+let currentFilter = "all";
+
+function makePubHTML(p, isReview) {
+  const doiLink = p.doi
+    ? `<a class="pub-doi" href="https://doi.org/${p.doi}" target="_blank" rel="noopener">DOI: ${p.doi}</a>`
+    : "";
+  const badge = isReview
+    ? `<span class="review-badge">Review</span>`
+    : `<span class="pub-year-badge">${p.y}</span>`;
+  const prefix = isReview ? "R" : "";
+  return `
+    <div class="pub-item" data-year="${p.y}" data-type="${isReview ? 'review' : 'paper'}">
+      <div class="pub-num">${prefix}${p.n}</div>
+      <div class="pub-authors">${p.au}</div>
+      <div class="pub-title">${p.ti}</div>
+      <div class="pub-meta">
+        <span class="pub-journal">${p.jo}</span>
+        <span>${p.vp}</span>
+        ${badge}
+        ${doiLink}
+      </div>
+    </div>`;
+}
+
+function getYears() {
+  // unused – kept for reference
+}
+
+// 5-year periods (first period is 1995-2000)
+const PERIODS = [
+  {label: "1995–2000", from: 1995, to: 2000},
+  {label: "2001–2005", from: 2001, to: 2005},
+  {label: "2006–2010", from: 2006, to: 2010},
+  {label: "2011–2015", from: 2011, to: 2015},
+  {label: "2016–2020", from: 2016, to: 2020},
+  {label: "2021–2025", from: 2021, to: 2025},
+  {label: "2026–2030", from: 2026, to: 2030},
+];
+
+function buildYearBtns() {
+  const container = document.getElementById("year-btns");
+  let html = `<button class="yr-btn active" onclick="filterPubs('all',this)">Original Articles</button>`;
+  html += `<button class="yr-btn review-btn" onclick="filterPubs('review',this)">Reviews</button>`;
+  container.innerHTML = html;
+}
+
+function renderList(filter) {
+  const container = document.getElementById("pub-list");
+  let html = "";
+  let count = 0;
+
+  // Resolve period filter
+  const period = PERIODS.find(p => p.label === filter) || null;
+
+  if (filter === "all" || period) {
+    // Group papers by year descending
+    const years = [...new Set(papers.map(p => p.y))].sort((a, b) => b - a);
+    for (const y of years) {
+      if (period && (y < period.from || y > period.to)) continue;
+      const yPapers = papers.filter(p => p.y === y).sort((a, b) => b.n - a.n);
+      if (!yPapers.length) continue;
+      for (const p of yPapers) {
+        html += makePubHTML(p, false);
+        count++;
+      }
+    }
+    // Reviews in their own section when showing all or matching period
+    const filteredReviews = period
+      ? [...reviews].filter(r => r.y >= period.from && r.y <= period.to)
+      : [...reviews];
+    if (filteredReviews.length) {
+      html += `<div class="section-divider"></div>`;
+      html += `<div class="year-heading" style="color:var(--purple)">Reviews</div>`;
+      for (const r of filteredReviews.sort((a, b) => b.y - a.y)) {
+        html += makePubHTML(r, true);
+        count++;
+      }
+    }
+  } else if (filter === "review") {
+    html += `<div class="year-heading" style="color:var(---purple)">Reviews</div>`;
+    for (const r of [...reviews].sort((a, b) => b.y - a.y)) {
+      html += makePubHTML(r, true);
+      count++;
+    }
+  }
+
+  if (!count) {
+    html = `<div class="no-results">No matching publications.</div>`;
+  }
+
+  container.innerHTML = html;
+
+  // Update count
+  const label = filter === "all" ? "All" :
+                filter === "review" ? "Reviews" :
+                filter;
+  document.getElementById("count-text").innerHTML =
+    `Showing <strong>${count}</strong>${label === "All" ? "" : " (" + label + ")"}`;
+}
+
+function filterPubs(filter, btn) {
+  currentFilter = filter;
+  document.querySelectorAll(".yr-btn").forEach(b => b.classList.remove("active"));
+  btn.classList.add("active");
+  renderList(filter);
+}
+
+// Init
+buildYearBtns();
+renderList("all");
+</script>
+
+
+<!-- Back-to-top button -->
+<button id="backToTop" aria-label="Back to top" class="back-to-top">
+  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+    <polyline points="18 15 12 9 6 15"></polyline>
+  </svg>
+</button>
+<style>
+.back-to-top {
+  position: fixed; bottom: 24px; right: 24px;
+  width: 44px; height: 44px; border-radius: 50%;
+  background: #1c3177; color: white; border: none;
+  display: flex; align-items: center; justify-content: center;
+  cursor: pointer; box-shadow: 0 4px 16px rgba(0,0,0,0.15);
+  opacity: 0; pointer-events: none;
+  transition: opacity 0.25s, transform 0.25s, background 0.2s;
+  transform: translateY(8px);
+  z-index: 200;
+}
+.back-to-top.visible { opacity: 1; pointer-events: auto; transform: translateY(0); }
+.back-to-top:hover { background: #14245a; }
+@media (max-width: 540px) {
+  .back-to-top { bottom: 16px; right: 16px; width: 40px; height: 40px; }
+}
+</style>
+<script>
+(function() {
+  var btn = document.getElementById('backToTop');
+  if (!btn) return;
+  window.addEventListener('scroll', function() {
+    if (window.scrollY > 300) btn.classList.add('visible');
+    else btn.classList.remove('visible');
+  });
+  btn.addEventListener('click', function() {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+})();
+</script>
+
+<!-- image download deterrent -->
+<style>img{-webkit-user-drag:none;-khtml-user-drag:none;-moz-user-drag:none;-o-user-drag:none;user-drag:none;}</style>
+<script>
+(function(){
+  function blockImg(e){ if(e.target && e.target.tagName==="IMG"){ e.preventDefault(); } }
+  document.addEventListener("contextmenu", blockImg);
+  document.addEventListener("dragstart", blockImg);
+})();
+</script>
+</body>
+</html>

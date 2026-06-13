@@ -1,0 +1,979 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Sasaki Laboratory — Department of Biochemical Pathophysiology / Department of Lipid Biology, Institute of Science Tokyo. We study the biology of phosphoinositides and other phospholipids to uncover the molecular mechanisms of cancer, inflammatory and neurodegenerative diseases, and aging.">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Sasaki Laboratory | Institute of Science Tokyo">
+<meta property="og:title" content="Sasaki Laboratory | Institute of Science Tokyo">
+<meta property="og:description" content="Sasaki Laboratory — Department of Biochemical Pathophysiology / Department of Lipid Biology, Institute of Science Tokyo. We study the biology of phosphoinositides and other phospholipids to uncover the molecular mechanisms of cancer, inflammatory and neurodegenerative diseases, and aging.">
+<meta property="og:url" content="https://sasaki-lab-art.github.io/en/">
+<meta property="og:image" content="https://sasaki-lab-art.github.io/photos/molecular_hierarchy.jpg">
+<meta property="og:locale" content="en_US">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Sasaki Laboratory | Institute of Science Tokyo">
+<meta name="twitter:description" content="Sasaki Laboratory — Department of Biochemical Pathophysiology / Department of Lipid Biology, Institute of Science Tokyo. We study the biology of phosphoinositides and other phospholipids to uncover the molecular mechanisms of cancer, inflammatory and neurodegenerative diseases, and aging.">
+<meta name="twitter:image" content="https://sasaki-lab-art.github.io/photos/molecular_hierarchy.jpg">
+<title>Sasaki Laboratory | Institute of Science Tokyo</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  :root {
+    --teal:     #1c3177;
+    --teal-lt:  #e9edf7;
+    --teal-mid: #7f96c2;
+    --coral:    #d85a30;
+    --coral-lt: #faece7;
+    --amber:    #ba7517;
+    --amber-lt: #faeeda;
+    --purple:   #534ab7;
+    --purple-lt:#eeedfe;
+    --blue:     #2563c9;
+    --blue-lt:  #e6eefb;
+    --bg:       #fafaf8;
+    --white:    #ffffff;
+    --text:     #1a1a18;
+    --muted:    #6b6b65;
+    --border:   #e4e4de;
+    --radius:   16px;
+    --radius-sm: 8px;
+    --nav-h:    64px;
+  }
+  html { scroll-behavior: smooth; }
+  body { font-family: 'Noto Sans JP', 'DM Sans', sans-serif; background: var(--bg); color: var(--text); font-size: 15px; line-height: 1.75; }
+
+  /* ── NAV ── */
+  nav {
+    position: sticky; top: 0; z-index: 100;
+    background: rgba(255,255,255,0.92); backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--border);
+    height: var(--nav-h); display: flex; align-items: center;
+  }
+  .nav-inner { max-width: 1100px; margin: auto; width: 100%; padding: 0 2rem; display: flex; align-items: center; justify-content: space-between; }
+  .nav-logo { display: flex; align-items: center; gap: 10px; text-decoration: none; }
+  .nav-logo-icon { width: 36px; height: 36px; background: var(--teal); border-radius: 10px; display: flex; align-items: center; justify-content: center; }
+  .nav-logo-icon svg { width: 20px; height: 20px; fill: white; }
+  .nav-logo-text { font-family: 'DM Serif Display', serif; font-size: 18px; color: var(--text); }
+  .nav-links { display: flex; gap: 0.25rem; }
+  .nav-links a { text-decoration: none; color: var(--muted); font-size: 13px; font-weight: 500; padding: 6px 12px; border-radius: 20px; transition: all 0.2s; }
+  .nav-links a:hover { background: var(--teal-lt); color: var(--teal); }
+  .nav-toggle { display: none; background: none; border: none; cursor: pointer; color: var(--text); padding: 4px; line-height: 0; }
+  .nav-toggle svg { width: 28px; height: 28px; stroke: currentColor; }
+  .nav-univ-logo { height: 44px; width: auto; display: block; }
+  .nav-univ-logo:hover { opacity: 0.85; }
+  @media (max-width: 860px) { .nav-univ-logo { height: 32px; } }
+
+  /* ── SECTIONS ── */
+  section { padding: 48px 2rem; max-width: 1100px; margin: auto; }
+  .section-tag { display: inline-block; font-size: 12px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--teal); background: var(--teal-lt); padding: 4px 12px; border-radius: 20px; margin-bottom: 12px; }
+  h2.sec-title { font-family: 'DM Serif Display', serif; font-size: 2.2rem; line-height: 1.2; margin-bottom: 1rem; }
+  .sec-lead { color: var(--muted); max-width: none; margin-bottom: 2.5rem; }
+
+  /* ── HERO ── */
+  #hero { padding: 80px 2rem 48px; max-width: 1100px; margin: auto; display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 2.5rem; align-items: end; }
+  .hero-eyebrow { font-size: 18px; font-weight: 700; letter-spacing: 0.04em; color: var(--teal); margin-bottom: 1rem; line-height: 1.6; }
+  .hero-eyebrow .univ-name { font-size: 1.35em; }
+  .hero-title { font-family: 'DM Serif Display', serif; font-size: 3.4rem; line-height: 1.15; margin-bottom: 1.25rem; }
+  .hero-title em { font-style: italic; color: var(--teal); }
+  .hero-desc { color: var(--muted); font-size: 16px; max-width: 480px; margin-bottom: 2rem; }
+  .hero-btns { display: flex; gap: 12px; flex-wrap: wrap; }
+  .btn { display: inline-block; padding: 11px 24px; border-radius: 50px; font-size: 14px; font-weight: 600; text-decoration: none; transition: all 0.2s; cursor: pointer; border: none; }
+  .btn-primary { background: var(--teal); color: white; }
+  .btn-primary:hover { background: #14245a; }
+  .btn-outline { background: transparent; color: var(--text); border: 1.5px solid var(--border); }
+  .btn-outline:hover { border-color: var(--teal); color: var(--teal); }
+  .btn-research, .btn-env, .btn-learn, .btn-admission { background:#1c3177; color:#fff; }
+  .btn-research:hover, .btn-env:hover, .btn-learn:hover, .btn-admission:hover { background:#14245a; }
+  .hero-visual { position: relative; border-radius: 20px; overflow: hidden; height: 360px; background: var(--teal-lt); }
+  .hero-slide { position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; object-position: left center; display: block; opacity: 0; z-index: 1; transition: opacity 1.2s ease-in-out; }
+  .hero-slide.active { opacity: 1; }
+  .hero-card { background: white; border: 1px solid var(--border); border-radius: 24px; padding: 2rem; box-shadow: 0 8px 40px rgba(28,49,119,0.08); }
+  .hero-card-top { display: flex; align-items: center; gap: 12px; margin-bottom: 1.5rem; }
+  .hero-avatar { width: 48px; height: 48px; border-radius: 50%; background: var(--teal-lt); display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 18px; color: var(--teal); }
+  .hero-meta h3 { font-size: 15px; font-weight: 700; }
+  .hero-meta p { font-size: 13px; color: var(--muted); }
+  .hero-tags { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 1.25rem; }
+  .tag { font-size: 12px; font-weight: 600; padding: 4px 10px; border-radius: 20px; }
+  .tag-teal { background: var(--teal-lt); color: #14245a; }
+  .tag-coral { background: var(--coral-lt); color: #993c1d; }
+  .tag-purple { background: var(--purple-lt); color: #3c3489; }
+  .tag-amber { background: var(--amber-lt); color: #854f0b; }
+  .hero-stat-row { display: grid; grid-template-columns: repeat(3,1fr); gap: 12px; }
+  .hero-stat { background: var(--bg); border-radius: 12px; padding: 12px; text-align: center; }
+  .hero-stat-n { font-family: 'DM Serif Display', serif; font-size: 24px; color: var(--teal); }
+  .hero-stat-l { font-size: 11px; color: var(--muted); margin-top: 2px; }
+
+  /* ── DIVIDER ── */
+  .full-divider { height: 1px; background: var(--border); margin: 0 2rem; }
+
+  /* ── NEWS ── */
+  #news { }
+  .news-grid { display: grid; gap: 1px; background: var(--border); border: 1px solid var(--border); border-radius: var(--radius); overflow: hidden; }
+  .news-item { background: white; padding: 1.25rem 1.5rem; display: flex; align-items: flex-start; gap: 1rem; transition: background 0.15s; }
+  a.news-item:hover { background: var(--teal-lt); }
+  a.news-item { cursor: pointer; }
+  .news-date { font-size: 12px; color: var(--muted); font-weight: 600; min-width: 80px; padding-top: 2px; }
+  .news-badge { font-size: 11px; font-weight: 700; padding: 2px 0; border-radius: 10px; white-space: nowrap; display: inline-block; width: 58px; text-align: center; flex-shrink: 0; }
+  .badge-new { background: var(--coral-lt); color: #993c1d; }
+  .badge-paper { background: var(--purple-lt); color: #3c3489; }
+  .badge-event { background: var(--amber-lt); color: #854f0b; }
+  .badge-award { background: var(--teal-lt); color: #14245a; }
+  .badge-recruit { background: var(--coral); color: #fff; }
+  .badge-press { background: #1f5fbf; color: #fff; }
+  .news-text { font-size: 14px; line-height: 1.5; }
+  .news-detail { display: block; font-size: 12px; font-weight: 400; color: var(--muted); line-height: 1.6; margin-top: 4px; }
+  /* ピン留め（最上部の注目ニュース）：一回り大きいフォント */
+  .news-item-pinned .news-date { font-size: 13px; }
+  .news-item-pinned .news-text { font-size: 16px; font-weight: 600; }
+
+  /* ── RESEARCH ── */
+  #research { background: transparent; max-width: 100%; padding: 0; }
+  #research .inner { max-width: 1100px; margin: auto; padding: 0 2rem; }
+  .research-grid { display: grid; grid-template-columns: repeat(2,1fr); gap: 1.5rem; }
+  .research-card { border: 1px solid var(--border); border-radius: var(--radius); padding: 2rem; background: var(--bg); transition: all 0.2s; }
+  .research-card:hover { border-color: var(--teal-mid); background: white; box-shadow: 0 4px 20px rgba(28,49,119,0.08); }
+  .research-icon { width: 52px; height: 52px; border-radius: 14px; display: flex; align-items: center; justify-content: center; margin-bottom: 1.25rem; font-size: 26px; }
+  .ri-teal { background: var(--teal-lt); }
+  .ri-coral { background: var(--coral-lt); }
+  .ri-purple { background: var(--purple-lt); }
+  .ri-amber { background: var(--amber-lt); }
+  .ri-blue { background: var(--blue-lt); }
+  .research-card h3 { font-size: 17px; font-weight: 700; margin-bottom: 0.6rem; }
+  .research-head { display: flex; align-items: center; gap: 1rem; margin-bottom: 0.8rem; }
+  .research-head .research-icon { margin-bottom: 0; flex-shrink: 0; }
+  .research-head h3 { margin-bottom: 0; }
+  .research-card p { font-size: 14px; color: var(--muted); line-height: 1.7; }
+
+  /* ── MEMBERS ── */
+  .members-grid { display: grid; grid-template-columns: repeat(4,1fr); gap: 1.25rem; }
+  .member-card { border: 1px solid var(--border); border-radius: var(--radius); overflow: hidden; background: white; transition: all 0.2s; }
+  .member-card:hover { box-shadow: 0 4px 20px rgba(0,0,0,0.07); transform: translateY(-2px); }
+  a.member-card { text-decoration: none; color: inherit; display: block; cursor: pointer; }
+  .member-photo { height: 140px; display: flex; align-items: center; justify-content: center; font-size: 48px; font-weight: 700; font-family: 'DM Serif Display', serif; }
+  .member-info { padding: 1rem; }
+  .member-name { font-size: 15px; font-weight: 700; }
+  .member-pos { font-size: 12px; color: var(--muted); margin-top: 2px; font-weight: 700; }
+  .member-keywords { display: flex; flex-wrap: wrap; gap: 4px; margin-top: 8px; }
+  .kw { font-size: 11px; background: var(--teal-lt); color: #14245a; padding: 2px 8px; border-radius: 10px; }
+
+  /* ── PUBLICATIONS ── */
+  #publications { background: white; max-width: 100%; padding: 0; }
+  #publications .inner { max-width: 1100px; margin: auto; padding: 0 2rem; }
+  .pub-list { display: flex; flex-direction: column; gap: 1px; background: var(--border); border: 1px solid var(--border); border-radius: var(--radius); overflow: hidden; }
+  .pub-item { background: white; padding: 1.5rem; transition: background 0.15s; }
+  .pub-item:hover { background: var(--bg); }
+  .pub-authors { font-size: 13px; color: var(--muted); margin-bottom: 4px; }
+  .pub-title { font-size: 15px; font-weight: 600; line-height: 1.5; margin-bottom: 6px; color: var(--text); }
+  .pub-title a { color: inherit; text-decoration: none; }
+  .pub-title a:hover { color: var(--teal); }
+  .pub-meta { display: flex; align-items: center; gap: 10px; font-size: 13px; color: var(--muted); }
+  .pub-journal { font-style: italic; }
+  .pub-year { background: var(--teal-lt); color: #14245a; padding: 1px 8px; border-radius: 10px; font-size: 12px; font-weight: 600; font-style: normal; }
+  .pub-doi { color: var(--teal); text-decoration: none; font-size: 13px; }
+  .pub-doi:hover { text-decoration: underline; }
+
+  /* ── LEARN ── */
+  .learn-tabs { display: flex; gap: 8px; margin-bottom: 2rem; flex-wrap: wrap; }
+  .tab-btn { padding: 8px 18px; border-radius: 50px; font-size: 13px; font-weight: 600; cursor: pointer; border: 1.5px solid var(--border); background: white; color: var(--muted); transition: all 0.18s; }
+  .tab-btn.active, .tab-btn:hover { background: var(--teal); color: white; border-color: var(--teal); }
+  .learn-panel { display: none; }
+  .learn-panel.active { display: block; }
+
+  /* Background cards */
+  .bg-grid { display: grid; grid-template-columns: repeat(3,1fr); grid-auto-rows: 1fr; gap: 1.25rem; }
+  .bg-card { position: relative; display: flex; flex-direction: column; overflow: hidden; border: 1px solid var(--border); border-radius: var(--radius); padding: 1.5rem; background: white; transition: transform 0.2s, box-shadow 0.2s; }
+  .bg-card:hover { transform: translateY(-3px); box-shadow: 0 8px 28px rgba(0,0,0,0.08); }
+  .bg-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 4px; background: var(--teal); }
+  .bg-card.c-coral::before  { background: var(--coral); }
+  .bg-card.c-amber::before  { background: var(--amber); }
+  .bg-card.c-purple::before { background: var(--purple); }
+  .bg-card h3 { font-size: 16px; font-weight: 700; line-height: 1.45; margin-bottom: 0.7rem; }
+  .bg-card p { font-size: 14px; color: var(--muted); }
+  .bg-card .read-more { align-self: flex-start; margin-top: auto; padding-top: 12px; font-size: 13px; font-weight: 600; color: var(--teal); text-decoration: none; }
+  .bg-card.c-coral  .read-more { color: var(--coral); }
+  .bg-card.c-amber  .read-more { color: var(--amber); }
+  .bg-card.c-purple .read-more { color: var(--purple); }
+
+  /* Column */
+  .column-list { display: flex; flex-direction: column; gap: 1.25rem; }
+  .column-card { border: 1px solid var(--border); border-radius: var(--radius); padding: 1.5rem; background: white; display: grid; grid-template-columns: 80px 1fr; gap: 1.5rem; align-items: center; transition: all 0.18s; }
+  .column-card:hover { box-shadow: 0 4px 16px rgba(0,0,0,0.06); }
+  .column-no { font-family: 'DM Serif Display', serif; font-size: 2.5rem; color: var(--teal-lt); text-align: center; }
+  .column-card h3 { font-size: 15px; font-weight: 700; margin-bottom: 4px; }
+  .column-card p { font-size: 13px; color: var(--muted); }
+
+  /* Glossary */
+  .glossary-grid { display: grid; grid-template-columns: repeat(2,1fr); gap: 1rem; }
+  .gloss-item { border: 1px solid var(--border); border-radius: var(--radius-sm); padding: 1rem 1.25rem; background: white; }
+  .gloss-term { font-size: 14px; font-weight: 700; color: var(--teal); margin-bottom: 4px; }
+  .gloss-term span { font-size: 12px; color: var(--muted); font-weight: 400; margin-left: 6px; }
+  .gloss-def { font-size: 13px; color: var(--muted); line-height: 1.6; }
+
+  /* Links */
+  .link-section-label { font-size: 13px; font-weight: 700; letter-spacing: 0.04em; color: var(--teal); margin: 0 0 0.9rem; padding-bottom: 0.4rem; border-bottom: 1px solid var(--border); }
+  .link-section-label + .link-grid { margin-bottom: 2rem; }
+  .link-grid { display: grid; grid-template-columns: repeat(2,1fr); gap: 1rem; }
+  .link-card { display: flex; flex-direction: column; gap: 5px; padding: 1.1rem 1.25rem; border: 1px solid var(--border); border-radius: var(--radius); background: white; text-decoration: none; color: inherit; transition: transform 0.2s, box-shadow 0.2s, border-color 0.2s; }
+  .link-card:hover { transform: translateY(-2px); box-shadow: 0 6px 20px rgba(0,0,0,0.07); border-color: var(--teal-mid); }
+  .link-card .lk-title { font-size: 15px; font-weight: 700; color: var(--text); }
+  .link-card .lk-title::after { content: ' ↗'; color: var(--teal); font-size: 12px; }
+  .link-card .lk-desc { font-size: 12.5px; color: var(--muted); line-height: 1.6; }
+  .link-card .lk-url { font-size: 11.5px; color: var(--teal); word-break: break-all; margin-top: 2px; }
+  @media (max-width: 640px) { .link-grid { grid-template-columns: 1fr; } }
+
+  /* ── CONTACT ── */
+  #contact { background: white; max-width: 100%; padding: 0; }
+  #contact .inner { max-width: 1100px; margin: auto; padding: 0 2rem; }
+  .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; }
+  .contact-info { display: flex; flex-direction: column; }
+  .contact-row { display: flex; align-items: flex-start; gap: 12px; margin-bottom: 1.25rem; }
+  .contact-icon { width: 38px; height: 38px; background: var(--teal-lt); border-radius: 10px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; font-size: 18px; }
+  .contact-label { font-size: 13px; font-weight: 700; color: var(--muted); text-transform: uppercase; letter-spacing: 0.06em; }
+  .contact-val { font-size: 16px; color: var(--text); margin-top: 2px; }
+  .access-box { background: var(--teal-lt); border-radius: var(--radius); padding: 1.5rem; }
+  .access-box h3 { font-size: 21px; font-weight: 700; color: #14245a; margin-bottom: 0.75rem; }
+  .access-step { display: flex; gap: 10px; align-items: flex-start; margin-bottom: 0.6rem; }
+  .step-n { width: 24px; height: 24px; background: var(--teal); color: white; border-radius: 50%; font-size: 13px; font-weight: 700; display: flex; align-items: center; justify-content: center; flex-shrink: 0; margin-top: 1px; }
+  .access-step p { font-size: 17px; color: #14245a; line-height: 1.6; }
+
+  /* ── FOOTER ── */
+  footer { background: #1a1a18; color: #9a9a94; padding: 3rem 2rem; }
+  .footer-inner { max-width: 1100px; margin: auto; display: flex; justify-content: space-between; align-items: center; }
+  .footer-lab { font-family: 'DM Serif Display', serif; font-size: 18px; color: white; }
+  .footer-links { display: flex; gap: 1.5rem; }
+  .footer-links a { font-size: 13px; color: #9a9a94; text-decoration: none; }
+  .footer-links a:hover { color: var(--teal-mid); }
+  .footer-copy { font-size: 12px; margin-top: 0.5rem; }
+
+  /* ── ANIMATIONS ── */
+  @keyframes fadeUp { from { opacity:0; transform:translateY(16px); } to { opacity:1; transform:translateY(0); } }
+  .hero-title { animation: fadeUp 0.6s ease both; }
+  .hero-desc { animation: fadeUp 0.6s 0.1s ease both; }
+  .hero-btns { animation: fadeUp 0.6s 0.2s ease both; }
+  .hero-visual { animation: fadeUp 0.6s 0.15s ease both; }
+
+  @media (max-width: 860px) {
+    #hero { grid-template-columns: 1fr; }
+    /* .hero-visual は非表示にせず、テキスト・ボタンの下に360pxの高さで表示 */
+    .research-grid { grid-template-columns: 1fr; }
+    .members-grid { grid-template-columns: repeat(2,1fr); }
+    .contact-grid { grid-template-columns: 1fr; }
+    .bg-grid { grid-template-columns: 1fr; }
+    .glossary-grid { grid-template-columns: 1fr; }
+    .nav-links a { font-size: 12px; padding: 5px 8px; }
+  }
+  @media (max-width: 540px) {
+    .hero-title { font-size: 2.2rem; }
+    h2.sec-title { font-size: 1.7rem; }
+    .hero-visual { height: 240px; }
+    #hero { padding: 60px 1.25rem 36px; }
+    section { padding: 36px 1.25rem; }
+  }
+  /* ── ハンバーガーメニュー（≤768px のみ。デスクトップ表示は不変） ── */
+  @media (max-width: 768px) {
+    .nav-toggle { display: block; }
+    .nav-links {
+      position: absolute; top: 100%; left: 0; right: 0;
+      flex-direction: column; gap: 0; max-width: none;
+      background: rgba(255,255,255,0.98); backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+      max-height: 0; overflow: hidden; transition: max-height 0.3s ease;
+    }
+    .nav-links.open { max-height: 80vh; }
+    .nav-links a { font-size: 15px; padding: 14px 2rem; border-radius: 0; border-bottom: 1px solid var(--border); }
+    .nav-links a:last-child { border-bottom: none; }
+  }
+
+  /* ── HIGHLIGHTS (Research Environment) ── */
+  #highlights { background: transparent; max-width: 100%; padding: 0; }
+  #highlights .inner { max-width: 1100px; margin: auto; padding: 0 2rem; }
+  .highlight-intro { color: var(--muted); font-size: 14px; max-width: none; margin-bottom: 2rem; }
+  .highlight-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.25rem; }
+  .highlight-card {
+    border-radius: var(--radius);
+    padding: 1.5rem;
+    border: 1px solid var(--border);
+    display: flex; flex-direction: column; gap: 0.75rem;
+    transition: all 0.2s;
+    text-decoration: none; color: inherit;
+    position: relative; overflow: hidden;
+  }
+  .highlight-card:hover { transform: translateY(-3px); box-shadow: 0 8px 28px rgba(0,0,0,0.09); }
+  .highlight-card::before {
+    content: ''; position: absolute; top: 0; left: 0; right: 0; height: 4px;
+  }
+  .hc-teal { background: var(--bg); }
+  .hc-teal::before { background: var(--teal); }
+  .hc-coral { background: var(--bg); }
+  .hc-coral::before { background: var(--coral); }
+  .hc-purple { background: var(--bg); }
+  .hc-purple::before { background: var(--purple); }
+  .hc-amber { background: var(--bg); }
+  .hc-amber::before { background: var(--amber); }
+  .hc-blue { background: var(--bg); }
+  .hc-blue::before { background: #00b0f0; }
+  .hc-navy { background: var(--bg); }
+  .hc-navy::before { background: #1f3a8c; }
+  .hc-dark { background: var(--bg); }
+  .hc-dark::before { background: #1a1a18; }
+  .highlight-badge {
+    font-size: 10px; font-weight: 800; letter-spacing: 0.08em; text-transform: uppercase;
+    padding: 3px 10px; border-radius: 20px; display: inline-block; width: fit-content;
+  }
+  .hb-teal { background: var(--teal-lt); color: #14245a; }
+  .hb-coral { background: var(--coral-lt); color: #993c1d; }
+  .hb-purple { background: var(--purple-lt); color: #3c3489; }
+  .hb-amber { background: var(--amber-lt); color: #854f0b; }
+  .hb-blue { background: #e3f4fc; color: #0a6aa3; }
+  .hb-navy { background: #e6eaf6; color: #1f3a8c; }
+  .hb-dark { background: #e8e8e4; color: #1a1a18; }
+  .highlight-card h3 { font-size: 15px; font-weight: 700; line-height: 1.4; }
+  .highlight-card p { font-size: 13px; color: var(--muted); line-height: 1.65; flex: 1; }
+  .highlight-link { font-size: 12px; font-weight: 700; color: var(--teal); margin-top: 0.25rem; }
+  .hc-coral .highlight-link { color: var(--coral); }
+  .hc-purple .highlight-link { color: var(--purple); }
+  .hc-amber .highlight-link { color: var(--amber); }
+  .hc-blue .highlight-link { color: #0086c9; }
+  .hc-navy .highlight-link { color: #1f3a8c; }
+  .hc-dark .highlight-link { color: #1a1a18; }
+  @media (max-width: 860px) { .highlight-grid { grid-template-columns: 1fr; } }
+
+
+  /* === セクション交互配色に伴うカード背景の調整（2026-05-28） === */
+  #research .research-card { background: white; }
+  #research .research-card:hover { background: white; box-shadow: 0 4px 20px rgba(28,49,119,0.08); }
+  #highlights .highlight-card,
+  #highlights .hc-teal,
+  #highlights .hc-coral,
+  #highlights .hc-purple,
+  #highlights .hc-amber,
+  #highlights .hc-blue,
+  #highlights .hc-navy,
+  #highlights .hc-dark { background: white; }
+
+</style>
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon-32.png" sizes="32x32" type="image/png">
+<link rel="icon" href="/favicon-16.png" sizes="16x16" type="image/png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="canonical" href="https://sasaki-lab-art.github.io/en/index.html">
+<link rel="alternate" hreflang="ja" href="https://sasaki-lab-art.github.io/index.html">
+<link rel="alternate" hreflang="en" href="https://sasaki-lab-art.github.io/en/index.html">
+<link rel="alternate" hreflang="x-default" href="https://sasaki-lab-art.github.io/index.html">
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-inner">
+    <a href="https://www.isct.ac.jp/en" target="_blank" rel="noopener" style="line-height:0;">
+      <img class="nav-univ-logo" src="../photos/sciencetokyo_logo.jpg" alt="Institute of Science Tokyo (Science Tokyo)">
+    </a>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="navLinks">
+      <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+    </button>
+    <div class="nav-links" id="navLinks">
+      <a href="index.html">Home</a>
+      <a href="#news">News</a>
+      <a href="#research">Research</a>
+      <a href="#publications">Publications</a>
+      <a href="#highlights">Research Environment</a>
+      <a href="#members">Members</a>
+      <a href="#learn">Learn</a>
+      <a href="#contact">Access</a>
+      <a href="../index.html" class="lang-switch" style="color:var(--teal);font-weight:700;">日本語</a>
+    </div>
+  </div>
+</nav>
+<script>
+(function(){
+  var t = document.getElementById('navToggle');
+  var m = document.getElementById('navLinks');
+  if (!t || !m) return;
+  var ICON_OPEN = '<svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><line x1="5" y1="5" x2="19" y2="19"/><line x1="19" y1="5" x2="5" y2="19"/></svg>';
+  var ICON_CLOSED = '<svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>';
+  function setOpen(o){ m.classList.toggle('open', o); t.setAttribute('aria-expanded', o ? 'true' : 'false'); t.innerHTML = o ? ICON_OPEN : ICON_CLOSED; }
+  t.addEventListener('click', function(){ setOpen(!m.classList.contains('open')); });
+  m.addEventListener('click', function(e){ if (e.target.tagName === 'A') setOpen(false); });
+})();
+</script>
+
+<!-- HERO -->
+<section id="hero">
+  <div>
+    <p class="hero-eyebrow"><a href="about_science_tokyo.html" class="univ-name" style="color:inherit; text-decoration:none; border-bottom:1.5px dotted currentColor;" title="About Institute of Science Tokyo">Institute of Science Tokyo</a><br><span style="font-size:12.5px; font-weight:500; line-height:1.6;">Institute of Integrated Research · Medical Research Laboratory · <strong>Department of Biochemical Pathophysiology</strong><br>Graduate School of Medical and Dental Sciences · <strong>Department of Lipid Biology</strong></span></p>
+    <h1 class="hero-title">Lipids decoding the mysteries of<br><em>life &amp; disease</em></h1>
+    <p class="hero-desc">Centered on the biology of phosphoinositides and other phospholipids, we work to elucidate the molecular mechanisms of cancer, inflammatory and neurodegenerative diseases, and aging. We seek new principles that govern life and aim to translate them into medicine for preventing and curing intractable diseases.</p>
+    <div style="display:inline-flex; flex-direction:column; align-items:stretch;">
+      <div class="hero-btns">
+        <a href="#research" class="btn btn-research">Research</a>
+        <a href="#highlights" class="btn btn-env">Research Environment</a>
+        <a href="#learn" class="btn btn-learn">Learn</a>
+      </div>
+      <a href="join.html" class="btn btn-admission" style="text-align:center; margin-top:12px; font-size:18px; padding:13px 28px;">🎓 For prospective graduate students (MSc / PhD) 🎓</a>
+    </div>
+  </div>
+  <div class="hero-visual">
+    <img src="../photos/yushima_plum_spring.jpg" alt="Plum blossoms and the M&amp;D Tower at the Yushima campus (spring)" class="hero-slide active" style="object-position: center center;">
+    <img src="../photos/ms_sample.jpg" alt="Experiment using a mass spectrometer" class="hero-slide" style="object-position: center center;">
+    <img src="../photos/research_papers.jpg" alt="Selected papers from the laboratory" class="hero-slide" style="object-position: center center;">
+    <img src="../photos/campus2.jpg" alt="The M&amp;D Tower at the Yushima campus (summer)" class="hero-slide" style="object-position: left center;">
+    <img src="../photos/sympo.jpg" alt="Symposium group photo" class="hero-slide" style="object-position: 40% top;">
+    <img src="../photos/research_montage.jpg" alt="Research highlights (mass spectrometry, fluorescence staining, model animals, histology)" class="hero-slide" style="object-position: center center;">
+    <img src="../photos/yushima_autumn.jpg" alt="Autumn foliage and the M&amp;D Tower at the Yushima campus (autumn)" class="hero-slide" style="object-position: center center;">
+    <img src="../photos/drink.jpg" alt="Members socializing in the laboratory" class="hero-slide" style="object-position: center center;">
+    <img src="../photos/award_trophy.jpg" alt="Best Paper Award trophy (Shin Morioka, 2023)" class="hero-slide" style="object-position: center center;">
+    <img src="../photos/award_ceremony.jpg" alt="Award ceremony at the MRL graduate student research presentation (Yuto Kikuchi and Fubuki Oka, 2024)" class="hero-slide" style="object-position: center center;">
+  </div>
+</section>
+
+<div class="full-divider"></div>
+
+<!-- NEWS -->
+<div style="background: white;">
+<section id="news">
+  <div class="section-tag">News</div>
+  <h2 class="sec-title">News</h2>
+  <div class="news-grid" id="top-news-grid"></div>
+  <div style="margin-top:1.5rem; text-align:left;">
+    <a href="news.html" class="btn btn-primary" style="font-size:13px; padding:8px 18px;">View all news →</a>
+  </div>
+</section>
+</div>
+
+<div class="full-divider"></div>
+
+<!-- RESEARCH -->
+<div id="research">
+  <section class="inner" style="padding: 48px 2rem; max-width: 1100px; margin:auto;">
+    <div class="section-tag">Research</div>
+    <h2 class="sec-title">Research</h2>
+    <p class="sec-lead" style="max-width:none;">From the perspective of phosphoinositide-centered lipid biology, we elucidate the pathology of cancer, inflammatory diseases, and neurodegenerative diseases at the molecular level.</p>
+    <div class="research-grid">
+      <div class="research-card">
+        <div class="research-head"><div class="research-icon ri-teal" style="padding:2px;"><img src="../photos/inositol_turtle.png" alt="The 3D structure of myo-inositol depicted as a turtle" style="width:100%;height:100%;object-fit:contain;"></div>
+        <h3>Phosphoinositides and intractable diseases</h3></div>
+        <p>Phosphoinositides are trace phospholipids that regulate signal transduction and membrane dynamics inside and outside the cell. Using genetically modified mice for some 50 phosphoinositide-metabolizing enzymes, we elucidate how intractable diseases such as cancer, inflammatory diseases, and neurodegenerative diseases arise and progress.</p>
+      </div>
+      <div class="research-card">
+        <div class="research-head"><div class="research-icon ri-blue" style="color:var(--blue);">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="1" fill="currentColor" stroke="none"/>
+            <path d="M20.2 20.2c2.04-2.03.02-7.36-4.5-11.9-4.54-4.52-9.87-6.54-11.9-4.5-2.04 2.03-.02 7.36 4.5 11.9 4.54 4.52 9.87 6.54 11.9 4.5Z"/>
+            <path d="M15.7 15.7c4.52-4.54 6.54-9.87 4.5-11.9-2.03-2.04-7.36-.02-11.9 4.5-4.52 4.54-6.54 9.87-4.5 11.9 2.03 2.04 7.36.02 11.9-4.5Z"/>
+          </svg>
+        </div>
+        <h3>Discovery of novel lipids and metabolic enzymes</h3></div>
+        <p>Combining mass spectrometry data with AI and machine learning, we search for unknown lipid molecules that change in disease. We identify the enzymes that produce and degrade them and elucidate their physiological functions and mechanisms of action.</p>
+      </div>
+      <div class="research-card">
+        <div class="research-head"><div class="research-icon ri-purple" style="color:var(--purple);">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <polygon points="11,1.1 14,2.85 14,6.35 11,8.1 8,6.35 8,2.85" fill="none" stroke="currentColor"/>
+            <path d="M9.3 8.4 C8.3 11, 10 13, 9.3 16 C8.7 18, 9.3 19, 9.3 20.5"/>
+            <path d="M12.7 8.4 C13.7 11, 12 13, 12.7 16 C13.3 18, 12.7 19, 12.7 20.5"/>
+            <path d="M14 7 a2 2 0 0 1 2 2" opacity="0.9"/>
+            <path d="M15.5 6.2 a3 3 0 0 1 3 3" opacity="0.6"/>
+            <path d="M17 4 a5.2 5.2 0 0 1 4.3 5" opacity="0.4"/>
+          </svg>
+        </div>
+        <h3>Mechanisms of bioactive lipids</h3></div>
+        <p>Lipids are distributed not only in the plasma membrane but also in organelles, the cytosol, and the extracellular environment, where they control biological processes. We elucidate how lipid localization is controlled and how lipid information is read out and converted into cellular responses.</p>
+      </div>
+      <div class="research-card">
+        <div class="research-head"><div class="research-icon ri-amber" style="color:var(--amber);">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M3.5 4 V20 H21" opacity="0.55"/>
+            <path d="M4.5 20 L7 20 L8.5 11 L10 20 L12.5 20 L14 5.5 L15.5 20 L17.5 20 L18.6 13 L20 20"/>
+          </svg>
+        </div>
+        <h3>Pathology analysis by lipid profiling</h3></div>
+        <p>We develop deep mass spectrometry techniques for phospholipids and apply them to clinical specimens of human disease. By analyzing lipid changes associated with disease, genetic abnormalities, lifestyle, and aging, we develop stratification markers.</p>
+      </div>
+      <div class="research-card" style="grid-column: 1 / -1;">
+        <div style="display:flex; align-items:center; gap:1rem; margin-bottom:0.75rem;">
+          <div class="research-icon ri-teal" style="margin-bottom:0; color:var(--teal);">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M6 3 H18"/>
+              <path d="M6 21 H18"/>
+              <path d="M7.2 3 C7.2 8, 12 9.6, 12 12 C12 14.4, 7.2 16, 7.2 21"/>
+              <path d="M16.8 3 C16.8 8, 12 9.6, 12 12 C12 14.4, 16.8 16, 16.8 21"/>
+            </svg>
+          </div>
+          <div>
+            <div style="font-size:11px; font-weight:700; color:var(--teal); text-transform:uppercase; letter-spacing:0.08em; margin-bottom:2px;">AMED-CREST project (FY2023–)</div>
+            <h3 style="margin-bottom:0;">Age-related remodeling of phosphoinositides and the essence of aging and disease</h3>
+          </div>
+        </div>
+        <p>We clarify how age-related changes in phosphoinositide metabolism contribute to aging and age-related diseases. Combining genetic analysis with our original lipid-measurement technology, we aim to elucidate the lipid-metabolic mechanisms that control aging and to develop new interventions.</p>
+      </div>
+    </div>
+  </section>
+</div>
+
+<div class="full-divider"></div>
+
+<!-- PUBLICATIONS -->
+<div id="publications">
+  <section class="inner" style="padding: 48px 2rem; max-width:1100px; margin:auto;">
+    <div class="section-tag">Publications</div>
+    <div style="display:flex; align-items:baseline; gap:1.25rem; flex-wrap:wrap; margin-bottom:1rem;">
+      <h2 class="sec-title" style="margin-bottom:0;">Publications</h2>
+      <span style="display:inline-flex; align-items:baseline; gap:16px; color:var(--muted); font-size:17px;">
+        <span><strong style="color:var(--teal); font-size:24px; font-family:'Segoe UI',system-ui,-apple-system,'Noto Sans JP',sans-serif; font-variant-numeric:tabular-nums; font-feature-settings:'tnum' 1;">71</strong> h-index</span>
+        <span>Citations <strong style="color:var(--teal); font-size:24px; font-family:'Segoe UI',system-ui,-apple-system,'Noto Sans JP',sans-serif; font-variant-numeric:tabular-nums; font-feature-settings:'tnum' 1;">25,111</strong></span>
+        <span style="font-size:14px; color:var(--muted);">(2026.6.1)</span>
+      </span>
+    </div>
+    <p class="sec-lead">Selected papers are listed here. Please see the full list of publications below.</p>
+    <div class="pub-list" id="top-pub-list"></div>
+    <div style="margin-top:1.25rem; text-align:left; display:flex; gap:12px; justify-content:flex-start; flex-wrap:wrap;">
+      <a href="publications.html" class="btn btn-primary" style="font-size:13px; padding:8px 18px;">View full publication list →</a>
+    </div>
+  </section>
+</div>
+
+<div class="full-divider"></div>
+
+<!-- HIGHLIGHTS -->
+<div id="highlights">
+  <section class="inner" style="padding: 48px 2rem; max-width:1100px; margin:auto;">
+    <div class="section-tag">Research Environment</div>
+    <div style="display:flex; align-items:center; gap:14px; flex-wrap:wrap; margin-bottom:1rem;">
+      <h2 class="sec-title" style="margin:0;">Research Environment</h2>
+      <a href="join.html" class="btn btn-admission" style="font-size:13px; padding:7px 16px; line-height:1.3;">🎓 For prospective graduate students (MSc / PhD) 🎓</a>
+    </div>
+    <p class="highlight-intro">With its designation as a University for International Research Excellence and its robotic experiment support, the laboratory offers a world-class education and research environment.</p>
+    <div class="highlight-grid">
+
+      <a class="highlight-card hc-dark" href="https://www.isct.ac.jp/en/news/6ztjq6t6ge63" target="_blank" rel="noopener">
+        <span class="highlight-badge hb-dark">Designated Jan 2026</span>
+        <h3>University for International<br>Research Excellence — Science Tokyo</h3>
+        <p>Under MEXT’s University for International Research Excellence program, Institute of Science Tokyo has been formally certified. Supported by the University Fund, it aims to build a world-leading research environment.</p>
+        <span class="highlight-link">Learn more →</span>
+      </a>
+
+      <a class="highlight-card hc-teal" href="https://www.nature.com/articles/d41586-026-01625-2" target="_blank" rel="noopener">
+        <span class="highlight-badge hb-teal">High-precision experiment support</span>
+        <h3>MRL Robotic Experiment Support Office<br>Center for Robotic Future Creation</h3>
+        <p>A Robotic Experiment Support Office that advances autonomous experimentation with robots and AI. It is an advanced research infrastructure for efficiently performing large-scale, high-precision experiments.</p>
+        <span class="highlight-link">Featured in Nature →</span>
+      </a>
+
+      <div class="highlight-card hc-amber">
+        <span class="highlight-badge hb-amber">MEXT-certified</span>
+        <h3>Joint Research Center for Intractable Diseases<br>Joint Usage / Research Center</h3>
+        <p>Certified as a Joint Usage / Research Center for intractable diseases. We actively support collaborative research and shared use of equipment with researchers both within and outside Japan.</p>
+      </div>
+
+      <div class="highlight-card hc-navy">
+        <span class="highlight-badge hb-navy">MEXT program</span>
+        <h3>Interdisciplinary Research Hub<br>“Overcoming Multilayered Stress Diseases”</h3>
+        <p>In partnership with the National Center of Neurology and Psychiatry and the Tokyo Metropolitan Institute of Medical Science, we aim to elucidate the pathology of multilayered stress diseases.</p>
+      </div>
+
+      <a class="highlight-card hc-blue" href="equipment_program.html">
+        <span class="highlight-badge hb-blue">Research infrastructure</span>
+        <h3>Cross-University Program for<br>Strengthening Research Infrastructure</h3>
+        <p>Through the Cross-University Program for Strengthening Research Infrastructure, we are enhancing advanced analytical instruments and technical-education systems.</p>
+        <span class="highlight-link">Learn more →</span>
+      </a>
+
+      <a class="highlight-card hc-purple" href="https://www.amed.go.jp/en/program/list/16/02/001_18.html" target="_blank" rel="noopener">
+        <span class="highlight-badge hb-purple">Selected FY2023</span>
+        <h3>AMED-CREST<br>Mechanisms of aging and disease</h3>
+        <p>“Age-related remodeling of phosphoinositides and the essence of aging and disease” was selected for AMED-CREST. We aim to elucidate aging-regulating lipid profiles and to develop methods to control aging.</p>
+        <span class="highlight-link">Learn more →</span>
+      </a>
+
+    </div>
+  </section>
+</div>
+
+<div class="full-divider"></div>
+
+<!-- MEMBERS -->
+<div style="background: white;">
+<section id="members">
+  <div class="section-tag">Members</div>
+  <h2 class="sec-title">Members</h2>
+  <p class="sec-lead" style="max-width:none;">Members from diverse backgrounds work together to pursue highly original research.</p>
+  <div class="members-grid">
+    <a class="member-card" href="members.html">
+      <div class="member-photo" style="background:var(--teal-lt); color:var(--teal);">雄</div>
+      <div class="member-info">
+        <div class="member-name">Takehiko Sasaki</div>
+        <div class="member-pos">Professor / Principal Investigator</div>
+      </div>
+    </a>
+    <a class="member-card" href="members.html#staff-junko-sasaki">
+      <div class="member-photo" style="background:var(--purple-lt); color:var(--purple);">純</div>
+      <div class="member-info">
+        <div class="member-name">Junko Sasaki</div>
+        <div class="member-pos">Associate Professor</div>
+        <div class="member-pos">Head, Dept. of Cellular and Molecular Medicine (concurrent)</div>
+      </div>
+    </a>
+    <a class="member-card" href="members.html#staff-hiroaki-kajiho">
+      <div class="member-photo" style="background:var(--coral-lt); color:var(--coral);">博</div>
+      <div class="member-info">
+        <div class="member-name">Hiroaki Kajiho</div>
+        <div class="member-pos">Assistant Professor</div>
+      </div>
+    </a>
+    <a class="member-card" href="members.html#staff-toshiyoshi-yamamoto">
+      <div class="member-photo" style="background:var(--amber-lt); color:var(--amber);">義</div>
+      <div class="member-info">
+        <div class="member-name">Toshiyoshi Yamamoto</div>
+        <div class="member-pos">Technical Staff</div>
+      </div>
+    </a>
+  </div>
+  <div style="margin-top:1.5rem;">
+    <a href="members.html" class="btn btn-primary" style="font-size:15px; padding:9px 20px;">About 20 faculty, graduate, and undergraduate members — see the full member list →</a>
+  </div>
+</section>
+</div>
+
+<div class="full-divider"></div>
+
+<!-- LEARN -->
+<section id="learn">
+  <div class="section-tag">Learn</div>
+  <div style="display:flex; align-items:center; gap:14px; flex-wrap:wrap; margin-bottom:1rem;">
+    <h2 class="sec-title" style="margin:0;">Learn</h2>
+    <a href="join.html" class="btn btn-admission" style="font-size:13px; padding:7px 16px; line-height:1.3;">🎓 For prospective graduate students (MSc / PhD) 🎓</a>
+  </div>
+  <p class="sec-lead" style="max-width:none;">We share background and explanations of our research along with a collection of useful links — recommended for students and general readers alike.</p>
+
+  <div class="learn-tabs">
+    <button class="tab-btn" onclick="showTab('bg')">📘 Background</button>
+    <a class="tab-btn" href="links.html" style="display:inline-block; text-decoration:none;">🔗 Links →</a>
+  </div>
+
+  <div id="tab-bg" class="learn-panel active">
+    <div class="bg-grid">
+      <div class="bg-card c-teal">
+        <h3>What are lipids: the three tiers of biomolecules</h3>
+        <p>Biomolecules can be understood as three tiers: genes – proteins – metabolites. Lipids belong to the metabolites and play three roles: membrane formation, energy storage, and signal transduction.</p>
+        <a href="lipid_layers.html" class="read-more">Read more →</a>
+      </div>
+      <div class="bg-card c-coral">
+        <h3>Functions of phosphoinositides</h3>
+        <p>A group of trace phospholipids in cell membranes. Eight species exist, differing in the phosphorylation pattern of the 3-, 4-, and 5-position hydroxyls of the inositol ring of phosphatidylinositol, and they regulate diverse effector proteins.</p>
+        <a href="pips_functions.html" class="read-more">Read more →</a>
+      </div>
+      <div class="bg-card c-amber">
+        <h3>The phosphoinositide metabolic system</h3>
+        <p>In the phosphoinositide metabolic system, about 50 enzymes in humans and mice catalyze interconversion reactions by phosphorylation and dephosphorylation.</p>
+        <a href="enzyme_list.html" class="read-more">Read more →</a>
+      </div>
+      <div class="bg-card c-purple">
+        <h3>Diseases linked to phosphoinositide metabolism</h3>
+        <p>Abnormalities in phosphoinositide-metabolizing enzyme genes cause cancer, inflammatory, and neurological diseases. We survey the pathologies arising from disrupted phosphoinositide metabolism revealed by genetically modified mouse studies of about 50 enzymes.</p>
+        <a href="pips_disease.html" class="read-more">Read more →</a>
+      </div>
+      <div class="bg-card c-teal">
+        <h3>Aging and phosphoinositide remodeling</h3>
+        <p>Using our original measurement technology, we found that phosphoinositide profiles change with age. We aim to identify aging-regulating phosphoinositide species and enzymes and to understand the fundamental mechanisms of aging.</p>
+        <a href="aging_pips.html" class="read-more">Read more →</a>
+      </div>
+      <div class="bg-card c-coral">
+        <h3>Decoding lipid–protein interactions with AI</h3>
+        <p>Combining structure-prediction AI with generative AI and statistical analysis, we are developing a new computational–biochemical approach to quantitatively predict and verify lipid–protein binding.</p>
+        <a href="ai_structure.html" class="read-more">Read more →</a>
+      </div>
+      <div class="bg-card c-amber">
+        <h3>A short history of phosphoinositide research</h3>
+        <p>From the Hokins’ 1953 discovery to the rediscovery of these lipids in disease — an overview of 70 years of phosphoinositide research.</p>
+        <a href="pips_history.html" class="read-more">Read more →</a>
+      </div>
+      <div class="bg-card c-purple">
+        <h3>PI3-kinase, PTEN, and disease</h3>
+        <p>PI3-kinase generates PI(3,4,5)P<sub>3</sub> from PI(4,5)P<sub>2</sub>, and PTEN catalyzes the reverse reaction. An imbalance between the two is deeply involved in cancer and immune diseases.</p>
+        <a href="pips_pten.html" class="read-more">Coming soon</a>
+      </div>
+      <div class="bg-card c-teal">
+        <h3>Lipid mass spectrometry and lipidomics</h3>
+        <p>Lipids in biological samples such as surgical tissue and blood can be measured with a mass spectrometer. Deep analysis of the hundreds of phosphoinositide species is a major strength of our laboratory.</p>
+        <a href="lipidomics.html" class="read-more">Coming soon</a>
+      </div>
+    </div>
+  </div>
+
+  </section>
+
+<div class="full-divider"></div>
+
+<!-- CONTACT -->
+<div id="contact">
+  <section class="inner" style="padding: 48px 2rem; max-width:1100px; margin:auto;">
+    <div class="section-tag">Contact & Access</div>
+    <h2 class="sec-title">Contact &amp; Access</h2>
+    <div class="contact-grid">
+      <div class="contact-info">
+        <div style="height:300px;">
+        <div class="contact-row">
+          <div class="contact-icon">🏛️</div>
+          <div>
+            <div class="contact-label">Address</div>
+            <div class="contact-val">M&amp;D Tower 19F, Institute of Science Tokyo<br>1-5-45 Yushima, Bunkyo-ku, Tokyo 113-8510, Japan</div>
+          </div>
+        </div>
+        <div class="contact-row">
+          <div class="contact-icon">✉️</div>
+          <div>
+            <div class="contact-label">Email</div>
+            <div class="contact-val">sasaki.t.7eda [at] m.isct.ac.jp<br><span style="font-size:12px; color:var(--muted);">※ Replace [at] with @</span></div>
+          </div>
+        </div>
+        <div class="contact-row">
+          <div class="contact-icon">🎓</div>
+          <div>
+            <div class="contact-label">For prospective students</div>
+            <div class="contact-val">We welcome lab visits at any time. Please contact us by email.</div>
+          </div>
+        </div>
+        </div>
+        <div style="margin-top:1.25rem; padding:1.25rem; border:1px solid var(--border); border-radius:var(--radius); background:white; flex:1; display:flex; flex-direction:column;">
+          <p style="font-size:14px; color:var(--muted); text-align:center;">🗺️ Open in Google Maps</p>
+          <div style="margin-top:10px; flex:1; display:flex; flex-direction:column;">
+            <iframe
+              src="https://maps.google.com/maps?q=Institute of Science Tokyo, 1-5-45 Yushima, Bunkyo-ku, Tokyo 113-8510&hl=en&t=&z=16&ie=UTF8&iwloc=&output=embed"
+              width="100%" height="100%"
+              style="border:0; border-radius:10px; display:block; width:100%; flex:1; min-height:320px;"
+              allowfullscreen loading="lazy">
+            </iframe>
+          </div>
+        </div>
+      </div>
+      <div style="display:flex; flex-direction:column;">
+        <div style="height:300px; display:flex; align-items:center; justify-content:center;">
+          <img src="../photos/access_ochanomizu.jpg" alt="Around Ochanomizu Station: the Kanda River where the Tokyo Metro Marunouchi Line and JR Chuo/Sobu Lines cross" style="width:100%; height:300px; object-fit:cover; object-position:center bottom; border-radius:var(--radius); display:block; border:1px solid var(--border);">
+        </div>
+        <div class="access-box" style="margin-top:1.25rem; flex:1; display:flex; flex-direction:column; justify-content:center;">
+          <h3>🚃 Getting here</h3>
+          <div class="access-step">
+            <div class="step-n">1</div>
+            <p>From JR Ochanomizu Station (Chuo Line Rapid <strong>JC03</strong> / Chuo-Sobu Line Local <strong>JB18</strong>), exit at Ochanomizubashi and cross the Ochanomizu Bridge<br><em>or</em> take the Tokyo Metro Marunouchi Line to Ochanomizu Station (<strong>M20</strong>) and use the ground-level exit (the Ochanomizu Gate is right there).</p>
+          </div>
+          <div class="access-step">
+            <div class="step-n">2</div>
+            <p>Enter the campus through the Ochanomizu Gate.</p>
+          </div>
+          <div class="access-step">
+            <div class="step-n">3</div>
+            <p>Keep the multi-story parking garage on your left and walk straight; turn left and the M&amp;D Tower entrance will be ahead on your right.</p>
+          </div>
+          <div class="access-step">
+            <div class="step-n">4</div>
+            <p>Take the elevator to the 19th floor (Department of Biochemical Pathophysiology).</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div>
+      <div class="footer-lab" style="font-size:15px; line-height:1.7;">Institute of Science Tokyo · Institute of Integrated Research · Medical Research Laboratory · <strong>Department of Biochemical Pathophysiology</strong></div>
+      <div class="footer-copy" style="font-size:15px; line-height:1.7; color:#fff; font-family:'DM Serif Display', serif;">Graduate School of Medical and Dental Sciences · <strong>Department of Lipid Biology</strong></div>
+      <div class="footer-copy" style="font-size:12px; margin-top:0.6rem;">© 2025–2026 Sasaki Laboratory, Institute of Science Tokyo. All rights reserved.</div>
+    </div>
+    <div>
+      <div class="footer-links">
+        <a href="index.html#research">Research</a>
+        <a href="members.html">Members</a>
+        <a href="publications.html">Publications</a>
+        <a href="index.html#learn">Learn</a>
+        <a href="index.html#contact">Access</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="../news_data.js"></script>
+<script>
+/* ── トップページ：国際講演・受賞を新しい順に上位7件レンダリング ── */
+(function() {
+  var container = document.getElementById('top-news-grid');
+  if (!container || typeof newsItems === 'undefined') return;
+
+  var badgeClass = {
+    '受賞':'badge-award', '採用':'badge-award',
+    // EN badge labels
+    '__en__':true,
+    '基調講演':'badge-event', '招待講演':'badge-event', '講演':'badge-event',
+    '説明会':'badge-recruit', '募集':'badge-recruit', '採択':'badge-new', 'お知らせ':'badge-new',
+    'プレスリリース':'badge-press'
+  };
+
+  /* ① pin:true の項目を最上部に固定（手動指定の注目ニュース）*/
+  var pinned = newsItems.filter(function(item) { return item.pin === true; });
+
+  /* ② 対象：受賞 / プレスリリース / 国際講演（intl:true の event）。pin 項目は除外 */
+  var filtered = newsItems.filter(function(item) {
+    return !item.pin && (item.cat === 'award' || item.cat === 'press' || (item.cat === 'event' && item.intl === true));
+  });
+
+  /* dateSort 降順 → 上位6件。pin を先頭に連結 */
+  filtered.sort(function(a, b) {
+    return (b.dateSort || '').localeCompare(a.dateSort || '');
+  });
+  var topNews = pinned.concat(filtered.slice(0, 6));
+
+  var html = '';
+  topNews.forEach(function(item) {
+    var bc    = badgeClass[item.badge] || 'badge-new';
+    var badgeEn = {'受賞':'Award','採用':'Award','基調講演':'Keynote','招待講演':'Invited Talk','講演':'Talk','説明会':'Briefing','募集':'Open Position','採択':'Grant','お知らせ':'Notice','プレスリリース':'Press Release'};
+    var bt    = (item.cat === 'press') ? 'Press' : (badgeEn[item.badge] || item.badge);
+    var date  = item.date.replace(/年.*/, '').replace('年','.');  /* "2026年3月" → "2026.03" 風 */
+    /* dateSort "2026-03" → "2026.03" */
+    var ds    = (item.dateSort || '').replace(/^(\d{4})-(\d{2}).*$/, '$1.$2');
+    var tag   = item.link ? 'a' : 'div';
+    var cls   = 'news-item' + (item.pin ? ' news-item-pinned' : '');
+    var attrs = 'class="' + cls + '"';
+    if (item.link) attrs += ' href="' + item.link + '" target="_blank" rel="noopener" style="text-decoration:none;color:inherit;"';
+
+    html += '<' + tag + ' ' + attrs + '>'
+          + '<span class="news-date">' + ds + '</span>'
+          + '<span class="news-badge ' + bc + '">' + bt + '</span>'
+          + '<span class="news-text">' + (item.tiEn || item.title)
+          + ((item.detail && item.cat === 'press') ? '<span class="news-detail">' + (item.detailEn || item.detail) + '</span>' : '')
+          + '</span>'
+          + '</' + tag + '>';
+  });
+  container.innerHTML = html;
+})();
+</script>
+
+<script src="../papers_data.js"></script>
+<script>
+/* ── トップページ：最新5件を自動レンダリング ── */
+(function() {
+  var container = document.getElementById('top-pub-list');
+  if (!container || typeof papers === 'undefined') return;
+
+  /* n の大きい順（最新順）に上位5件 */
+  var top5 = papers.slice().sort(function(a, b) { return b.n - a.n; }).slice(0, 5);
+
+  var html = '';
+  top5.forEach(function(p) {
+    /* ファーストオーサー et al. */
+    var firstAuthor = p.au.split(',')[0].trim();
+    var authStr = firstAuthor + ' et al.';
+
+    /* DOIリンク */
+    var doiLink = p.doi
+      ? '<a class="pub-doi" href="https://doi.org/' + p.doi + '" target="_blank" rel="noopener">DOI: ' + p.doi + '</a>'
+      : '<span style="font-size:12px;color:var(--muted);">In press</span>';
+
+    /* タイトル（DOIがあればリンク、なければプレーンテキスト） */
+    var titleHtml = p.doi
+      ? '<a href="https://doi.org/' + p.doi + '" target="_blank" rel="noopener">' + p.ti + '</a>'
+      : p.ti;
+
+    html += '<div class="pub-item">'
+      + '<div class="pub-authors">' + authStr + '</div>'
+      + '<div class="pub-title">' + titleHtml + '</div>'
+      + '<div class="pub-meta">'
+      + '<span class="pub-journal">' + p.jo + '</span>'
+      + '<span>' + p.vp + '</span>'
+      + '<span class="pub-year">' + p.y + '</span>'
+      + doiLink
+      + '</div>'
+      + '</div>';
+  });
+  container.innerHTML = html;
+})();
+
+function showTab(id) {
+  document.querySelectorAll('.learn-panel').forEach(p => p.classList.remove('active'));
+  document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+  document.getElementById('tab-' + id).classList.add('active');
+  event.currentTarget.classList.add('active');
+}
+
+/* Hero slideshow */
+var _slides = document.querySelectorAll('.hero-slide');
+(function() {
+  var slides = _slides;
+  if (slides.length <= 1) return;
+  var current = 0;
+  var zNext = 2;
+  var busy = false;
+  setInterval(function() {
+    if (busy) return;
+    busy = true;
+    var prev = current;
+    current = (current + 1) % slides.length;
+    slides[current].style.zIndex = ++zNext;
+    slides[current].classList.add('active');
+    setTimeout(function() {
+      slides[prev].style.transition = 'none';
+      slides[prev].classList.remove('active');
+      requestAnimationFrame(function() {
+        requestAnimationFrame(function() {
+          slides[prev].style.transition = '';
+          busy = false;
+        });
+      });
+    }, 1300);
+  }, 6200);
+})();
+</script>
+
+<!-- Back-to-top button -->
+<button id="backToTop" aria-label="Back to top" class="back-to-top">
+  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+    <polyline points="18 15 12 9 6 15"></polyline>
+  </svg>
+</button>
+<style>
+.back-to-top {
+  position: fixed; bottom: 24px; right: 24px;
+  width: 44px; height: 44px; border-radius: 50%;
+  background: #1c3177; color: white; border: none;
+  display: flex; align-items: center; justify-content: center;
+  cursor: pointer; box-shadow: 0 4px 16px rgba(0,0,0,0.15);
+  opacity: 0; pointer-events: none;
+  transition: opacity 0.25s, transform 0.25s, background 0.2s;
+  transform: translateY(8px);
+  z-index: 200;
+}
+.back-to-top.visible { opacity: 1; pointer-events: auto; transform: translateY(0); }
+.back-to-top:hover { background: #14245a; }
+@media (max-width: 540px) {
+  .back-to-top { bottom: 16px; right: 16px; width: 40px; height: 40px; }
+}
+</style>
+<script>
+(function() {
+  var btn = document.getElementById('backToTop');
+  if (!btn) return;
+  window.addEventListener('scroll', function() {
+    if (window.scrollY > 300) btn.classList.add('visible');
+    else btn.classList.remove('visible');
+  });
+  btn.addEventListener('click', function() {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+})();
+</script>
+
+<!-- image download deterrent -->
+<style>img{-webkit-user-drag:none;-khtml-user-drag:none;-moz-user-drag:none;-o-user-drag:none;user-drag:none;}</style>
+<script>
+(function(){
+  function blockImg(e){ if(e.target && e.target.tagName==="IMG"){ e.preventDefault(); } }
+  document.addEventListener("contextmenu", blockImg);
+  document.addEventListener("dragstart", blockImg);
+})();
+</script>
+</body>
+</html>

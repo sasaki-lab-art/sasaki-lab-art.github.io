@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="The origins of phosphoinositide research — a survey of more than half a century of discoveries on how phosphoinositides regulate biological functions. A “Learn” article from Sasaki Laboratory.">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Sasaki Laboratory | Institute of Science Tokyo">
+<meta property="og:title" content="The origins of phosphoinositide research | Sasaki Laboratory">
+<meta property="og:description" content="The origins of phosphoinositide research — a survey of more than half a century of discoveries on how phosphoinositides regulate biological functions. A “Learn” article from Sasaki Laboratory.">
+<meta property="og:url" content="https://sasaki-lab-art.github.io/en/pips_history.html">
+<meta property="og:image" content="https://sasaki-lab-art.github.io/photos/molecular_hierarchy.jpg">
+<meta property="og:locale" content="en_US">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="The origins of phosphoinositide research | Sasaki Laboratory">
+<meta name="twitter:description" content="The origins of phosphoinositide research — a survey of more than half a century of discoveries on how phosphoinositides regulate biological functions. A “Learn” article from Sasaki Laboratory.">
+<meta name="twitter:image" content="https://sasaki-lab-art.github.io/photos/molecular_hierarchy.jpg">
+<title>The origins of phosphoinositide research | Sasaki Laboratory, Institute of Science Tokyo</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  :root {
+    --teal:     #1c3177;
+    --teal-lt:  #e9edf7;
+    --teal-mid: #7f96c2;
+    --coral:    #d85a30;
+    --coral-lt: #faece7;
+    --amber:    #ba7517;
+    --amber-lt: #faeeda;
+    --purple:   #534ab7;
+    --purple-lt:#eeedfe;
+    --bg:       #fafaf8;
+    --white:    #ffffff;
+    --text:     #1a1a18;
+    --muted:    #6b6b65;
+    --border:   #e4e4de;
+    --radius:   16px;
+    --nav-h:    64px;
+  }
+  html { scroll-behavior: smooth; }
+  body { font-family: 'Noto Sans JP', 'DM Sans', sans-serif; background: var(--bg); color: var(--text); font-size: 15px; line-height: 1.75; }
+
+  /* ── NAV ── */
+  nav {
+    position: sticky; top: 0; z-index: 100;
+    background: rgba(255,255,255,0.92); backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--border);
+    height: var(--nav-h); display: flex; align-items: center;
+  }
+  .nav-inner { max-width: 1100px; margin: auto; width: 100%; padding: 0 2rem; display: flex; align-items: center; justify-content: space-between; }
+  .nav-univ-logo { height: 44px; width: auto; display: block; }
+  .nav-univ-logo:hover { opacity: 0.85; }
+  .nav-links { display: flex; gap: 0.25rem; }
+  .nav-links a { text-decoration: none; color: var(--muted); font-size: 13px; font-weight: 500; padding: 6px 12px; border-radius: 20px; transition: all 0.2s; }
+  .nav-links a:hover { background: var(--teal-lt); color: var(--teal); }
+  @media (max-width: 860px) {
+    .nav-univ-logo { height: 32px; }
+    .nav-links a { font-size: 12px; padding: 5px 8px; }
+  }
+
+  /* ── PAGE HEADER ── */
+  .page-header {
+    background: linear-gradient(135deg, var(--teal-lt) 0%, #f0f3fa 100%);
+    padding: 64px 2rem 56px;
+    border-bottom: 1px solid var(--border);
+  }
+  .page-header-inner { max-width: 800px; margin: auto; }
+  .section-tag { display: inline-block; font-size: 12px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--teal); background: white; padding: 4px 12px; border-radius: 20px; margin-bottom: 14px; border: 1px solid var(--teal-lt); }
+  .page-title { font-family: 'DM Serif Display', serif; font-size: 2.6rem; line-height: 1.2; margin-bottom: 1rem; }
+  .page-lead { color: var(--muted); font-size: 15px; max-width: none; line-height: 1.8; }
+
+  /* ── ARTICLE ── */
+  .article-wrap { max-width: 800px; margin: 0 auto; padding: 56px 2rem 80px; }
+
+  .article-body { font-size: 16px; line-height: 2.0; color: var(--text); }
+  .article-body p { margin-bottom: 1.6rem; }
+  .article-body p:last-child { margin-bottom: 0; }
+
+  /* 人名・用語ハイライト */
+  .person { font-weight: 700; color: var(--text); }
+  .year  { font-weight: 700; color: var(--teal); }
+  .term  { font-style: normal; }
+
+  /* 年表タイムライン */
+  .timeline { margin: 2.5rem 0; border-left: 3px solid var(--teal-lt); padding-left: 1.5rem; }
+  .tl-entry { position: relative; margin-bottom: 1.2rem; }
+  .tl-entry::before {
+    content: '';
+    position: absolute; left: -1.85rem; top: 0.55rem;
+    width: 10px; height: 10px;
+    background: var(--teal-mid); border-radius: 50%;
+  }
+  .tl-year { font-family: 'DM Serif Display', serif; font-size: 1.1rem; color: var(--teal); font-weight: 700; }
+  .tl-desc { font-size: 14px; color: var(--muted); line-height: 1.7; margin-top: 2px; }
+
+  /* 戻るリンク */
+  .back-link { display: inline-flex; align-items: center; gap: 6px; color: var(--teal); text-decoration: none; font-size: 14px; font-weight: 600; margin-bottom: 2rem; }
+  .back-link:hover { text-decoration: underline; }
+
+  /* ── FOOTER ── */
+  footer { background: #1a1a18; color: #9a9a94; padding: 3rem 2rem; }
+  .footer-inner { max-width: 1100px; margin: auto; display: flex; justify-content: space-between; align-items: center; }
+  .footer-lab { font-family: 'DM Serif Display', serif; font-size: 18px; color: white; }
+  .footer-links { display: flex; gap: 1.5rem; }
+  .footer-links a { font-size: 13px; color: #9a9a94; text-decoration: none; }
+  .footer-links a:hover { color: var(--teal-mid); }
+  .footer-copy { font-size: 12px; margin-top: 0.5rem; }
+  .nav-toggle { display: none; background: none; border: none; cursor: pointer; color: var(--text); padding: 4px; line-height: 0; }
+  .nav-toggle svg { width: 28px; height: 28px; stroke: currentColor; }
+  /* hamburger menu (<=768px only; desktop unchanged) */
+  @media (max-width: 768px) {
+    .nav-toggle { display: block; }
+    .nav-links {
+      position: absolute; top: 100%; left: 0; right: 0;
+      flex-direction: column; gap: 0; max-width: none;
+      background: rgba(255,255,255,0.98); backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+      max-height: 0; overflow: hidden; transition: max-height 0.3s ease;
+    }
+    .nav-links.open { max-height: 80vh; }
+    .nav-links a { font-size: 15px; padding: 14px 2rem; border-radius: 0; border-bottom: 1px solid var(--border); }
+    .nav-links a:last-child { border-bottom: none; }
+  }
+</style>
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon-32.png" sizes="32x32" type="image/png">
+<link rel="icon" href="/favicon-16.png" sizes="16x16" type="image/png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="canonical" href="https://sasaki-lab-art.github.io/en/pips_history.html">
+<link rel="alternate" hreflang="ja" href="https://sasaki-lab-art.github.io/pips_history.html">
+<link rel="alternate" hreflang="en" href="https://sasaki-lab-art.github.io/en/pips_history.html">
+<link rel="alternate" hreflang="x-default" href="https://sasaki-lab-art.github.io/pips_history.html">
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-inner">
+    <a href="https://www.isct.ac.jp/en" target="_blank" rel="noopener" style="line-height:0;">
+      <img class="nav-univ-logo" src="../photos/sciencetokyo_logo.jpg" alt="Institute of Science Tokyo (Science Tokyo)">
+    </a>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="navLinks">
+      <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+    </button>
+    <div class="nav-links" id="navLinks">
+      <a href="index.html">Home</a>
+      <a href="index.html#news">News</a>
+      <a href="index.html#research">Research</a>
+      <a href="index.html#publications">Publications</a>
+      <a href="index.html#highlights">Research Environment</a>
+      <a href="members.html">Members</a>
+      <a href="index.html#learn">Learn</a>
+      <a href="index.html#contact">Access</a>
+      <a href="../pips_history.html" class="lang-switch" style="color:var(--teal);font-weight:700;">日本語</a>
+    </div>
+  </div>
+</nav>
+<script>
+(function(){
+  var t = document.getElementById('navToggle');
+  var m = document.getElementById('navLinks');
+  if (!t || !m) return;
+  var ICON_OPEN = '<svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><line x1="5" y1="5" x2="19" y2="19"/><line x1="19" y1="5" x2="5" y2="19"/></svg>';
+  var ICON_CLOSED = '<svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>';
+  function setOpen(o){ m.classList.toggle('open', o); t.setAttribute('aria-expanded', o ? 'true' : 'false'); t.innerHTML = o ? ICON_OPEN : ICON_CLOSED; }
+  t.addEventListener('click', function(){ setOpen(!m.classList.contains('open')); });
+  m.addEventListener('click', function(e){ if (e.target.tagName === 'A') setOpen(false); });
+})();
+</script>
+
+<!-- PAGE HEADER -->
+<div class="page-header">
+  <div class="page-header-inner">
+    <div class="section-tag">Background</div>
+    <h1 class="page-title">The origins of phosphoinositide research</h1>
+    <p class="page-lead">Phosphoinositide research traces back to 1953. For more than half a century since, the mechanisms by which phosphoinositides regulate biological functions have been studied. Here we survey the flow of this knowledge.</p>
+  </div>
+</div>
+
+<!-- ARTICLE -->
+<div class="article-wrap">
+
+  <!-- 年表サマリー -->
+  <div class="timeline">
+    <div class="tl-entry">
+      <div class="tl-year">1953</div>
+      <div class="tl-desc">The Hokins discover that acetylcholine stimulation increases radiolabeled-phosphate incorporation into pigeon pancreas slices</div>
+    </div>
+    <div class="tl-entry">
+      <div class="tl-year">1970s</div>
+      <div class="tl-desc">Michell and colleagues propose a link between PI turnover and intracellular calcium mobilization<br>Takai, Nishizuka, and colleagues discover PKC activation by DAG, a breakdown product of PI(4,5)P<sub>2</sub></div>
+    </div>
+    <div class="tl-entry">
+      <div class="tl-year">1980s</div>
+      <div class="tl-desc">Berridge and colleagues discover Ins(1,4,5)P<sub>3</sub>-mediated calcium release from the ER; Mikoshiba and colleagues identify the IP<sub>3</sub> receptor<br>Sklar, Cantley, and colleagues identify PI3K activity as a signaling molecule binding polyoma middle T antigen<br>Lindberg, Takenawa, and colleagues discover binding of PI(4,5)P<sub>2</sub> to actin-regulating proteins<br>Nishizuka and Berridge receive the Lasker Award (1989)</div>
+    </div>
+    <div class="tl-entry">
+      <div class="tl-year">1990s</div>
+      <div class="tl-desc">Maehama, Dixon, and colleagues identify PTEN as a PI(3,4,5)P<sub>3</sub> phosphatase<br>Suzuki, Mak, and colleagues demonstrate PI(3,4,5)P<sub>3</sub> accumulation and constitutive Akt activation in PTEN-deficient mice<br>Phosphoinositides are found to bind diverse proteins and recruit them to the plasma membrane</div>
+    </div>
+    <div class="tl-entry">
+      <div class="tl-year">2000s–</div>
+      <div class="tl-desc">Hotspot mutations in PIK3CA are found in many cancers and recognized as a representative metabolic abnormality in cancer<br><br>Abnormal metabolism of phosphoinositides with diverse phosphorylation isomers and acyl-chain compositions is found to be involved in a wide range of pathologies — inflammation, immune disorders, neuropsychiatric diseases, metabolic disorders, cardiovascular diseases, and developmental abnormalities — and research toward medical applications advances</div>
+    </div>
+  </div>
+
+  <!-- 本文 -->
+  <div class="article-body">
+    <p>The study of phosphoinositides (also called inositol phospholipids) in plasma-membrane signaling began in <span class="year">1953</span>. In the same year the DNA double helix was solved, the <span class="person">Hokins</span> found that treating pigeon pancreas slices with acetylcholine increased the incorporation of radiolabeled phosphate into the lipid fraction. The lipids mainly responsible were phosphoinositides. At the time this was thought to compensate for the loss of phospholipids accompanying the amylase secretory response, but by the <span class="year">1970s</span> the phenomenon had been observed across many combinations of cells and receptor agonists. In particular, <span class="person">Michell and colleagues</span> proposed a link to intracellular calcium mobilization, and it came to be regarded as a general early cellular response to extracellular signals.</p>
+
+    <p>Subsequently, <span class="person">Takai, Nishizuka, and colleagues</span> showed in the <span class="year">late 1970s</span> that <span class="term">diacylglycerol (DAG)</span>, produced by breakdown of <span class="term">PI(4,5)P<sub>2</sub></span>, is an activator of <span class="term">protein kinase C (PKC)</span>, and <span class="person">Berridge and colleagues</span> found in the <span class="year">early 1980s</span> that <span class="term">Ins(1,4,5)P<sub>3</sub></span> triggers calcium release from the endoplasmic reticulum. With the identification of the IP<sub>3</sub> receptor by <span class="person">Mikoshiba and colleagues</span>, the significance of the so-called "<span class="term">PI turnover</span>" came to be explained at the molecular level. Through this series of discoveries, PI(4,5)P<sub>2</sub> was positioned as the precursor of two second messengers, DAG and Ins(1,4,5)P<sub>3</sub>, and <span class="person">Nishizuka</span> and <span class="person">Berridge</span> received the Lasker Award in <span class="year">1989</span>. Around the same time, <span class="person">Lindberg</span> and <span class="person">Takenawa and colleagues</span> found that PI(4,5)P<sub>2</sub> binds actin-regulating proteins. Phosphoinositides thus came to be understood not only as molecules broken down to generate second messengers, but also as lipid signaling molecules that directly regulate protein function on membranes.</p>
+
+    <p>The link between cancer and phosphoinositides emerged from the discovery of a trace phosphoinositide phosphorylated at the 3-position hydroxyl of the inositol ring and of its producing enzyme, <span class="term">phosphoinositide 3-kinase (PI3K)</span>. In the <span class="year">mid-1980s</span>, <span class="person">Sklar, Cantley, and colleagues</span> identified PI3K as an oncogenic protein binding polyoma middle T antigen. This brought a new direction to phosphoinositide research, which had centered on the breakdown of PI(4,5)P<sub>2</sub> by phospholipase C and the production of second messengers — namely, the concept that phosphoinositides themselves act as signaling molecules controlling cell proliferation, survival, and transformation.</p>
+
+    <p>It later became clear that PI3K phosphorylates PI(4,5)P<sub>2</sub> to produce <span class="term">PI(3,4,5)P<sub>3</sub></span>, and that PI(3,4,5)P<sub>3</sub> recruits proteins bearing a <span class="term">pleckstrin homology (PH) domain</span> to the plasma membrane. In particular, the membrane translocation and activation of <span class="term">Akt/PKB</span> was established as a central molecular mechanism of PI3K signaling. PI3K-mediated PI(3,4,5)P<sub>3</sub> production is a major pathway converting extracellular signals such as growth factors and cytokines into intracellular proliferation and survival programs, and was shown to play an important role in how cancer cells acquire proliferative and survival capacities.</p>
+
+    <p>Within this stream, <span class="person">Maehama, Dixon, and colleagues</span> revealed that the tumor-suppressor gene product <span class="term">PTEN</span> is a lipid phosphatase that dephosphorylates PI(3,4,5)P<sub>3</sub>. PTEN removes the 3-position phosphate of PI(3,4,5)P<sub>3</sub> to convert it back to PI(4,5)P<sub>2</sub> — that is, it catalyzes the reverse reaction of PI3K. Around the same time, knockout-mouse technology was being established, and <span class="person">Suzuki, Mak, and colleagues</span> generated PTEN-deficient mice and found that Akt signaling is constitutively activated. They further demonstrated that PTEN deficiency causes excessive accumulation of PI(3,4,5)P<sub>3</sub>, making clear that the breakdown of intracellular signaling due to abnormal phosphoinositide metabolism is directly linked to cancer onset. The thin-layer chromatography measurement of PI(3,4,5)P<sub>3</sub> in this work was carried out by Sasaki, and became an important starting point for subsequent research.</p>
+
+    <p>In the <span class="year">2000s</span>, as gene sequencing became widespread, amplification of <span class="term">PIK3CA</span> (which encodes PI3Kα) and hotspot mutations increasing its enzymatic activity were found in various cancers, and abnormal phosphoinositide metabolism via PI3K/PTEN became widely recognized as a representative metabolic abnormality in cancer. Moreover, genetic analyses in knockout mice and human disease have shown that abnormalities in the metabolism of phosphoinositides such as <span class="term">PI(3)P, PI(3,4)P<sub>2</sub>, PI(3,5)P<sub>2</sub></span> are involved not only in cancer but in diverse biological processes and pathologies — inflammation, immune disorders, neuropsychiatric diseases, metabolic disorders, cardiovascular diseases, and developmental abnormalities (figure below). Building on these insights, mechanistic studies at the cellular and molecular levels are now revealing how each phosphoinositide controls cellular function and how its breakdown leads to disease, and development toward medical applications is advancing.</p>
+  </div>
+
+  <a href="index.html#learn" class="back-link" style="margin-top:2.5rem; margin-bottom:0;">← Back to Learn</a>
+
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div>
+      <div class="footer-lab" style="font-size:15px; line-height:1.7;">Institute of Science Tokyo · Institute of Integrated Research · Medical Research Laboratory · <strong>Department of Biochemical Pathophysiology</strong></div>
+      <div class="footer-copy" style="font-size:15px; line-height:1.7; color:#fff; font-family:'DM Serif Display', serif;">Graduate School of Medical and Dental Sciences · <strong>Department of Lipid Biology</strong></div>
+      <div class="footer-copy" style="font-size:12px; margin-top:0.6rem;">© 2025–2026 Sasaki Laboratory, Institute of Science Tokyo. All rights reserved.</div>
+    </div>
+    <div>
+      <div class="footer-links">
+        <a href="index.html#research">Research</a>
+        <a href="members.html">Members</a>
+        <a href="publications.html">Publications</a>
+        <a href="index.html#learn">Learn</a>
+        <a href="index.html#contact">Access</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- Back-to-top button -->
+<button id="backToTop" aria-label="Back to top" class="back-to-top">
+  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+    <polyline points="18 15 12 9 6 15"></polyline>
+  </svg>
+</button>
+<style>
+.back-to-top {
+  position: fixed; bottom: 24px; right: 24px;
+  width: 44px; height: 44px; border-radius: 50%;
+  background: #1c3177; color: white; border: none;
+  display: flex; align-items: center; justify-content: center;
+  cursor: pointer; box-shadow: 0 4px 16px rgba(0,0,0,0.15);
+  opacity: 0; pointer-events: none;
+  transition: opacity 0.25s, transform 0.25s, background 0.2s;
+  transform: translateY(8px);
+  z-index: 200;
+}
+.back-to-top.visible { opacity: 1; pointer-events: auto; transform: translateY(0); }
+.back-to-top:hover { background: #14245a; }
+@media (max-width: 540px) {
+  .back-to-top { bottom: 16px; right: 16px; width: 40px; height: 40px; }
+}
+</style>
+<script>
+(function() {
+  var btn = document.getElementById('backToTop');
+  if (!btn) return;
+  window.addEventListener('scroll', function() {
+    if (window.scrollY > 300) btn.classList.add('visible');
+    else btn.classList.remove('visible');
+  });
+  btn.addEventListener('click', function() {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+})();
+</script>
+
+<!-- image download deterrent -->
+<style>img{-webkit-user-drag:none;-khtml-user-drag:none;-moz-user-drag:none;-o-user-drag:none;user-drag:none;}</style>
+<script>
+(function(){
+  function blockImg(e){ if(e.target && e.target.tagName==="IMG"){ e.preventDefault(); } }
+  document.addEventListener("contextmenu", blockImg);
+  document.addEventListener("dragstart", blockImg);
+})();
+</script>
+</body>
+</html>

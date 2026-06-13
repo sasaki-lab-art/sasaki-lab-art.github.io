@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Members of Sasaki Laboratory, Institute of Science Tokyo — faculty, researchers, and graduate students working on lipid biology and intractable diseases.">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Sasaki Laboratory | Institute of Science Tokyo">
+<meta property="og:title" content="Members | Sasaki Laboratory">
+<meta property="og:description" content="Members of Sasaki Laboratory, Institute of Science Tokyo — faculty, researchers, and graduate students working on lipid biology and intractable diseases.">
+<meta property="og:url" content="https://sasaki-lab-art.github.io/en/members.html">
+<meta property="og:image" content="https://sasaki-lab-art.github.io/photos/molecular_hierarchy.jpg">
+<meta property="og:locale" content="en_US">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Members | Sasaki Laboratory">
+<meta name="twitter:description" content="Members of Sasaki Laboratory, Institute of Science Tokyo — faculty, researchers, and graduate students working on lipid biology and intractable diseases.">
+<meta name="twitter:image" content="https://sasaki-lab-art.github.io/photos/molecular_hierarchy.jpg">
+<title>Members | Sasaki Laboratory, Institute of Science Tokyo</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  :root {
+    --teal:     #1c3177;
+    --teal-lt:  #e9edf7;
+    --teal-mid: #7f96c2;
+    --coral:    #d85a30;
+    --coral-lt: #faece7;
+    --amber:    #ba7517;
+    --amber-lt: #faeeda;
+    --purple:   #534ab7;
+    --purple-lt:#eeedfe;
+    --bg:       #fafaf8;
+    --white:    #ffffff;
+    --text:     #1a1a18;
+    --muted:    #6b6b65;
+    --border:   #e4e4de;
+    --radius:   16px;
+    --radius-sm: 8px;
+    --nav-h:    64px;
+  }
+  html { scroll-behavior: smooth; }
+  body { font-family: 'Noto Sans JP', 'DM Sans', sans-serif; background: var(--bg); color: var(--text); font-size: 15px; line-height: 1.75; }
+
+  /* ── NAV ── */
+  nav {
+    position: sticky; top: 0; z-index: 100;
+    background: rgba(255,255,255,0.92); backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--border);
+    height: var(--nav-h); display: flex; align-items: center;
+  }
+  .nav-inner { max-width: 1100px; margin: auto; width: 100%; padding: 0 2rem; display: flex; align-items: center; justify-content: space-between; }
+  .nav-logo { display: flex; align-items: center; gap: 10px; text-decoration: none; }
+  .nav-logo-icon { width: 36px; height: 36px; background: var(--teal); border-radius: 10px; display: flex; align-items: center; justify-content: center; }
+  .nav-logo-icon svg { width: 20px; height: 20px; fill: white; }
+  .nav-logo-text { font-family: 'DM Serif Display', serif; font-size: 18px; color: var(--text); }
+  .nav-links { display: flex; gap: 0.25rem; }
+  .nav-links a { text-decoration: none; color: var(--muted); font-size: 13px; font-weight: 500; padding: 6px 12px; border-radius: 20px; transition: all 0.2s; }
+  .nav-links a:hover, .nav-links a.active { background: var(--teal-lt); color: var(--teal); }
+  .nav-univ-logo { height: 44px; width: auto; display: block; }
+  .nav-univ-logo:hover { opacity: 0.85; }
+  @media (max-width: 860px) { .nav-univ-logo { height: 32px; } }
+
+  /* ── PAGE HEADER ── */
+  .page-header {
+    background: white;
+    border-bottom: 1px solid var(--border);
+    padding: 60px 2rem 48px;
+  }
+  .page-header-inner { max-width: 1100px; margin: auto; }
+  .breadcrumb { display: flex; align-items: center; gap: 8px; font-size: 13px; color: var(--muted); margin-bottom: 1.25rem; }
+  .breadcrumb a { color: var(--teal); text-decoration: none; }
+  .breadcrumb a:hover { text-decoration: underline; }
+  .breadcrumb-sep { color: var(--border); }
+  .section-tag { display: inline-block; font-size: 12px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--teal); background: var(--teal-lt); padding: 4px 12px; border-radius: 20px; margin-bottom: 12px; }
+  .page-title { font-family: 'DM Serif Display', serif; font-size: 2.6rem; line-height: 1.2; margin-bottom: 0.75rem; }
+  .page-lead { color: var(--muted); font-size: 15px; max-width: none; }
+
+  /* ── SECTION COMMON ── */
+  .content-section { max-width: 1100px; margin: auto; padding: 56px 2rem; }
+  .back-link { display: inline-flex; align-items: center; gap: 6px; color: var(--teal); text-decoration: none; font-size: 14px; font-weight: 600; margin-bottom: 1.5rem; }
+  .back-link:hover { text-decoration: underline; }
+  .group-label {
+    display: flex; align-items: center; gap: 12px;
+    font-size: 13px; font-weight: 700; color: var(--muted);
+    text-transform: uppercase; letter-spacing: 0.08em;
+    margin-bottom: 1.5rem;
+  }
+  .group-label::after {
+    content: ''; flex: 1; height: 1px; background: var(--border);
+  }
+
+  /* ── PI CARD ── */
+  .pi-card {
+    background: white;
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 2.5rem;
+    display: grid;
+    grid-template-columns: 160px 1fr;
+    gap: 2.5rem;
+    margin-bottom: 3rem;
+    box-shadow: 0 4px 24px rgba(28,49,119,0.06);
+  }
+  .pi-photo {
+    width: 160px; height: 160px; border-radius: 50%;
+    background: var(--teal-lt);
+    display: flex; align-items: center; justify-content: center;
+    font-family: 'DM Serif Display', serif;
+    font-size: 56px; color: var(--teal);
+    flex-shrink: 0;
+    overflow: hidden;
+  }
+  .pi-photo img { width: 100%; height: 100%; object-fit: cover; }
+  .pi-name { font-family: 'DM Serif Display', serif; font-size: 1.8rem; margin-bottom: 2px; }
+  .pi-name-en { font-size: 14px; color: var(--muted); margin-bottom: 0.5rem; }
+  .pi-pos-badge {
+    display: inline-block; font-size: 12px; font-weight: 700;
+    background: var(--teal); color: white;
+    padding: 3px 12px; border-radius: 20px; margin-bottom: 1.25rem;
+  }
+  .pi-bio-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin-top: 1.25rem; }
+  .pi-bio-block h4 { font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: var(--teal); margin-bottom: 0.6rem; }
+  .pi-bio-list { list-style: none; }
+  .pi-bio-list li { font-size: 13px; color: var(--muted); padding: 4px 0; border-bottom: 1px solid var(--border); display: flex; gap: 10px; }
+  .pi-bio-list li:last-child { border-bottom: none; }
+  .pi-bio-year { font-weight: 700; color: var(--text); min-width: 38px; }
+  .pi-award-item { font-size: 13px; color: var(--muted); padding: 4px 0; border-bottom: 1px solid var(--border); display: flex; gap: 10px; }
+  .pi-award-item:last-child { border-bottom: none; }
+  .pi-guest { font-size: 13px; color: var(--muted); margin-top: 0.5rem; }
+
+  /* ── MEMBER GRID ── */
+  .member-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.25rem; margin-bottom: 2.5rem; }
+  .member-card {
+    background: white; border: 1px solid var(--border);
+    border-radius: var(--radius); overflow: hidden;
+    transition: all 0.2s;
+  }
+  .member-card:hover { box-shadow: 0 4px 20px rgba(0,0,0,0.07); transform: translateY(-2px); }
+  .member-photo {
+    height: 120px; display: flex; align-items: center; justify-content: center;
+    font-family: 'DM Serif Display', serif; font-size: 40px; font-weight: 700;
+    overflow: hidden;
+  }
+  .member-photo img { width: 100%; height: 100%; object-fit: cover; }
+  .member-info { padding: 1rem; display: flex; flex-direction: column; }
+  .member-name-en { font-size: 17px; font-weight: 700; color: var(--text); order: 1; }
+  .member-name { font-size: 12px; font-weight: 500; color: var(--muted); margin-top: 3px; order: 2; }
+  .member-pos { font-size: 12px; color: var(--muted); margin-top: 8px; order: 3; }
+  .member-kws { display: flex; flex-wrap: wrap; gap: 4px; margin-top: 8px; }
+  .kw { font-size: 11px; padding: 2px 8px; border-radius: 10px; }
+  .kw-teal { background: var(--teal-lt); color: #14245a; }
+  .kw-coral { background: var(--coral-lt); color: #993c1d; }
+  .kw-purple { background: var(--purple-lt); color: #3c3489; }
+  .kw-amber { background: var(--amber-lt); color: #854f0b; }
+
+  /* ── STAFF ROW (for secretary, tech staff) ── */
+  .staff-list { display: flex; flex-direction: column; background: var(--border); border: 1px solid var(--border); border-radius: var(--radius); overflow: hidden; margin-bottom: 2.5rem; }
+  .staff-item { background: white; padding: 1rem 1.5rem; display: flex; align-items: center; gap: 1.25rem; transition: background 0.15s; }
+  .staff-item:hover { background: var(--teal-lt); }
+  .staff-item + .staff-item { border-top: 1px solid var(--border); }
+  .staff-avatar { width: 44px; height: 44px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-family: 'DM Serif Display', serif; font-size: 18px; font-weight: 700; flex-shrink: 0; overflow: hidden; }
+  .staff-avatar img { width: 100%; height: 100%; object-fit: cover; }
+  .staff-name { font-size: 14px; font-weight: 700; }
+  .staff-name-en { font-size: 11px; color: var(--muted); margin-top: 1px; }
+  .staff-pos { margin-left: auto; font-size: 12px; color: var(--muted); font-weight: 600; white-space: nowrap; }
+
+  /* ── DIVIDER ── */
+  .full-divider { height: 1px; background: var(--border); }
+
+  /* ── FOOTER ── */
+  footer { background: #1a1a18; color: #9a9a94; padding: 3rem 2rem; }
+  .footer-inner { max-width: 1100px; margin: auto; display: flex; justify-content: space-between; align-items: center; }
+  .footer-lab { font-family: 'DM Serif Display', serif; font-size: 18px; color: white; }
+  .footer-links { display: flex; gap: 1.5rem; }
+  .footer-links a { font-size: 13px; color: #9a9a94; text-decoration: none; }
+  .footer-links a:hover { color: var(--teal-mid); }
+  .footer-copy { font-size: 12px; margin-top: 0.5rem; }
+
+  /* ── RESPONSIVE ── */
+  @media (max-width: 860px) {
+    .pi-card { grid-template-columns: 1fr; }
+    .pi-photo { width: 120px; height: 120px; font-size: 40px; }
+    .pi-bio-grid { grid-template-columns: 1fr; }
+    .member-grid { grid-template-columns: repeat(2, 1fr); }
+    .page-title { font-size: 2rem; }
+  }
+  @media (max-width: 860px) {
+    .nav-links a { font-size: 12px; padding: 5px 8px; }
+  }
+  @media (max-width: 540px) {
+    .member-grid { grid-template-columns: repeat(2, 1fr); }
+  }
+  .nav-toggle { display: none; background: none; border: none; cursor: pointer; color: var(--text); padding: 4px; line-height: 0; }
+  .nav-toggle svg { width: 28px; height: 28px; stroke: currentColor; }
+  /* hamburger menu (<=768px only; desktop unchanged) */
+  @media (max-width: 768px) {
+    .nav-toggle { display: block; }
+    .nav-links {
+      position: absolute; top: 100%; left: 0; right: 0;
+      flex-direction: column; gap: 0; max-width: none;
+      background: rgba(255,255,255,0.98); backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+      max-height: 0; overflow: hidden; transition: max-height 0.3s ease;
+    }
+    .nav-links.open { max-height: 80vh; }
+    .nav-links a { font-size: 15px; padding: 14px 2rem; border-radius: 0; border-bottom: 1px solid var(--border); }
+    .nav-links a:last-child { border-bottom: none; }
+  }
+  a.staff-item { text-decoration: none; color: inherit; cursor: pointer; }
+  a.member-card { text-decoration: none; color: inherit; display: block; cursor: pointer; }
+</style>
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon-32.png" sizes="32x32" type="image/png">
+<link rel="icon" href="/favicon-16.png" sizes="16x16" type="image/png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="canonical" href="https://sasaki-lab-art.github.io/en/members.html">
+<link rel="alternate" hreflang="ja" href="https://sasaki-lab-art.github.io/members.html">
+<link rel="alternate" hreflang="en" href="https://sasaki-lab-art.github.io/en/members.html">
+<link rel="alternate" hreflang="x-default" href="https://sasaki-lab-art.github.io/members.html">
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-inner">
+    <a href="https://www.isct.ac.jp/en" target="_blank" rel="noopener" style="line-height:0;">
+      <img class="nav-univ-logo" src="../photos/sciencetokyo_logo.jpg" alt="Institute of Science Tokyo (Science Tokyo)">
+    </a>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="navLinks">
+      <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+    </button>
+    <div class="nav-links" id="navLinks">
+      <a href="index.html">Home</a>
+      <a href="index.html#news">News</a>
+      <a href="index.html#research">Research</a>
+      <a href="index.html#publications">Publications</a>
+      <a href="index.html#highlights">Research Environment</a>
+      <a href="members.html" class="active">Members</a>
+      <a href="index.html#learn">Learn</a>
+      <a href="index.html#contact">Access</a>
+      <a href="../members.html" class="lang-switch" style="color:var(--teal);font-weight:700;">日本語</a>
+    </div>
+  </div>
+</nav>
+<script>
+(function(){
+  var t = document.getElementById('navToggle');
+  var m = document.getElementById('navLinks');
+  if (!t || !m) return;
+  var ICON_OPEN = '<svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><line x1="5" y1="5" x2="19" y2="19"/><line x1="19" y1="5" x2="5" y2="19"/></svg>';
+  var ICON_CLOSED = '<svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>';
+  function setOpen(o){ m.classList.toggle('open', o); t.setAttribute('aria-expanded', o ? 'true' : 'false'); t.innerHTML = o ? ICON_OPEN : ICON_CLOSED; }
+  t.addEventListener('click', function(){ setOpen(!m.classList.contains('open')); });
+  m.addEventListener('click', function(e){ if (e.target.tagName === 'A') setOpen(false); });
+})();
+</script>
+
+<!-- PAGE HEADER -->
+<div class="page-header">
+  <div class="page-header-inner">
+    <div class="breadcrumb">
+      <a href="index.html">Top</a>
+      <span class="breadcrumb-sep">›</span>
+      <span>Members</span>
+    </div>
+    <div class="section-tag">Members</div>
+    <h1 class="page-title">Members</h1>
+    <p class="page-lead" style="max-width:none;">Members from diverse backgrounds work together to pursue highly original research.</p>
+  </div>
+</div>
+
+<!-- MAIN CONTENT -->
+<div class="content-section">
+
+  <a href="index.html#members" class="back-link">← Back to home</a>
+
+  <!-- PI -->
+  <div class="group-label">Principal Investigator</div>
+  <div class="pi-card">
+    <div>
+      <div class="pi-photo">雄</div>
+      <img src="../photos/sasaki_portrait.jpg" alt="Takehiko Sasaki"
+           style="width:100%; max-width:170px; height:auto; border-radius:var(--radius-sm); display:block; margin-top:1.25rem; box-shadow:0 4px 16px rgba(0,0,0,0.10);">
+    </div>
+    <div>
+      <h2 class="pi-name">Takehiko Sasaki, Ph.D.</h2>
+      <p class="pi-name-en">佐々木 雄彦</p>
+      <span class="pi-pos-badge">Professor / Principal Investigator</span>
+      <div class="pi-bio-grid">
+        <div class="pi-bio-block">
+          <h4>Career</h4>
+          <ul class="pi-bio-list">
+            <li><span class="pi-bio-year">1988</span><span>Graduated, Hiroshima University High School</span></li>
+            <li><span class="pi-bio-year">1992</span><span>B.S., Faculty of Pharmaceutical Sciences, The University of Tokyo</span></li>
+            <li><span class="pi-bio-year">1997</span><span>Ph.D., Graduate School of Pharmaceutical Sciences, The University of Tokyo</span></li>
+            <li><span class="pi-bio-year">1997</span><span>Postdoc, University of Toronto / Ontario Cancer Institute</span></li>
+            <li><span class="pi-bio-year">2000</span><span>Senior Researcher, Tokyo Metropolitan Institute of Medical Science</span></li>
+            <li><span class="pi-bio-year">2004</span><span>Professor, Akita University School of Medicine</span></li>
+            <li><span class="pi-bio-year">2018</span><span>Professor, Medical Research Institute, Tokyo Medical and Dental University</span></li>
+            <li><span class="pi-bio-year">2024</span><span>Professor, Medical Research Laboratory, Institute of Integrated Research, Institute of Science Tokyo</span></li>
+          </ul>
+        </div>
+        <div class="pi-bio-block">
+          <h4>Awards</h4>
+          <div class="pi-award-item">
+            <span class="pi-bio-year">2008</span><span>MEXT Commendation — Young Scientists' Award</span>
+          </div>
+          <div class="pi-award-item">
+            <span class="pi-bio-year">2010</span><span>Samuro Kakiuchi Award, Japanese Biochemical Society</span>
+          </div>
+          <h4 style="margin-top: 1.5rem;">Visiting Professor</h4>
+          <div class="pi-award-item"><span>Kobe University</span></div>
+          <div class="pi-award-item"><span>Kyushu University</span></div>
+          <div class="pi-award-item"><span>Tokyo University of Science</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- STAFF -->
+  <div class="group-label">Staff</div>
+  <div class="staff-list">
+    <a class="staff-item" id="staff-junko-sasaki" style="scroll-margin-top:90px;" href="member_junko_sasaki.html">
+      <div class="staff-avatar"><img src="../photos/junko_avatar.jpg" alt="佐々木 純子"></div>
+      <div>
+        <div class="staff-name">Junko Sasaki, Ph.D.</div>
+        <div class="staff-name-en">佐々木 純子</div>
+        <div class="staff-name-en" style="margin-top:3px;">Head, Dept. of Cellular and Molecular Medicine (concurrent)</div>
+      </div>
+      <div class="staff-pos">Associate Professor</div>
+    </a>
+    <a class="staff-item" id="staff-hiroaki-kajiho" style="scroll-margin-top:90px;" href="member_hiroaki_kajiho.html">
+      <div class="staff-avatar"><img src="../photos/kajiho_avatar.jpg" alt="梶保 博昭"></div>
+      <div>
+        <div class="staff-name">Hiroaki Kajiho, Ph.D.</div>
+        <div class="staff-name-en">梶保 博昭</div>
+      </div>
+      <div class="staff-pos">Assistant Professor</div>
+    </a>
+    <a class="staff-item" id="staff-toshiyoshi-yamamoto" style="scroll-margin-top:90px;" href="member_toshiyoshi_yamamoto.html">
+      <div class="staff-avatar"><img src="../photos/yamamoto_avatar.jpg" alt="山本 利義"></div>
+      <div>
+        <div class="staff-name">Toshiyoshi Yamamoto, Ph.D.</div>
+        <div class="staff-name-en">山本 利義</div>
+      </div>
+      <div class="staff-pos">Technical Staff</div>
+    </a>
+    <a class="staff-item" href="member_shogo_yanai.html">
+      <div class="staff-avatar"><img src="../photos/yanai_shogo.jpg" alt="柳井 翔吾"></div>
+      <div>
+        <div class="staff-name">Shogo Yanai, Ph.D.</div>
+        <div class="staff-name-en">柳井 翔吾</div>
+      </div>
+      <div class="staff-pos">Project Assistant Professor</div>
+    </a>
+    <a class="staff-item" href="member_shin_morioka.html">
+      <div class="staff-avatar"><img src="../photos/morioka_avatar.jpg" alt="森岡 真"></div>
+      <div>
+        <div class="staff-name">Shin Morioka, Ph.D.</div>
+        <div class="staff-name-en">森岡 真</div>
+      </div>
+      <div class="staff-pos">JSPS Postdoctoral Fellow (PD)</div>
+    </a>
+    <a class="staff-item" href="member_kaori_kofuji.html">
+      <div class="staff-avatar" style="background:var(--purple-lt); color:var(--purple);">香</div>
+      <div>
+        <div class="staff-name">Kaori Kofuji</div>
+        <div class="staff-name-en">小藤 香織</div>
+      </div>
+      <div class="staff-pos">Secretary</div>
+    </a>
+  </div>
+
+
+  <!-- COLLABORATIVE RESEARCHERS -->
+  <div class="group-label">Collaborative Researchers</div>
+  <div class="staff-list">
+    <a class="staff-item" href="member_emi_tokuda.html">
+      <div class="staff-avatar" style="background:var(--teal-lt); color:var(--teal);">恵</div>
+      <div>
+        <div class="staff-name">Emi Tokuda, Ph.D.</div>
+        <div class="staff-name-en">徳田 恵美</div>
+      </div>
+      <div class="staff-pos">Collaborative Researcher</div>
+    </a>
+  </div>
+
+
+  <!-- PhD STUDENTS -->
+  <div class="group-label">Doctoral Students</div>
+  <div class="member-grid">
+    <a class="member-card" href="member_yuki_kugii.html">
+      <div class="member-photo"><img src="../photos/kugii_yuki_card.jpg" alt="釘井 雄基"></div>
+      <div class="member-info">
+        <div class="member-name">釘井 雄基</div>
+        <div class="member-name-en">Yuki Kugii</div>
+        <div class="member-pos">PhD Student (JSPS DC)</div>
+      </div>
+    </a>
+    <a class="member-card" href="member_kasumi_yoshitomi.html">
+      <div class="member-photo"><img src="../photos/yoshitomi_kasumi_card.jpg" alt="吉富 香澄"></div>
+      <div class="member-info">
+        <div class="member-name">吉富 香澄</div>
+        <div class="member-name-en">Kasumi Yoshitomi</div>
+        <div class="member-pos">PhD Student (Clinician-Scientist / SPRING)</div>
+      </div>
+    </a>
+    <a class="member-card" href="member_katsuya_yuguchi.html">
+      <div class="member-photo"><img src="../photos/yuguchi_katsuya.jpg" alt="湯口 勝也"></div>
+      <div class="member-info">
+        <div class="member-name">湯口 勝也</div>
+        <div class="member-name-en">Katsuya Yuguchi</div>
+        <div class="member-pos">PhD Student (SPRING)</div>
+      </div>
+    </a>
+    <a class="member-card" href="member_yuto_kikuchi.html">
+      <div class="member-photo"><img src="../photos/kikuchi_yuto_card.jpg" alt="菊池 雄翔"></div>
+      <div class="member-info">
+        <div class="member-name">菊池 雄翔</div>
+        <div class="member-name-en">Yuto Kikuchi</div>
+        <div class="member-pos">PhD Student</div>
+      </div>
+    </a>
+    <a class="member-card" href="member_miko_oikawa.html">
+      <div class="member-photo" style="background:var(--purple-lt); color:var(--purple);">己</div>
+      <div class="member-info">
+        <div class="member-name">及川 堅己</div>
+        <div class="member-name-en">Miko Oikawa</div>
+        <div class="member-pos">PhD Student</div>
+      </div>
+    </a>
+  </div>
+
+
+  <!-- MASTER STUDENTS -->
+  <div class="group-label">Master's Students</div>
+  <div class="member-grid">
+    <a class="member-card" href="member_yurina_togashi.html">
+      <div class="member-photo" style="background:var(--teal-lt); color:var(--teal);">富</div>
+      <div class="member-info">
+        <div class="member-name">富樫 ユリナ</div>
+        <div class="member-name-en">Yurina Togashi</div>
+        <div class="member-pos">Master’s Student</div>
+      </div>
+    </a>
+    <a class="member-card" href="member_hiroki_matsumoto.html">
+      <div class="member-photo"><img src="../photos/matsumoto_hiroki.jpg" alt="松本 大輝"></div>
+      <div class="member-info">
+        <div class="member-name">松本 大輝</div>
+        <div class="member-name-en">Hiroki Matsumoto</div>
+        <div class="member-pos">Master’s Student</div>
+      </div>
+    </a>
+    <a class="member-card" href="member_xinke_huang.html">
+      <div class="member-photo" style="background:var(--coral-lt); color:var(--coral);">欣</div>
+      <div class="member-info">
+        <div class="member-name">黄 欣可</div>
+        <div class="member-name-en">Xinke Huang</div>
+        <div class="member-pos">Master’s Student</div>
+      </div>
+    </a>
+    <a class="member-card" href="member_sakura_amemiya.html">
+      <div class="member-photo"><img src="../photos/amemiya_sakura_card.jpg" alt="雨宮 咲久良"></div>
+      <div class="member-info">
+        <div class="member-name">雨宮 咲久良</div>
+        <div class="member-name-en">Sakura Amemiya</div>
+        <div class="member-pos">Master’s Student</div>
+      </div>
+    </a>
+    <a class="member-card" href="member_komomo_sugiura.html">
+      <div class="member-photo"><img src="../photos/sugiura_komomo.jpg" alt="杉浦 小桃"></div>
+      <div class="member-info">
+        <div class="member-name">杉浦 小桃</div>
+        <div class="member-name-en">Komomo Sugiura</div>
+        <div class="member-pos">Master’s Student</div>
+      </div>
+    </a>
+  </div>
+
+
+  <!-- UNDERGRAD & SHORT-TERM -->
+  <div class="group-label">Undergraduates &amp; Research Students</div>
+  <div class="member-grid">
+    <a class="member-card" href="member_ayana_ishii.html">
+      <div class="member-photo" style="background:var(--teal-lt); color:var(--teal);">絢</div>
+      <div class="member-info">
+        <div class="member-name">石井 絢菜</div>
+        <div class="member-name-en">Ayana Ishii</div>
+        <div class="member-pos">Undergraduate</div>
+      </div>
+    </a>
+    <a class="member-card" href="member_lichen_tang.html">
+      <div class="member-photo" style="background:var(--coral-lt); color:var(--coral);">力</div>
+      <div class="member-info">
+        <div class="member-name">唐 力宸</div>
+        <div class="member-name-en">Lichen Tang</div>
+        <div class="member-pos">Collaborating Undergraduate</div>
+      </div>
+    </a>
+    <a class="member-card" href="member_zhengjie_shi.html">
+      <div class="member-photo" style="background:var(--purple-lt); color:var(--purple);">正</div>
+      <div class="member-info">
+        <div class="member-name">代 正男</div>
+        <div class="member-name-en">Zhengnan Dai</div>
+        <div class="member-pos">Short-term Graduate Research Student</div>
+      </div>
+    </a>
+  </div>
+
+</div><!-- /content-section -->
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div>
+      <div class="footer-lab" style="font-size:15px; line-height:1.7;">Institute of Science Tokyo · Institute of Integrated Research · Medical Research Laboratory · <strong>Department of Biochemical Pathophysiology</strong></div>
+      <div class="footer-copy" style="font-size:15px; line-height:1.7; color:#fff; font-family:'DM Serif Display', serif;">Graduate School of Medical and Dental Sciences · <strong>Department of Lipid Biology</strong></div>
+      <div class="footer-copy" style="font-size:12px; margin-top:0.6rem;">© 2025–2026 Sasaki Laboratory, Institute of Science Tokyo. All rights reserved.</div>
+    </div>
+    <div>
+      <div class="footer-links">
+        <a href="index.html#research">Research</a>
+        <a href="members.html">Members</a>
+        <a href="publications.html">Publications</a>
+        <a href="index.html#learn">Learn</a>
+        <a href="index.html#contact">Access</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+<!-- Back-to-top button -->
+<button id="backToTop" aria-label="Back to top" class="back-to-top">
+  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+    <polyline points="18 15 12 9 6 15"></polyline>
+  </svg>
+</button>
+<style>
+.back-to-top {
+  position: fixed; bottom: 24px; right: 24px;
+  width: 44px; height: 44px; border-radius: 50%;
+  background: #1c3177; color: white; border: none;
+  display: flex; align-items: center; justify-content: center;
+  cursor: pointer; box-shadow: 0 4px 16px rgba(0,0,0,0.15);
+  opacity: 0; pointer-events: none;
+  transition: opacity 0.25s, transform 0.25s, background 0.2s;
+  transform: translateY(8px);
+  z-index: 200;
+}
+.back-to-top.visible { opacity: 1; pointer-events: auto; transform: translateY(0); }
+.back-to-top:hover { background: #14245a; }
+@media (max-width: 540px) {
+  .back-to-top { bottom: 16px; right: 16px; width: 40px; height: 40px; }
+}
+</style>
+<script>
+(function() {
+  var btn = document.getElementById('backToTop');
+  if (!btn) return;
+  window.addEventListener('scroll', function() {
+    if (window.scrollY > 300) btn.classList.add('visible');
+    else btn.classList.remove('visible');
+  });
+  btn.addEventListener('click', function() {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+})();
+</script>
+
+<!-- image download deterrent -->
+<style>img{-webkit-user-drag:none;-khtml-user-drag:none;-moz-user-drag:none;-o-user-drag:none;user-drag:none;}</style>
+<script>
+(function(){
+  function blockImg(e){ if(e.target && e.target.tagName==="IMG"){ e.preventDefault(); } }
+  document.addEventListener("contextmenu", blockImg);
+  document.addEventListener("dragstart", blockImg);
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Center for Robotic Future Creation — an advanced research infrastructure for autonomous experimentation with robots and AI. Research environment of Sasaki Laboratory, Institute of Science Tokyo.">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Sasaki Laboratory | Institute of Science Tokyo">
+<meta property="og:title" content="Center for Robotic Future Creation | Sasaki Laboratory">
+<meta property="og:description" content="Center for Robotic Future Creation — an advanced research infrastructure for autonomous experimentation with robots and AI. Research environment of Sasaki Laboratory, Institute of Science Tokyo.">
+<meta property="og:url" content="https://sasaki-lab-art.github.io/en/robot_center.html">
+<meta property="og:image" content="https://sasaki-lab-art.github.io/photos/molecular_hierarchy.jpg">
+<meta property="og:locale" content="en_US">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Center for Robotic Future Creation | Sasaki Laboratory">
+<meta name="twitter:description" content="Center for Robotic Future Creation — an advanced research infrastructure for autonomous experimentation with robots and AI. Research environment of Sasaki Laboratory, Institute of Science Tokyo.">
+<meta name="twitter:image" content="https://sasaki-lab-art.github.io/photos/molecular_hierarchy.jpg">
+<title>Center for Robotic Future Creation | Sasaki Laboratory, Institute of Science Tokyo</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  :root {
+    --teal:     #1c3177;
+    --teal-lt:  #e9edf7;
+    --teal-mid: #7f96c2;
+    --coral:    #d85a30;
+    --coral-lt: #faece7;
+    --amber:    #ba7517;
+    --amber-lt: #faeeda;
+    --purple:   #534ab7;
+    --purple-lt:#eeedfe;
+    --bg:       #fafaf8;
+    --white:    #ffffff;
+    --text:     #1a1a18;
+    --muted:    #6b6b65;
+    --border:   #e4e4de;
+    --radius:   16px;
+    --nav-h:    64px;
+  }
+  html { scroll-behavior: smooth; }
+  body { font-family: 'Noto Sans JP', 'DM Sans', sans-serif; background: var(--bg); color: var(--text); font-size: 15px; line-height: 1.75; }
+
+  /* ── NAV ── */
+  nav {
+    position: sticky; top: 0; z-index: 100;
+    background: rgba(255,255,255,0.92); backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--border);
+    height: var(--nav-h); display: flex; align-items: center;
+  }
+  .nav-inner { max-width: 1100px; margin: auto; width: 100%; padding: 0 2rem; display: flex; align-items: center; justify-content: space-between; }
+  .nav-univ-logo { height: 44px; width: auto; display: block; }
+  .nav-univ-logo:hover { opacity: 0.85; }
+  .nav-links { display: flex; gap: 0.25rem; }
+  .nav-links a { text-decoration: none; color: var(--muted); font-size: 13px; font-weight: 500; padding: 6px 12px; border-radius: 20px; transition: all 0.2s; }
+  .nav-links a:hover { background: var(--teal-lt); color: var(--teal); }
+  @media (max-width: 860px) {
+    .nav-univ-logo { height: 32px; }
+    .nav-links a { font-size: 12px; padding: 5px 8px; }
+  }
+
+  /* ── PAGE HEADER ── */
+  .page-header {
+    background: linear-gradient(135deg, var(--teal-lt) 0%, #f0f3fa 100%);
+    padding: 64px 2rem 56px;
+    border-bottom: 1px solid var(--border);
+  }
+  .page-header-inner { max-width: 1100px; margin: auto; }
+  .section-tag { display: inline-block; font-size: 12px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--teal); background: white; padding: 4px 12px; border-radius: 20px; margin-bottom: 14px; border: 1px solid var(--teal-lt); }
+  .page-title { font-family: 'DM Serif Display', serif; font-size: 2.4rem; line-height: 1.25; margin-bottom: 1rem; }
+  .page-lead { color: var(--muted); font-size: 15px; max-width: none; line-height: 1.8; }
+
+  /* ── ARTICLE ── */
+  .article-wrap { max-width: 1100px; margin: 0 auto; padding: 48px 2rem 80px; }
+  .back-link { display: inline-flex; align-items: center; gap: 6px; color: var(--teal); text-decoration: none; font-size: 14px; font-weight: 600; margin-bottom: 2rem; }
+  .back-link:hover { text-decoration: underline; }
+
+  .lead-para { font-size: 16px; line-height: 2.0; max-width: 820px; margin: 0 auto 2.4rem; }
+
+  /* ── VIDEO THUMBNAIL (links to YouTube) ── */
+  .video-wrap { display: block; position: relative; width: 100%; max-width: 880px; margin: 0 auto; aspect-ratio: 16 / 9; border-radius: var(--radius); overflow: hidden; box-shadow: 0 8px 28px rgba(0,0,0,0.14); background: #000; cursor: pointer; }
+  .video-wrap img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; display: block; transition: transform 0.4s ease, opacity 0.2s; }
+  .video-wrap:hover img { transform: scale(1.03); opacity: 0.92; }
+  .video-wrap::after { content: ""; position: absolute; inset: 0; background: rgba(0,0,0,0.12); transition: background 0.2s; }
+  .video-wrap:hover::after { background: rgba(0,0,0,0.04); }
+  .play-btn { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); z-index: 2;
+    width: 84px; height: 84px; border-radius: 50%; background: rgba(220,40,40,0.92);
+    display: flex; align-items: center; justify-content: center; box-shadow: 0 6px 20px rgba(0,0,0,0.35); transition: transform 0.2s, background 0.2s; }
+  .video-wrap:hover .play-btn { transform: translate(-50%, -50%) scale(1.08); background: #e22; }
+  .play-btn svg { width: 34px; height: 34px; fill: #fff; margin-left: 4px; }
+  .video-caption { max-width: 880px; margin: 1rem auto 0; font-size: 13px; color: var(--muted); text-align: center; line-height: 1.7; }
+
+  .cta-row { max-width: 880px; margin: 2.6rem auto 0; text-align: center; }
+  .cta-btn { display: inline-flex; align-items: center; gap: 8px; background: var(--teal); color: #fff; text-decoration: none; font-size: 14px; font-weight: 600; padding: 11px 22px; border-radius: 26px; transition: background 0.2s; }
+  .cta-btn:hover { background: #14245a; }
+
+  /* ── FOOTER ── */
+  footer { background: #1a1a18; color: #9a9a94; padding: 3rem 2rem; }
+  .footer-inner { max-width: 1100px; margin: auto; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; }
+  .footer-lab { font-family: 'DM Serif Display', serif; font-size: 18px; color: white; }
+  .footer-links { display: flex; gap: 1.5rem; flex-wrap: wrap; }
+  .footer-links a { font-size: 13px; color: #9a9a94; text-decoration: none; }
+  .footer-links a:hover { color: var(--teal-mid); }
+  .footer-copy { font-size: 12px; margin-top: 0.5rem; }
+
+  @media (max-width: 640px) {
+    .page-title { font-size: 1.8rem; }
+    .article-wrap { padding: 32px 1.1rem 64px; }
+    .lead-para { font-size: 15px; line-height: 1.9; }
+  }
+  .nav-toggle { display: none; background: none; border: none; cursor: pointer; color: var(--text); padding: 4px; line-height: 0; }
+  .nav-toggle svg { width: 28px; height: 28px; stroke: currentColor; }
+  /* hamburger menu (<=768px only; desktop unchanged) */
+  @media (max-width: 768px) {
+    .nav-toggle { display: block; }
+    .nav-links {
+      position: absolute; top: 100%; left: 0; right: 0;
+      flex-direction: column; gap: 0; max-width: none;
+      background: rgba(255,255,255,0.98); backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+      max-height: 0; overflow: hidden; transition: max-height 0.3s ease;
+    }
+    .nav-links.open { max-height: 80vh; }
+    .nav-links a { font-size: 15px; padding: 14px 2rem; border-radius: 0; border-bottom: 1px solid var(--border); }
+    .nav-links a:last-child { border-bottom: none; }
+  }
+</style>
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon-32.png" sizes="32x32" type="image/png">
+<link rel="icon" href="/favicon-16.png" sizes="16x16" type="image/png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="canonical" href="https://sasaki-lab-art.github.io/en/robot_center.html">
+<link rel="alternate" hreflang="ja" href="https://sasaki-lab-art.github.io/robot_center.html">
+<link rel="alternate" hreflang="en" href="https://sasaki-lab-art.github.io/en/robot_center.html">
+<link rel="alternate" hreflang="x-default" href="https://sasaki-lab-art.github.io/robot_center.html">
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-inner">
+    <a href="https://www.isct.ac.jp/en" target="_blank" rel="noopener" style="line-height:0;">
+      <img class="nav-univ-logo" src="../photos/sciencetokyo_logo.jpg" alt="Institute of Science Tokyo (Science Tokyo)">
+    </a>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="navLinks">
+      <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+    </button>
+    <div class="nav-links" id="navLinks">
+      <a href="index.html">Home</a>
+      <a href="index.html#news">News</a>
+      <a href="index.html#research">Research</a>
+      <a href="index.html#publications">Publications</a>
+      <a href="index.html#highlights">Research Environment</a>
+      <a href="members.html">Members</a>
+      <a href="index.html#learn">Learn</a>
+      <a href="index.html#contact">Access</a>
+      <a href="../robot_center.html" class="lang-switch" style="color:var(--teal);font-weight:700;">日本語</a>
+    </div>
+  </div>
+</nav>
+<script>
+(function(){
+  var t = document.getElementById('navToggle');
+  var m = document.getElementById('navLinks');
+  if (!t || !m) return;
+  var ICON_OPEN = '<svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><line x1="5" y1="5" x2="19" y2="19"/><line x1="19" y1="5" x2="5" y2="19"/></svg>';
+  var ICON_CLOSED = '<svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>';
+  function setOpen(o){ m.classList.toggle('open', o); t.setAttribute('aria-expanded', o ? 'true' : 'false'); t.innerHTML = o ? ICON_OPEN : ICON_CLOSED; }
+  t.addEventListener('click', function(){ setOpen(!m.classList.contains('open')); });
+  m.addEventListener('click', function(e){ if (e.target.tagName === 'A') setOpen(false); });
+})();
+</script>
+
+<!-- PAGE HEADER -->
+<div class="page-header">
+  <div class="page-header-inner">
+    <div class="section-tag">Research Infrastructure</div>
+    <h1 class="page-title">MRL Robotic Experiment Support Office<br>Center for Robotic Future Creation</h1>
+    <p class="page-lead">An advanced research infrastructure — among the most sophisticated in Japan — that advances autonomous experimentation with robots and AI to perform large-scale, high-precision experiments efficiently.</p>
+  </div>
+</div>
+
+<!-- ARTICLE -->
+<div class="article-wrap">
+
+  <a href="index.html#highlights" class="back-link">← Back to Research Environment</a>
+
+  <p class="lead-para">At the Center for Robotic Future Creation, established at Institute of Science Tokyo, laboratory robots carry out scientific experiments 24 hours a day, 365 days a year. By autonomously performing large volumes of highly reproducible experiments, the center dramatically increases the speed and precision of research and accelerates the elucidation of intractable diseases and drug discovery. For details and the latest activities, please see the official website below.</p>
+
+  <div class="cta-row">
+    <a class="cta-btn" href="https://www.ric.rim.isct.ac.jp/ja/" target="_blank" rel="noopener">Visit the Center for Robotic Future Creation website →</a>
+  </div>
+
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div>
+      <div class="footer-lab" style="font-size:15px; line-height:1.7;">Institute of Science Tokyo · Institute of Integrated Research · Medical Research Laboratory · <strong>Department of Biochemical Pathophysiology</strong></div>
+      <div class="footer-copy" style="font-size:15px; line-height:1.7; color:#fff; font-family:'DM Serif Display', serif;">Graduate School of Medical and Dental Sciences · <strong>Department of Lipid Biology</strong></div>
+      <div class="footer-copy" style="font-size:12px; margin-top:0.6rem;">© 2025–2026 Sasaki Laboratory, Institute of Science Tokyo. All rights reserved.</div>
+    </div>
+    <div>
+      <div class="footer-links">
+        <a href="index.html#research">Research</a>
+        <a href="members.html">Members</a>
+        <a href="publications.html">Publications</a>
+        <a href="index.html#learn">Learn</a>
+        <a href="index.html#contact">Access</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- Back-to-top button -->
+<button id="backToTop" aria-label="Back to top" class="back-to-top">
+  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+    <polyline points="18 15 12 9 6 15"></polyline>
+  </svg>
+</button>
+<style>
+.back-to-top {
+  position: fixed; bottom: 24px; right: 24px;
+  width: 44px; height: 44px; border-radius: 50%;
+  background: #1c3177; color: white; border: none;
+  display: flex; align-items: center; justify-content: center;
+  cursor: pointer; box-shadow: 0 4px 16px rgba(0,0,0,0.15);
+  opacity: 0; pointer-events: none;
+  transition: opacity 0.25s, transform 0.25s, background 0.2s;
+  transform: translateY(8px);
+  z-index: 200;
+}
+.back-to-top.visible { opacity: 1; pointer-events: auto; transform: translateY(0); }
+.back-to-top:hover { background: #14245a; }
+@media (max-width: 540px) {
+  .back-to-top { bottom: 16px; right: 16px; width: 40px; height: 40px; }
+}
+</style>
+<script>
+(function() {
+  var btn = document.getElementById('backToTop');
+  if (!btn) return;
+  window.addEventListener('scroll', function() {
+    if (window.scrollY > 300) btn.classList.add('visible');
+    else btn.classList.remove('visible');
+  });
+  btn.addEventListener('click', function() {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+})();
+</script>
+
+<!-- image download deterrent -->
+<style>img{-webkit-user-drag:none;-khtml-user-drag:none;-moz-user-drag:none;-o-user-drag:none;user-drag:none;}</style>
+<script>
+(function(){
+  function blockImg(e){ if(e.target && e.target.tagName==="IMG"){ e.preventDefault(); } }
+  document.addEventListener("contextmenu", blockImg);
+  document.addEventListener("dragstart", blockImg);
+})();
+</script>
+</body>
+</html>

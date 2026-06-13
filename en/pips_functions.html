@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="The eight phosphoinositide species — their abundance, subcellular localization, binding proteins, and roles in cellular functions and disease. A “Learn” article from Sasaki Laboratory.">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Sasaki Laboratory | Institute of Science Tokyo">
+<meta property="og:title" content="Functions of phosphoinositides | Sasaki Laboratory">
+<meta property="og:description" content="The eight phosphoinositide species — their abundance, subcellular localization, binding proteins, and roles in cellular functions and disease. A “Learn” article from Sasaki Laboratory.">
+<meta property="og:url" content="https://sasaki-lab-art.github.io/en/pips_functions.html">
+<meta property="og:image" content="https://sasaki-lab-art.github.io/photos/molecular_hierarchy.jpg">
+<meta property="og:locale" content="en_US">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Functions of phosphoinositides | Sasaki Laboratory">
+<meta name="twitter:description" content="The eight phosphoinositide species — their abundance, subcellular localization, binding proteins, and roles in cellular functions and disease. A “Learn” article from Sasaki Laboratory.">
+<meta name="twitter:image" content="https://sasaki-lab-art.github.io/photos/molecular_hierarchy.jpg">
+<title>Functions of phosphoinositides | Sasaki Laboratory, Institute of Science Tokyo</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  :root {
+    --teal:     #1c3177;
+    --teal-lt:  #e9edf7;
+    --teal-mid: #7f96c2;
+    --coral:    #d85a30;
+    --coral-lt: #faece7;
+    --amber:    #ba7517;
+    --amber-lt: #faeeda;
+    --purple:   #534ab7;
+    --purple-lt:#eeedfe;
+    --bg:       #fafaf8;
+    --white:    #ffffff;
+    --text:     #1a1a18;
+    --muted:    #6b6b65;
+    --border:   #e4e4de;
+    --radius:   16px;
+    --nav-h:    64px;
+  }
+  html { scroll-behavior: smooth; }
+  body { font-family: 'Noto Sans JP', 'DM Sans', sans-serif; background: var(--bg); color: var(--text); font-size: 15px; line-height: 1.75; }
+
+  /* ── NAV ── */
+  nav {
+    position: sticky; top: 0; z-index: 100;
+    background: rgba(255,255,255,0.92); backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--border);
+    height: var(--nav-h); display: flex; align-items: center;
+  }
+  .nav-inner { max-width: 1100px; margin: auto; width: 100%; padding: 0 2rem; display: flex; align-items: center; justify-content: space-between; }
+  .nav-univ-logo { height: 44px; width: auto; display: block; }
+  .nav-univ-logo:hover { opacity: 0.85; }
+  .nav-links { display: flex; gap: 0.25rem; }
+  .nav-links a { text-decoration: none; color: var(--muted); font-size: 13px; font-weight: 500; padding: 6px 12px; border-radius: 20px; transition: all 0.2s; }
+  .nav-links a:hover { background: var(--teal-lt); color: var(--teal); }
+  @media (max-width: 860px) {
+    .nav-univ-logo { height: 32px; }
+    .nav-links a { font-size: 12px; padding: 5px 8px; }
+  }
+  @media (max-width: 540px) {
+  }
+
+  /* ── PAGE HEADER ── */
+  .page-header {
+    background: linear-gradient(135deg, var(--teal-lt) 0%, #f0f3fa 100%);
+    padding: 64px 2rem 56px;
+    border-bottom: 1px solid var(--border);
+  }
+  .page-header-inner { max-width: 800px; margin: auto; }
+  .section-tag { display: inline-block; font-size: 12px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--teal); background: white; padding: 4px 12px; border-radius: 20px; margin-bottom: 14px; border: 1px solid var(--teal-lt); }
+  .page-title { font-family: 'DM Serif Display', serif; font-size: 2.6rem; line-height: 1.2; margin-bottom: 1rem; }
+  .page-lead { color: var(--muted); font-size: 15px; max-width: none; line-height: 1.8; }
+
+  /* ── ARTICLE ── */
+  .article-wrap { max-width: 800px; margin: 0 auto; padding: 56px 2rem 80px; }
+  .back-link { display: inline-flex; align-items: center; gap: 6px; color: var(--teal); text-decoration: none; font-size: 14px; font-weight: 600; margin-bottom: 2rem; }
+  .back-link:hover { text-decoration: underline; }
+
+  /* イントロ */
+  .intro {
+    font-size: 16px; line-height: 2.0; color: var(--text);
+    background: var(--teal-lt); border-radius: var(--radius);
+    padding: 24px 28px; margin-bottom: 1.4rem;
+  }
+
+  /* 存在量の序列 */
+  .abundance {
+    display: flex; flex-wrap: wrap; align-items: center; gap: 7px;
+    font-size: 13.5px; font-weight: 700; color: var(--text);
+    background: var(--white); border: 1px solid var(--border);
+    border-radius: var(--radius); padding: 16px 22px; margin-bottom: 2.6rem;
+  }
+  .abundance .ab-label { color: var(--teal); margin-right: 6px; }
+  .abundance .ab-chip { background: var(--teal-lt); border-radius: 16px; padding: 2px 10px; color: var(--text); font-weight: 500; }
+  .abundance .ab-sep { color: var(--teal-mid); }
+
+  /* 各種ホスホイノシタイドのカード */
+  .species {
+    background: var(--white); border: 1px solid var(--border);
+    border-radius: var(--radius); padding: 24px 28px; margin-bottom: 1.3rem;
+    border-left: 5px solid var(--teal);
+  }
+  .species-head { display: flex; align-items: baseline; flex-wrap: wrap; gap: 12px; margin-bottom: 12px; }
+  .species-name { font-family: 'DM Serif Display', serif; font-size: 1.7rem; color: var(--teal); line-height: 1.1; }
+  .species-name sub { font-size: 0.6em; }
+  .species-badge { font-size: 12px; font-weight: 700; color: var(--muted); background: var(--bg); border: 1px solid var(--border); border-radius: 16px; padding: 3px 12px; }
+  .species p { font-size: 15px; line-height: 1.95; color: var(--text); }
+  .species p sub { font-size: 0.7em; }
+  .species p sup { font-size: 0.7em; }
+  .species-ref { margin-top: 12px; padding-top: 10px; border-top: 1px dashed var(--border); font-size: 12.5px; color: var(--muted); line-height: 1.6; }
+  .species-ref div { margin-top: 8px; }
+  .species-ref div:first-child { margin-top: 0; }
+
+  /* アクセント色（リン酸化数で色分け） */
+  .species.c-pi   { border-left-color: var(--purple); }
+  .species.c-pi   .species-name { color: var(--purple); }
+  .species.c-bis  { border-left-color: var(--amber); }
+  .species.c-bis  .species-name { color: var(--amber); }
+  .species.c-tris { border-left-color: var(--coral); }
+  .species.c-tris .species-name { color: var(--coral); }
+
+  .source {
+    margin-top: 2.4rem; padding: 18px 24px; font-size: 13px; color: var(--muted);
+    background: var(--amber-lt); border-radius: var(--radius); border-left: 4px solid var(--amber);
+  }
+  .source strong { color: var(--text); }
+
+  figure.figure { margin: 2.6rem 0 0.4rem; text-align: center; }
+  figure.figure img { display: block; width: 100%; height: auto; border-radius: var(--radius); border: 1px solid var(--border); background: var(--white); }
+  figure.figure figcaption { font-size: 13px; color: var(--muted); margin-top: 12px; line-height: 1.8; text-align: left; }
+
+  /* ── FOOTER ── */
+  footer { background: #1a1a18; color: #9a9a94; padding: 3rem 2rem; }
+  .footer-inner { max-width: 1100px; margin: auto; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; }
+  .footer-lab { font-family: 'DM Serif Display', serif; font-size: 18px; color: white; }
+  .footer-links { display: flex; gap: 1.5rem; flex-wrap: wrap; }
+  .footer-links a { font-size: 13px; color: #9a9a94; text-decoration: none; }
+  .footer-links a:hover { color: var(--teal-mid); }
+  .footer-copy { font-size: 12px; margin-top: 0.5rem; }
+
+  @media (max-width: 640px) {
+    .page-title { font-size: 2rem; }
+    .article-wrap { padding: 40px 1.3rem 64px; }
+    .species { padding: 20px 20px; }
+    .species-name { font-size: 1.45rem; }
+  }
+  .nav-toggle { display: none; background: none; border: none; cursor: pointer; color: var(--text); padding: 4px; line-height: 0; }
+  .nav-toggle svg { width: 28px; height: 28px; stroke: currentColor; }
+  /* hamburger menu (<=768px only; desktop unchanged) */
+  @media (max-width: 768px) {
+    .nav-toggle { display: block; }
+    .nav-links {
+      position: absolute; top: 100%; left: 0; right: 0;
+      flex-direction: column; gap: 0; max-width: none;
+      background: rgba(255,255,255,0.98); backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+      max-height: 0; overflow: hidden; transition: max-height 0.3s ease;
+    }
+    .nav-links.open { max-height: 80vh; }
+    .nav-links a { font-size: 15px; padding: 14px 2rem; border-radius: 0; border-bottom: 1px solid var(--border); }
+    .nav-links a:last-child { border-bottom: none; }
+  }
+</style>
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon-32.png" sizes="32x32" type="image/png">
+<link rel="icon" href="/favicon-16.png" sizes="16x16" type="image/png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="canonical" href="https://sasaki-lab-art.github.io/en/pips_functions.html">
+<link rel="alternate" hreflang="ja" href="https://sasaki-lab-art.github.io/pips_functions.html">
+<link rel="alternate" hreflang="en" href="https://sasaki-lab-art.github.io/en/pips_functions.html">
+<link rel="alternate" hreflang="x-default" href="https://sasaki-lab-art.github.io/pips_functions.html">
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-inner">
+    <a href="https://www.isct.ac.jp/en" target="_blank" rel="noopener" style="line-height:0;">
+      <img class="nav-univ-logo" src="../photos/sciencetokyo_logo.jpg" alt="Institute of Science Tokyo (Science Tokyo)">
+    </a>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="navLinks">
+      <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+    </button>
+    <div class="nav-links" id="navLinks">
+      <a href="index.html">Home</a>
+      <a href="index.html#news">News</a>
+      <a href="index.html#research">Research</a>
+      <a href="index.html#publications">Publications</a>
+      <a href="index.html#highlights">Research Environment</a>
+      <a href="members.html">Members</a>
+      <a href="index.html#learn">Learn</a>
+      <a href="index.html#contact">Access</a>
+      <a href="../pips_functions.html" class="lang-switch" style="color:var(--teal);font-weight:700;">日本語</a>
+    </div>
+  </div>
+</nav>
+<script>
+(function(){
+  var t = document.getElementById('navToggle');
+  var m = document.getElementById('navLinks');
+  if (!t || !m) return;
+  var ICON_OPEN = '<svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><line x1="5" y1="5" x2="19" y2="19"/><line x1="19" y1="5" x2="5" y2="19"/></svg>';
+  var ICON_CLOSED = '<svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>';
+  function setOpen(o){ m.classList.toggle('open', o); t.setAttribute('aria-expanded', o ? 'true' : 'false'); t.innerHTML = o ? ICON_OPEN : ICON_CLOSED; }
+  t.addEventListener('click', function(){ setOpen(!m.classList.contains('open')); });
+  m.addEventListener('click', function(e){ if (e.target.tagName === 'A') setOpen(false); });
+})();
+</script>
+
+<!-- PAGE HEADER -->
+<div class="page-header">
+  <div class="page-header-inner">
+    <div class="section-tag">Background</div>
+    <h1 class="page-title">Functions of phosphoinositides</h1>
+    <p class="page-lead">Phosphatidylinositol (PI) and the seven phosphoinositides phosphorylated at the 3-, 4-, and 5-position hydroxyls of its inositol ring. Each of the eight species has its own abundance, subcellular localization, and binding proteins, and controls a diverse range of biological processes.</p>
+  </div>
+</div>
+
+<!-- ARTICLE -->
+<div class="article-wrap">
+
+  <div class="intro">
+    Phosphoinositides are a group of trace phospholipids in which the inositol ring of phosphatidylinositol (PI) is phosphorylated in various combinations. They form an interconnected metabolic system, each regulating specific effector proteins in particular intracellular compartments.
+  </div>
+
+  <div class="abundance">
+    <span class="ab-label">Abundance order</span>
+    <span class="ab-chip">PI</span><span class="ab-sep">≫</span>
+    <span class="ab-chip">PI4P</span><span class="ab-sep">≥</span>
+    <span class="ab-chip">PI(4,5)P<sub>2</sub></span><span class="ab-sep">&gt;</span>
+    <span class="ab-chip">PI3P</span><span class="ab-sep">&gt;</span>
+    <span class="ab-chip">PI(3,5)P<sub>2</sub></span><span class="ab-sep">&gt;</span>
+    <span class="ab-chip">PI(3,4,5)P<sub>3</sub></span><span class="ab-sep">≫</span>
+    <span class="ab-chip">PI(3,4)P<sub>2</sub></span><span class="ab-sep">,</span>
+    <span class="ab-chip">PI5P</span>
+  </div>
+
+  <figure class="figure">
+    <img src="../photos/pips_network.png" alt="The metabolic network of phosphoinositides and a list of associated cellular functions and pathologies. In the center, PI, PI3P, PI4P, PI5P, PI(3,4)P2, PI(3,5)P2, PI(4,5)P2, and PI(3,4,5)P3 are metabolically interconverted, and outward arrows indicate their involvement in various cellular functions and diseases (cancer, inflammation, neurodegeneration, immunity, metabolism, cardiovascular disease, etc.).">
+    <figcaption>Each phosphoinositide is metabolically interconverted with the others (red and blue arrows in the center), and each is involved in diverse cellular functions (cell proliferation/survival, organelle communication, membrane trafficking, autophagy, cell morphology/motility, etc.) and a wide range of pathologies including cancer, inflammation, neurodegeneration, immunity, metabolism, and cardiovascular disease.</figcaption>
+  </figure>
+
+  <div class="species c-pi">
+    <div class="species-head">
+      <span class="species-name">PI</span>
+      <span class="species-badge">1–10% of membrane phospholipids</span>
+    </div>
+    <p>PI accounts for 1–10% of membrane phospholipids. A fraction is phosphorylated to generate the phosphoinositides below. In normal cells and tissues, their abundance is roughly maintained in the order PI ≫ PI4P ≥ PI(4,5)P<sub>2</sub> &gt; PI3P &gt; PI(3,5)P<sub>2</sub> &gt; PI(3,4,5)P<sub>3</sub> ≫ PI(3,4)P<sub>2</sub>, PI5P.</p>
+  </div>
+
+  <div class="species">
+    <div class="species-head">
+      <span class="species-name">PI3P</span>
+      <span class="species-badge">&lt;1% of PI</span>
+    </div>
+    <p>Present at &lt;1% of PI. It plays an important role in regulating protein degradation. In the formation of the ESCRT complex, which sorts ubiquitinated proteins into multivesicular bodies, it recruits Hrs (ESCRT-0) and EAP45 (ESCRT-II). In autophagy, it targets WIPI2 and DFCP1 to autophagosome-initiation sites and, via Alfy, promotes accumulation of ubiquitinated proteins into autophagosomes. Through binding to SNX5, kinesin-16B, and others, it participates in many aspects of intracellular vesicular transport.</p>
+    <div class="species-ref">
+      <div>Yoshioka K et al. Essential role of endothelial class II PI3K-C2α in angiogenesis and vascular barrier function.<br>Nat Med 18:1560-1569, 2012</div>
+      <div>Kimura H et al. Vps34 regulates myofibril proteostasis to prevent hypertrophic cardiomyopathy.<br>JCI Insight 2:e89462, 2017</div>
+    </div>
+  </div>
+
+  <div class="species">
+    <div class="species-head">
+      <span class="species-name">PI4P</span>
+      <span class="species-badge">3–5% of PI</span>
+    </div>
+    <p>Present at 3–5% of PI. Its functions at the Golgi and plasma membrane have attracted attention. It recruits AP1 to the Golgi to promote formation of cargo-laden clathrin-coated vesicles, and via GOLPH3 it controls membrane morphology and vesicle budding. It also plays an important role in lipid transport at contact sites — for example, CERT-mediated ceramide transfer from the ER to the Golgi, ORP-mediated transport of phosphatidylserine from the ER to the plasma membrane, and cholesterol transport from the ER to the Golgi. Although with low specificity, it also acts on plasma-membrane transmembrane proteins, with reported involvement in regulating the TRPV1 cation channel and the mechanosensitive Piezo cation channel.</p>
+    <div class="species-ref">
+      <div>Zhou X et al. Control of Golgi-V-ATPase through Sac1-dependent co-regulation of PI(4)P and cholesterol.<br>Nat Commun 16:7808, 2025</div>
+      <div>Kawasaki A et al. PI4P/PS countertransport by ORP10 at ER-endosome membrane contact sites regulates endosome fission.<br>J Cell Biol 221:e202103141, 2022</div>
+    </div>
+  </div>
+
+  <div class="species">
+    <div class="species-head">
+      <span class="species-name">PI5P</span>
+      <span class="species-badge">Trace</span>
+    </div>
+    <p>Usually present only in trace amounts, and much about its physiological functions remains unknown. Its nuclear functions have been studied: it binds ING2 via a plant homeodomain (PHD) finger and participates in the DNA-damage response through stabilization of p53, and it binds the basic amino-acid clusters of SAP30 and SAP30L to regulate histone deacetylation. It has also been reported to induce autophagy via PI3P-target proteins under glucose starvation. However, few papers exist, and it remains a lipid full of mysteries.</p>
+  </div>
+
+  <div class="species c-bis">
+    <div class="species-head">
+      <span class="species-name">PI(3,4)P<sub>2</sub></span>
+      <span class="species-badge">Trace (accumulates in cancer)</span>
+    </div>
+    <p>Usually present only in trace amounts, but produced intracellularly upon receptor stimulation by growth factors and chemotactic factors or by hydrogen-peroxide treatment. In cancer tissue it can accumulate to levels comparable to PI(4,5)P<sub>2</sub>. By binding several SNX-family molecules, it promotes maturation and scission of clathrin-coated vesicles and macropinosomes. In cell morphology and motility, it recruits lamellipodin (Lpd) to the plasma membrane and, through Ena/VASP-mediated actin-filament elongation and WAVE-mediated actin-filament branching, promotes ruffling and lamellipodia formation. Its binding to p40<sup>phox</sup> on the phagosome membrane is essential for reactive-oxygen production by NADPH-oxidase assembly. Binding of αTTP to PI(3,4)P<sub>2</sub> promotes vitamin E release and is involved in its handoff to ABC transporters at the plasma membrane. In the nucleus, it is involved in oxidative-stress-associated DNA damage.</p>
+    <div class="species-ref">
+      <div>Sasaki J et al. The PtdIns(3,4)P<sub>2</sub>-phosphatase INPP4A is a suppressor of excitotoxic neuronal death.<br>Nature 465:497-501, 2010</div>
+      <div>Malek M et al. PTEN regulates PI(3,4)P<sub>2</sub> signaling downstream of class I PI3K.<br>Mol Cell 68:566-580, 2017</div>
+      <div>Kikuchi Y et al. Phosphatidylinositol 3,4-bisphosphate emerges as a lipid mediator linking oxidative stress to DNA damage.<br>J Biochem mvag027, 2026</div>
+    </div>
+  </div>
+
+  <div class="species c-bis">
+    <div class="species-head">
+      <span class="species-name">PI(3,5)P<sub>2</sub></span>
+      <span class="species-badge">&lt;0.5% of PI</span>
+    </div>
+    <p>Present at &lt;0.5% of PI. Its functions are noted mainly in endosomes and lysosomes; depletion of PI(3,5)P<sub>2</sub> forms vacuoles that are visible even by light microscopy. Acting on ion channels, it activates TRPML1 to promote Ca<sup>2+</sup> release from lysosomes and activates two-pore channels (TPC) 1/2 to promote Na<sup>+</sup> release from lysosomes and melanosomes. It binds Vps24 of the ESCRT-III complex and is involved in protein degradation via the multivesicular-body pathway.</p>
+    <div class="species-ref">
+      <div>Shoji T et al. A PI(3,5)P<sub>2</sub>/CHMP4B axis on lysosomes is essential for microautophagic degradation of STING.<br>Nat Commun 17:4602, 2026</div>
+      <div>Wu JZ et al. Sorting nexin 10 regulates lysosomal ionic homeostasis via ClC-7 by controlling PI(3,5)P<sub>2</sub>.<br>J Cell Biol 224:e202408174, 2025</div>
+    </div>
+  </div>
+
+  <div class="species c-bis">
+    <div class="species-head">
+      <span class="species-name">PI(4,5)P<sub>2</sub></span>
+      <span class="species-badge">3–5% of PI</span>
+    </div>
+    <p>Present at 3–5% of PI. It serves as a substrate for PLC, producing diacylglycerol and inositol (1,4,5)-trisphosphate. Elucidation of the binding and regulatory functions of PI(4,5)P<sub>2</sub> toward actin-polymerization regulators such as profilin and α-actinin became the trigger for broad study of the direct actions of inositol phospholipids. It mediates focal-adhesion formation via the ezrin/radixin/moesin (ERM) proteins that crosslink actin filaments to the plasma membrane, as well as talin and vinculin. The membrane transporters regulated by PI(4,5)P<sub>2</sub>, including ion channels and transporters, are too numerous to list. Plasma-membrane functions — such as AP-2-mediated clathrin assembly in clathrin-coated-pit formation and epsin-1-mediated membrane deformation — were studied first, but involvement in membrane-protein recycling and autophagy in the endosomal system has also been suggested. Because it activates cPLA2 and PLD, it is thought to participate in other phospholipid metabolism through generation of lysophospholipids and phosphatidic acid.</p>
+    <div class="species-ref">
+      <div>Sako K et al. Cells adapt to extracellular acidic pH through TM9SF3-mediated PI(4,5)P<sub>2</sub> flop.<br>Nat Commun 16:8852, 2025</div>
+      <div>Kanemaru K et al. Plasma membrane phosphatidylinositol (4,5)-bisphosphate is critical for determination of epithelial characteristics.<br>Nat Commun 13:2347, 2022</div>
+    </div>
+  </div>
+
+  <div class="species c-tris">
+    <div class="species-head">
+      <span class="species-name">PI(3,4,5)P<sub>3</sub></span>
+      <span class="species-badge">&lt;0.1% of PI (elevated in cancer)</span>
+    </div>
+    <p>Present at &lt;0.1% of PI, but in cancer tissue it can rise to about 100-fold. Because its degrading enzymes are highly active and because class I phosphoinositide 3-kinase (PI3K) is activated in a receptor-stimulation-dependent manner by various extracellular agonists such as insulin, it functions as a second messenger. Its functions are understood mainly at the plasma membrane. Its binding proteins are diverse, including protein kinases such as PKB and Btk; ion channels such as TRPM3; GEFs for the small GTPases Rac and Arf6 and GAPs for Rho; myosin-X and various actin-binding proteins; and cytoskeleton-related proteins such as WAVE2. It governs cell proliferation, differentiation, migration, cell death, and the regulation of glucose and lipid metabolism.</p>
+    <div class="species-ref">
+      <div>Stambolic V et al. Negative regulation of PKB/Akt-dependent cell survival by the tumor suppressor PTEN.<br>Cell 95:29-39, 1998</div>
+      <div>Sasaki T et al. Function of PI3Kγ in thymocyte development, T cell activation, and neutrophil migration.<br>Science 287:1040-1046, 2000</div>
+      <div>Nishikimi A et al. Sequential regulation of DOCK2 dynamics by two phospholipids during neutrophil chemotaxis.<br>Science 324:384-387, 2009</div>
+    </div>
+  </div>
+
+  <div class="source">
+    <strong>Source:</strong> Adapted from “Bioactive lipids acting on membranes — inositol phospholipids and diacylglycerol” [Takehiko Sasaki], Handbook of Lipid Analysis (Jikken Igaku Bessatsu).
+  </div>
+
+  <a href="index.html#learn" class="back-link" style="margin-top:2.5rem; margin-bottom:0;">← Back to Learn</a>
+
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div>
+      <div class="footer-lab" style="font-size:15px; line-height:1.7;">Institute of Science Tokyo · Institute of Integrated Research · Medical Research Laboratory · <strong>Department of Biochemical Pathophysiology</strong></div>
+      <div class="footer-copy" style="font-size:15px; line-height:1.7; color:#fff; font-family:'DM Serif Display', serif;">Graduate School of Medical and Dental Sciences · <strong>Department of Lipid Biology</strong></div>
+      <div class="footer-copy" style="font-size:12px; margin-top:0.6rem;">© 2025–2026 Sasaki Laboratory, Institute of Science Tokyo. All rights reserved.</div>
+    </div>
+    <div>
+      <div class="footer-links">
+        <a href="index.html#research">Research</a>
+        <a href="members.html">Members</a>
+        <a href="publications.html">Publications</a>
+        <a href="index.html#learn">Learn</a>
+        <a href="index.html#contact">Access</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- Back-to-top button -->
+<button id="backToTop" aria-label="Back to top" class="back-to-top">
+  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+    <polyline points="18 15 12 9 6 15"></polyline>
+  </svg>
+</button>
+<style>
+.back-to-top {
+  position: fixed; bottom: 24px; right: 24px;
+  width: 44px; height: 44px; border-radius: 50%;
+  background: #1c3177; color: white; border: none;
+  display: flex; align-items: center; justify-content: center;
+  cursor: pointer; box-shadow: 0 4px 16px rgba(0,0,0,0.15);
+  opacity: 0; pointer-events: none;
+  transition: opacity 0.25s, transform 0.25s, background 0.2s;
+  transform: translateY(8px);
+  z-index: 200;
+}
+.back-to-top.visible { opacity: 1; pointer-events: auto; transform: translateY(0); }
+.back-to-top:hover { background: #14245a; }
+@media (max-width: 540px) {
+  .back-to-top { bottom: 16px; right: 16px; width: 40px; height: 40px; }
+}
+</style>
+<script>
+(function() {
+  var btn = document.getElementById('backToTop');
+  if (!btn) return;
+  window.addEventListener('scroll', function() {
+    if (window.scrollY > 300) btn.classList.add('visible');
+    else btn.classList.remove('visible');
+  });
+  btn.addEventListener('click', function() {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+})();
+</script>
+
+<!-- image download deterrent -->
+<style>img{-webkit-user-drag:none;-khtml-user-drag:none;-moz-user-drag:none;-o-user-drag:none;user-drag:none;}</style>
+<script>
+(function(){
+  function blockImg(e){ if(e.target && e.target.tagName==="IMG"){ e.preventDefault(); } }
+  document.addEventListener("contextmenu", blockImg);
+  document.addEventListener("dragstart", blockImg);
+})();
+</script>
+</body>
+</html>

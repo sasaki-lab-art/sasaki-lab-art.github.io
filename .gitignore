@@ -30,3 +30,7 @@ video_assets/
 
 # 未参照画像の退避（公開不要・ローカル保管）
 photos/_unused/
+
+# Skillドラフト（公開不要・ローカル/導入用）
+sasaki-lab-english-website/
+sasaki-lab-english-website.zip

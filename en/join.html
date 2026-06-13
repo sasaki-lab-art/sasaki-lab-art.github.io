@@ -1,0 +1,670 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Join Sasaki Laboratory (Institute of Science Tokyo) — information for prospective graduate students on lab life, admissions, and how to apply.">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Sasaki Laboratory | Institute of Science Tokyo">
+<meta property="og:title" content="Join Our Lab | Sasaki Laboratory">
+<meta property="og:description" content="Join Sasaki Laboratory (Institute of Science Tokyo) — information for prospective graduate students on lab life, admissions, and how to apply.">
+<meta property="og:url" content="https://sasaki-lab-art.github.io/en/join.html">
+<meta property="og:image" content="https://sasaki-lab-art.github.io/photos/molecular_hierarchy.jpg">
+<meta property="og:locale" content="en_US">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Join Our Lab | Sasaki Laboratory">
+<meta name="twitter:description" content="Join Sasaki Laboratory (Institute of Science Tokyo) — information for prospective graduate students on lab life, admissions, and how to apply.">
+<meta name="twitter:image" content="https://sasaki-lab-art.github.io/photos/molecular_hierarchy.jpg">
+<title>Join Our Lab | Sasaki Laboratory, Institute of Science Tokyo</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  :root {
+    --teal:     #1c3177;
+    --teal-lt:  #e9edf7;
+    --teal-mid: #7f96c2;
+    --coral:    #d85a30;
+    --coral-lt: #faece7;
+    --amber:    #ba7517;
+    --amber-lt: #faeeda;
+    --purple:   #534ab7;
+    --purple-lt:#eeedfe;
+    --bg:       #fafaf8;
+    --white:    #ffffff;
+    --text:     #1a1a18;
+    --muted:    #6b6b65;
+    --border:   #e4e4de;
+    --radius:   16px;
+    --radius-sm: 8px;
+    --nav-h:    64px;
+  }
+  html { scroll-behavior: smooth; }
+  body { font-family: 'Noto Sans JP', 'DM Sans', sans-serif; background: var(--bg); color: var(--text); font-size: 15px; line-height: 1.75; }
+
+  /* ── NAV ── */
+  nav {
+    position: sticky; top: 0; z-index: 100;
+    background: rgba(255,255,255,0.92); backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--border);
+    height: var(--nav-h); display: flex; align-items: center;
+  }
+  .nav-inner { max-width: 1100px; margin: auto; width: 100%; padding: 0 2rem; display: flex; align-items: center; justify-content: space-between; }
+  .nav-logo { display: flex; align-items: center; gap: 10px; text-decoration: none; }
+  .nav-logo-icon { width: 36px; height: 36px; background: var(--teal); border-radius: 10px; display: flex; align-items: center; justify-content: center; }
+  .nav-logo-icon svg { width: 20px; height: 20px; fill: white; }
+  .nav-logo-text { font-family: 'DM Serif Display', serif; font-size: 18px; color: var(--text); }
+  .nav-links { display: flex; gap: 0.25rem; }
+  .nav-links a { text-decoration: none; color: var(--muted); font-size: 13px; font-weight: 500; padding: 6px 12px; border-radius: 20px; transition: all 0.2s; }
+  .nav-links a:hover { background: var(--teal-lt); color: var(--teal); }
+  .nav-univ-logo { height: 44px; width: auto; display: block; }
+  .nav-univ-logo:hover { opacity: 0.85; }
+  @media (max-width: 860px) { .nav-univ-logo { height: 32px; } }
+  .nav-links a.active { background: var(--teal-lt); color: var(--teal); }
+
+  /* ── HERO ── */
+  #hero {
+    padding: 80px 2rem 60px;
+    max-width: 1100px; margin: auto;
+    display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center;
+  }
+  .hero-eyebrow { font-size: 13px; font-weight: 700; letter-spacing: 0.1em; color: var(--teal); text-transform: uppercase; margin-bottom: 1rem; }
+  .hero-title { font-family: 'DM Serif Display', serif; font-size: 2.8rem; line-height: 1.2; margin-bottom: 1.25rem; }
+  .hero-title em { font-style: italic; color: var(--teal); }
+  .hero-desc { color: var(--muted); font-size: 15px; line-height: 1.9; margin-bottom: 2rem; }
+  .btn { display: inline-block; padding: 11px 24px; border-radius: 50px; font-size: 14px; font-weight: 600; text-decoration: none; transition: all 0.2s; cursor: pointer; border: none; }
+  .btn-primary { background: var(--teal); color: white; }
+  .btn-primary:hover { background: #14245a; }
+  .btn-outline { background: transparent; border: 1.5px solid var(--border); color: var(--text); }
+  .btn-outline:hover { border-color: var(--teal); color: var(--teal); }
+  .hero-btns { display: flex; gap: 12px; flex-wrap: wrap; }
+
+  /* hero right panel */
+  .hero-panel { background: white; border: 1px solid var(--border); border-radius: 24px; padding: 2rem; box-shadow: 0 8px 40px rgba(28,49,119,0.08); }
+  .hero-panel h3 { font-size: 15px; font-weight: 700; margin-bottom: 1.25rem; color: var(--text); }
+  .hp-row { display: flex; align-items: flex-start; gap: 12px; margin-bottom: 1rem; }
+  .hp-icon { width: 36px; height: 36px; border-radius: 10px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; font-size: 18px; }
+  .hp-teal { background: var(--teal-lt); }
+  .hp-coral { background: var(--coral-lt); }
+  .hp-amber { background: var(--amber-lt); }
+  .hp-purple { background: var(--purple-lt); }
+  .hp-text h4 { font-size: 14px; font-weight: 700; margin-bottom: 2px; }
+  .hp-text p { font-size: 13px; color: var(--text); line-height: 1.5; }
+
+  /* ── SECTIONS ── */
+  section { padding: 80px 2rem; max-width: 1100px; margin: auto; }
+  .section-tag { display: inline-block; font-size: 12px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--teal); background: var(--teal-lt); padding: 4px 12px; border-radius: 20px; margin-bottom: 12px; }
+  h2.sec-title { font-family: 'DM Serif Display', serif; font-size: 2.2rem; line-height: 1.2; margin-bottom: 1rem; }
+  .sec-lead { color: var(--muted); max-width: none; margin-bottom: 2.5rem; line-height: 1.9; }
+
+  /* ── REASONS ── */
+  .reasons-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; }
+  .reason-card { border: 1px solid var(--border); border-radius: var(--radius); padding: 2rem; background: white; transition: all 0.2s; }
+  .reason-card:hover { border-color: var(--teal-mid); box-shadow: 0 4px 20px rgba(28,49,119,0.08); }
+  .reason-num { font-family: 'DM Serif Display', serif; font-size: 3rem; color: var(--teal-lt); line-height: 1; margin-bottom: 0.75rem; }
+  .reason-card h3 { font-size: 17px; font-weight: 700; margin-bottom: 0.6rem; }
+  .reason-card p { font-size: 14px; color: var(--muted); line-height: 1.75; }
+
+  /* ── LIFE ── */
+  #life { background: white; max-width: 100%; padding: 80px 0; }
+  #life .inner { max-width: 1100px; margin: auto; padding: 0 2rem; }
+  .life-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.5rem; }
+  .life-card { border: 1px solid var(--border); border-radius: var(--radius); padding: 2rem; background: var(--bg); }
+  .life-card h3 { font-size: 16px; font-weight: 700; margin-bottom: 0.75rem; display: flex; align-items: center; gap: 8px; }
+  .life-card p, .life-card li { font-size: 14px; color: var(--muted); line-height: 1.75; }
+  .life-card ul { padding-left: 1.25rem; }
+  .life-card li { margin-bottom: 0.25rem; }
+
+  /* ── ADMISSION ── */
+  .admission-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; }
+  .adm-block { background: white; border: 1px solid var(--border); border-radius: var(--radius); padding: 2rem; }
+  .adm-block h3 { font-size: 17px; font-weight: 700; margin-bottom: 1.25rem; padding-bottom: 0.75rem; border-bottom: 2px solid var(--teal-lt); }
+  .adm-row { display: flex; gap: 1rem; padding: 0.75rem 0; border-bottom: 1px solid var(--border); font-size: 14px; }
+  .adm-row:last-child { border-bottom: none; }
+  .adm-label { font-weight: 700; min-width: 110px; color: var(--text); flex-shrink: 0; }
+  .adm-val { color: var(--muted); line-height: 1.6; }
+  .adm-val a { color: var(--teal); text-decoration: none; }
+  .adm-val a:hover { text-decoration: underline; }
+  .adm-note { background: var(--amber-lt); border-radius: var(--radius-sm); padding: 1rem 1.25rem; margin-top: 1.25rem; font-size: 13px; color: #854f0b; line-height: 1.7; }
+  .adm-note strong { font-weight: 700; }
+
+  /* ── STEPS ── */
+  .steps-list { display: flex; flex-direction: column; gap: 0; position: relative; }
+  .steps-list::before { content: ''; position: absolute; left: 23px; top: 28px; bottom: 28px; width: 2px; background: var(--teal-lt); }
+  .step-item { display: flex; gap: 1.5rem; align-items: flex-start; padding: 1.5rem 0; position: relative; }
+  .step-circle { width: 48px; height: 48px; background: var(--teal); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-family: 'DM Serif Display', serif; font-size: 20px; flex-shrink: 0; z-index: 1; }
+  .step-body h3 { font-size: 17px; font-weight: 700; margin-bottom: 0.4rem; }
+  .step-body p { font-size: 14px; color: var(--muted); line-height: 1.7; }
+  .step-body .step-tip { display: inline-block; margin-top: 0.5rem; font-size: 13px; font-weight: 600; color: var(--teal); background: var(--teal-lt); padding: 3px 10px; border-radius: 10px; }
+
+  /* ── FAQ ── */
+  .faq-list { display: flex; flex-direction: column; gap: 1rem; }
+  .faq-item { border: 1px solid var(--border); border-radius: var(--radius); background: white; overflow: hidden; }
+  .faq-q { padding: 1.25rem 1.5rem; font-size: 15px; font-weight: 700; cursor: pointer; display: flex; justify-content: space-between; align-items: center; gap: 1rem; user-select: none; }
+  .faq-q:hover { background: var(--teal-lt); }
+  .faq-q::after { content: '+'; font-size: 22px; color: var(--teal); font-weight: 300; flex-shrink: 0; transition: transform 0.2s; }
+  .faq-item.open .faq-q::after { transform: rotate(45deg); }
+  .faq-a { display: none; padding: 0 1.5rem 1.25rem; font-size: 14px; color: var(--muted); line-height: 1.8; border-top: 1px solid var(--border); padding-top: 1rem; }
+  .faq-item.open .faq-a { display: block; }
+
+  /* ── CONTACT ── */
+  #contact-join { background: linear-gradient(135deg, #14245a 0%, var(--teal) 60%, var(--teal-mid) 100%); max-width: 100%; padding: 80px 0; }
+  #contact-join .inner { max-width: 800px; margin: auto; padding: 0 2rem; text-align: center; }
+  #contact-join h2 { font-family: 'DM Serif Display', serif; font-size: 2.2rem; color: white; margin-bottom: 1rem; }
+  #contact-join p { color: rgba(255,255,255,0.85); font-size: 15px; margin-bottom: 2rem; line-height: 1.9; }
+  .contact-cards { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.5rem; margin-bottom: 2rem; }
+  .contact-card { background: rgba(255,255,255,0.12); border: 1px solid rgba(255,255,255,0.25); border-radius: var(--radius); padding: 1.5rem; text-align: left; }
+  .contact-card h3 { font-size: 15px; font-weight: 700; color: white; margin-bottom: 0.5rem; }
+  .contact-card p { font-size: 13px; color: rgba(255,255,255,0.75); line-height: 1.6; }
+  .contact-card a { color: #a8c2f0; text-decoration: none; font-weight: 600; }
+  .contact-card a:hover { text-decoration: underline; }
+  .btn-white { background: white; color: var(--teal); font-weight: 700; }
+  .btn-white:hover { background: var(--teal-lt); }
+
+  /* ── FOOTER ── */
+  footer { background: #1a1a18; color: #9a9a94; padding: 3rem 2rem; }
+  .footer-inner { max-width: 1100px; margin: auto; display: flex; justify-content: space-between; align-items: center; }
+  .footer-lab { font-family: 'DM Serif Display', serif; font-size: 18px; color: white; }
+  .footer-links { display: flex; gap: 1.5rem; }
+  .footer-links a { font-size: 13px; color: #9a9a94; text-decoration: none; }
+  .footer-links a:hover { color: var(--teal-mid); }
+  .footer-copy { font-size: 12px; margin-top: 0.5rem; }
+
+  /* ── DIVIDER ── */
+  .full-divider { height: 1px; background: var(--border); margin: 0 2rem; }
+
+  /* ── ANIMATIONS ── */
+  @keyframes fadeUp { from { opacity:0; transform:translateY(16px); } to { opacity:1; transform:translateY(0); } }
+  .hero-title { animation: fadeUp 0.6s ease both; }
+  .hero-desc { animation: fadeUp 0.6s 0.1s ease both; }
+  .hero-btns { animation: fadeUp 0.6s 0.2s ease both; }
+
+  @media (max-width: 860px) {
+    .nav-links a { font-size: 12px; padding: 5px 8px; }
+  }
+  @media (max-width: 768px) {
+    #hero { grid-template-columns: 1fr; gap: 2rem; padding: 60px 1.5rem 40px; }
+    .reasons-grid { grid-template-columns: 1fr; }
+    .admission-grid { grid-template-columns: 1fr; }
+    .life-grid { grid-template-columns: 1fr; }
+    .contact-cards { grid-template-columns: 1fr; }
+    .hero-title { font-size: 2.2rem; }
+  }
+  @media (max-width: 540px) {
+  }
+  .nav-toggle { display: none; background: none; border: none; cursor: pointer; color: var(--text); padding: 4px; line-height: 0; }
+  .nav-toggle svg { width: 28px; height: 28px; stroke: currentColor; }
+  /* hamburger menu (<=768px only; desktop unchanged) */
+  @media (max-width: 768px) {
+    .nav-toggle { display: block; }
+    .nav-links {
+      position: absolute; top: 100%; left: 0; right: 0;
+      flex-direction: column; gap: 0; max-width: none;
+      background: rgba(255,255,255,0.98); backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+      max-height: 0; overflow: hidden; transition: max-height 0.3s ease;
+    }
+    .nav-links.open { max-height: 80vh; }
+    .nav-links a { font-size: 15px; padding: 14px 2rem; border-radius: 0; border-bottom: 1px solid var(--border); }
+    .nav-links a:last-child { border-bottom: none; }
+  }
+</style>
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon-32.png" sizes="32x32" type="image/png">
+<link rel="icon" href="/favicon-16.png" sizes="16x16" type="image/png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="canonical" href="https://sasaki-lab-art.github.io/en/join.html">
+<link rel="alternate" hreflang="ja" href="https://sasaki-lab-art.github.io/join.html">
+<link rel="alternate" hreflang="en" href="https://sasaki-lab-art.github.io/en/join.html">
+<link rel="alternate" hreflang="x-default" href="https://sasaki-lab-art.github.io/join.html">
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-inner">
+    <a href="https://www.isct.ac.jp/en" target="_blank" rel="noopener" style="line-height:0;">
+      <img class="nav-univ-logo" src="../photos/sciencetokyo_logo.jpg" alt="Institute of Science Tokyo (Science Tokyo)">
+    </a>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="navLinks">
+      <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+    </button>
+    <div class="nav-links" id="navLinks">
+      <a href="index.html">Home</a>
+      <a href="index.html#news">News</a>
+      <a href="index.html#research">Research</a>
+      <a href="index.html#publications">Publications</a>
+      <a href="index.html#highlights">Research Environment</a>
+      <a href="members.html">Members</a>
+      <a href="index.html#learn">Learn</a>
+      <a href="index.html#contact">Access</a>
+      <a href="../join.html" class="lang-switch" style="color:var(--teal);font-weight:700;">日本語</a>
+    </div>
+  </div>
+</nav>
+<script>
+(function(){
+  var t = document.getElementById('navToggle');
+  var m = document.getElementById('navLinks');
+  if (!t || !m) return;
+  var ICON_OPEN = '<svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><line x1="5" y1="5" x2="19" y2="19"/><line x1="19" y1="5" x2="5" y2="19"/></svg>';
+  var ICON_CLOSED = '<svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>';
+  function setOpen(o){ m.classList.toggle('open', o); t.setAttribute('aria-expanded', o ? 'true' : 'false'); t.innerHTML = o ? ICON_OPEN : ICON_CLOSED; }
+  t.addEventListener('click', function(){ setOpen(!m.classList.contains('open')); });
+  m.addEventListener('click', function(e){ if (e.target.tagName === 'A') setOpen(false); });
+})();
+</script>
+
+<!-- HERO -->
+<section id="hero">
+  <div>
+    <div class="hero-eyebrow">🎓 Join Our Lab</div>
+    <h1 class="hero-title">To the frontier of<br><em>lipid biology</em>, together</h1>
+    <p class="hero-desc" style="color:var(--text); font-size:16.5px; margin-bottom:0.75rem;">
+      We welcome graduate students (Master’s and PhD) with a clear sense of purpose who engage proactively with research. Centered on phosphoinositides, in a setting that tackles the fundamental principles of cancer, inflammatory diseases, neurodegenerative diseases, and aging, let’s grow into researchers who can communicate with the world.
+    </p>
+    <p class="hero-desc" style="font-size:13px;">
+      At the institute we are the Department of Biochemical Pathophysiology, and we accept graduate students through the Department of Lipid Biology / Department of Cellular and Molecular Medicine at the graduate school.
+    </p>
+    <div class="hero-btns">
+      <a href="#contact-join" class="btn btn-primary">Contact us by email</a>
+      <a href="#admission" class="btn btn-outline">See admission info</a>
+    </div>
+  </div>
+  <div class="hero-panel">
+    <h3>Lab highlights</h3>
+    <div class="hp-row">
+      <div class="hp-icon hp-teal">🔬</div>
+      <div class="hp-text">
+        <h4>Original research themes</h4>
+        <p>We carry out internationally leading research in the medicine and biology of phosphoinositides and intractable diseases.</p>
+      </div>
+    </div>
+    <div class="hp-row">
+      <div class="hp-icon hp-purple">🏛️</div>
+      <div class="hp-text">
+        <h4>Advanced research infrastructure</h4>
+        <p>Leveraging the environment of a University for International Research Excellence and the Medical Research Laboratory, you can pursue research using cutting-edge analytical technologies.</p>
+      </div>
+    </div>
+    <div class="hp-row">
+      <div class="hp-icon hp-amber">📚</div>
+      <div class="hp-text">
+        <h4>A strong educational system</h4>
+        <p>Through progress reports, project presentations, and hands-on instruction, you steadily acquire research skills.</p>
+      </div>
+    </div>
+    <div class="hp-row">
+      <div class="hp-icon hp-coral">🌏</div>
+      <div class="hp-text">
+        <h4>An open research environment</h4>
+        <p>There are many opportunities for international collaboration, and we support English communication and presentations at conferences.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="full-divider"></div>
+
+<!-- REASONS -->
+<section id="reasons">
+  <div class="section-tag">Why Our Lab</div>
+  <h2 class="sec-title">Reasons to choose our lab</h2>
+  <p class="sec-lead">We provide an environment where students with scientific curiosity and passion can pose their own questions and grow into researchers who can communicate with the world.</p>
+  <div class="reasons-grid">
+    <div class="reason-card">
+      <div class="reason-num">01</div>
+      <h3>Original topic setting</h3>
+      <p>Lipid biology is a field with great room to approach unexplained biological phenomena. Without being bound by short-term papers, you get the chance to aim for the world’s first discoveries.</p>
+    </div>
+    <div class="reason-card">
+      <div class="reason-num">02</div>
+      <h3>Research linked to drug discovery and medicine</h3>
+      <p>We tackle from the fundamentals topics of great social impact — cancer, inflammatory diseases, neurodegenerative diseases, and aging. You can feel the reward of your research connecting to future medicine.</p>
+    </div>
+    <div class="reason-card">
+      <div class="reason-num">03</div>
+      <h3>Diverse approaches</h3>
+      <p>From biochemistry, cell biology, structural biology, and mouse experiments to the use of AI and robots, you acquire broad expertise. Practicing multifaceted approaches to a single question builds your strength as a researcher.</p>
+    </div>
+    <div class="reason-card">
+      <div class="reason-num">04</div>
+      <h3>A track record of papers, talks, and awards</h3>
+      <p>Our graduate students have received many conference awards, and we have a rich record of publications in top journals such as Nature, Cell, Science, and their sister journals.</p>
+    </div>
+    <div class="reason-card">
+      <div class="reason-num">05</div>
+      <h3>Career development support</h3>
+      <p>We have a strong record of acceptance into graduate-student support programs such as JSPS Research Fellowships, the SPRING program for next-generation researchers, and the Clinician-Scientist Development Program.</p>
+    </div>
+    <div class="reason-card">
+      <div class="reason-num">06</div>
+      <h3>An atmosphere of equal discussion</h3>
+      <p>Without being constrained by the teacher–student distinction, we face one another as fellow researchers. We build logical, data-based discussions and welcome ideas grounded in students’ free thinking.</p>
+    </div>
+  </div>
+</section>
+
+<div class="full-divider"></div>
+
+<!-- LIFE in LAB -->
+<div id="life">
+  <div class="inner">
+    <div class="section-tag">Lab Life</div>
+    <h2 class="sec-title">Daily life in the lab</h2>
+    <p class="sec-lead">An introduction to the daily activities and atmosphere of the lab.</p>
+    <div class="life-grid">
+      <div class="life-card">
+        <h3>📅 Weekly schedule</h3>
+        <ul>
+          <li><strong>Mon</strong>: Progress reports</li>
+          <li><strong>Tue</strong>: Student–faculty individual consultations (as needed)</li>
+          <li><strong>Wed</strong>: English class & journal club (<em>The Cell</em>)</li>
+          <li><strong>Thu</strong>: MRL progress meeting (monthly)</li>
+          <li><strong>Fri</strong>: Campus seminars (irregular)</li>
+          <li><strong>Sat / Sun</strong>: No official events</li>
+        </ul>
+      </div>
+      <div class="life-card">
+        <h3>🌐 Opportunities for research exchange</h3>
+        <p>As your research progresses, you have opportunities to present at conferences in Japan and abroad. Through presentations and Q&A in Japanese and English, you develop the communication skills demanded of researchers and of future leaders in society. Collaboration with overseas labs is active, and we support visits and short-term study at labs in Japan and abroad. You can also routinely attend lectures by leading researchers.</p>
+      </div>
+      <div class="life-card">
+        <h3>🛠️ Skills you can acquire</h3>
+        <ul>
+          <li>Lipid profiling by mass spectrometry and chromatography</li>
+          <li>Omics analysis (genome, transcriptome, proteome, etc.)</li>
+          <li>Protein purification and <em>in vitro</em> enzyme assays</li>
+          <li>Fluorescence microscopy and live-cell imaging</li>
+          <li>Generation and functional analysis of genetically modified cells</li>
+          <li>Mouse experiments, behavioral analysis, histological and anatomical analysis</li>
+          <li>Lipid and omics data analysis using AI and machine learning</li>
+          <li>Automation and high-throughput analysis using laboratory robots</li>
+        </ul>
+      </div>
+      <div class="life-card">
+        <h3>🎉 Events</h3>
+        <p>We hold lab trips, welcome and farewell parties, and other social occasions. At the institute level there are beer gardens, bowling tournaments, year-end parties, and more, giving opportunities to mingle with students and faculty from other fields. Through the English class and journal club, we also value places to absorb knowledge beyond your specialty and to express your own ideas.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="full-divider"></div>
+
+<!-- ADMISSION POLICY -->
+<section id="policy">
+  <div class="section-tag">Admission Policy</div>
+  <h2 class="sec-title">The students we seek</h2>
+  <p class="sec-lead">The Department of Lipid Biology welcomes diligent students with a strong motivation to learn and to do research.</p>
+  <div class="reasons-grid">
+    <div class="reason-card">
+      <h3>Strong interest and sense of purpose</h3>
+      <p>Strong curiosity about the life sciences, medicine, and pharmacy, with clear goals and the motivation to engage proactively with related problems.</p>
+    </div>
+    <div class="reason-card">
+      <h3>Foundational knowledge and skills to do research</h3>
+      <p>The motivation to acquire sufficient foundational knowledge and skills to independently carry out research toward solving these problems.</p>
+    </div>
+    <div class="reason-card">
+      <h3>Collaboration and international communication</h3>
+      <p>The motivation to acquire the ethics, English ability, and communication skills needed to advance research with others and disseminate the results widely to the world.</p>
+    </div>
+  </div>
+  <p style="font-size:13px; color:var(--muted); margin-top:1.25rem;">Reference: <a href="https://www.tmd.ac.jp/admissions/graduate-school/admission-policy/" target="_blank" rel="noopener" style="color:var(--teal); text-decoration:none;">Admission Policy, Graduate School of Medical and Dental Sciences, Institute of Science Tokyo →</a></p>
+</section>
+
+<div class="full-divider"></div>
+
+<!-- ADMISSION INFO -->
+<section id="admission">
+  <div class="section-tag">Admissions</div>
+  <h2 class="sec-title">About graduate admissions</h2>
+  <p class="sec-lead">If you wish to enter the Graduate School of Medical and Dental Sciences, Institute of Science Tokyo, please refer to the information below. Always confirm details on the official graduate-school website.</p>
+  <div class="admission-grid">
+    <div class="adm-block">
+      <h3>🎓 Master’s program (M1–M2)</h3>
+      <div class="adm-row">
+        <div class="adm-label">Graduate school / major</div>
+        <div class="adm-val">Graduate School of Medical and Dental Sciences, Health Sciences and Biomedical Engineering (Master’s, 2 years)</div>
+      </div>
+      <div class="adm-row">
+        <div class="adm-label">Exam timing</div>
+        <div class="adm-val">Usually held in summer. Additional rounds may be offered; please check the application guidelines for the year.</div>
+      </div>
+      <div class="adm-row">
+        <div class="adm-label">Eligibility</div>
+        <div class="adm-val">University graduates (including those expected to graduate) or those recognized by the Institute as having equivalent or higher academic ability.</div>
+      </div>
+      <div class="adm-row">
+        <div class="adm-label">Degree awarded</div>
+        <div class="adm-val">Master’s degree (in Medical Science, Dental Science, Oral Health, Science, Engineering, or Health Sciences)</div>
+      </div>
+      <div class="adm-row">
+        <div class="adm-label">Official information</div>
+        <div class="adm-val"><a href="https://admissions.isct.ac.jp/ja/013/graduate/guideline#anchor02" target="_blank" rel="noopener">Institute of Science Tokyo Graduate Admissions Guidelines (Medical & Dental) →</a></div>
+      </div>
+      <div class="adm-note">
+        <strong>Before applying, you must meet with the supervising faculty member of your desired field and obtain permission to apply by email.</strong><br>
+        We actively welcome applicants from other universities and faculties — science, pharmacy, agriculture, engineering, and more. Please feel free to contact us first.
+      </div>
+    </div>
+    <div class="adm-block">
+      <h3>🎓 Doctoral program (D1–D4)</h3>
+      <div class="adm-row">
+        <div class="adm-label">Graduate school / major</div>
+        <div class="adm-val">Graduate School of Medical and Dental Sciences<br>· Medical and Dental Sciences (PhD, 4 years)<br>· Life Science, Technology and Medical Science (PhD, 3 years)</div>
+      </div>
+      <div class="adm-row">
+        <div class="adm-label">Exam timing</div>
+        <div class="adm-val">Usually there are first and second application rounds.<br>* Please check the application guidelines for the year for details.</div>
+      </div>
+      <div class="adm-row">
+        <div class="adm-label">Eligibility</div>
+        <div class="adm-val"><strong>Medical and Dental Sciences:</strong> Graduates of medicine, dentistry, 6-year pharmacy, or veterinary programs; holders of a master’s degree; or those recognized by the Institute as having equivalent or higher academic ability.<br><strong>Life Science, Technology and Medical Science:</strong> Holders of a master’s or professional degree, or those recognized by the Institute as having equivalent or higher academic ability.<br><span style="font-size:12px;">* In all cases, those expected to qualify are included.</span></div>
+      </div>
+      <div class="adm-row">
+        <div class="adm-label">Degree awarded</div>
+        <div class="adm-val"><strong>Medical and Dental Sciences:</strong> PhD (in Medicine, Dentistry, Mathematical Medical Science, or Academic studies)<br><strong>Life Science, Technology and Medical Science:</strong> PhD (in Science, Engineering, Health Sciences, or Oral Health)</div>
+      </div>
+      <div class="adm-row">
+        <div class="adm-label">Official information</div>
+        <div class="adm-val"><a href="https://admissions.isct.ac.jp/ja/013/graduate/guideline#anchor02" target="_blank" rel="noopener">Institute of Science Tokyo Graduate Admissions Guidelines (Medical & Dental) →</a></div>
+      </div>
+      <div class="adm-note">
+        <strong>Before applying, you must meet with the supervising faculty member of your desired field and obtain permission to apply by email.</strong><br>
+        We actively welcome applicants from other universities and faculties — science, pharmacy, agriculture, engineering, and more. Please feel free to contact us first.
+      </div>
+      <div class="adm-note">
+        <strong>MD-PhD (Early Training for Medical Researchers) course</strong><br>
+        We also support an early-training course for medical researchers, for students of our School of Medicine. After completing the 4th or 5th year, you can advance early into the PhD program and, after obtaining a PhD (Medicine), return to the medical program. Medical students who wish to take on serious research early are welcome to consult us.
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="full-divider"></div>
+
+<!-- STEPS -->
+<section id="steps">
+  <div class="section-tag">How it works</div>
+  <h2 class="sec-title">From lab visit to admission</h2>
+  <p class="sec-lead">An overview of the general flow from visit to exam to admission. Please feel free to contact us by email.</p>
+  <div class="steps-list">
+    <div class="step-item">
+      <div class="step-circle">1</div>
+      <div class="step-body">
+        <h3>Email us in advance</h3>
+        <p>First, email the PI (Takehiko Sasaki). Briefly tell us about yourself, your research interests, your goals for graduate study, and your preferred timing. The contact details are in the “Contact” section below.</p>
+      </div>
+    </div>
+    <div class="step-item">
+      <div class="step-circle">2</div>
+      <div class="step-body">
+        <h3>Lab visit and interview</h3>
+        <p>Visit the lab in person and meet with the PI and staff. You can directly check the research themes, daily lab life, and student living environment. Senior students will show you around the facilities. Online options are available for those far away in Japan or abroad.</p>
+      </div>
+    </div>
+    <div class="step-item">
+      <div class="step-circle">3</div>
+      <div class="step-body">
+        <h3>Prepare for the entrance exam</h3>
+        <p>Check the exam schedule, application documents, and exam subjects, and prepare. We can advise on past exams and references as needed.</p>
+      </div>
+    </div>
+    <div class="step-item">
+      <div class="step-circle">4</div>
+      <div class="step-body">
+        <h3>Entrance exam and admission</h3>
+        <p>Take the Institute of Science Tokyo graduate entrance exam. Please check the official graduate-school page for exam details.</p>
+      </div>
+    </div>
+    <div class="step-item">
+      <div class="step-circle">5</div>
+      <div class="step-body">
+        <h3>Lab assignment and start of research</h3>
+        <p>After enrolling, you decide your research theme in consultation with your supervisor. In addition to joining existing projects, you can also take on your own original theme.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="full-divider"></div>
+
+<!-- FAQ -->
+<section id="faq">
+  <div class="section-tag">FAQ</div>
+  <h2 class="sec-title">Frequently asked questions</h2>
+  <p class="sec-lead">Common questions from those considering graduate study.</p>
+  <div class="faq-list">
+    <div class="faq-item">
+      <div class="faq-q">I’m from another university or faculty — can I join the lab?</div>
+      <div class="faq-a">Yes, we welcome you. Regardless of your faculty or major, we value a sense of purpose and initiative toward research and a basic interest in the life sciences. You can acquire the necessary knowledge and skills step by step as your research progresses.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">Should I visit the lab before enrolling?</div>
+      <div class="faq-a">If possible, we recommend visiting beforehand. Checking the lab atmosphere directly helps prevent a mismatch after enrollment. During a visit, you can also get past-exam files and advice on exam preparation from current students. Online meetings are available for those far away. Please contact us first by email.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">Is there support for research funding or scholarships?</div>
+      <div class="faq-a">We actively support applications to programs such as JSPS Research Fellowships, the SPRING program for next-generation researchers, and the Clinician-Scientist Development Program. You can also consult us about Institute of Science Tokyo scholarship and tuition-waiver systems depending on your situation after enrolling.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">Is it okay if I’m not good at English?</div>
+      <div class="faq-a">We do not require especially high English ability at enrollment. Even if you’re anxious about English, you can build it up gradually as your research progresses. The lab also has graduate students who use English as their main language of communication, so there are daily opportunities to engage with English. Through English journal clubs of <em>The Cell</em> and presentation practice, you can steadily improve your reading, presentation, and communication skills for English papers.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">Can I find a job after completing the Master’s?</div>
+      <div class="faq-a">Yes. Some students focus intensively on research during the Master’s, enjoy a fulfilling research life, and then find employment. Among those who completed the Master’s, some achieved excellent research results and received conference awards while enrolled.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">Can physicians or dentists join the lab?</div>
+      <div class="faq-a">Yes, we welcome you. Our lab includes graduate students aiming to become clinician-scientists. It is well suited to those who want to learn basic research seriously while aiming to bridge to the clinic in the future. We also pursue collaborations with clinical researchers inside and outside the university, so if you are interested in both basic research and the clinic, please consult us.</div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT CTA -->
+<div id="contact-join">
+  <div class="inner">
+    <h2>Get in touch</h2>
+    <p>
+      Interested in the lab?<br>
+      For visit requests, questions, or anything else — however small — please feel free to email us.
+    </p>
+    <div class="contact-cards">
+      <div class="contact-card">
+        <h3>📧 Contact by email</h3>
+        <p>Please contact the PI, Takehiko Sasaki, directly.<br>
+        sasaki.t.7eda [at] m.isct.ac.jp<br>
+        <span style="font-size:12px; opacity:0.8;">* Replace [at] with @</span></p>
+      </div>
+      <div class="contact-card">
+        <h3>🏛️ Address</h3>
+        <p>Medical Research Laboratory, Institute of Science Tokyo<br>
+        1-5-45 Yushima, Bunkyo-ku, Tokyo 113-8510, Japan<br>
+        <a href="index.html#contact">Access details →</a></p>
+      </div>
+    </div>
+    <a href="index.html#contact" class="btn btn-white">Back to the lab home page</a>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div>
+      <div class="footer-lab" style="font-size:15px; line-height:1.7;">Institute of Science Tokyo · Institute of Integrated Research · Medical Research Laboratory · <strong>Department of Biochemical Pathophysiology</strong></div>
+      <div class="footer-copy" style="font-size:15px; line-height:1.7; color:#fff; font-family:'DM Serif Display', serif;">Graduate School of Medical and Dental Sciences · <strong>Department of Lipid Biology</strong></div>
+      <div class="footer-copy" style="font-size:12px; margin-top:0.6rem;">© 2025–2026 Department of Lipid Biology, Institute of Science Tokyo. All rights reserved.</div>
+    </div>
+    <div class="footer-links">
+      <a href="index.html">Home</a>
+      <a href="members.html">Members</a>
+      <a href="publications.html">Publications</a>
+      <a href="news.html">News</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // FAQ accordion
+  document.querySelectorAll('.faq-q').forEach(q => {
+    q.addEventListener('click', () => {
+      const item = q.closest('.faq-item');
+      const wasOpen = item.classList.contains('open');
+      document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+      if (!wasOpen) item.classList.add('open');
+    });
+  });
+</script>
+
+<!-- Back-to-top button -->
+<button id="backToTop" aria-label="Back to top" class="back-to-top">
+  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+    <polyline points="18 15 12 9 6 15"></polyline>
+  </svg>
+</button>
+<style>
+.back-to-top {
+  position: fixed; bottom: 24px; right: 24px;
+  width: 44px; height: 44px; border-radius: 50%;
+  background: #1c3177; color: white; border: none;
+  display: flex; align-items: center; justify-content: center;
+  cursor: pointer; box-shadow: 0 4px 16px rgba(0,0,0,0.15);
+  opacity: 0; pointer-events: none;
+  transition: opacity 0.25s, transform 0.25s, background 0.2s;
+  transform: translateY(8px);
+  z-index: 200;
+}
+.back-to-top.visible { opacity: 1; pointer-events: auto; transform: translateY(0); }
+.back-to-top:hover { background: #14245a; }
+@media (max-width: 540px) {
+  .back-to-top { bottom: 16px; right: 16px; width: 40px; height: 40px; }
+}
+</style>
+<script>
+(function() {
+  var btn = document.getElementById('backToTop');
+  if (!btn) return;
+  window.addEventListener('scroll', function() {
+    if (window.scrollY > 300) btn.classList.add('visible');
+    else btn.classList.remove('visible');
+  });
+  btn.addEventListener('click', function() {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+})();
+</script>
+
+<!-- image download deterrent -->
+<style>img{-webkit-user-drag:none;-khtml-user-drag:none;-moz-user-drag:none;-o-user-drag:none;user-drag:none;}</style>
+<script>
+(function(){
+  function blockImg(e){ if(e.target && e.target.tagName==="IMG"){ e.preventDefault(); } }
+  document.addEventListener("contextmenu", blockImg);
+  document.addEventListener("dragstart", blockImg);
+})();
+</script>
+</body>
+</html>
