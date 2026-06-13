@@ -23,3 +23,7 @@ README_history.md
 .DS_Store
 Thumbs.db
 desktop.ini
+
+# 動画制作用の内部資料・素材（サイト本体では未使用・公開不要）
+recruit_video_*.md
+video_assets/

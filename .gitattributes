@@ -1,0 +1,17 @@
+# 改行コードを正規化（リポジトリ内は常に LF）。CRLF差分の再発を防止。
+* text=auto eol=lf
+
+# バイナリ（改行変換しない）
+*.png  binary
+*.jpg  binary
+*.jpeg binary
+*.JPG  binary
+*.JPEG binary
+*.gif  binary
+*.webp binary
+*.pdf  binary
+*.mp4  binary
+*.psd  binary
+*.docx binary
+*.pptx binary
+*.ico  binary
