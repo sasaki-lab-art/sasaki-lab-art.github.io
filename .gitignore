@@ -27,3 +27,6 @@ desktop.ini
 # 動画制作用の内部資料・素材（サイト本体では未使用・公開不要）
 recruit_video_*.md
 video_assets/
+
+# 未参照画像の退避（公開不要・ローカル保管）
+photos/_unused/
