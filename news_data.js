@@ -25,7 +25,7 @@ const newsItems = [
    detail:"Mont Sainte-Odile, Alsace, France ／ Confirmed Invited Speaker",
    link:"https://www.hormones-cell-regulation.eu/"},
 
-  {date:"2026年6月11日", dateSort:"2026-06", cat:"event", intl:false, badge:"説明会", pin:true,
+  {date:"2026年6月11日", dateSort:"2026-06", cat:"event", intl:false, badge:"説明会",
    link:"https://www.tmd.ac.jp/mri/events/open-campus/20260611/",
    /* link フィールドで「カード全体」を説明会ページへのリンクにする（レンダリング側が item.link を <a> 化）。
       タイトル内に <a> を置くと入れ子アンカーになるためプレーンテキストにする。 */
