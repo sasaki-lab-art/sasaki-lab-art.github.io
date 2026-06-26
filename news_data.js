@@ -13,7 +13,7 @@ const newsItems = [
 
   /* ── 2026 ── */
   {date:"2026年10月7–10日", dateSort:"2026-10", cat:"event", intl:true, pin:true, badge:"基調講演",
-   title:'48<sup>th</sup> Symposium on Hormones and Cell Regulation "Phosphoinositides — Key Regulators of Cell Signaling and Membrane Dynamics in Health and Disease"',
+   title:'48<sup>th</sup> Symposium on Hormones and Cell Regulation <br>"Phosphoinositides — Key Regulators of Cell Signaling and Membrane Dynamics in Health and Disease"',
    detail:"Mont Sainte-Odile, Alsace, France ／ Confirmed Invited Speaker",
    dateEn:"Oct 7–10, 2026",
    link:"https://www.hormones-cell-regulation.eu/"},
