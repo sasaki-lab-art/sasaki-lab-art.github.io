@@ -35,3 +35,19 @@ photos/_unused/
 sasaki-lab-english-website/
 sasaki-lab-english-website.zip
 HANDOFF_引継ぎ.md
+
+# 引き継ぎメモ全般（内部用。日付つきファイル名にも対応）
+*引き継ぎ*.md
+*引継ぎ*.md
+
+# 内部作業用スクリプト（サイト本体では未使用。人事・学内案件を扱うものを含むため公開しない）
+scripts/
+__pycache__/
+*.pyc
+
+# 作業用の一時フォルダ。サイトと無関係な作業（書簡の作成など）を
+# 誤ってこのフォルダで行ったときの保険。2026-08-04 に実例あり。
+tmp_*/
+.agents/
+_work/
+_drafts/
